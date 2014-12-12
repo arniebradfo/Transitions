@@ -1,0 +1,70 @@
+// about--resume.scss
+
+$centerFoldPadding: 1rem;
+$workInfoWidth:150px;
+
+#work-experience{
+	color: white;
+	background: $colorBlack8;
+	h2,h3,h4,h5{
+		color: white;
+	}
+}
+
+#work-experience, #education{
+	padding-top: 	$textMargins;
+	padding-bottom:	$textMargins;
+
+	li{
+		position: relative;
+	}
+	& > ul > li{
+		margin-left: $workInfoWidth;
+		margin-bottom:	2.5rem;
+		margin-top:		2.5rem;
+		& > ul > li{
+			border-left: 2px solid $colorAccent;
+			padding-left: $centerFoldPadding;
+			margin-bottom:	1.25rem;
+			margin-top:		1.25rem;
+		}
+	}
+}
+.work-info{
+	position: absolute;
+	right:100%;
+	top: 0;
+	width: $workInfoWidth;
+	padding-left: 	$centerFoldPadding;
+	padding-right: 	$centerFoldPadding;
+
+	text-align: right;
+	color: $colorAccent;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	line-height: 1.1em;
+
+	time,span{
+		margin-bottom: $textMargins/2;
+		display: block;
+	}
+
+}
+
+.work-responsibilities{
+	text-transform: uppercase;
+	font-size: .8rem;
+	letter-spacing: .05em;
+	span{
+		color: lighten($colorAccent, 10%);
+		font-weight: 900;
+	}
+}
+
+.view-work{
+	position: relative;
+	display: inline-block;
+	text-align: right;
+	display: none; // do I want this?
+}

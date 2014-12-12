@@ -1,0 +1,70 @@
+// single-content.scss
+
+#post-content{
+	min-height: 200px;
+	@include dimension(1,margin-left, margin-right);
+	> picture, > img{
+		width: 100%;
+		margin-top: $imgMargins;
+		margin-bottom: $imgMargins;
+	}
+	picture{
+		img{
+			width: 100%;
+		}
+	}
+}
+
+article.post{
+	position: relative;
+}
+.scroll-down, .scroll-to-top{
+	position: absolute;
+	right: 0;
+	&::after{
+		@include fontCaps;
+		width: 200px;
+		position: absolute;
+		bottom: 100%;
+		left:50%;
+		@include transition();
+		@include transform(translate(0,5px) rotate(-90deg));
+		transform-origin: left;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+// --------------------------------------------------------------- SCROLL BUTTONS	
+.scroll-down{
+	bottom: $headerBottomMargin;
+	&::after{
+		content: 'Scroll Down';
+	}
+	@include dimension(-0.5, margin-bottom);
+}
+.scroll-to-top{
+	bottom: 0;
+	&::after{
+		content: 'Scroll To The Top';
+	}	
+}
+@include screenSize(L){
+	.scroll-down, .scroll-to-top{
+		&::after{
+			opacity: 0;
+			visibility: hidden;
+			@include transform(translate(0,30px) rotate(-90deg));
+		}
+		&:hover::after{
+			opacity: 1;
+			visibility: visible;
+			@include transform(translate(0,15px) rotate(-90deg));
+		}
+	}
+}
+
+@media screen and (max-height: 450px){
+	picture{
+		height: ($headerPictureHeightSmall - $headerMargins);
+	}
+}

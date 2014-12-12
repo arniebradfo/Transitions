@@ -1,0 +1,13 @@
+// about--header.scss
+
+#about-header{
+	picture{
+		margin: 0 $headerMargins;
+		height: ($headerPictureHeight);
+	}
+}
+
+.about-section{
+	@include dimension(1,padding-left,padding-right);
+	margin-bottom: $textMargins*2;
+}

@@ -1,0 +1,81 @@
+// about--logo-colors.scss
+
+// --------------------------------------------------------------- ADOBE PROGRAMS
+#logo-adobe:hover{
+	color:$colorAdobe;
+}
+#logo-a-photoshop:hover, #logo-adobe:hover ~ #logo-a-photoshop{
+	color:$colorPhotoshop;
+}
+#logo-a-illustrator:hover, #logo-adobe:hover ~ #logo-a-illustrator{
+	color:$colorIllustrator;
+}
+#logo-a-indesign:hover, #logo-adobe:hover ~ #logo-a-indesign{
+	color:$colorInDesign;
+}
+#logo-a-lightroom:hover, #logo-adobe:hover ~ #logo-a-lightroom{
+	color:$colorLightroom;
+}
+#logo-a-bridge:hover, #logo-adobe:hover ~ #logo-a-bridge{
+	color:$colorBridge;
+}
+
+// --------------------------------------------------------------- GOOGLE PROGRAMS
+#logo-g-drive:hover{
+	color:$colorGoogleRed;
+}
+#logo-g-docs:hover, #logo-g-drive:hover ~ #logo-g-docs{
+	color:$colorGoogleBlue;
+}
+#logo-g-sheets:hover, #logo-g-drive:hover ~ #logo-g-sheets{
+	color:$colorGoogleGreen;
+}
+#logo-g-slides:hover, #logo-g-drive:hover ~ #logo-g-slides{
+	color:$colorGoogleYellow;
+}
+
+// --------------------------------------------------------------- OTHER PROGRAMS
+#logo-sublime-text:hover{
+	color:$colorSublimeText;
+}
+#logo-mamp:hover{
+	color:$colorMAMP;
+}
+
+// --------------------------------------------------------------- PROGRAMMING LANGUAGES
+#logo-html5:hover{
+	color:$colorHTML5;
+}
+#logo-css3:hover{
+	color:$colorCSS3;
+}
+#logo-sass:hover{
+	color:$colorSass;
+}
+#logo-javascript:hover{
+	color:$colorJavascript;
+}
+#logo-jquery:hover{
+	color:$colorJquery;
+}
+#logo-wordpress:hover{
+	color:$colorWordPress;
+}
+#logo-php:hover{
+	color:$colorPhp;
+}
+#logo-apache:hover{
+	color:$colorApache;
+}
+#logo-mysql:hover{
+	color:$colorMySQL;
+}
+#logo-grunt:hover{
+	color:$colorGruntJS;
+}
+#logo-node:hover{
+	color:$colorNodeJS;
+}
+#logo-npm:hover{
+	color:$colorNPM;
+}

@@ -1,0 +1,89 @@
+/*	
+ *	SASS media query breakpoints plugin 
+ *		-define your breakpoints as $variables
+ *		-call a range with an @include mixin
+ *	
+ *	creates media queries in a style that can be used with a CMQ(combine media queries) grunt task:
+ *		https://github.com/konitter/gulp-combine-media-queries
+ *		https://github.com/buildingblocks/grunt-combine-media-queries
+ *	
+ *	Created by James Bradford 2014
+ *	
+ *	Copyright / Licence : none(public domain)
+ *	
+ */	
+
+// BREAKPOINT VARIABLES
+$breakpoint3XL:		2500px;
+$breakpoint2XL:		2000px;
+$breakpointXL:		1500px;
+$breakpointL:		1000px;
+$breakpointM:		750px;
+$breakpointS:		500px;
+$breakpointXS:		250px;
+$mobileFirstSyntax: false;
+// UNTESTED - set $mobileFirstSyntax: true; to return media queries without a lower limit as regular css - not in a media query
+
+/*	BREAKPOINT MIXIN
+ *	Specify a minimum by using one arguement.
+ *	Specify a range using two arguments.
+ *	Accepted arguements are shorthand for breakpoint varibles:
+ *	0, XS, S, M, L, XL, 2XL, 3XL, infinity
+ *	0 not accepted as 1st arguement     
+ *	infinity not accepted as 2nd argument
+*/	
+@mixin screenSize($smallerScreenSize:0, $largerScreenSize:infinity){
+	// define breakpoint proxies outside of @if statements
+	$smallerWidth:  null;
+	$largerWidth: 	null;
+
+	// define smaller beakpoint proxy based on shorthand arguement
+	@if      $smallerScreenSize == 0   { $smallerWidth: 0 ;}
+	@else if $smallerScreenSize == XS  { $smallerWidth: $breakpointXS  ;}
+	@else if $smallerScreenSize == S   { $smallerWidth: $breakpointS   ;}
+	@else if $smallerScreenSize == M   { $smallerWidth: $breakpointM   ;}
+	@else if $smallerScreenSize == L   { $smallerWidth: $breakpointL   ;}
+	@else if $smallerScreenSize == XL  { $smallerWidth: $breakpointXL  ;}
+	@else if $smallerScreenSize == 2XL { $smallerWidth: $breakpoint2XL ;}
+	@else if $smallerScreenSize == 3XL { $smallerWidth: $breakpoint3XL ;}
+
+	// define larger beakpoint proxy based on shorthand arguement
+	@if      $largerScreenSize  == XS  { $largerWidth:  $breakpointXS  ;}
+	@else if $largerScreenSize  == S   { $largerWidth:  $breakpointS   ;}
+	@else if $largerScreenSize  == M   { $largerWidth:  $breakpointM   ;}
+	@else if $largerScreenSize  == L   { $largerWidth:  $breakpointL   ;}
+	@else if $largerScreenSize  == XL  { $largerWidth:  $breakpointXL  ;}
+	@else if $largerScreenSize  == 2XL { $largerWidth:  $breakpoint2XL ;}
+	@else if $largerScreenSize  == 3XL { $largerWidth:  $breakpoint3XL ;}
+	@else if $largerScreenSize  == infinity{ $largerWidth: 0 ;} 
+
+	// create media query out of combined breakpoints
+
+	// if both breakpoints are defined, return a media query with the specified range
+	@if ($smallerWidth != 0 and $largerWidth != 0) {
+		@media  screen and ( min-width: $smallerWidth ) and ( max-width: $largerWidth - 1 ){
+			@content;
+		}
+	}
+	// if lower breakpoint is zero, there are two OPTIONS 
+	@else if ($smallerWidth == 0 and $largerWidth != 0) {
+		// OPTION 1 - mobileFirstSyntax var is set to true
+		// mobile first syntax - return content as regular css - not in a media query
+		@if $mobileFirstSyntax{
+			@content;
+		}
+		// OPTION 2 - mobileFirstSyntax var is set to false
+		// return a media query with only a max-width
+		@else {
+			@media  screen and ( max-width: $largerWidth - 1 ){@content;}
+		}
+	}
+	// if higher breakpoint is infinity, return a media query with only a min-width
+	@else if ($smallerWidth != 0 and $largerWidth == 0) {
+		@media  screen and ( min-width: $smallerWidth ){@content;}
+	}
+	// if breakpoints are 0 to infinity, include content as regular css - not in a media query - DUHH!
+	@else if ($smallerWidth == 0 and $largerWidth == 0) {
+		@content;
+	}
+}

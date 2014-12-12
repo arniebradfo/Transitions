@@ -1,0 +1,77 @@
+// pagination-nav.scss
+
+// --------------------------------------------------------------- NUMBERED PAGE NAVIGATION
+ul.navigation{
+	@include fontCaps;
+	@include dimension(1,margin-left,margin-right);
+	@include dimension(1,height);
+	position: relative;
+	display: block;
+	color: $colorBlack5;
+	text-align: center;
+	li {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	a{
+		display: block;
+		vertical-align: middle;
+	}
+	.page-previous, .page-next{
+		position: absolute;
+		display: block;
+	}
+}
+
+// --------------------------------------------------------------- PREVIOUS/NEXT PAGE NAVIGATION
+.page-previous, .page-next{
+	height: 100%;	
+	top:0;
+	@include screenSize(L) {
+		.icon-capsule{
+			&::after{
+				position: absolute;
+				bottom: 50%;
+				min-width:125px;
+				opacity: 0;
+				visibility: hidden;
+				@include transition;
+			}
+			&:hover {
+				&::after{
+					opacity: 1;
+					visibility: visible;
+					@include transform(translate(0,50%));
+				}
+			}		
+		}
+	}
+}
+
+.page-previous{
+	text-align: left;
+	left:0;
+	@include screenSize(L) {
+		.icon-capsule::after{
+			content: 'previous page';
+			text-align: left;
+			left:0;
+			margin-left: $sideMarginsL;
+			@include transform(translate(-15px,50%));
+		}
+	}
+}
+.page-next{
+	text-align: right;
+	right:0;
+	@include screenSize(L) {
+		.icon-capsule::after{
+			content: 'next page';
+			text-align: right;
+			right: 0;
+			margin-right: $sideMarginsL;
+			@include transform(translate(15px,50%));
+		}
+	}
+}
