@@ -26,8 +26,8 @@
 			</picture>
 
 			<h1 class="entry-title">
-				Hi, I'm Maddy 
-				<span>and I fucking love Candles and kittens...</span>
+				Hi, I'm James 
+				<span>thanks for stopping by</span>
 			</h1>
 
 			<!-- svg button -->
@@ -46,7 +46,7 @@
 				My name is James Bradford.
 				I’m a  multifaceted designer &amp; developer living in beautiful Logan, Utah.
 				I produce compelling visual &amp; interactive experiences by blending graphic design &amp; web development into the perfect mix technology &amp; creativity.
-				I believe the web should be more intuitive, friendly, &amp; beautiful, so I strive to craft simple, usable interfaces to promote a remarkable and effective brand identity.
+				I believe the web should be more intuitive, friendly, &amp; beautiful, so I strive to craft simple, usable interfaces to promote a remarkable and memorable brand identity.
 				<!-- Scroll down to review my qualifications. --> 
 			</p>
 
@@ -273,6 +273,52 @@
 			<h2>Work Experience</h2>
 
 			<ul>
+
+				<li><h3>Willoughby &amp; Crane</h3>
+					<h5>Freelance Logo Development</h5>
+					<div class="work-info">
+						<time datetime="2014-12"> Dec 2014 </time>
+					</div>
+					<p>
+						Designed a logo and branding identiity for a Savannah, GA based consulting firm.
+					</p>
+					<p class="work-responsibilities">
+						<span>Responsible for: </span>
+						logo design, 
+						branding, 
+						layout
+					</p>
+				</li>
+
+				<li><h3>Bestway USA</h3>
+					<h5>Production Assistant &amp; Digital Operator</h5>
+					<div class="work-info">
+						<span class="work-location">Phoenix,</br>AZ</span>
+						<time datetime="2014-12"> Oct 2014–</br>Dec, 2014 </time>
+					</div>
+					<p>
+						Worked as an integral part of a photo/video production team on an epic 2 month shoot of more than 400 items 
+						that included product photos, lifestyle photos, and a promotional video component.
+					</p>
+					<p>
+						Organized &amp; prepped all products &amp; sets. 
+						Helped art direct wardrobe/product/set combinations &amp; photo compositions. 
+						Managed &amp; directed models including children ages 2-12yrs 
+						Color corrected &amp; light balanced photos as examples for a post-production team to follow. 
+						Worked closely with a videographer to storyboard &amp; organize the production of a promotional video for above ground pools &amp; pool toys. 
+						Filled in as a photographer in some circumstances.  
+					</p>
+					<p class="work-responsibilities">
+						<span>Responsible for: </span>
+						set design, 
+						art direction, 
+						storyboarding, 
+						photo editing, 
+						photography, 
+						scheduling &amp; management
+					</p>
+				</li>
+
 				<li><h3>Covey Rise</h3>
 					<h5>Freelance Photo Editing &amp; Graphic Design</h5>
 					<div class="work-info">
@@ -362,6 +408,19 @@
 								web development
 							</p>
 						</li>
+					</ul>
+				</li>
+
+				<li><h3>Dura Global Sourcing</h3>
+					<div class="work-info">
+						<time datetime="2014-1"> Jan, 2014–</br>present </time>
+					</div>
+					<p>
+						designed a wide range of promotional materials for 
+						eCommerce and marketing of various sub-brands including:
+					</p>
+					<ul>
+						</li>
 						<li><h4>Perfect Cloud</h4>
 							<h5>Freelance Branding &amp; Graphic Design</h5>
 							<div class="work-info">
@@ -381,22 +440,38 @@
 							</p>
 						</li>
 						<li><h4>Lumitronics</h4>
-							<h5>Freelance Logo Development</h5>
+							<h5>Freelance Logo &amp; Package Design</h5>
 							<div class="work-info">
-								<time datetime="2014-5"> May,</br>2014 </time>
+								<time datetime="2014-5"> May-Sept,</br>2014 </time>
 							</div>
 							<p>
-								created a new logo for LED trailer brake lights
+								created a new logo &amp; packaging for LED trailer brake lights
 							</p>
 							<p class="work-responsibilities">
 								<span>Responsible for: </span>
-								logo development
+								logo development, 
+								package design
 							</p>
 						</li>
-
+						<li><h4>e Flame</h4>
+							<h5>Freelance Branding &amp; Graphic Design</h5>
+							<div class="work-info">
+								<time datetime="2014-9"> Sept,</br>2014 </time>
+							</div>
+							<p>
+								designed info graphics for a line of electric heaters
+							</p>
+							<p class="work-responsibilities">
+								<span>Responsible for: </span>
+								branding, 
+								icon design, 
+								infographics, 
+								layout
+							</p>
+						</li>
 					</ul>
 				</li>
-				
+
 				<li><h3>The Keer Group</h3>
 					<h5>Freelance Graphic Design &amp; Web Development</h5>
 					<div class="work-info">
@@ -424,24 +499,7 @@
 						<span class="work-location">Shanghai,</br>China</span>
 					</div>
 					<ul>
-						<li>
-							<h5>User experience Design Intern</h5>
-							<div class="work-info">
-								<time datetime="2013-7"> July–</br>Sept, 2013 </time>
-							</div>
-							<p>
-								Selected from more than 500 applicants to be on a 6 person 
-								multidisciplinary design team that also included industrial 
-								designers and toy designers.
-							</p>
-							<p>
-								Worked with team through multiple cycles of research, 
-								design, consumer testing, and redesign to produce a set of 6 
-								new market ready products for Bestway’s summer product line.						</p>
-							</p>
-						</li>
-						<li>
-							<h5>Graphic Designer</h5>
+						<li><h5>Graphic Designer</h5>
 							<div class="work-info">
 								<time datetime="2013-9"> Sept 2013–</br>Mar, 2014 </time>
 								<a href="#" class="icon-capsule dark view-work"><svg class="icon">
@@ -473,6 +531,21 @@
 								web design, 
 								storyboarding, 
 								photo editing
+							</p>
+						</li>
+						<li><h5>User experience Design Intern</h5>
+							<div class="work-info">
+								<time datetime="2013-7"> July–</br>Sept, 2013 </time>
+							</div>
+							<p>
+								Selected from more than 500 applicants to be on a 6 person 
+								multidisciplinary design team that also included industrial 
+								designers and toy designers.
+							</p>
+							<p>
+								Worked with team through multiple cycles of research, 
+								design, consumer testing, and redesign to produce a set of 6 
+								new market ready products for Bestway’s summer product line.						</p>
 							</p>
 						</li>
 					</ul>
@@ -542,7 +615,7 @@
 				</li>
 
 				<li><h3>University of Georgia Cycling Team</h3>
-					<h5>Bro Bono Graphic Design</h5>
+					<h5>Pro Bono Graphic Design</h5>
 					<div class="work-info">
 						<span class="work-location"> Athens, GA </span>
 						<time datetime="2012-11"> Winter,</br>2012–2013 </time>
