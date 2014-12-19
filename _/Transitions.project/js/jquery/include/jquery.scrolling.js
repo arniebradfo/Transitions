@@ -27,7 +27,7 @@ function scrollDown(){
 			1000, 
 			'easeOutExpo',
 			function(){unbindScrollInput();}
-		});
+		);
 	});
 }
 
@@ -40,7 +40,7 @@ function scrollToTop(){
 			2000, 
 			'easeOutExpo',
 			function(){unbindScrollInput();}
-		});
+		);
 	});
 }
 

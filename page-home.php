@@ -12,6 +12,22 @@ Template Name: Home Page
 
 ?>
 
+
+<div 
+	id="wrapper-home" 
+	style="
+		display: block; 
+		z-index: 999;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color:black;
+	"
+></div>
+
+
 <header id="home-header">
 
 

@@ -27,7 +27,7 @@
 
 			<h1 class="entry-title">
 				Hi, I'm James 
-				<span>thanks for stopping by</span>
+				<span>What can I do for you?</span>
 			</h1>
 
 			<!-- svg button -->
@@ -41,12 +41,13 @@
 
 		<section class="about-section" id="bio">
 
-			<h2>Who is this guy?</h2>
+			<h2>Do you need a web &amp; graphics guy?</h2>
 			<p>
-				My name is James Bradford.
-				I’m a  multifaceted designer &amp; developer living in beautiful Logan, Utah.
-				I produce compelling visual &amp; interactive experiences by blending graphic design &amp; web development into the perfect mix technology &amp; creativity.
-				I believe the web should be more intuitive, friendly, &amp; beautiful, so I strive to craft simple, usable interfaces to promote a remarkable and memorable brand identity.
+				I can help! 
+				I'm James Bradford. 
+				I’m a  multifaceted designer and developer living in beautiful Logan, Utah. 
+				I produce compelling visual and interactive experiences by blending graphic design and web development with the perfect mix of technology and creativity. 
+				I believe the web should be more intuitive, friendly, and beautiful, so I strive to craft simple, usable interfaces to promote remarkable and memorable brand identity.
 				<!-- Scroll down to review my qualifications. --> 
 			</p>
 
@@ -55,6 +56,58 @@
 		<section class="about-section" id="skills">
 
 			<h2>Skills</h2>
+
+			<h3>DESIGN SKILLSET</h3>
+			<ul id="list-design" class="skillset clearfix">
+				<li class="skill" id="logo-layout"><figure>
+					<figcaption>Layout &amp;</br>Wireframing</figcaption>
+					<svg class="logo program"><use xlink:href="#logo-layout"></use></svg>
+				</figure></li>
+				<li class="skill" id="logo-info-62"><figure>
+					<figcaption>Information</br>Heiarchy</figcaption>
+					<svg class="logo program"><use xlink:href="#logo-info-62"></use></svg>
+				</figure></li>
+				<li class="skill" id="logo-code"><figure>
+					<figcaption>Web</br>Development</figcaption>
+					<svg class="logo program"><use xlink:href="#logo-code"></use></svg>
+				</figure></li>
+				<li class="skill" id="logo-illustration"><figure>
+					<figcaption></br>Illustration</figcaption>
+					<svg class="logo program"><use xlink:href="#logo-illustration"></use></svg>
+				</figure></li>
+				<li class="skill" id="logo-photography"><figure>
+					<figcaption></br>Photography</figcaption>
+					<svg class="logo program"><use xlink:href="#logo-photography"></use></svg>
+				</figure></li>
+				<li class="skill" id="logo-packaging"><figure>
+					<figcaption>Package</br>Design</figcaption>
+					<svg class="logo program"><use xlink:href="#logo-packaging"></use></svg>
+				</figure></li>
+				<li class="skill" id="logo-ui"><figure>
+					<figcaption>User</br>Interface</figcaption>
+					<svg class="logo program"><use xlink:href="#logo-ui"></use></svg>
+				</figure></li>
+				<li class="skill" id="logo-ux"><figure>
+					<figcaption>User</br>Experience</figcaption>
+					<svg class="logo program"><use xlink:href="#logo-ux"></use></svg>
+				</figure></li>
+				<li class="skill" id="logo-branding"><figure>
+					<figcaption>Branding &amp;</br>Identity</figcaption>
+					<svg class="logo program"><use xlink:href="#logo-branding"></use></svg>
+				</figure></li>
+				<li class="skill" id="logo-iconography"><figure>
+					<figcaption></br>Iconography</figcaption>
+					<svg class="logo program"><use xlink:href="#logo-iconography"></use></svg>
+				</figure></li>
+				<li class="skill" id="logo-typography"><figure>
+					<figcaption></br>Typography</figcaption>
+					<svg class="logo program"><use xlink:href="#logo-typography"></use></svg>
+				</figure></li>
+				<li class="skill" id="logo-color-theory"><figure>
+					<figcaption>Color</br>Theory</figcaption>
+					<svg class="logo program"><use xlink:href="#logo-color-theory"></use></svg>
+				</figure></li>
+			</ul>
 
 			<h3>Software proficiencies</h3>
 			<ul id="list-software" class="skillset clearfix">
@@ -215,58 +268,6 @@
 				</figure></li>
 			</ul>
 
-			<h3>DESIGN SKILLSET</h3>
-			<ul id="list-design" class="skillset clearfix">
-				<li class="skill" id="logo-layout"><figure>
-					<figcaption>Layout &amp;</br>Wireframing</figcaption>
-					<svg class="logo program"><use xlink:href="#logo-layout"></use></svg>
-				</figure></li>
-				<li class="skill" id="logo-info-62"><figure>
-					<figcaption>Information</br>Heiarchy</figcaption>
-					<svg class="logo program"><use xlink:href="#logo-info-62"></use></svg>
-				</figure></li>
-				<li class="skill" id="logo-code"><figure>
-					<figcaption>Web</br>Development</figcaption>
-					<svg class="logo program"><use xlink:href="#logo-code"></use></svg>
-				</figure></li>
-				<li class="skill" id="logo-illustration"><figure>
-					<figcaption></br>Illustration</figcaption>
-					<svg class="logo program"><use xlink:href="#logo-illustration"></use></svg>
-				</figure></li>
-				<li class="skill" id="logo-photography"><figure>
-					<figcaption></br>Photography</figcaption>
-					<svg class="logo program"><use xlink:href="#logo-photography"></use></svg>
-				</figure></li>
-				<li class="skill" id="logo-packaging"><figure>
-					<figcaption>Package</br>Design</figcaption>
-					<svg class="logo program"><use xlink:href="#logo-packaging"></use></svg>
-				</figure></li>
-				<li class="skill" id="logo-ui"><figure>
-					<figcaption>User</br>Interface</figcaption>
-					<svg class="logo program"><use xlink:href="#logo-ui"></use></svg>
-				</figure></li>
-				<li class="skill" id="logo-ux"><figure>
-					<figcaption>User</br>Experience</figcaption>
-					<svg class="logo program"><use xlink:href="#logo-ux"></use></svg>
-				</figure></li>
-				<li class="skill" id="logo-branding"><figure>
-					<figcaption>Branding &amp;</br>Identity</figcaption>
-					<svg class="logo program"><use xlink:href="#logo-branding"></use></svg>
-				</figure></li>
-				<li class="skill" id="logo-iconography"><figure>
-					<figcaption></br>Iconography</figcaption>
-					<svg class="logo program"><use xlink:href="#logo-iconography"></use></svg>
-				</figure></li>
-				<li class="skill" id="logo-typography"><figure>
-					<figcaption></br>Typography</figcaption>
-					<svg class="logo program"><use xlink:href="#logo-typography"></use></svg>
-				</figure></li>
-				<li class="skill" id="logo-color-theory"><figure>
-					<figcaption>Color</br>Theory</figcaption>
-					<svg class="logo program"><use xlink:href="#logo-color-theory"></use></svg>
-				</figure></li>
-			</ul>
-
 		</section>
 
 		<section class="about-section" id="work-experience">
@@ -277,10 +278,10 @@
 				<li><h3>Willoughby &amp; Crane</h3>
 					<h5>Freelance Logo Development</h5>
 					<div class="work-info">
-						<time datetime="2014-12"> Dec 2014 </time>
+						<time datetime="2014-12">Dec. 2014</time>
 					</div>
 					<p>
-						Designed a logo and branding identiity for a Savannah, GA based consulting firm.
+						Designed a logo and branding identity for a Savannah, GA, based consulting firm.
 					</p>
 					<p class="work-responsibilities">
 						<span>Responsible for: </span>
@@ -294,19 +295,19 @@
 					<h5>Production Assistant &amp; Digital Operator</h5>
 					<div class="work-info">
 						<span class="work-location">Phoenix,</br>AZ</span>
-						<time datetime="2014-12"> Oct 2014–</br>Dec, 2014 </time>
+						<time datetime="2014-12"> Oct. 2014–</br>Dec. 2014 </time>
 					</div>
 					<p>
-						Worked as an integral part of a photo/video production team on an epic 2 month shoot of more than 400 items 
+						Worked as an integral part of a photo/video production team on an epic 2 month photo shoot of more than 400 items 
 						that included product photos, lifestyle photos, and a promotional video component.
 					</p>
 					<p>
-						Organized &amp; prepped all products &amp; sets. 
-						Helped art direct wardrobe/product/set combinations &amp; photo compositions. 
-						Managed &amp; directed models including children ages 2-12yrs 
-						Color corrected &amp; light balanced photos as examples for a post-production team to follow. 
-						Worked closely with a videographer to storyboard &amp; organize the production of a promotional video for above ground pools &amp; pool toys. 
-						Filled in as a photographer in some circumstances.  
+						Organized and prepped all products and sets. 
+						Helped art direct wardrobe/product/set combinations and photo compositions. 
+						Managed and directed models including children ages 2-12 years. 
+						Color corrected and light balanced photos as examples for a post-production team to follow. 
+						Worked closely with a videographer to storyboard and organize the production of a promotional video for above ground pools and pool toys. 
+						Filled in as a photographer when needed.  
 					</p>
 					<p class="work-responsibilities">
 						<span>Responsible for: </span>
@@ -315,21 +316,21 @@
 						storyboarding, 
 						photo editing, 
 						photography, 
-						scheduling &amp; management
+						scheduling and management
 					</p>
 				</li>
 
 				<li><h3>Covey Rise</h3>
 					<h5>Freelance Photo Editing &amp; Graphic Design</h5>
 					<div class="work-info">
-						<time datetime="2014-2"> Feb, 2014–</br>present </time>
+						<time datetime="2014-2"> Feb. 2014–</br>present </time>
 					</div>
 					<p>
 						Worked with the art director to edit photos for a bird hunting magazine.
 					</p>
 					<ul>
 						<li><h4>Quail Coalition</h4>
-							<h5>Freelance Graphic Design and web development</h5>
+							<h5>Freelance Graphic Design &amp; web development</h5>
 							<p>
 								Designed a 42 page annual publication for a quail conservation 
 								nonprofit in conjunction with the Covey Rise team.
@@ -346,24 +347,25 @@
 				
 				<li><h3>Frontline Advance LLC</h3>
 					<div class="work-info">
-						<time datetime="2014-1"> Jan, 2014–</br>present </time>
+						<time datetime="2014-1"> Jan. 2014–</br>present </time>
 					</div>
 					<p>
-						designed a wide range of promotional materials for 
+						Designed a wide range of promotional materials for 
 						eCommerce and marketing of various sub-brands including:
 					</p>
 					<ul>
 						<li><h4>Solo Stove</h4>
-							<h5>Freelance Graphic Design and web development</h5>
+							<h5>Freelance Graphic Design &amp; web development</h5>
 							<div class="work-info">
-								<time datetime="2014-1"> Jan, 2014–</br>present </time>
+								<time datetime="2014-1">Jan. 2014–</br>present</time>
 							</div>
 							<p>
-								created promotional ads and other web content for solostove.com
+								Cxreated promotional ads and other web content for solostove.com
 							</p>
 							<p class="work-responsibilities">
 								<span>Responsible for: </span>
-								icon design, 
+								icon design,
+								technical illustration, 
 								copywriting, 
 								layout, 
 								infographics, 
@@ -374,7 +376,7 @@
 						<li><h4>Fox Outfitters</h4>
 							<h5>Freelance Branding, Graphic Design, &amp; Web Development</h5>
 							<div class="work-info">
-								<time datetime="2014-1"> Jan 2014–</br>present </time>
+								<time datetime="2014-1">Jan. 2014–</br>present</time>
 							</div>
 							<p>
 								Created initial logo and branding identity for 
@@ -395,7 +397,7 @@
 						<li><h4>SlumberMaax</h4>
 							<h5>Freelance Web Development</h5>
 							<div class="work-info">
-								<time datetime="2014-2"> Feb,</br>2014 </time>
+								<time datetime="2014-2"> Feb. 2014 </time>
 							</div>
 							<p>
 								Refurbished homepage of an ecommerce mattress distributer 
@@ -413,10 +415,10 @@
 
 				<li><h3>Dura Global Sourcing</h3>
 					<div class="work-info">
-						<time datetime="2014-1"> Jan, 2014–</br>present </time>
+						<time datetime="2014-1">Jan. 2014–</br>present</time>
 					</div>
 					<p>
-						designed a wide range of promotional materials for 
+						Designed a wide range of promotional materials for 
 						eCommerce and marketing of various sub-brands including:
 					</p>
 					<ul>
@@ -424,10 +426,10 @@
 						<li><h4>Perfect Cloud</h4>
 							<h5>Freelance Branding &amp; Graphic Design</h5>
 							<div class="work-info">
-								<time datetime="2014-5"> May,</br>2014 </time>
+								<time datetime="2014-5">May. 2014</time>
 							</div>
 							<p>
-								created initial logo &amp; branding identity for 
+								Created initial logo and branding identity for 
 								a memory foam mattress start up.
 							</p>
 							<p class="work-responsibilities">
@@ -442,10 +444,10 @@
 						<li><h4>Lumitronics</h4>
 							<h5>Freelance Logo &amp; Package Design</h5>
 							<div class="work-info">
-								<time datetime="2014-5"> May-Sept,</br>2014 </time>
+								<time datetime="2014-5">May.-Sept.</br>2014</time>
 							</div>
 							<p>
-								created a new logo &amp; packaging for LED trailer brake lights
+								Created a new logo and packaging for LED trailer brake lights.
 							</p>
 							<p class="work-responsibilities">
 								<span>Responsible for: </span>
@@ -456,10 +458,10 @@
 						<li><h4>e Flame</h4>
 							<h5>Freelance Branding &amp; Graphic Design</h5>
 							<div class="work-info">
-								<time datetime="2014-9"> Sept,</br>2014 </time>
+								<time datetime="2014-9">Sept. 2014</time>
 							</div>
 							<p>
-								designed info graphics for a line of electric heaters
+								Designed info graphics for a line of electric heaters.
 							</p>
 							<p class="work-responsibilities">
 								<span>Responsible for: </span>
@@ -475,18 +477,17 @@
 				<li><h3>The Keer Group</h3>
 					<h5>Freelance Graphic Design &amp; Web Development</h5>
 					<div class="work-info">
-						<time datetime="2013-11"> Nov, 2013</br>–present </time>
+						<time datetime="2013-11">Nov. 2013</br>–present</time>
 					</div>
 					<ul>
 						<li><h4>Wild Chef Spices</h4>
 							<p>
-								photoshopped new labels onto existing line of product 
-								photos to avoid a new photoshoot after a brand redesign.
+								Photoshopped new labels onto existing line of product photos to avoid a new photoshoot after a brand redesign.
 							</p>
 						</li>
 						<li><h4>Woodcock Limited</h4>
 							<p>
-								Designed an annual publication for the Woodcock ltd. conservation society.
+								Designed an annual publication for the Woodcock Ltd. Conservation Society.
 								Developed the menu bar for their wordpress site.
 								Designed other promotional materials.
 							</p>
@@ -501,7 +502,7 @@
 					<ul>
 						<li><h5>Graphic Designer</h5>
 							<div class="work-info">
-								<time datetime="2013-9"> Sept 2013–</br>Mar, 2014 </time>
+								<time datetime="2013-9">Sept. 2013–</br>Mar. 2014</time>
 								<a href="#" class="icon-capsule dark view-work"><svg class="icon">
 									<use xlink:href="#icon-view"></use></svg></a>
 							</div>
@@ -512,7 +513,7 @@
 								Swim Doctor, 
 								Hydroforce, 
 								UVcareful, 
-								&amp; Cloud9, 
+								and Cloud9. 
 							</p>
 							<p>
 								Lead in-house package design production team in the development of 
@@ -535,7 +536,7 @@
 						</li>
 						<li><h5>User experience Design Intern</h5>
 							<div class="work-info">
-								<time datetime="2013-7"> July–</br>Sept, 2013 </time>
+								<time datetime="2013-7">July–</br>Sept. 2013 </time>
 							</div>
 							<p>
 								Selected from more than 500 applicants to be on a 6 person 
@@ -545,7 +546,7 @@
 							<p>
 								Worked with team through multiple cycles of research, 
 								design, consumer testing, and redesign to produce a set of 6 
-								new market ready products for Bestway’s summer product line.						</p>
+								new market ready products for Bestway’s summer product line.
 							</p>
 						</li>
 					</ul>
@@ -555,10 +556,10 @@
 					<h5>Freelance Branding &amp; Graphic Design</h5>
 					<div class="work-info">
 						<span class="work-location">Shanghai,</br>China</span>
-						<time datetime="2013-9"> Oct 2013–</br>Jan, 2014 </time>
+						<time datetime="2013-9">Oct. 2013–</br>Jan. 2014</time>
 					</div>
 					<p>
-						Designed and produced a new bilingual(english &amp; chinese) 
+						Designed and produced a new bilingual (English and Chinese) 
 						branding identity and materials for a restaurant in Pudong district, Shanghai.
 					</p>
 					<p class="work-responsibilities">
@@ -578,7 +579,7 @@
 					<h5>Freelance Web Development</h5>
 					<div class="work-info">
 						<span class="work-location">Shanghai,</br>China</span>
-						<time datetime="2013-12">Dec, 2013 </time>
+						<time datetime="2013-12">Dec. 2013 </time>
 					</div>
 					<p>
 						Created a portfolio microsite to be used for a graduate 
@@ -594,10 +595,10 @@
 
 				<li><h3>University of Georgia Office of Sustainability &amp;</br>
 					Students for Environmental Action</h3>
-					<h5>Bro Bono Graphic Design</h5>
+					<h5>pro Bono Graphic Design</h5>
 					<div class="work-info">
 						<span class="work-location">Athens, GA</span>
-						<time datetime="2013-4">Spring, 2013 </time>
+						<time datetime="2013-4">Spring 2013</time>
 					</div>
 					<p>
 						designed logo and branded promotional materials for UGA’s 
@@ -618,18 +619,18 @@
 					<h5>Pro Bono Graphic Design</h5>
 					<div class="work-info">
 						<span class="work-location"> Athens, GA </span>
-						<time datetime="2012-11"> Winter,</br>2012–2013 </time>
+						<time datetime="2012-11">Winter</br>2012–2013</time>
 					</div>
 					<p>
-						designed the 2013 cycling team uniform including - shirts, jackets, hats, bibs, and socks
+						Designed the 2013 cycling team uniform including: shirts, jackets, hats, bibs, and socks.
 					</p>
 				</li>
 
 				<li><h3>Skateshop of Athens</h3>
-					<h5>Freelance Graphic Design and Illustration</h5>
+					<h5>Freelance Graphic Design &amp; Illustration</h5>
 					<div class="work-info">
 						<span class="work-location">Athens, GA</span>
-						<time datetime="2012-6"> Summer,</br> 2012 </time>
+						<time datetime="2012-6">Summer 2012</time>
 					</div>
 					<p>
 						Designed graphics for the shop brand of skateboard decks.
@@ -647,7 +648,7 @@
 					<h4>BFA Graphic Design</h4>
 					<div class="work-info">
 						<span class="work-location">Athens, GA</span>
-						<time datetime="2009-8"> Fall 2009–</br>Spring 2013 </time>
+						<time datetime="2009-8">Fall 2009–</br>Spring 2013</time>
 					</div>
 					<p>
 						Lamar Dodd School of Art</br>HOPE Scholarship - full tuition
@@ -657,7 +658,7 @@
 					<h4>Visual Arts Major, Science Minor</h4>
 					<div class="work-info">
 						<span class="work-location">Valdosta, GA</span>
-						<time datetime="2008-4"> Summer 2008 </time>
+						<time datetime="2008-4">Summer 2008</time>
 					</div>
 					<p>
 						An audition-only, state-sponsored summer 

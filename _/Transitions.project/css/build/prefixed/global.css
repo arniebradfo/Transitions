@@ -1,10 +1,12 @@
 /*!  
-Theme Name: Transitions
-Theme URI: http://html5reset.org
-Description: A custom WordPress theme with magical page load and unload transitions. Based on the HTML5 Reset Theme.
-Author: Arniebradfo
-Author URI: http://www.polaris.graphics
-Version: 1.0
+Theme Name: 		Transitions
+Theme URI: 			https://github.com/arniebradfo/Transitions
+Description: 		A custom WordPress theme with magical page load and unload transitions. Based on the HTML5 Reset Theme.
+Author: 			Arniebradfo
+Author URI: 		http://www.polaris.graphics
+Version: 			1.0.1
+GitHub Theme URI: 	https://github.com/arniebradfo/Transitions
+GitHub Branch:    	master
 */
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,900,100);
 /*	
@@ -854,8 +856,8 @@ h1, h2, h3, h4, h5, h6
           backface-visibility: hidden; }
 
 #wrapper.menu-is-active {
-  -webkit-transform: translateX(350px) translateZ(0);
-          transform: translateX(350px) translateZ(0); }
+  -webkit-transform: translateX(310px) translateZ(0);
+          transform: translateX(310px) translateZ(0); }
 
 body {
   overflow-x: hidden; }
@@ -911,7 +913,7 @@ body {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 350px;
+  width: 310px;
   -webkit-transition: all 0.25s ease;
        -o-transition: all 0.25s ease;
           transition: all 0.25s ease;
@@ -972,17 +974,17 @@ body {
     #home-link {
       margin: 0 4.5px; }
       #home-link img {
-        width: 321px; } }
+        width: 281px; } }
   @media screen and (min-width: 500px) and (max-width: 999px) {
     #home-link {
       margin: 0 14.5px; }
       #home-link img {
-        width: 301px; } }
+        width: 261px; } }
   @media screen and (min-width: 1000px) {
     #home-link {
       margin: 0 17px; }
       #home-link img {
-        width: 296px; } }
+        width: 256px; } }
 
 .icon-nav {
   position: absolute;
@@ -1059,7 +1061,7 @@ body {
     margin-top: -10px; } }
 @media screen and (max-width: 499px) {
   #header-wrapper .menu-item a {
-    margin-top: 0px; } }
+    margin-top: 10px; } }
 
 .nav-bottom {
   position: absolute;
@@ -1240,7 +1242,7 @@ body {
     background: gray; }
     @media screen and (max-width: 499px) {
       #search-form::after {
-        bottom: 8.75px;
+        bottom: 4.375px;
         left: 32.75px;
         right: 4.5px; } }
     @media screen and (min-width: 500px) and (max-width: 999px) {
@@ -2863,6 +2865,9 @@ body {
     .skill:nth-child(3n+1), .set-title:nth-child(3n+1), .subskill:nth-child(3n+1) {
       margin-left: 0; }
 
+  #list-software > li:nth-child(3) {
+    margin-left: 0; }
+
   #adobe-software {
     width: 99%;
     padding-bottom: 66.033%;
@@ -2933,7 +2938,6 @@ body {
   #work-experience li, #education li {
     position: relative; }
   #work-experience > ul > li, #education > ul > li {
-    margin-left: 150px;
     margin-bottom: 2.5rem;
     margin-top: 2.5rem; }
     #work-experience > ul > li > ul > li, #education > ul > li > ul > li {
@@ -2946,19 +2950,34 @@ body {
   position: absolute;
   right: 100%;
   top: 0;
-  width: 150px;
-  padding-left: 1rem;
-  padding-right: 1rem;
   text-align: right;
   color: #ff5831;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 1.1rem;
   line-height: 1.1em; }
   .work-info time, .work-info span {
     margin-bottom: 0.4rem;
     display: block; }
 
+@media screen and (min-width: 500px) {
+  .work-info {
+    width: 130px;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    padding-right: 1rem; }
+
+  #work-experience > ul > li, #education > ul > li {
+    margin-left: 130px; } }
+@media screen and (max-width: 499px) {
+  .work-info {
+    width: 50px;
+    font-size: 0.6rem;
+    padding-left: 0px;
+    padding-right: 5px;
+    line-height: 1.3em; }
+
+  #work-experience > ul > li, #education > ul > li {
+    margin-left: 50px; } }
 .work-responsibilities {
   text-transform: uppercase;
   font-size: .8rem;

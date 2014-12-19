@@ -176,7 +176,7 @@ $logoDimensions:55%;
 		@include postRows(4, $boxMargins, 1, false);
 	}
 	#list-software{
-		li:nth-child(3){ margin-right: 0; }
+		li:nth-child(3) { margin-right: 0; }
 		.set-title, .subskill{
 			@include postRows(4, $boxMargins, 0.975);
 		}
@@ -200,6 +200,9 @@ $logoDimensions:55%;
 @include screenSize(S,M) {
 	.skill, .set-title, .subskill{
 		@include postRows(3, $boxMargins, 1, false);
+	}
+	#list-software{
+		> li:nth-child(3) { margin-left: 0; }
 	}
 	#adobe-software{
 		@include postRows(1, $boxMargins, .667);

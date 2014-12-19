@@ -71,7 +71,7 @@ $sideMarginsNavL: ($sideMarginsL - $buttonNavSizeL) / 2 ;
 $sideMarginsNavM: ($sideMarginsM - $buttonNavSizeM) / 2 ;
 $sideMarginsNavS: ($sideMarginsS - $buttonNavSizeS) / 2 ;
 
-$menuWidth: 350px;
+$menuWidth: 310px;
 $menuPadding: 10px;
 $menuMinHeight: 500px;
 $menuMinHeightS: 0;
@@ -218,6 +218,6 @@ $activeTiming: 0.05s;
 // --------------------------------------------------------------- CUT AND PASTE
 // empty standard media query useage
 // ... for copy & paste
-@include screenSize(L){}
-@include screenSize(S,L){}
-@include screenSize(0,S){}
+@include screenSize(L) {}
+@include screenSize(S,L) {}
+@include screenSize(0,S) {}

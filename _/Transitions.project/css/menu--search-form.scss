@@ -22,7 +22,7 @@
 		background: $colorBlack5;
 		
 		@include screenSize(0,S) {
-			bottom:$sideMarginsS / 4;
+			bottom:$sideMarginsS / 8;
 			left: $sideMarginsS - ( $sideMarginsNavS / 2 );
 			right: $sideMarginsNavS;		
 		}		

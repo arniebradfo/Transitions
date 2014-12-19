@@ -25,6 +25,7 @@ function readyLoadingAmimation() {
 
 	// delete the "plese make sure you have your javascript turned on" warning
 	$('#wrapper-js-warning').remove();
+	$('#wrapper-home').remove();
 
 	// defines list of elements to be animated on loads & scroll - it's a doozy
 	$animated = $('

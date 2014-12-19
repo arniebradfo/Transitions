@@ -89,7 +89,7 @@
 #header-wrapper .menu-item a{
 	@include screenSize(L) {	margin-top: -20px; 	}
 	@include screenSize(S,L) {	margin-top: -10px; 	}
-	@include screenSize(0,S) {	margin-top: 0px; 	}
+	@include screenSize(0,S) {	margin-top: 10px; 	}
 }
 
 // --------------------------------------------------------------- NAV BOTTOM FIELDS

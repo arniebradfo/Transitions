@@ -1,7 +1,8 @@
 // about--resume.scss
 
 $centerFoldPadding: 1rem;
-$workInfoWidth:150px;
+$workInfoWidthWide:130px;
+$workInfoWidthThin:50px;
 
 #work-experience{
 	color: white;
@@ -19,7 +20,6 @@ $workInfoWidth:150px;
 		position: relative;
 	}
 	& > ul > li{
-		margin-left: $workInfoWidth;
 		margin-bottom:	2.5rem;
 		margin-top:		2.5rem;
 		& > ul > li{
@@ -34,22 +34,46 @@ $workInfoWidth:150px;
 	position: absolute;
 	right:100%;
 	top: 0;
-	width: $workInfoWidth;
-	padding-left: 	$centerFoldPadding;
-	padding-right: 	$centerFoldPadding;
 
 	text-align: right;
 	color: $colorAccent;
 	font-weight: 400;
 	text-transform: uppercase;
-	font-size: 1.1rem;
 	line-height: 1.1em;
 
 	time,span{
 		margin-bottom: $textMargins/2;
 		display: block;
 	}
+}
 
+// MEDIA QUERIES
+@include screenSize(S) {
+	.work-info{
+		width: $workInfoWidthWide;
+		font-size: 1.1rem;
+		padding-left: 	$centerFoldPadding;
+		padding-right: 	$centerFoldPadding;
+	}
+	#work-experience, #education{
+		& > ul > li{
+			margin-left: $workInfoWidthWide;
+		}
+	}
+}
+@include screenSize(0,S) {
+	.work-info{
+		width: $workInfoWidthThin;
+		font-size: 0.6rem;
+		padding-left: 	0px;
+		padding-right: 	5px;
+		line-height: 1.3em;
+	}
+	#work-experience, #education{
+		& > ul > li{
+			margin-left: $workInfoWidthThin;
+		}
+	}
 }
 
 .work-responsibilities{
