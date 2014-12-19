@@ -31,8 +31,9 @@
 
 	<meta name="title" content="<?php wp_title( '|', true, 'right' ); ?>">
 
-	<meta name="description" content="<?php bloginfo('description'); ?>" />
-
+	<!-- yaost SEO takes care of this -->
+	<!-- <meta name="description" content="<?php bloginfo('description'); ?>" /> -->
+	
 	<?php
 		if (true == of_get_option('meta_author'))
 			echo '<meta name="author" content="' . of_get_option("meta_author") . '" />';
