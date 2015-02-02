@@ -225,6 +225,20 @@ function CustomZoomControl(controlDiv, map) {
 	    map.setZoom(map.getZoom()-1)
 	});
 }
+// jquery.isFirefox.js
+
+function fireFoxLimits(){
+	// Firefox 1.0+ Detection - Sorry if sniffing isn't sexy
+	var isFirefox = typeof InstallTrigger !== 'undefined';   
+	// FireFox can't handle animationing such a large area?
+	// if FireFox, delete the large elements and skip the centering
+	if ( isFirefox && $('.image-overlay').length ){
+		$('.image-overlay').css({
+			'display' : 'none'
+		}); 
+	}
+}
+
 // jquery.loadingAnimation.js
 // css classes are in js-loading-animation.scss
 
@@ -245,6 +259,7 @@ function animateReset() {
 	$('.below-the-fold').removeClass('below-the-fold');
 	$('.image-in-viewport').removeClass('image-in-viewport');
 	$('.image-below-the-fold').removeClass('image-below-the-fold');	
+	$('.fade').removeClass('fade');	
 }
 
 // code to be executed on document.ready
@@ -424,7 +439,9 @@ function animateOut($href) {
 	;
 	// if this is the home page, animate the home page elements
 	if ( $('#home-header').length ) {
-		$('#home-header').addClass('above-the-top');
+		$('#total-animation').addClass('above-the-top');
+		$('#home-bg').addClass('fade');
+		$('#home-nav').removeClass('above-the-top').addClass('fade');
 	}
 	// reset #wrapper-loading to original state
 	$('#wrapper-loading').css({	
@@ -706,6 +723,7 @@ function setWindowHeight() {
 		scrollDown();
 		scrollToTop();
 		currentLinks();
+		fireFoxLimits();
 	});
 
 	var theTiming = 1000; // WHY 1000?

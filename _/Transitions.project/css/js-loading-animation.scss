@@ -30,3 +30,9 @@ $threshold:50px; // must match the  thresholdExpand var in "jquery.viewportSelec
 	@include transform( translateY(($threshold * -1))  );
 	@include transition(all, .5s, ease-in);
 }
+
+.fade{
+	opacity: 0;
+	@include transition(all, .55s, ease-in);
+
+}

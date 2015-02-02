@@ -4,7 +4,7 @@ Theme URI: 			https://github.com/arniebradfo/Transitions
 Description: 		A custom WordPress theme with magical page load and unload transitions. Based on the HTML5 Reset Theme.
 Author: 			Arniebradfo
 Author URI: 		http://www.polaris.graphics
-Version: 			1.0.4
+Version: 			1.1.0
 GitHub Theme URI: 	https://github.com/arniebradfo/Transitions
 GitHub Branch:    	master
 */
@@ -781,7 +781,7 @@ use {
 }
 
 #menu-toggle {
-	z-index: 15;
+	z-index: 16;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -806,7 +806,7 @@ use {
 }
 
 .info-toggle {
-	z-index: 6;
+	z-index: 7;
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -973,7 +973,7 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 7;
+	z-index: 8;
 	background-color: white;
 	opacity: 0;
 	-webkit-transition: -webkit-transform 0.001s ease;
@@ -1007,7 +1007,7 @@ body {
 
 #header {
 	overflow-y: scroll;
-	z-index: 14;
+	z-index: 15;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -1119,7 +1119,7 @@ body {
 
 .nav a {
 	position: relative;
-	z-index: 11;
+	z-index: 12;
 	-webkit-transition: all 0.25s ease;
 	-o-transition: all 0.25s ease;
 	transition: all 0.25s ease;
@@ -1382,12 +1382,28 @@ body {
 	color: white;
 }
 
-.post-link picture {
+.post-link picture,
+.post-link .image-overlay {
 	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
+}
+
+.post-link .image-overlay {
+	background: black;
+	background: -webkit-gradient(linear, left bottom, left top, from(black), to(#666666));
+	background: -webkit-linear-gradient(bottom, black, #666666);
+	background: -o-linear-gradient(bottom, black, #666666);
+	background: linear-gradient(to top, black, #666666);
+	z-index: 2;
+	opacity: 0.5;
+	-webkit-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 .post-link img,
@@ -1416,7 +1432,7 @@ body {
 }
 
 .post-link h2 {
-	z-index: 2;
+	z-index: 3;
 	padding: 0.8rem;
 	margin-top: 0;
 	margin-right: 0;
@@ -1442,7 +1458,7 @@ body {
 	left: 0;
 	right: 0;
 	opacity: 0;
-	z-index: 4;
+	z-index: 5;
 }
 
 .post-link footer {
@@ -1450,7 +1466,7 @@ body {
 	bottom: -1%;
 	padding-left: 0.8rem;
 	padding-right: 0.8rem;
-	z-index: 5;
+	z-index: 6;
 	background: white;
 	color: gray;
 	-webkit-transform: translateY(100%) translateZ(0);
@@ -1551,10 +1567,10 @@ ul.navigation .page-next {
 	width: 99%;
 	height: 94.5%;
 	overflow: hidden;
-	background: -webkit-gradient(linear, left bottom, left top, from(black), to(white));
-	background: -webkit-linear-gradient(bottom, black, white);
-	background: -o-linear-gradient(bottom, black, white);
-	background: linear-gradient(to top, black, white);
+	background: -webkit-gradient(linear, left bottom, left top, from(black), to(#e6e6e6));
+	background: -webkit-linear-gradient(bottom, black, #e6e6e6);
+	background: -o-linear-gradient(bottom, black, #e6e6e6);
+	background: linear-gradient(to top, black, #e6e6e6);
 }
 
 #post-header picture img,
@@ -1608,8 +1624,30 @@ ul.navigation .page-next {
 	transition: all 0.25s ease;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	padding-left: 0.8rem;
-	padding-right: 0.8rem;
+	padding-left: 1.6rem;
+	padding-right: 1.6rem;
+	color: #4d4d4d;
+}
+
+#post-header footer a,
+#about-header footer a,
+#contact-header footer a {
+	color: #1a1a1a;
+}
+
+#post-header footer a:hover,
+#post-header footer a:focus,
+#about-header footer a:hover,
+#about-header footer a:focus,
+#contact-header footer a:hover,
+#contact-header footer a:focus {
+	color: #333333;
+}
+
+#post-header footer a:active,
+#about-header footer a:active,
+#contact-header footer a:active {
+	color: white;
 }
 
 #post-header footer p,
@@ -1732,7 +1770,7 @@ article.post {
 }
 
 #adjacent-posts .post-link .nav-arrow-tall {
-	z-index: 3;
+	z-index: 4;
 	position: absolute;
 	stroke: #fff;
 	stroke-width: 3px;
@@ -1951,19 +1989,36 @@ body {
 	stroke-width: 3px;
 }
 
-#home-header {
-	z-index: 16;
+#home-bg {
+	z-index: 17;
 	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
 	background: #172126;
+}
+
+#total-animation {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+#home-header {
+	z-index: 18;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 	overflow: hidden;
 }
 
 .ring {
-	z-index: 17;
+	z-index: 19;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -1985,14 +2040,14 @@ body {
 }
 
 #polaris-graphics-animation {
-	z-index: 18;
+	z-index: 20;
 	position: absolute;
 	height: 100%;
 	width: 100%;
 }
 
 #home-nav {
-	z-index: 19;
+	z-index: 21;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -2394,10 +2449,10 @@ body {
 	margin: 0 0.5%;
 	height: 95%;
 	overflow: hidden;
-	background: -webkit-gradient(linear, left bottom, left top, from(black), to(white));
-	background: -webkit-linear-gradient(bottom, black, white);
-	background: -o-linear-gradient(bottom, black, white);
-	background: linear-gradient(to top, black, white);
+	background: -webkit-gradient(linear, left bottom, left top, from(black), to(#e6e6e6));
+	background: -webkit-linear-gradient(bottom, black, #e6e6e6);
+	background: -o-linear-gradient(bottom, black, #e6e6e6);
+	background: linear-gradient(to top, black, #e6e6e6);
 }
 
 #cd-zoom-in,
@@ -2622,6 +2677,15 @@ body {
 	-webkit-transition: all 0.5s ease-in;
 	-o-transition: all 0.5s ease-in;
 	transition: all 0.5s ease-in;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.fade {
+	opacity: 0;
+	-webkit-transition: all 0.55s ease-in;
+	-o-transition: all 0.55s ease-in;
+	transition: all 0.55s ease-in;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
@@ -3439,6 +3503,10 @@ h2.page-title,
 	transform: translate(-50%, -50%) scale(0.95) translateZ(0);
 }
 
+.post-link:hover .image-overlay {
+	opacity: 0;
+}
+
 ul.navigation {
 	margin-left: 70px;
 }
@@ -3519,6 +3587,12 @@ ul.navigation {
 #about-header footer,
 #contact-header footer {
 	min-height: 70px;
+}
+
+#post-header footer,
+#about-header footer,
+#contact-header footer {
+	padding-top: 0.8rem;
 }
 
 #post-content {
@@ -3696,6 +3770,11 @@ ul.navigation {
 	opacity: 0.5;
 	-webkit-transform: translate(-50%, -50%) scale(0.95) translateZ(0);
 	transform: translate(-50%, -50%) scale(0.95) translateZ(0);
+}
+
+#adjacent-posts .left-post:hover .image-overlay,
+#adjacent-posts .right-post:hover .image-overlay {
+	opacity: 0;
 }
 
 #adjacent-posts .left-post:hover .nav-arrow-tall-right,
@@ -3911,18 +3990,17 @@ ul.navigation {
 	transform: translate(-50%, -50%) scale(0.95) translateZ(0);
 }
 
+.post-link.info-is-active .image-overlay {
+	opacity: 0;
+}
+
 #post-header footer,
 #about-header footer,
 #contact-header footer {
 	background: white;
+	color: gray;
 	-webkit-transform: translate(0, -100%) translateZ(0);
 	transform: translate(0, -100%) translateZ(0);
-}
-
-#post-header footer p,
-#about-header footer p,
-#contact-header footer p {
-	color: gray;
 }
 
 #post-header.info-is-active footer,

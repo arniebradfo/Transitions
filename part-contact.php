@@ -27,7 +27,7 @@
 			</section>
 
 			<h1 class="entry-title">
-				Greetings from Logan, Utah
+				Greetings from</br>Logan, Utah
 			</h1>
 
 			<!-- svg button -->

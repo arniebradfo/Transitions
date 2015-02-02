@@ -17,6 +17,7 @@
 		scrollDown();
 		scrollToTop();
 		currentLinks();
+		fireFoxLimits();
 	});
 
 	var theTiming = 1000; // WHY 1000?

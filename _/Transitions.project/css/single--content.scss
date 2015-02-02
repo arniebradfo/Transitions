@@ -13,6 +13,12 @@
 			width: 100%;
 		}
 	}
+	// // for long paragraphs ?? Make a specal class??
+	// @include screenSize(L) {
+	// 	p{
+	// 		column-count: 2;
+	// 	}		
+	// }
 }
 
 article.post{

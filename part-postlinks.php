@@ -23,6 +23,8 @@
 			<img srcset="<?php // ??? - not sure if its nessasary to put anything here - ??? ?>" alt="<?php echo get_post_meta($thumbID, '_wp_attachment_image_alt', true); ?>">
 			<noscript><?php the_post_thumbnail('sizeM'); ?></noscript>
 		</picture>
+
+		<div class="image-overlay"></div>
 		
 		<footer class="post-meta-data">
 			<p><?php posted_on(); ?></p>

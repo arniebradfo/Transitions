@@ -72,8 +72,21 @@ $headerPictureHeightSmall:100% - $headerBottomMarginSmall;
 		width: 100%;
 		@include dimension(1,min-height);
 		@include transition();
-		padding-left: $textMargins;
-		padding-right: $textMargins;
+		padding-left: $textMargins*2;
+		padding-right: $textMargins*2;
+		@include screenSize(L) {
+			padding-top: $textMargins;
+		}
+		color: $colorBlack7;
+		a{
+			color:$colorBlack9;
+			&:hover,&:focus{
+				color:$colorBlack8;
+			}
+			&:active{
+				color:$colorBlack0;
+			}
+		}
 		p{
 			@include fontCaps;
 			text-align: right;
@@ -94,11 +107,10 @@ $headerPictureHeightSmall:100% - $headerBottomMarginSmall;
 	@include screenSize(0,L) {
 		footer{
 			background: $colorBG;
+			color: $colorBlack5;
 			@include dimension(1,padding-left, padding-right);
+			// padding-top: $textMargins*1.5;
 			@include transform(translate(0,-100%));
-			p{
-				color: $colorBlack5;
-			}
 		}
 		&.info-is-active{
 			footer{

@@ -34,7 +34,9 @@ $colorSelectionText: invert($colorSelectionBG);
 $colorBG: white;
 
 $backgroundGradientDown:	linear-gradient(to bottom, 	$colorBlack, lighten($colorBlack5, 50%));
-$backgroundGradientUp:		linear-gradient(to top, 	$colorBlack, lighten($colorBlack5, 50%));
+$backgroundGradientUp:		linear-gradient(to top, 	$colorBlack, $colorBlack1);
+$backgroundGradientOverlay:	linear-gradient(to top, 	$colorBlack, $colorBlack6);
+
 
 $colorFooterBG: $colorBlack9;
 

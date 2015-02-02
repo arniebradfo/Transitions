@@ -18,10 +18,20 @@ $polarisCenterXPercent:(100% * $polarisCenterX) / $polarisWidth;
 $polarisCenterYPercent:(100% * $polarisCenterY) / $polarisHeight;
 
 
+#home-bg{
+	z-index: index($z-of, '#home-bg');
+	@include absoluteFill;
+	background: $colorAnimationBG;
+}
+
+#total-animation{
+	@include absoluteFill;
+}
+
 #home-header{
 	z-index: index($z-of, '#home-header');
 	@include absoluteFill;
-	background: $colorAnimationBG;
+	// background: $colorAnimationBG;
 	overflow: hidden;
 }
 

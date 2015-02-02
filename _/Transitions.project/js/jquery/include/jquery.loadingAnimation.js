@@ -18,6 +18,7 @@ function animateReset() {
 	$('.below-the-fold').removeClass('below-the-fold');
 	$('.image-in-viewport').removeClass('image-in-viewport');
 	$('.image-below-the-fold').removeClass('image-below-the-fold');	
+	$('.fade').removeClass('fade');	
 }
 
 // code to be executed on document.ready
@@ -197,7 +198,9 @@ function animateOut($href) {
 	;
 	// if this is the home page, animate the home page elements
 	if ( $('#home-header').length ) {
-		$('#home-header').addClass('above-the-top');
+		$('#total-animation').addClass('above-the-top');
+		$('#home-bg').addClass('fade');
+		$('#home-nav').removeClass('above-the-top').addClass('fade');
 	}
 	// reset #wrapper-loading to original state
 	$('#wrapper-loading').css({	

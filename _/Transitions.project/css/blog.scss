@@ -22,6 +22,9 @@
 		opacity:0.5;
 		@include transform( translate(-50%,-50%) scale(0.95));
 	}
+	.image-overlay{
+		opacity: 0;
+	}
 }
 
 // --------------------------------------------------------------- POST LINKS
@@ -84,8 +87,17 @@
 	}
 
 	// ------------------------------------------- POST LINK ELEMENTS
-	picture{
+	picture
+	,.image-overlay
+	{
 		@include absoluteFill;
+	}
+	.image-overlay{
+		background: black;
+		background: $backgroundGradientOverlay;
+		z-index:index($z-of,'.image-overlay');
+		opacity:0.5;
+		@include transition();
 	}
 	img, h2, footer, a.post-permalink{ // --------------------------------------< IMG HERE
 		position:absolute;
