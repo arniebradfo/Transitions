@@ -67,6 +67,8 @@
 			
 				<?php // posted_on(); ?>
 
+				<p id="post-content-rule"></p>
+
 			</section>
 
 			<div class="icon-capsule scroll-to-top">

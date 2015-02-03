@@ -137,6 +137,8 @@
 				$adjacent_posts .='<img><!-- no featured image set -->';
 			}
 
+			$adjacent_posts .='<div class="image-overlay"></div>';
+
 			$adjacent_posts .='
 				<footer class="post-meta-data">
 					<p>Posted on:

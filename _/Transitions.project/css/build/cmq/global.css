@@ -4,7 +4,7 @@ Theme URI: 			https://github.com/arniebradfo/Transitions
 Description: 		A custom WordPress theme with magical page load and unload transitions. Based on the HTML5 Reset Theme.
 Author: 			Arniebradfo
 Author URI: 		http://www.polaris.graphics
-Version: 			1.1.0
+Version: 			1.1.1
 GitHub Theme URI: 	https://github.com/arniebradfo/Transitions
 GitHub Branch:    	master
 */
@@ -1684,6 +1684,7 @@ ul.navigation .page-next {
 
 #post-content {
 	min-height: 200px;
+	margin-bottom: 0.8rem;
 }
 
 #post-content > picture,
@@ -1695,6 +1696,16 @@ ul.navigation .page-next {
 
 #post-content picture img {
 	width: 100%;
+}
+
+#post-content-rule {
+	height: 2px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	background: gray;
+	margin-top: 0;
+	margin-bottom: -1px;
 }
 
 article.post {
@@ -3040,6 +3051,22 @@ ul.navigation {
 	margin-right: 60px;
 }
 
+#post-content {
+	padding-bottom: 60px;
+}
+
+#post-content-rule {
+	margin-left: 60px;
+}
+
+#post-content-rule {
+	margin-right: 60px;
+}
+
+#post-content-rule {
+	bottom: 30px;
+}
+
 .scroll-down {
 	margin-bottom: -30px;
 }
@@ -3603,6 +3630,22 @@ ul.navigation {
 	margin-right: 70px;
 }
 
+#post-content {
+	padding-bottom: 70px;
+}
+
+#post-content-rule {
+	margin-left: 70px;
+}
+
+#post-content-rule {
+	margin-right: 70px;
+}
+
+#post-content-rule {
+	bottom: 35px;
+}
+
 .scroll-down {
 	margin-bottom: -35px;
 }
@@ -3920,6 +3963,10 @@ ul.navigation {
 	display: visible;
 }
 
+.post-link .image-overlay {
+	display: none;
+}
+
 .post-link img {
 	opacity: 0.65;
 }
@@ -4227,6 +4274,22 @@ ul.navigation {
 
 #post-content {
 	margin-right: 35px;
+}
+
+#post-content {
+	padding-bottom: 35px;
+}
+
+#post-content-rule {
+	margin-left: 35px;
+}
+
+#post-content-rule {
+	margin-right: 35px;
+}
+
+#post-content-rule {
+	bottom: 17.5px;
 }
 
 .scroll-down {

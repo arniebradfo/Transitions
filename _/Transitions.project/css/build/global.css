@@ -4,7 +4,7 @@ Theme URI: 			https://github.com/arniebradfo/Transitions
 Description: 		A custom WordPress theme with magical page load and unload transitions. Based on the HTML5 Reset Theme.
 Author: 			Arniebradfo
 Author URI: 		http://www.polaris.graphics
-Version: 			1.1.0
+Version: 			1.1.1
 GitHub Theme URI: 	https://github.com/arniebradfo/Transitions
 GitHub Branch:    	master
 */
@@ -1268,6 +1268,9 @@ body {
         font-size: 4rem; }
         .post-link h2 span {
           font-size: 1.5rem; } }
+  @media screen and (max-width: 999px) {
+    .post-link .image-overlay {
+      display: none; } }
   .post-link picture
   , .post-link .image-overlay {
     position: absolute;
@@ -1656,7 +1659,8 @@ ul.navigation {
     right: 0; }
 
 #post-content {
-  min-height: 200px; }
+  min-height: 200px;
+  margin-bottom: 0.8rem; }
   @media screen and (max-width: 499px) {
     #post-content {
       margin-left: 35px; } }
@@ -1675,12 +1679,57 @@ ul.navigation {
   @media screen and (min-width: 1000px) {
     #post-content {
       margin-right: 70px; } }
+  @media screen and (max-width: 499px) {
+    #post-content {
+      padding-bottom: 35px; } }
+  @media screen and (min-width: 500px) and (max-width: 999px) {
+    #post-content {
+      padding-bottom: 60px; } }
+  @media screen and (min-width: 1000px) {
+    #post-content {
+      padding-bottom: 70px; } }
   #post-content > picture, #post-content > img {
     width: 100%;
     margin-top: 0.5%;
     margin-bottom: 0.5%; }
   #post-content picture img {
     width: 100%; }
+
+#post-content-rule {
+  height: 2px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: gray;
+  margin-top: 0;
+  margin-bottom: -1px; }
+  @media screen and (max-width: 499px) {
+    #post-content-rule {
+      margin-left: 35px; } }
+  @media screen and (min-width: 500px) and (max-width: 999px) {
+    #post-content-rule {
+      margin-left: 60px; } }
+  @media screen and (min-width: 1000px) {
+    #post-content-rule {
+      margin-left: 70px; } }
+  @media screen and (max-width: 499px) {
+    #post-content-rule {
+      margin-right: 35px; } }
+  @media screen and (min-width: 500px) and (max-width: 999px) {
+    #post-content-rule {
+      margin-right: 60px; } }
+  @media screen and (min-width: 1000px) {
+    #post-content-rule {
+      margin-right: 70px; } }
+  @media screen and (max-width: 499px) {
+    #post-content-rule {
+      bottom: 17.5px; } }
+  @media screen and (min-width: 500px) and (max-width: 999px) {
+    #post-content-rule {
+      bottom: 30px; } }
+  @media screen and (min-width: 1000px) {
+    #post-content-rule {
+      bottom: 35px; } }
 
 article.post {
   position: relative; }

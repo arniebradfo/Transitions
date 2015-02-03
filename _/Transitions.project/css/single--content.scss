@@ -2,7 +2,9 @@
 
 #post-content{
 	min-height: 200px;
-	@include dimension(1,margin-left, margin-right);
+	@include dimension(1,margin-left, margin-right,padding-bottom);
+	margin-bottom: $textMargins;
+
 	> picture, > img{
 		width: 100%;
 		margin-top: $imgMargins;
@@ -19,6 +21,21 @@
 	// 		column-count: 2;
 	// 	}		
 	// }
+}
+
+#post-content-rule{
+	// content: '';
+	// width: 100%;
+	height:2px;
+	position: absolute;
+	left:0;
+	right: 0;
+	// bottom: 10px;
+	background: $colorBlack5;
+	margin-top: 0;
+	margin-bottom: -1px;
+	@include dimension(1,margin-left, margin-right);
+	@include dimension(.5,bottom);
 }
 
 article.post{

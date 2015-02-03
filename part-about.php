@@ -44,7 +44,7 @@
 			<h2>Do you need a web &amp; graphics guy?</h2>
 			<p>
 				I can help! 
-				I'm James Bradford. 
+				My name's James Bradford. 
 				I’m a  multifaceted designer and developer living in beautiful Logan, Utah. 
 				I produce compelling visual and interactive experiences by blending graphic design and web development with the perfect mix of technology and creativity. 
 				I believe the web should be more intuitive, friendly, and beautiful, so I strive to craft simple, usable interfaces to promote remarkable and memorable brand identity.
