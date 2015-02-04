@@ -275,6 +275,33 @@
 
 			<ul>
 
+				<li><h3>Bestway Global</h3>
+					<h5>Digital Operator &amp; Production Assistant</h5>
+					<div class="work-info">
+						<span class="work-location">Phuket,</br>Thailand</span>
+						<time datetime="2015-1"> Jan. 2015 </time>
+					</div>
+					<p>
+						Worked as an integral part of a photo/video production team on a 2 week photo shoot of more than 400 items 
+						that included product photos, lifestyle photos, and a instructional video component.
+					</p>
+					<p>
+						Helped compose shots and adjusted lighting/camera settings as needed.
+						Helped art direct wardrobe/product/set combinations and photo compositions. 
+						Managed and directed models including children ages 2-12 years. 
+						Color corrected and light balanced photos as examples for a post-production team to follow. 
+						Filled in as a photographer when needed.  
+					</p>
+					<p class="work-responsibilities">
+						<span>Responsible for: </span>
+						set design, 
+						art direction, 
+						photo editing, 
+						photography, 
+						scheduling &amp; management
+					</p>
+				</li>
+
 				<li><h3>Willoughby &amp; Crane</h3>
 					<h5>Freelance Logo Development</h5>
 					<div class="work-info">
@@ -316,7 +343,7 @@
 						storyboarding, 
 						photo editing, 
 						photography, 
-						scheduling and management
+						scheduling &amp; management
 					</p>
 				</li>
 
