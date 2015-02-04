@@ -387,7 +387,7 @@
 								<time datetime="2014-1">Jan. 2014–</br>present</time>
 							</div>
 							<p>
-								Cxreated promotional ads and other web content for solostove.com
+								Created promotional ads and other web content for solostove.com
 							</p>
 							<p class="work-responsibilities">
 								<span>Responsible for: </span>
@@ -543,7 +543,7 @@
 								and Cloud9. 
 							</p>
 							<p>
-								Lead in-house package design production team in the development of 
+								Led in-house package design production team in the development of 
 								dimension independent package design templates. Educated the team on 
 								the tools and processes needed to produce print ready packaging for 
 								over 200 products.
@@ -628,7 +628,7 @@
 						<time datetime="2013-4">Spring 2013</time>
 					</div>
 					<p>
-						designed logo and branded promotional materials for UGA’s 
+						Designed logo and branded promotional materials for UGA’s 
 						Earth Week events that included: posters, banners, t shirts, 
 						and digital media.
 					</p>

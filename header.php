@@ -41,6 +41,8 @@
 
 	<meta name="Copyright" content="Copyright &copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?>. All Rights Reserved.">
 
+	<meta name="p:domain_verify" content="3cfe7461cad9d55314beba0db32f456b"/>
+	
 	<?php
 		/*
 			j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
