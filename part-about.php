@@ -421,84 +421,24 @@
 								web development
 							</p>
 						</li>
-						<li><h4>SlumberMaax</h4>
-							<h5>Freelance Web Development</h5>
-							<div class="work-info">
-								<time datetime="2014-2"> Feb. 2014 </time>
-							</div>
-							<p>
-								Refurbished homepage of an ecommerce mattress distributer 
-								by creating new sliding banners and animated categorical links.
-							</p>
-							<p class="work-responsibilities">
-								<span>Responsible for: </span>
-								layout, 
-								interaction design, 
-								web development
-							</p>
-						</li>
 					</ul>
 				</li>
 
-				<li><h3>Dura Global Sourcing</h3>
+				<li><h3>SlumberMaax</h3>
+					<h5>Freelance Web Development</h5>
 					<div class="work-info">
-						<time datetime="2014-1">Jan. 2014–</br>present</time>
+						<time datetime="2014-2"> Feb. 2014 </time>
 					</div>
 					<p>
-						Designed a wide range of promotional materials for 
-						eCommerce and marketing of various sub-brands including:
+						Refurbished homepage of an ecommerce mattress distributer 
+						by creating new sliding banners and animated categorical links.
 					</p>
-					<ul>
-						</li>
-						<li><h4>Perfect Cloud</h4>
-							<h5>Freelance Branding &amp; Graphic Design</h5>
-							<div class="work-info">
-								<time datetime="2014-5">May. 2014</time>
-							</div>
-							<p>
-								Created initial logo and branding identity for 
-								a memory foam mattress start up.
-							</p>
-							<p class="work-responsibilities">
-								<span>Responsible for: </span>
-								branding, 
-								logo development, 
-								icon design, 
-								package design, 
-								infographics
-							</p>
-						</li>
-						<li><h4>Lumitronics</h4>
-							<h5>Freelance Logo &amp; Package Design</h5>
-							<div class="work-info">
-								<time datetime="2014-5">May.-Sept.</br>2014</time>
-							</div>
-							<p>
-								Created a new logo and packaging for LED trailer brake lights.
-							</p>
-							<p class="work-responsibilities">
-								<span>Responsible for: </span>
-								logo development, 
-								package design
-							</p>
-						</li>
-						<li><h4>e Flame</h4>
-							<h5>Freelance Branding &amp; Graphic Design</h5>
-							<div class="work-info">
-								<time datetime="2014-9">Sept. 2014</time>
-							</div>
-							<p>
-								Designed info graphics for a line of electric heaters.
-							</p>
-							<p class="work-responsibilities">
-								<span>Responsible for: </span>
-								branding, 
-								icon design, 
-								infographics, 
-								layout
-							</p>
-						</li>
-					</ul>
+					<p class="work-responsibilities">
+						<span>Responsible for: </span>
+						layout, 
+						interaction design, 
+						web development
+					</p>
 				</li>
 
 				<li><h3>The Keer Group</h3>

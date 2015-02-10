@@ -1,0 +1,343 @@
+-dura-text.txt
+part-about.php that contains the dura global sourcing text in "work-experience"
+
+
+
+
+		<section class="about-section" id="work-experience">
+			<h2>Work Experience</h2>
+
+			<ul>
+
+				<li><h3>Bestway Global</h3>
+					<h5>Digital Operator &amp; Production Assistant</h5>
+					<div class="work-info">
+						<span class="work-location">Phuket,</br>Thailand</span>
+						<time datetime="2015-1"> Jan. 2015 </time>
+					</div>
+					<p>
+						Worked as an integral part of a photo/video production team on a 2 week photo shoot of more than 400 items 
+						that included product photos, lifestyle photos, and a instructional video component.
+					</p>
+					<p>
+						Helped compose shots and adjusted lighting/camera settings as needed.
+						Helped art direct wardrobe/product/set combinations and photo compositions. 
+						Managed and directed models including children ages 2-12 years. 
+						Color corrected and light balanced photos as examples for a post-production team to follow. 
+						Filled in as a photographer when needed.  
+					</p>
+					<p class="work-responsibilities">
+						<span>Responsible for: </span>
+						set design, 
+						art direction, 
+						photo editing, 
+						photography, 
+						scheduling &amp; management
+					</p>
+				</li>
+
+				<li><h3>Willoughby &amp; Crane</h3>
+					<h5>Freelance Logo Development</h5>
+					<div class="work-info">
+						<time datetime="2014-12">Dec. 2014</time>
+					</div>
+					<p>
+						Designed a logo and branding identity for a Savannah, GA, based consulting firm.
+					</p>
+					<p class="work-responsibilities">
+						<span>Responsible for: </span>
+						logo design, 
+						branding, 
+						layout
+					</p>
+				</li>
+
+				<li><h3>Bestway USA</h3>
+					<h5>Production Assistant &amp; Digital Operator</h5>
+					<div class="work-info">
+						<span class="work-location">Phoenix,</br>AZ</span>
+						<time datetime="2014-12"> Oct. 2014–</br>Dec. 2014 </time>
+					</div>
+					<p>
+						Worked as an integral part of a photo/video production team on an epic 2 month photo shoot of more than 400 items 
+						that included product photos, lifestyle photos, and a promotional video component.
+					</p>
+					<p>
+						Organized and prepped all products and sets. 
+						Helped art direct wardrobe/product/set combinations and photo compositions. 
+						Managed and directed models including children ages 2-12 years. 
+						Color corrected and light balanced photos as examples for a post-production team to follow. 
+						Worked closely with a videographer to storyboard and organize the production of a promotional video for above ground pools and pool toys. 
+						Filled in as a photographer when needed.  
+					</p>
+					<p class="work-responsibilities">
+						<span>Responsible for: </span>
+						set design, 
+						art direction, 
+						storyboarding, 
+						photo editing, 
+						photography, 
+						scheduling &amp; management
+					</p>
+				</li>
+
+				<li><h3>Covey Rise</h3>
+					<h5>Freelance Photo Editing &amp; Graphic Design</h5>
+					<div class="work-info">
+						<time datetime="2014-2"> Feb. 2014–</br>present </time>
+					</div>
+					<p>
+						Worked with the art director to edit photos for a bird hunting magazine.
+					</p>
+					<ul>
+						<li><h4>Quail Coalition</h4>
+							<h5>Freelance Graphic Design &amp; web development</h5>
+							<p>
+								Designed a 42 page annual publication for a quail conservation 
+								nonprofit in conjunction with the Covey Rise team.
+							</p>
+							<p class="work-responsibilities">
+								<span>Responsible for: </span>
+								logo design, 
+								layout, 
+								photo editing
+							</p>
+						</li>
+					</ul>
+				</li>
+				
+				<li><h3>Frontline Advance LLC</h3>
+					<div class="work-info">
+						<time datetime="2014-1"> Jan. 2014–</br>present </time>
+					</div>
+					<p>
+						Designed a wide range of promotional materials for 
+						eCommerce and marketing of various sub-brands including:
+					</p>
+					<ul>
+						<li><h4>Solo Stove</h4>
+							<h5>Freelance Graphic Design &amp; web development</h5>
+							<div class="work-info">
+								<time datetime="2014-1">Jan. 2014–</br>present</time>
+							</div>
+							<p>
+								Created promotional ads and other web content for solostove.com
+							</p>
+							<p class="work-responsibilities">
+								<span>Responsible for: </span>
+								icon design,
+								technical illustration, 
+								copywriting, 
+								layout, 
+								infographics, 
+								web development, 
+								photo editing
+							</p>
+						</li>
+						<li><h4>Fox Outfitters</h4>
+							<h5>Freelance Branding, Graphic Design, &amp; Web Development</h5>
+							<div class="work-info">
+								<time datetime="2014-1">Jan. 2014–</br>present</time>
+							</div>
+							<p>
+								Created initial logo and branding identity for 
+								ecommerce camping gear startup. Designed and developed 
+								a custom BigCommerce theme for their web platform.
+							</p>
+							<p class="work-responsibilities">
+								<span>Responsible for: </span>
+								branding, 
+								logo design, 
+								icon design, 
+								package design, 
+								photo editing, 
+								interaction design, 
+								web development
+							</p>
+						</li>
+					</ul>
+				</li>
+
+				<li><h3>SlumberMaax</h3>
+					<h5>Freelance Web Development</h5>
+					<div class="work-info">
+						<time datetime="2014-2"> Feb. 2014 </time>
+					</div>
+					<p>
+						Refurbished homepage of an ecommerce mattress distributer 
+						by creating new sliding banners and animated categorical links.
+					</p>
+					<p class="work-responsibilities">
+						<span>Responsible for: </span>
+						layout, 
+						interaction design, 
+						web development
+					</p>
+				</li>
+
+				<li><h3>The Keer Group</h3>
+					<h5>Freelance Graphic Design &amp; Web Development</h5>
+					<div class="work-info">
+						<time datetime="2013-11">Nov. 2013</br>–present</time>
+					</div>
+					<ul>
+						<li><h4>Wild Chef Spices</h4>
+							<p>
+								Photoshopped new labels onto existing line of product photos to avoid a new photoshoot after a brand redesign.
+							</p>
+						</li>
+						<li><h4>Woodcock Limited</h4>
+							<p>
+								Designed an annual publication for the Woodcock Ltd. Conservation Society.
+								Developed the menu bar for their wordpress site.
+								Designed other promotional materials.
+							</p>
+						</li>
+					</ul>
+				</li>
+
+				<li><h3>Bestway Global</h3>
+					<div class="work-info">
+						<span class="work-location">Shanghai,</br>China</span>
+					</div>
+					<ul>
+						<li><h5>Graphic Designer</h5>
+							<div class="work-info">
+								<time datetime="2013-9">Sept. 2013–</br>Mar. 2014</time>
+								<a href="#" class="icon-capsule dark view-work"><svg class="icon">
+									<use xlink:href="#icon-view"></use></svg></a>
+							</div>
+							<p>
+								Worked closely with the art director and sales team to create graphics 
+								and branding for Bestway and its subsidiary brands including: 
+								Pavillo Camping Gear, 
+								Swim Doctor, 
+								Hydroforce, 
+								UVcareful, 
+								and Cloud9. 
+							</p>
+							<p>
+								Led in-house package design production team in the development of 
+								dimension independent package design templates. Educated the team on 
+								the tools and processes needed to produce print ready packaging for 
+								over 200 products.
+							</p>
+							<p class="work-responsibilities">
+								<span>Responsible for: </span>
+								Branding, 
+								logo design, 
+								layout, 
+								package design, 
+								illustration, 
+								icon design, 
+								web design, 
+								storyboarding, 
+								photo editing
+							</p>
+						</li>
+						<li><h5>User experience Design Intern</h5>
+							<div class="work-info">
+								<time datetime="2013-7">July–</br>Sept. 2013 </time>
+							</div>
+							<p>
+								Selected from more than 500 applicants to be on a 6 person 
+								multidisciplinary design team that also included industrial 
+								designers and toy designers.
+							</p>
+							<p>
+								Worked with team through multiple cycles of research, 
+								design, consumer testing, and redesign to produce a set of 6 
+								new market ready products for Bestway’s summer product line.
+							</p>
+						</li>
+					</ul>
+				</li>
+
+				<li><h3>Nancy's Bakery &amp; Bistro</h3>
+					<h5>Freelance Branding &amp; Graphic Design</h5>
+					<div class="work-info">
+						<span class="work-location">Shanghai,</br>China</span>
+						<time datetime="2013-9">Oct. 2013–</br>Jan. 2014</time>
+					</div>
+					<p>
+						Designed and produced a new bilingual (English and Chinese) 
+						branding identity and materials for a restaurant in Pudong district, Shanghai.
+					</p>
+					<p class="work-responsibilities">
+						<span>Responsible for: </span>
+						branding, 
+						logo design, 
+						menu design, 
+						copywriting, 
+						photography, 
+						photo editing, 
+						layout, 
+						package design
+					</p>
+				</li>
+
+				<li><h3>Jared Goldberg</h3>
+					<h5>Freelance Web Development</h5>
+					<div class="work-info">
+						<span class="work-location">Shanghai,</br>China</span>
+						<time datetime="2013-12">Dec. 2013 </time>
+					</div>
+					<p>
+						Created a portfolio microsite to be used for a graduate 
+						school application resulting in Jared’s acceptance to the 
+						California College of the Arts master’s program.					
+					</p>
+					<p class="work-responsibilities">
+						<span>Responsible for: </span>
+						interaction design, 
+						web development
+					</p>
+				</li>
+
+				<li><h3>University of Georgia Office of Sustainability &amp;</br>
+					Students for Environmental Action</h3>
+					<h5>pro Bono Graphic Design</h5>
+					<div class="work-info">
+						<span class="work-location">Athens, GA</span>
+						<time datetime="2013-4">Spring 2013</time>
+					</div>
+					<p>
+						Designed logo and branded promotional materials for UGA’s 
+						Earth Week events that included: posters, banners, t shirts, 
+						and digital media.
+					</p>
+					<p class="work-responsibilities">
+						<span>Responsible for: </span>
+						logo development, 
+						branding, 
+						layout, 
+						photo editing, 
+						copywriting
+					</p>
+				</li>
+
+				<li><h3>University of Georgia Cycling Team</h3>
+					<h5>Pro Bono Graphic Design</h5>
+					<div class="work-info">
+						<span class="work-location"> Athens, GA </span>
+						<time datetime="2012-11">Winter</br>2012–2013</time>
+					</div>
+					<p>
+						Designed the 2013 cycling team uniform including: shirts, jackets, hats, bibs, and socks.
+					</p>
+				</li>
+
+				<li><h3>Skateshop of Athens</h3>
+					<h5>Freelance Graphic Design &amp; Illustration</h5>
+					<div class="work-info">
+						<span class="work-location">Athens, GA</span>
+						<time datetime="2012-6">Summer 2012</time>
+					</div>
+					<p>
+						Designed graphics for the shop brand of skateboard decks.
+					</p>
+				</li>
+								
+			</ul>
+		</section>
+
