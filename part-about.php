@@ -60,51 +60,51 @@
 			<h3>DESIGN SKILLSET</h3>
 			<ul id="list-design" class="skillset clearfix">
 				<li class="skill" id="logo-layout"><figure>
-					<figcaption>Layout &amp;</br>Wireframing</figcaption>
+					<figcaption>Layout &amp;<br/>Wireframing</figcaption>
 					<svg class="logo program"><use xlink:href="#logo-layout"></use></svg>
 				</figure></li>
 				<li class="skill" id="logo-info-62"><figure>
-					<figcaption>Information</br>Heiarchy</figcaption>
+					<figcaption>Information<br/>Heiarchy</figcaption>
 					<svg class="logo program"><use xlink:href="#logo-info-62"></use></svg>
 				</figure></li>
 				<li class="skill" id="logo-code"><figure>
-					<figcaption>Web</br>Development</figcaption>
+					<figcaption>Web<br/>Development</figcaption>
 					<svg class="logo program"><use xlink:href="#logo-code"></use></svg>
 				</figure></li>
 				<li class="skill" id="logo-illustration"><figure>
-					<figcaption></br>Illustration</figcaption>
+					<figcaption><br/>Illustration</figcaption>
 					<svg class="logo program"><use xlink:href="#logo-illustration"></use></svg>
 				</figure></li>
 				<li class="skill" id="logo-photography"><figure>
-					<figcaption></br>Photography</figcaption>
+					<figcaption><br/>Photography</figcaption>
 					<svg class="logo program"><use xlink:href="#logo-photography"></use></svg>
 				</figure></li>
 				<li class="skill" id="logo-packaging"><figure>
-					<figcaption>Package</br>Design</figcaption>
+					<figcaption>Package<br/>Design</figcaption>
 					<svg class="logo program"><use xlink:href="#logo-packaging"></use></svg>
 				</figure></li>
 				<li class="skill" id="logo-ui"><figure>
-					<figcaption>User</br>Interface</figcaption>
+					<figcaption>User<br/>Interface</figcaption>
 					<svg class="logo program"><use xlink:href="#logo-ui"></use></svg>
 				</figure></li>
 				<li class="skill" id="logo-ux"><figure>
-					<figcaption>User</br>Experience</figcaption>
+					<figcaption>User<br/>Experience</figcaption>
 					<svg class="logo program"><use xlink:href="#logo-ux"></use></svg>
 				</figure></li>
 				<li class="skill" id="logo-branding"><figure>
-					<figcaption>Branding &amp;</br>Identity</figcaption>
+					<figcaption>Branding &amp;<br/>Identity</figcaption>
 					<svg class="logo program"><use xlink:href="#logo-branding"></use></svg>
 				</figure></li>
 				<li class="skill" id="logo-iconography"><figure>
-					<figcaption></br>Iconography</figcaption>
+					<figcaption><br/>Iconography</figcaption>
 					<svg class="logo program"><use xlink:href="#logo-iconography"></use></svg>
 				</figure></li>
 				<li class="skill" id="logo-typography"><figure>
-					<figcaption></br>Typography</figcaption>
+					<figcaption><br/>Typography</figcaption>
 					<svg class="logo program"><use xlink:href="#logo-typography"></use></svg>
 				</figure></li>
 				<li class="skill" id="logo-color-theory"><figure>
-					<figcaption>Color</br>Theory</figcaption>
+					<figcaption>Color<br/>Theory</figcaption>
 					<svg class="logo program"><use xlink:href="#logo-color-theory"></use></svg>
 				</figure></li>
 			</ul>
@@ -115,7 +115,7 @@
 				<li class="skillsubset" id="adobe-software">
 					<ul class="clearfix">
 						<li class="set-title" id="logo-adobe"><figure>
-							<figcaption>Adobe</br>Creative Suite</figcaption>
+							<figcaption>Adobe<br/>Creative Suite</figcaption>
 							<svg class="logo program"><use xlink:href="#logo-adobe"></use></svg>
 						</figure></li>
 						<li class="subskill" id="logo-a-photoshop"><figure>
@@ -148,7 +148,7 @@
 				<li class="skillsubset clearfix" id="google-software">
 					<ul class="clearfix">
 						<li class="set-title" id="logo-g-drive"><figure>
-							<figcaption>Google</br>Drive Software</figcaption>
+							<figcaption>Google<br/>Drive Software</figcaption>
 							<svg class="logo program"><use xlink:href="#logo-g-drive"></use></svg>
 						</figure></li>
 						<li class="subskill" id="logo-g-docs"><figure>
@@ -278,7 +278,7 @@
 				<li><h3>Bestway Global</h3>
 					<h5>Digital Operator &amp; Production Assistant</h5>
 					<div class="work-info">
-						<span class="work-location">Phuket,</br>Thailand</span>
+						<span class="work-location">Phuket,<br/>Thailand</span>
 						<time datetime="2015-1"> Jan. 2015 </time>
 					</div>
 					<p>
@@ -321,8 +321,8 @@
 				<li><h3>Bestway USA</h3>
 					<h5>Production Assistant &amp; Digital Operator</h5>
 					<div class="work-info">
-						<span class="work-location">Phoenix,</br>AZ</span>
-						<time datetime="2014-12"> Oct. 2014–</br>Dec. 2014 </time>
+						<span class="work-location">Phoenix,<br/>AZ</span>
+						<time datetime="2014-12"> Oct. 2014–<br/>Dec. 2014 </time>
 					</div>
 					<p>
 						Worked as an integral part of a photo/video production team on an epic 2 month photo shoot of more than 400 items 
@@ -350,7 +350,7 @@
 				<li><h3>Covey Rise</h3>
 					<h5>Freelance Photo Editing &amp; Graphic Design</h5>
 					<div class="work-info">
-						<time datetime="2014-2"> Feb. 2014–</br>present </time>
+						<time datetime="2014-2"> Feb. 2014–<br/>present </time>
 					</div>
 					<p>
 						Worked with the art director to edit photos for a bird hunting magazine.
@@ -374,7 +374,7 @@
 				
 				<li><h3>Frontline Advance LLC</h3>
 					<div class="work-info">
-						<time datetime="2014-1"> Jan. 2014–</br>present </time>
+						<time datetime="2014-1"> Jan. 2014–<br/>present </time>
 					</div>
 					<p>
 						Designed a wide range of promotional materials for 
@@ -384,7 +384,7 @@
 						<li><h4>Solo Stove</h4>
 							<h5>Freelance Graphic Design &amp; web development</h5>
 							<div class="work-info">
-								<time datetime="2014-1">Jan. 2014–</br>present</time>
+								<time datetime="2014-1">Jan. 2014–<br/>present</time>
 							</div>
 							<p>
 								Created promotional ads and other web content for solostove.com
@@ -403,7 +403,7 @@
 						<li><h4>Fox Outfitters</h4>
 							<h5>Freelance Branding, Graphic Design, &amp; Web Development</h5>
 							<div class="work-info">
-								<time datetime="2014-1">Jan. 2014–</br>present</time>
+								<time datetime="2014-1">Jan. 2014–<br/>present</time>
 							</div>
 							<p>
 								Created initial logo and branding identity for 
@@ -444,7 +444,7 @@
 				<li><h3>The Keer Group</h3>
 					<h5>Freelance Graphic Design &amp; Web Development</h5>
 					<div class="work-info">
-						<time datetime="2013-11">Nov. 2013</br>–present</time>
+						<time datetime="2013-11">Nov. 2013<br/>–present</time>
 					</div>
 					<ul>
 						<li><h4>Wild Chef Spices</h4>
@@ -464,12 +464,12 @@
 
 				<li><h3>Bestway Global</h3>
 					<div class="work-info">
-						<span class="work-location">Shanghai,</br>China</span>
+						<span class="work-location">Shanghai,<br/>China</span>
 					</div>
 					<ul>
 						<li><h5>Graphic Designer</h5>
 							<div class="work-info">
-								<time datetime="2013-9">Sept. 2013–</br>Mar. 2014</time>
+								<time datetime="2013-9">Sept. 2013–<br/>Mar. 2014</time>
 								<a href="#" class="icon-capsule dark view-work"><svg class="icon">
 									<use xlink:href="#icon-view"></use></svg></a>
 							</div>
@@ -503,7 +503,7 @@
 						</li>
 						<li><h5>User experience Design Intern</h5>
 							<div class="work-info">
-								<time datetime="2013-7">July–</br>Sept. 2013 </time>
+								<time datetime="2013-7">July–<br/>Sept. 2013 </time>
 							</div>
 							<p>
 								Selected from more than 500 applicants to be on a 6 person 
@@ -522,8 +522,8 @@
 				<li><h3>Nancy's Bakery &amp; Bistro</h3>
 					<h5>Freelance Branding &amp; Graphic Design</h5>
 					<div class="work-info">
-						<span class="work-location">Shanghai,</br>China</span>
-						<time datetime="2013-9">Oct. 2013–</br>Jan. 2014</time>
+						<span class="work-location">Shanghai,<br/>China</span>
+						<time datetime="2013-9">Oct. 2013–<br/>Jan. 2014</time>
 					</div>
 					<p>
 						Designed and produced a new bilingual (English and Chinese) 
@@ -545,7 +545,7 @@
 				<li><h3>Jared Goldberg</h3>
 					<h5>Freelance Web Development</h5>
 					<div class="work-info">
-						<span class="work-location">Shanghai,</br>China</span>
+						<span class="work-location">Shanghai,<br/>China</span>
 						<time datetime="2013-12">Dec. 2013 </time>
 					</div>
 					<p>
@@ -560,7 +560,7 @@
 					</p>
 				</li>
 
-				<li><h3>University of Georgia Office of Sustainability &amp;</br>
+				<li><h3>University of Georgia Office of Sustainability &amp;<br/>
 					Students for Environmental Action</h3>
 					<h5>pro Bono Graphic Design</h5>
 					<div class="work-info">
@@ -586,7 +586,7 @@
 					<h5>Pro Bono Graphic Design</h5>
 					<div class="work-info">
 						<span class="work-location"> Athens, GA </span>
-						<time datetime="2012-11">Winter</br>2012–2013</time>
+						<time datetime="2012-11">Winter<br/>2012–2013</time>
 					</div>
 					<p>
 						Designed the 2013 cycling team uniform including: shirts, jackets, hats, bibs, and socks.
@@ -615,10 +615,10 @@
 					<h4>BFA Graphic Design</h4>
 					<div class="work-info">
 						<span class="work-location">Athens, GA</span>
-						<time datetime="2009-8">Fall 2009–</br>Spring 2013</time>
+						<time datetime="2009-8">Fall 2009–<br/>Spring 2013</time>
 					</div>
 					<p>
-						Lamar Dodd School of Art</br>HOPE Scholarship - full tuition
+						Lamar Dodd School of Art<br/>HOPE Scholarship - full tuition
 					</p>
 				</li>
 				<li><h3>Governor's Honors Program</h3>
