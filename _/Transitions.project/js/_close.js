@@ -4,7 +4,7 @@
 	function resizeOrder(){
 		setWindowHeight();
 		perfectCenterImage();
-		perfectCenterRings();
+		// perfectCenterRings();
 	}
 
 	$(document).ready(function(){

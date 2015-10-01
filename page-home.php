@@ -13,7 +13,7 @@ Template Name: Home Page
 ?>
 
 
-<div 
+<!-- <div 
 	id="wrapper-home" 
 	style="
 		display: block; 
@@ -25,21 +25,13 @@ Template Name: Home Page
 		left: 0;
 		background-color:black;
 	"
-></div>
+></div> -->
 
 <div id="home-bg"></div>
 
-<header id="home-header" class="animation">
+<header id="home-header" >
 
-	<div id="total-animation">
-		<div id="ring-1" class="ring">
-			<?php echo file_get_contents(get_template_directory_uri() . '/_/svg/polaris.graphics-ring-1.svg'); ?>
-		</div>
-		<div id="ring-2" class="ring">
-			<?php echo file_get_contents(get_template_directory_uri() . '/_/svg/polaris.graphics-ring-2.svg'); ?>
-		</div>
-		<?php echo file_get_contents(get_template_directory_uri() . '/_/svg/polaris.graphics-animation-styleless.svg'); ?>
-	</div>
+	<?php the_content(); ?>
 
 	<nav id="home-nav" class="nav foot-nav" role="navigation">
 		<?php 

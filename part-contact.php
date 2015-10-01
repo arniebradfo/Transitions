@@ -39,21 +39,7 @@
 
 		</header>
 
-		<section class="about-section">
-
-			<h3 id="contact-invitation">
-				Drop me a line at: 
-				<a href="mailto:<?php echo get_bloginfo('admin_email'); ?>">
-					<?php echo get_bloginfo('admin_email'); ?>
-				</a>
-				<br/><br/>
-				or
-			</h3>
-
-			<!-- contact form 7 should be here -->
-			<?php the_content(); ?>
-
-		</section>
+		<?php the_content(); ?>
 
 		<div class="icon-capsule scroll-to-top">
 			<svg class="icon icon-arrow-double-top">
