@@ -29,7 +29,7 @@ Template Name: Home Page
 
 <div id="home-bg"></div>
 
-<header id="home-header">
+<header id="home-header" class="animation">
 
 	<div id="total-animation">
 		<div id="ring-1" class="ring">

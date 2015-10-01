@@ -1,5 +1,23 @@
 // home--animation.scss
 
+// --------------------------------------------------------------- DIMENSIONS
+$polarisCenterX:467;
+$polarisCenterY:353;
+$polarisWidth:1200;
+$polarisHeight:800;
+
+$ringHeight:1756;
+$ringWidth:$ringHeight;
+
+$ringSizeWidth: (100% * $ringWidth) / $polarisWidth;
+$ringSizeHeight: (100% * $ringHeight) / $polarisHeight;
+$ringSizeWidth: (100% * $ringWidth) / $polarisWidth;
+$ringSizeHeight: (100% * $ringHeight) / $polarisHeight;
+
+$polarisCenterXPercent:(100% * $polarisCenterX) / $polarisWidth;
+$polarisCenterYPercent:(100% * $polarisCenterY) / $polarisHeight;
+
+
 // --------------------------------------------------------------- COLOR VARS
 $colorAnimationRings:			#448784	;
 $colorAnimationBG:				#172126	;
@@ -241,3 +259,37 @@ $midpoint: 15%;
 	opacity:.35;
 	stroke-width:3px;
 }
+
+$polarisRatio: $polarisWidth / $polarisHeight ;
+$polarisRatioInvert: $polarisHeight / $polarisWidth ;
+$windowHeight: 100vh ;
+$windowWidth: 100vw ;
+
+@media screen and (min-aspect-ratio: #{$polarisWidth}/#{$polarisHeight}) {
+  .ring{
+    top:((100% * $polarisCenterY) / $polarisHeight);
+    $offsetX: ( $windowHeight/( $polarisRatioInvert * $polarisWidth/$polarisCenterX ) - $polarisRatio * $windowHeight/2 );
+    $insetX: $windowWidth/2 ;
+    left:calc(#{$insetX} + #{$offsetX});
+  }
+}
+
+@media screen and (max-aspect-ratio: #{$polarisWidth}/#{$polarisHeight}) {
+  .ring{
+    left:((100% * $polarisCenterX) / $polarisWidth);
+    $offsetY: ( $windowWidth/( $polarisRatio * $polarisHeight/$polarisCenterY ) - $polarisRatioInvert * $windowWidth/2 );
+    $insetY: $windowHeight/2 ;
+    top:calc(#{$insetY} + #{$offsetY});
+  }
+}
+
+/*! 
+ * Firefox 1.0+ Detection 
+ * FireFox can't handle animationing such a large area?
+ * hide the .rings so we don't see choppy animation
+ */
+@-moz-document url-prefix() { 
+  .ring {
+     display:none;
+  }
+} 
