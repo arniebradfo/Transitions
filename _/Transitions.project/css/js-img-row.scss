@@ -1,0 +1,19 @@
+// js-img-row.scss
+
+.img-row {
+  width: 100%;
+  margin: 1% 0;
+  // images in the row take the row's margin-bottom as their spacing.
+  img {
+  width: 100%;
+  display: block;
+  font-size: 0;
+  float: left;
+  }
+  // clearfix
+  &::after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}

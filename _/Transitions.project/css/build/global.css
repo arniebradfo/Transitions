@@ -2818,16 +2818,17 @@ so that all elements are not hoverable
     width: 101%;
     height: auto; }
 
-.pic-row {
+.img-row {
   width: 100%;
-  margin-top: 0.5%;
-  margin-bottom: 0.5%; }
-  .pic-row picture {
+  margin: 1% 0; }
+  .img-row img {
+    width: 100%;
     display: block;
     font-size: 0;
     float: left; }
-    .pic-row picture img {
-      width: 100%;
-      display: block; }
+  .img-row::after {
+    content: "";
+    display: table;
+    clear: both; }
 
 /*# sourceMappingURL=global.css.map */

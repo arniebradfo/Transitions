@@ -23,6 +23,7 @@
 	var theTiming = 1000; // WHY 1000?
 	$(window).load(function() {
 		// alert("window has loaded!");
+		imgRow(".img-row");
 		perfectCenterImage();
 		loadLoadingAmimation(theTiming);
 		clickDiversion();	
@@ -41,6 +42,7 @@
 
 	$(window).resize(function() {
 		// alert("window has resized!");
+		imgRow(".img-row");
 		theDelay(function(){
 			resizeOrder();
 		}, 500);

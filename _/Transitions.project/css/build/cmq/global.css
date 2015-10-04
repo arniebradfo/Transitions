@@ -2756,21 +2756,22 @@ so that all elements are not hoverable
 	height: auto;
 }
 
-.pic-row {
+.img-row {
 	width: 100%;
-	margin-top: 0.5%;
-	margin-bottom: 0.5%;
+	margin: 1% 0;
 }
 
-.pic-row picture {
+.img-row img {
+	width: 100%;
 	display: block;
 	font-size: 0;
 	float: left;
 }
 
-.pic-row picture img {
-	width: 100%;
-	display: block;
+.img-row::after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 @media screen and (min-aspect-ratio: 1200 / 800) {
