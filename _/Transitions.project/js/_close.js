@@ -9,6 +9,7 @@
 
 	$(document).ready(function(){
 		// alert("doc is ready!");
+		imgRow(".img-row");
 		gMap();
 		readyLoadingAmimation();
 		resizeOrder();
@@ -17,13 +18,12 @@
 		scrollDown();
 		scrollToTop();
 		currentLinks();
-		fireFoxLimits();
+		//fireFoxLimits(); // this is done with css now
 	});
 
 	var theTiming = 1000; // WHY 1000?
 	$(window).load(function() {
 		// alert("window has loaded!");
-		imgRow(".img-row");
 		perfectCenterImage();
 		loadLoadingAmimation(theTiming);
 		clickDiversion();	
@@ -42,7 +42,6 @@
 
 	$(window).resize(function() {
 		// alert("window has resized!");
-		imgRow(".img-row");
 		theDelay(function(){
 			resizeOrder();
 		}, 500);

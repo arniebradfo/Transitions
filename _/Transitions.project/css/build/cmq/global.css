@@ -2763,6 +2763,7 @@ so that all elements are not hoverable
 
 .img-row img {
 	width: 100%;
+	height: auto;
 	display: block;
 	font-size: 0;
 	float: left;

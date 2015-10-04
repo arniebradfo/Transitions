@@ -2823,6 +2823,7 @@ so that all elements are not hoverable
   margin: 1% 0; }
   .img-row img {
     width: 100%;
+    height: auto;
     display: block;
     font-size: 0;
     float: left; }
