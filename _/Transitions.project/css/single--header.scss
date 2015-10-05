@@ -14,7 +14,7 @@ $headerPictureHeightSmall:100% - $headerBottomMarginSmall;
 	overflow: hidden;
 	color: white;
 
-	picture{
+	.perfect-contain{
 		margin: $headerMargins $headerMargins 0 $headerMargins;
 		width: (100% - ($headerMargins * 2));
 		height: ($headerPictureHeight - $headerMargins);

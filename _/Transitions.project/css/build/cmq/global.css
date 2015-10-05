@@ -1560,9 +1560,9 @@ ul.navigation .page-next {
 	color: white;
 }
 
-#post-header picture,
-#about-header picture,
-#contact-header picture {
+#post-header .perfect-contain,
+#about-header .perfect-contain,
+#contact-header .perfect-contain {
 	margin: 0.5% 0.5% 0 0.5%;
 	width: 99%;
 	height: 94.5%;
@@ -1573,9 +1573,9 @@ ul.navigation .page-next {
 	background: linear-gradient(to top, black, #e6e6e6);
 }
 
-#post-header picture img,
-#about-header picture img,
-#contact-header picture img {
+#post-header .perfect-contain img,
+#about-header .perfect-contain img,
+#contact-header .perfect-contain img {
 	opacity: 0.4;
 }
 
@@ -2071,7 +2071,7 @@ body {
 	right: 0;
 }
 
-#about-header picture {
+#about-header .perfect-contain {
 	margin: 0 0.5%;
 	height: 95%;
 }

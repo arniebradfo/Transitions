@@ -1525,13 +1525,13 @@ ul.navigation {
   width: 100%;
   overflow: hidden;
   color: white; }
-  #post-header picture, #about-header picture, #contact-header picture {
+  #post-header .perfect-contain, #about-header .perfect-contain, #contact-header .perfect-contain {
     margin: 0.5% 0.5% 0 0.5%;
     width: 99%;
     height: 94.5%;
     overflow: hidden;
     background: linear-gradient(to top, black, #e6e6e6); }
-    #post-header picture img, #about-header picture img, #contact-header picture img {
+    #post-header .perfect-contain img, #about-header .perfect-contain img, #contact-header .perfect-contain img {
       opacity: 0.4; }
   #post-header h1, #post-header footer, #post-header .icon-capsule, #about-header h1, #about-header footer, #about-header .icon-capsule, #contact-header h1, #contact-header footer, #contact-header .icon-capsule {
     position: absolute; }
@@ -2187,7 +2187,7 @@ body {
   left: 0;
   right: 0; }
 
-#about-header picture {
+#about-header .perfect-contain {
   margin: 0 0.5%;
   height: 95%; }
 

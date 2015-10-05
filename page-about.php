@@ -7,11 +7,23 @@
  */
 get_header(); ?>
 	
-	<?php echo file_get_contents(get_template_directory_uri() . '/_/svg/build/svg-defs-logos.svg'); ?>
-
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	
+	<h1 class="page-title"><?php the_title(); ?></h1>
 
-		<?php get_template_part('part-about'); ?>
+	<article class="post" id="post-<?php the_ID(); ?>">
+
+		<?php the_content(); ?>
+
+		<div class="icon-capsule scroll-to-top">
+			<svg class="icon icon-arrow-double-top">
+				<use xlink:href="#icon-arrow-double-top"></use>
+			</svg>
+		</div>
+
+	</article>
+
+	<?php edit_post_link(__('Edit this entry','html5reset'), '<p>', '</p>'); ?>
 		
 		<?php // comments_template(); ?>
 

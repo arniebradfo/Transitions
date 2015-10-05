@@ -4,27 +4,25 @@
  * @subpackage HTML5-Reset-WordPress-Theme
  * @since HTML5 Reset 2.0
  */
- get_header(); ?>
-
+get_header(); ?>
+	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			
-		<article class="post" id="post-<?php the_ID(); ?>">
+	
+	<h1 class="page-title"><?php the_title(); ?></h1>
 
-			<h2 class="page-title"><?php the_title(); ?></h2>
+	<article class="post" id="post-<?php the_ID(); ?>">
 
-			<?php posted_on(); ?>
+		<?php the_content(); ?>
 
-			<div class="entry">
+		<div class="icon-capsule scroll-to-top">
+			<svg class="icon icon-arrow-double-top">
+				<use xlink:href="#icon-arrow-double-top"></use>
+			</svg>
+		</div>
 
-				<?php the_content(); ?>
+	</article>
 
-				<?php wp_link_pages(array('before' => __('Pages: ','html5reset'), 'next_or_number' => 'number')); ?>
-
-			</div>
-
-			<?php edit_post_link(__('Edit this entry','html5reset'), '<p>', '</p>'); ?>
-
-		</article>
+	<?php edit_post_link(__('Edit this entry','html5reset'), '<p>', '</p>'); ?>
 		
 		<?php // comments_template(); ?>
 
@@ -33,3 +31,8 @@
 <?php // get_sidebar(); ?>
 
 <?php get_footer(); ?>
+<?php if (get_post_custom_values( 'script' )[0]): ?>
+	<script src="<?php echo get_post_custom_values( 'script' )[0]; ?>"></script>
+<?php endif; ?>
+
+

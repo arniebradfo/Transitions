@@ -13,7 +13,6 @@
 		require_once dirname( __FILE__ ) . '/_/inc/options-framework.php';
 	}
 
-
 	// Allow svg uploads - from CSS-tricks (http://css-tricks.com/snippets/wordpress/allow-svg-through-wordpress-media-uploader/)
 	function cc_mime_types( $mimes ){
 		$mimes['svg'] = 'image/svg+xml';
@@ -96,6 +95,36 @@
 	}
 	add_filter( 'wp_title', 'html5reset_wp_title', 10, 2 );
 
+	// CUSTOM SHORTCODES
+	function pagehead_func( $atts, $content = "" ) {
+		$atts = shortcode_atts( array(
+			'id' => 'page-header',
+			'class' => 'page-masthead',
+			'title' => '',
+			'deck' => '',
+			'style' => '',
+			'svgdefs' => ''
+		), $atts, 'pagehead' );
+
+		$output  = '';
+		$output .=		($atts['svgdefs'] !== '' ? file_get_contents($atts['svgdefs']) : '' );
+		$output .= '	<header id="'.$atts['id'].'" class="'.$atts['class'].'" '. ($atts['style'] !== '' ? 'style="'.$atts['style'].'"' : '').'>';
+		$output .=			$content;
+		$output .= '		<h1 class="entry-title">';
+		$output .=  			$atts['title'];
+		$output .= '			<span>'. $atts['deck'] .'</span>';
+		$output .= '		</h1>';
+		$output .= '		<!-- svg button -->';
+		$output .= '		<div class="icon-capsule scroll-down">';
+		$output .= '			<svg class="icon icon-arrow-bottom">';
+		$output .= '				<use xlink:href="#icon-arrow-bottom"></use>';
+		$output .= '			</svg>';
+		$output .= '		</div>';
+		$output .= '	</header>';
+
+		return $output;
+	}
+	add_shortcode( 'pagehead', 'pagehead_func' );
 
 
 
