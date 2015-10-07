@@ -109,7 +109,7 @@
 		$output  = '';
 		$output .=		($atts['svgdefs'] !== '' ? file_get_contents($atts['svgdefs']) : '' );
 		$output .= '	<header id="'.$atts['id'].'" class="'.$atts['class'].'" '. ($atts['style'] !== '' ? 'style="'.$atts['style'].'"' : '').'>';
-		$output .=			$content;
+		$output .=			do_shortcode($content);
 		$output .= '		<h1 class="entry-title">';
 		$output .=  			$atts['title'];
 		$output .= '			<span>'. $atts['deck'] .'</span>';
@@ -125,6 +125,19 @@
 		return $output;
 	}
 	add_shortcode( 'pagehead', 'pagehead_func' );
+
+	// add image sizes to the wp uploader
+	// SYNTAX - add_image_size( $name, $width, $height, $crop );
+	add_image_size( 'imgXS',  250  );
+	add_image_size( 'imgS',   500  );
+	add_image_size( 'imgM',   750  );
+	add_image_size( 'imgL',   1000 );
+	add_image_size( 'imgXL',  1500 );
+	add_image_size( 'img2XL', 2000 );
+	add_image_size( 'img3XL', 3000 );
+	add_image_size( 'img4XL', 4000 );
+	add_image_size( 'imgSsq', 550, 550, true );
+	// add_image_size( 'imgMsq',  825, 825, true );
 
 
 

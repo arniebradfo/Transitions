@@ -2071,7 +2071,8 @@ body {
 	right: 0;
 }
 
-#about-header .perfect-contain {
+#about-header .perfect-contain,
+.page-masthead .perfect-contain {
 	margin: 0 0.5%;
 	height: 95%;
 }

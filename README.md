@@ -5,9 +5,12 @@ A custom WordPress theme with magical page load and unload transitions.
 
 ToDo list
 =========
-1. add ajax loading
-2. X - add support for a header box that can have any content
-3. add video home page
-4. clear html validation
-5. add video chrome
-6. replace all picture elemets with img srcset
+- X - fix pic row
+- X - add support for a header box that can have any content
+- add a video lightbox post page.
+- add video home page
+- add ajax loading
+- clear html validation
+- 0 - add video chrome
+- replace all picture elemets with img srcset
+-

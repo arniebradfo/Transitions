@@ -12,18 +12,32 @@
 			
 			<header id="post-header" class="post-masthead">
 
-				<picture class="perfect-contain">
-					<!--[if IE 9]><video style="display: none;"><![endif]-->
-					<?php $thumbID = get_post_thumbnail_id(get_the_ID()); ?>
-					<source srcset="<?php echo wp_get_attachment_image_src( $thumbID, 'img2XL' )[0]; 	?>" 	media="(min-width: 3000px)">
-					<source srcset="<?php echo wp_get_attachment_image_src( $thumbID, 'img3XL' )[0]; 	?>" 	media="(min-width: 2000px)">
-					<source srcset="<?php echo wp_get_attachment_image_src( $thumbID, 'img4XL' )[0]; 	?>" 	media="(min-width: 1500px)">
-					<source srcset="<?php echo wp_get_attachment_image_src( $thumbID, 'imgXL' )[0];		?>" 	media="(min-width: 1000px)">
-					<source srcset="<?php echo wp_get_attachment_image_src( $thumbID, 'imgL' )[0]; 		?>" 	media="(min-width: 0px)">
-					<!--[if IE 9]></video><![endif]-->
-					<img srcset="<?php // ??? - not sure if its nessasary to put anything here - ??? ?>" alt="<?php echo get_post_meta($thumbID, '_wp_attachment_image_alt', true); ?>">
-					<noscript><?php the_post_thumbnail('full'); ?></noscript>
-				</picture>
+
+
+				<div class="perfect-contain">
+					<?php 
+						$thumbID = get_post_thumbnail_id(get_the_ID());
+						$thumbSrc = wp_get_attachment_image_src( $thumbID, 'full' )[0];
+						$thumbWidth = wp_get_attachment_image_src( $thumbID, 'full' )[1];
+					?>
+					<img src="<?php echo $thumbSrc;?>" 
+					     alt="<?php echo get_post_meta($thumbID, '_wp_attachment_image_alt', true); ?>" 
+					     width="<?php echo $thumbWidth;?>" 
+					     height="<?php echo wp_get_attachment_image_src( $thumbID, 'full' )[2];?>" 
+					     class="" 
+					     srcset="<?php
+					            $output = '';
+					            $sizesArray = array( 'imgXS', 'imgS', 'imgM', 'imgL', 'imgXL', 'img2XL', 'img3XL', 'img4XL' );
+					            foreach ($sizesArray as $i) {
+					            	$currentSrc = wp_get_attachment_image_src( $thumbID, $i );
+					            	$output .=  ($currentSrc[3] !== false ?$currentSrc[0].' ' .$currentSrc[1].'w, ':'');
+					            }
+					            $output .=  $thumbSrc .' '.$thumbWidth.'w';
+					            echo $output;
+					            ?>" 
+					     sizes="(max-width: <?php echo $thumbWidth;?>px) 100vw, <?php echo $thumbWidth;?>px"
+					/>
+				</div>
 
 				<h1 class="entry-title">
 					<?php the_title(); ?>
