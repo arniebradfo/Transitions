@@ -21,6 +21,8 @@
 		$nextID = 			$nextPost->ID;
 		$nextThumbID =		get_post_thumbnail_id($nextID);
 
+		$sizesArray = array( 'imgXS', 'imgS', 'imgM', 'imgL', 'imgXL', 'img2XL', 'img3XL', 'img4XL' );
+
 		if( $nextID!='' ) {
 			$adjacent_posts_info[] = array(
 				'name' 		=> 'newer',
@@ -29,6 +31,9 @@
 				'class' 	=> get_post_class('post-link left-post', $nextID),
 				'thumbnail' => get_the_post_thumbnail( $nextID, 'thumbnail' ),
 				'thumbID'	=> $nextThumbID,
+				'thumbSrc'  => wp_get_attachment_image_src( $nextThumbID, 'full' )[0],
+				'thumbWidth'=> wp_get_attachment_image_src( $nextThumbID, 'full' )[1],
+				'thumbHeight'=> wp_get_attachment_image_src( $nextThumbID, 'full' )[2],				
 				'imgXS' 	=> wp_get_attachment_image_src( $nextThumbID, 'imgXS'  )[0],
 				'imgS'  	=> wp_get_attachment_image_src( $nextThumbID, 'imgS'   )[0],
 				'imgM'  	=> wp_get_attachment_image_src( $nextThumbID, 'imgM'   )[0],
@@ -54,6 +59,9 @@
 				'class' 	=> get_post_class('post-link right-post', $previousID),
 				'thumbnail' => get_the_post_thumbnail( $previousID, 'thumbnail' ),
 				'thumbID'	=> $previousThumbID,
+				'thumbSrc'  => wp_get_attachment_image_src( $previousThumbID, 'full' )[0],
+				'thumbWidth'=> wp_get_attachment_image_src( $previousThumbID, 'full' )[1],
+				'thumbHeight'=> wp_get_attachment_image_src( $previousThumbID, 'full' )[2],				
 				'imgXS' 	=> wp_get_attachment_image_src( $previousThumbID, 'imgXS'  )[0],
 				'imgS'  	=> wp_get_attachment_image_src( $previousThumbID, 'imgS'   )[0],
 				'imgM'  	=> wp_get_attachment_image_src( $previousThumbID, 'imgM'   )[0],
@@ -97,44 +105,32 @@
 				</h2>
 			';
 
-			if ( $post['thumbnail'] && count($adjacent_posts_info) > 1) {
+			if ( count($adjacent_posts_info) > 1) {
 				// if there are two post links serve half page image at >750px
-				$adjacent_posts .='
-					<picture>
-						<!--[if IE 9]><video style="display: none;"><![endif]-->
-						<source srcset="' . $post['img2XL'] . '" 	media="(min-width: 3000px )">
-						<source srcset="' . $post['imgXL'] . '" 	media="(min-width: 2000px )">
-						<source srcset="' . $post['imgL'] . '" 		media="(min-width: 1500px )">
-						<source srcset="' . $post['imgM'] . '" 		media="(min-width: 1000px )">
-						<source srcset="' . $post['imgSsq'] . '" 	media="(min-width: 750px )">
-						<source srcset="' . $post['imgM'] . '" 		media="(min-width: 500px )">
-						<source srcset="' . $post['imgS'] . '" 		media="(min-width: 250px )">
-						<source srcset="' . $post['imgXS'] . '" 	media="(min-width: 0px )">
-						<!--[if IE 9]></video><![endif]-->
-						<img srcset=" " alt="' . $post['imgAlt'] . '">
-						<noscript>' . $post['thumbnail'] . '</noscript>
-					</picture>
-				';
-			} elseif ( $post['thumbnail'] && count($adjacent_posts_info) <= 1) {
+				$imgSize = '50vw';
+			} else {
 				// if there is one post link serve an image that is twice as large.
+				$imgSize = '100vw';
+			}
+			if ( $post['thumbnail']) {
 				$adjacent_posts .='
-					<picture>
-						<!--[if IE 9]><video style="display: none;"><![endif]-->
-						<source srcset="' . $post['img4XL'] . '" 	media="(min-width: 3000px )">
-						<source srcset="' . $post['img3XL'] . '" 	media="(min-width: 2000px )">
-						<source srcset="' . $post['img2XL'] . '" 	media="(min-width: 1500px )">
-						<source srcset="' . $post['imgXL'] . '" 	media="(min-width: 1000px )">
-						<source srcset="' . $post['imgL'] . '" 		media="(min-width: 750px )">
-						<source srcset="' . $post['imgM'] . '" 		media="(min-width: 500px )">
-						<source srcset="' . $post['imgS'] . '" 		media="(min-width: 250px )">
-						<source srcset="' . $post['imgXS'] . '" 	media="(min-width: 0px )">
-						<!--[if IE 9]></video><![endif]-->
-						<img srcset=" " alt="' . $post['imgAlt'] . '">
-						<noscript>' . $post['thumbnail'] . '</noscript>
-					</picture>
-				';			} else {
+					<img src="'. $post['thumbSrc'] .'" 
+					     alt="'. get_post_meta($post['thumbID'], '_wp_attachment_image_alt', true).'" 
+					     width="'. $post['thumbWidth'] .'" 
+					     height="'. $post['thumbHeight'] .'" 
+					     class="" 
+					     srcset="';
+					            foreach ($sizesArray as $i) {
+					            	$currentSrc = wp_get_attachment_image_src( $post['thumbID'], $i );
+					            	$adjacent_posts .=  ($currentSrc[3] !== false ?$currentSrc[0].' ' .$currentSrc[1].'w, ':'');
+					            }
+					            $adjacent_posts .=  $post['thumbSrc'] .' '.$post['thumbWidth'].'w';
+					     $adjacent_posts .='       
+					     sizes="(max-width: '. $post['thumbWidth'].'px) '. $imgSize .', '. $post['thumbWidth'].'px"
+					/>';
+			} else {
 				//if there is no image to set
-				$adjacent_posts .='<img><!-- no featured image set -->';
+				$adjacent_posts .='<!-- no featured image set -->';
 			}
 
 			$adjacent_posts .='<div class="image-overlay"></div>';

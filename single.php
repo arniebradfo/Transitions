@@ -12,8 +12,6 @@
 			
 			<header id="post-header" class="post-masthead">
 
-
-
 				<div class="perfect-contain">
 					<?php 
 						$thumbID = get_post_thumbnail_id(get_the_ID());

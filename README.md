@@ -12,5 +12,4 @@ ToDo list
 - add ajax loading
 - clear html validation
 - 0 - add video chrome
-- replace all picture elemets with img srcset
--
+- X - replace all picture elemets with img srcset
