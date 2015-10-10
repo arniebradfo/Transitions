@@ -5,6 +5,8 @@
  * @since HTML5 Reset 2.0
  */
 
+	// CUSTOM SHORTCODES
+	require_once('functions/shortcodes.php');
 
 	// BAKE PLUGINS INTO THEME: http://alexking.org/blog/2012/07/09/include-plugin-in-wordpress-theme
 	// Options Framework (https://github.com/devinsays/options-framework-plugin)
@@ -95,36 +97,23 @@
 	}
 	add_filter( 'wp_title', 'html5reset_wp_title', 10, 2 );
 
-	// CUSTOM SHORTCODES
-	function pagehead_func( $atts, $content = "" ) {
-		$atts = shortcode_atts( array(
-			'id' => 'page-header',
-			'class' => 'page-masthead',
-			'title' => '',
-			'deck' => '',
-			'style' => '',
-			'svgdefs' => ''
-		), $atts, 'pagehead' );
+	// create a custom video post type : ( https://codex.wordpress.org/Post_Types )
+	// not exactly what I want to do...
+	// function create_video_post_type() {
+	// 	register_post_type( 'video_post',
+	// 		array(
+	// 			'labels' => array(
+	// 				'name' => __( 'Videos' ),
+	// 				'singular_name' => __( 'Video' )
+	// 			),
+	// 			'public' => true,
+	// 			'has_archive' => true,
+	// 			'menu_position' => 5,
+	// 		)
+	// 	);
+	// }
+	// add_action( 'init', 'create_video_post_type' );
 
-		$output  = '';
-		$output .=		($atts['svgdefs'] !== '' ? file_get_contents($atts['svgdefs']) : '' );
-		$output .= '	<header id="'.$atts['id'].'" class="'.$atts['class'].'" '. ($atts['style'] !== '' ? 'style="'.$atts['style'].'"' : '').'>';
-		$output .=			do_shortcode($content);
-		$output .= '		<h1 class="entry-title">';
-		$output .=  			$atts['title'];
-		$output .= '			<span>'. $atts['deck'] .'</span>';
-		$output .= '		</h1>';
-		$output .= '		<!-- svg button -->';
-		$output .= '		<div class="icon-capsule scroll-down">';
-		$output .= '			<svg class="icon icon-arrow-bottom">';
-		$output .= '				<use xlink:href="#icon-arrow-bottom"></use>';
-		$output .= '			</svg>';
-		$output .= '		</div>';
-		$output .= '	</header>';
-
-		return $output;
-	}
-	add_shortcode( 'pagehead', 'pagehead_func' );
 
 	// add image sizes to the wp uploader
 	// SYNTAX - add_image_size( $name, $width, $height, $crop );

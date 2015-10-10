@@ -10,7 +10,7 @@ get_header(); ?>
 	
 	<h1 class="page-title"><?php the_title(); ?></h1>
 
-	<article class="post" id="post-<?php the_ID(); ?>">
+	<article <?php post_class('test') ?> id="post-<?php the_ID(); ?>">
 
 		<?php the_content(); ?>
 
