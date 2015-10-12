@@ -97,14 +97,20 @@
 	function pagewrapper_func( $atts, $content = "" ) {
 		$atts = shortcode_atts( array(
 			'style' => '',
-			'title' => ( is_page(get_the_ID()) ? '<h1 class="page-title">'. the_title() .'</h1>' : '' )
+			'title' => ( is_page(get_the_ID()) ? '<h1 class="page-title">'. get_the_title() .'</h1>' : '' ),
+			'ID' => get_the_ID()
 		), $atts, 'pagewrapper' );
+		
 		$output = '';
+		$classArray = get_post_class( 'post', get_the_ID() );
+		$class = '';
+		foreach ($classArray as $key => $value) {
+			$class .= $value .' ';
+		}
 
 		$output .= 		$atts['title'];
-		$output .='		<article '. post_class('test') .' id="post-'. the_ID() .'">';
+		$output .='		<article class="'. $class .'"" id="post-'. get_the_ID() .'">';
 		$output .=			do_shortcode($content);
-		$output .= 			$scroll_to_top;
 		$output .=' 	</article>';
 
 		return $output;
