@@ -7,7 +7,7 @@ ToDo list
 =========
 - X - fix pic row
 - X - add support for a header box that can have any content
-- add a video lightbox post page.
+- X - add a video lightbox post page.
 - X - make shortcodes to produce post/page content
 	- X - add a shortcodes.php file that get pulled into functions
 	- X - add a header shortcode
