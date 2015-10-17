@@ -2019,15 +2019,33 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 22;
-  background: rgba(0, 0, 0, 0.75); }
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0.0;
+  z-index: 0;
+  transition: all 0.07s ease;
+  backface-visibility: hidden; }
+  .perfect-contain.with-video::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; }
   .perfect-contain.with-video video {
-    max-height: 95%;
-    max-width: 95%;
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) translateZ(0); }
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -50%) scale(0.5) translateZ(0);
+    transition: all 0.1s ease;
+    backface-visibility: hidden;
+    cursor: pointer; }
+  .perfect-contain.with-video.opened {
+    z-index: 22;
+    opacity: 1.0; }
+    .perfect-contain.with-video.opened video {
+      transform: translate(-50%, -50%) scale(1) translateZ(0); }
 
 #video-close {
   right: 0; }

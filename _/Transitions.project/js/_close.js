@@ -18,6 +18,7 @@
 		scrollDown();
 		scrollToTop();
 		currentLinks();
+		videoPlayer();
 		//fireFoxLimits(); // this is done with css now
 	});
 

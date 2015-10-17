@@ -37,7 +37,8 @@ function readyLoadingAmimation() {
 
 		#post-header .post-meta-data p, 
 		#post-header .info-toggle, 
-		.scroll-down, 
+		.scroll-down,
+		#video-play,
 
 		#post-content h1, 
 		#post-content h2, 

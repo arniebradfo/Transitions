@@ -337,7 +337,8 @@ function readyLoadingAmimation() {
 
 		#post-header .post-meta-data p, 
 		#post-header .info-toggle, 
-		.scroll-down, 
+		.scroll-down,
+		#video-play,
 
 		#post-content h1, 
 		#post-content h2, 
@@ -671,6 +672,35 @@ function theDelay(funks, timing){
 	clearTimeout(resizeTimer);
 	resizeTimer = setTimeout( funks, timing );
 }
+// jquery.videoPlayer.js
+
+function videoPlayer(){
+
+	var $videoBox = $('#header-video'),
+		$video    = $('#header-video video');
+	var video     = $video.get(0);
+
+	$('#video-play').on("click", function(){
+		$videoBox.addClass('opened');
+		// video animate in
+		video.play();
+	});
+
+	$video.on("click", function(){
+		if (video.paused){
+			video.play();
+		} else {
+			video.pause();
+		}
+	})
+
+	$('#video-close').on("click", function(){
+		$videoBox.removeClass('opened');
+		// video animate out
+		// video display none
+		video.pause();
+	});
+}
 // jquery.viewportSize.js
 
 function setWindowHeight() {
@@ -734,6 +764,7 @@ function setWindowHeight() {
 		scrollDown();
 		scrollToTop();
 		currentLinks();
+		videoPlayer();
 		//fireFoxLimits(); // this is done with css now
 	});
 

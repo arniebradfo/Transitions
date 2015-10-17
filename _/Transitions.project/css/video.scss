@@ -2,20 +2,39 @@
 
 .perfect-contain.with-video{
 	@include absoluteFill;
-	z-index: index($z-of, '.perfect-contain.with-video');
 	background: rgba($colorBlack,0.75);
 
+	&::before{
+		@include absoluteFill;
+	}
 
 	video{
-		max-height: 95%;
-		max-width:  95%;
+		// max-height: 95%;
+		// max-width:  95%;
+		height: 100%;
+		width: 100%;
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		@include transform(translate(-50%,-50%));
+		transform-origin: 50% 50%;
+		@include transform(translate(-50%,-50%) scale(0.5));
+		@include transition( all, 0.1s);
+		cursor: pointer;
+	}
+	
+	opacity: 0.0;
+	z-index: 0;
+	@include transition( all, 0.07s);
+	&.opened{
+		z-index: index($z-of, '.perfect-contain.with-video');
+		opacity: 1.0;
+		video{
+			@include transform(translate(-50%,-50%) scale(1));
+		}
 	}
 }
 
+// --------------------------------------------------------------- VIDEO CONTROL ICONS
 #video-close{
 	right: 0;
 }
