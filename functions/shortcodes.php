@@ -14,9 +14,9 @@
 			'deck' => '',
 			'style' => '',
 			'svgdefs' => '',
-			'featured_image' => true,
+			'featured_image' => 'true',
 			'video' => '',
-			'scroll_down' => true
+			'scroll_down' => 'true'
 		), $atts, 'pagehead' );
 
 		$ID = get_the_ID();
@@ -24,7 +24,7 @@
 
 		// add the scroll down button
 		$scroll_down = '';
-		if ($atts['scroll_down']){
+		if ($atts['scroll_down'] == "true" ){
 			$scroll_down .= '		<div class="icon-capsule scroll-down">';
 			$scroll_down .= '			<svg class="icon icon-arrow-bottom">';
 			$scroll_down .= '				<use xlink:href="#icon-arrow-bottom"></use>';
@@ -34,7 +34,7 @@
 
 		// add the featured image in a perfect contain
 		$heroimage = '';
-		if ($atts['featured_image'] == true ){
+		if ($atts['featured_image'] == 'true' ){
 
 			$thumbID = get_post_thumbnail_id($ID);
 			$thumbSrc = wp_get_attachment_image_src( $thumbID, 'full' )[0];

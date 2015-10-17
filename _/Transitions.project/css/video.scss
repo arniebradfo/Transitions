@@ -1,0 +1,28 @@
+// video.scss
+
+.perfect-contain.with-video{
+	@include absoluteFill;
+	z-index: index($z-of, '.perfect-contain.with-video');
+	background: rgba($colorBlack,0.75);
+
+
+	video{
+		max-height: 95%;
+		max-width:  95%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%,-50%));
+	}
+}
+
+#video-close{
+	right: 0;
+}
+
+#video-play{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	@include transform( translate(-50%,-50%) );
+}

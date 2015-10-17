@@ -1,6 +1,5 @@
 // _z-indicies.scss
 
-
 // list all elements that need z-indexing in ascending order here
 // use the index() function to return a number to be used as the z-index
 // example - z-index:index($z-of,class-name);
@@ -33,5 +32,8 @@ $z-of:
 '.ring',
 '#polaris-graphics-animation',
 '#home-nav',
+
+'.perfect-contain.with-video',
+'.scroll-down', 
 
 ;

@@ -60,6 +60,7 @@ article.post{
 // --------------------------------------------------------------- SCROLL BUTTONS	
 .scroll-down{
 	bottom: $headerBottomMargin;
+	z-index: index($z-of, '.scroll-down');
 	&::after{
 		content: 'Scroll Down';
 	}

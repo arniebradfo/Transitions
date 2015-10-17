@@ -68,7 +68,7 @@ $colorDarkIconSVGCurrent: 		$colorBlack9;
 use{position: relative;}
 
 // --------------------------------------------------------------- ICON CAPSULE & COLORS LIGHT
-.icon-capsule{
+@mixin iconCapsule{
 	&::before{
 		@include transition();
 		content: '';
@@ -109,6 +109,32 @@ use{position: relative;}
 		}
 	}
 }
+
+.icon-capsule{
+	@include iconCapsule;
+}
+.icon-capsule--large{
+	$multiplier:4;
+	$width:$buttonSizeL * 1.1;
+	@include iconCapsule;
+	height:	$width * $multiplier;
+	width:	$width * $multiplier; 
+	&::before{
+		height:	$buttonSizeL * $multiplier;  
+		width:	$buttonSizeL * $multiplier; 
+		top:  (($width * $multiplier) - (($buttonSizeL * $multiplier) + ($buttonBorderSize * 2)))/2;
+		left: (($width * $multiplier) - (($buttonSizeL * $multiplier) + ($buttonBorderSize * 2)))/2;
+	}
+	.icon{
+		height:	$buttonIconSizeL * $multiplier;
+		width:	$buttonIconSizeL * $multiplier;
+		top:  (($width - $buttonIconSizeL)/2) * $multiplier;
+		left: (($width - $buttonIconSizeL)/2) * $multiplier;
+		line-height: $buttonIconSizeL * 2;
+	}
+}
+
+
 
 // --------------------------------------------------------------- ICON COLORS DARK
 #menu-toggle.menu-is-active,
@@ -239,7 +265,6 @@ use{position: relative;}
 @include screenSize(L) { 
 	@include iconResize($sideMarginsL, $buttonSizeL, $buttonIconSizeL, $buttonNavSizeL, $buttonNavIconSizeL);
 }
-
 
 .icon-close,.icon-menu,.icon-info{
 	@include transition();

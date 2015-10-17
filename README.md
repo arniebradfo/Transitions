@@ -14,7 +14,7 @@ ToDo list
 	- X - add a body shortcode
 	- X - add a a scroll to top shorcode 
 	- X - make it work on posts
-	- make it work on pages
+	- X - make it work on pages
 - add video home page
 - add ajax loading
 - clear html validation

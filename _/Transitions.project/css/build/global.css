@@ -441,6 +441,50 @@ use {
 .icon-capsule:active::after {
   color: #1a1a1a; }
 
+.icon-capsule--large {
+  height: 114.4px;
+  width: 114.4px; }
+  .icon-capsule--large::before {
+    transition: all 0.25s ease;
+    backface-visibility: hidden;
+    content: '';
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid #4d4d4d;
+    cursor: pointer; }
+  .icon-capsule--large .icon {
+    color: #4d4d4d; }
+  .icon-capsule--large.info-toggle::before {
+    background: rgba(255, 255, 255, 0.6); }
+  .icon-capsule--large:hover .icon {
+    color: white; }
+  .icon-capsule--large:hover::before {
+    background: #1a1a1a;
+    border-color: #1a1a1a;
+    transform: scale(1.1) translateZ(0); }
+  .icon-capsule--large:active .icon {
+    color: white; }
+  .icon-capsule--large:active::before {
+    background: #ff5831;
+    border-color: #ff5831;
+    transform: scale(0.95) translateZ(0);
+    transition: all 0.05s ease;
+    backface-visibility: hidden; }
+  .icon-capsule--large:active::after {
+    color: #1a1a1a; }
+  .icon-capsule--large::before {
+    height: 104px;
+    width: 104px;
+    top: 3.2px;
+    left: 3.2px; }
+  .icon-capsule--large .icon {
+    height: 64px;
+    width: 64px;
+    top: 25.2px;
+    left: 25.2px;
+    line-height: 32px; }
+
 #menu-toggle.menu-is-active::before,
 .dark::before {
   transition: all 0.25s ease;
@@ -1519,47 +1563,48 @@ ul.navigation {
       margin-right: 70px;
       transform: translate(15px, 50%) translateZ(0); } }
 
-#post-header, #about-header, #contact-header {
+.perfect-contain {
+  margin: 0.5% 0.5% 0 0.5%;
+  width: 99%;
+  height: 94.5%;
+  overflow: hidden;
+  background: linear-gradient(to top, black, #e6e6e6); }
+  .perfect-contain img {
+    opacity: 0.4; }
+
+#post-header, #page-header, #about-header, #contact-header {
   position: relative;
   display: block;
   width: 100%;
   overflow: hidden;
   color: white; }
-  #post-header .perfect-contain, #about-header .perfect-contain, #contact-header .perfect-contain {
-    margin: 0.5% 0.5% 0 0.5%;
-    width: 99%;
-    height: 94.5%;
-    overflow: hidden;
-    background: linear-gradient(to top, black, #e6e6e6); }
-    #post-header .perfect-contain img, #about-header .perfect-contain img, #contact-header .perfect-contain img {
-      opacity: 0.4; }
-  #post-header h1, #post-header footer, #post-header .icon-capsule, #about-header h1, #about-header footer, #about-header .icon-capsule, #contact-header h1, #contact-header footer, #contact-header .icon-capsule {
+  #post-header h1, #post-header footer, #post-header .icon-capsule, #page-header h1, #page-header footer, #page-header .icon-capsule, #about-header h1, #about-header footer, #about-header .icon-capsule, #contact-header h1, #contact-header footer, #contact-header .icon-capsule {
     position: absolute; }
-  #post-header h1, #about-header h1, #contact-header h1 {
+  #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
     bottom: 5%;
     left: 0;
     max-width: 80%;
     margin-bottom: 4rem;
     color: inherit; }
     @media screen and (max-width: 499px) {
-      #post-header h1, #about-header h1, #contact-header h1 {
+      #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
         margin-left: 35px; } }
     @media screen and (min-width: 500px) and (max-width: 999px) {
-      #post-header h1, #about-header h1, #contact-header h1 {
+      #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
         margin-left: 60px; } }
     @media screen and (min-width: 1000px) {
-      #post-header h1, #about-header h1, #contact-header h1 {
+      #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
         margin-left: 70px; } }
     @media screen and (max-width: 499px) {
-      #post-header h1, #about-header h1, #contact-header h1 {
+      #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
         margin-right: 35px; } }
     @media screen and (min-width: 500px) and (max-width: 999px) {
-      #post-header h1, #about-header h1, #contact-header h1 {
+      #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
         margin-right: 60px; } }
     @media screen and (min-width: 1000px) {
-      #post-header h1, #about-header h1, #contact-header h1 {
+      #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
         margin-right: 70px; } }
-    #post-header h1 span, #about-header h1 span, #contact-header h1 span {
+    #post-header h1 span, #page-header h1 span, #about-header h1 span, #contact-header h1 span {
       font-family: "Raleway", Helvetica, Arial, sans-serif;
       font-weight: 100;
       letter-spacing: 0.06em;
@@ -1568,21 +1613,21 @@ ul.navigation {
       display: block;
       padding-top: 0.8rem; }
   @media screen and (min-width: 1000px) {
-    #post-header h1, #about-header h1, #contact-header h1 {
+    #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
       font-size: 6rem; }
-      #post-header h1 span, #about-header h1 span, #contact-header h1 span {
+      #post-header h1 span, #page-header h1 span, #about-header h1 span, #contact-header h1 span {
         font-size: 3rem; } }
   @media screen and (min-width: 750px) and (max-width: 999px) {
-    #post-header h1, #about-header h1, #contact-header h1 {
+    #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
       font-size: 4.5rem; }
-      #post-header h1 span, #about-header h1 span, #contact-header h1 span {
+      #post-header h1 span, #page-header h1 span, #about-header h1 span, #contact-header h1 span {
         font-size: 2.25rem; } }
   @media screen and (max-width: 749px) {
-    #post-header h1, #about-header h1, #contact-header h1 {
+    #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
       font-size: 3.5rem; }
-      #post-header h1 span, #about-header h1 span, #contact-header h1 span {
+      #post-header h1 span, #page-header h1 span, #about-header h1 span, #contact-header h1 span {
         font-size: 1.75rem; } }
-  #post-header footer, #about-header footer, #contact-header footer {
+  #post-header footer, #page-header footer, #about-header footer, #contact-header footer {
     top: 0;
     right: 0;
     width: 100%;
@@ -1592,24 +1637,24 @@ ul.navigation {
     padding-right: 1.6rem;
     color: #4d4d4d; }
     @media screen and (max-width: 499px) {
-      #post-header footer, #about-header footer, #contact-header footer {
+      #post-header footer, #page-header footer, #about-header footer, #contact-header footer {
         min-height: 35px; } }
     @media screen and (min-width: 500px) and (max-width: 999px) {
-      #post-header footer, #about-header footer, #contact-header footer {
+      #post-header footer, #page-header footer, #about-header footer, #contact-header footer {
         min-height: 60px; } }
     @media screen and (min-width: 1000px) {
-      #post-header footer, #about-header footer, #contact-header footer {
+      #post-header footer, #page-header footer, #about-header footer, #contact-header footer {
         min-height: 70px; } }
     @media screen and (min-width: 1000px) {
-      #post-header footer, #about-header footer, #contact-header footer {
+      #post-header footer, #page-header footer, #about-header footer, #contact-header footer {
         padding-top: 0.8rem; } }
-    #post-header footer a, #about-header footer a, #contact-header footer a {
+    #post-header footer a, #page-header footer a, #about-header footer a, #contact-header footer a {
       color: #1a1a1a; }
-      #post-header footer a:hover, #post-header footer a:focus, #about-header footer a:hover, #about-header footer a:focus, #contact-header footer a:hover, #contact-header footer a:focus {
+      #post-header footer a:hover, #post-header footer a:focus, #page-header footer a:hover, #page-header footer a:focus, #about-header footer a:hover, #about-header footer a:focus, #contact-header footer a:hover, #contact-header footer a:focus {
         color: #333333; }
-      #post-header footer a:active, #about-header footer a:active, #contact-header footer a:active {
+      #post-header footer a:active, #page-header footer a:active, #about-header footer a:active, #contact-header footer a:active {
         color: white; }
-    #post-header footer p, #about-header footer p, #contact-header footer p {
+    #post-header footer p, #page-header footer p, #about-header footer p, #contact-header footer p {
       font-family: "Raleway", Helvetica, Arial, sans-serif;
       font-weight: 900;
       letter-spacing: 0.4px;
@@ -1618,43 +1663,43 @@ ul.navigation {
       font-size: 0.8rem;
       display: block;
       text-align: right; }
-      #post-header footer p:first-child, #about-header footer p:first-child, #contact-header footer p:first-child {
+      #post-header footer p:first-child, #page-header footer p:first-child, #about-header footer p:first-child, #contact-header footer p:first-child {
         padding-top: 0.4rem; }
         @media screen and (min-width: 500px) {
-          #post-header footer p:first-child, #about-header footer p:first-child, #contact-header footer p:first-child {
+          #post-header footer p:first-child, #page-header footer p:first-child, #about-header footer p:first-child, #contact-header footer p:first-child {
             padding-top: 0.8rem; } }
-      #post-header footer p:last-child, #about-header footer p:last-child, #contact-header footer p:last-child {
+      #post-header footer p:last-child, #page-header footer p:last-child, #about-header footer p:last-child, #contact-header footer p:last-child {
         padding-bottom: 0.4rem; }
         @media screen and (min-width: 500px) {
-          #post-header footer p:last-child, #about-header footer p:last-child, #contact-header footer p:last-child {
+          #post-header footer p:last-child, #page-header footer p:last-child, #about-header footer p:last-child, #contact-header footer p:last-child {
             padding-bottom: 0.8rem; } }
   @media screen and (max-width: 999px) {
-    #post-header footer, #about-header footer, #contact-header footer {
+    #post-header footer, #page-header footer, #about-header footer, #contact-header footer {
       background: white;
       color: gray;
       transform: translate(0, -100%) translateZ(0); } }
   @media screen and (max-width: 999px) and (max-width: 499px) {
-    #post-header footer, #about-header footer, #contact-header footer {
+    #post-header footer, #page-header footer, #about-header footer, #contact-header footer {
       padding-left: 35px; } }
   @media screen and (max-width: 999px) and (min-width: 500px) and (max-width: 999px) {
-    #post-header footer, #about-header footer, #contact-header footer {
+    #post-header footer, #page-header footer, #about-header footer, #contact-header footer {
       padding-left: 60px; } }
   @media screen and (max-width: 999px) and (min-width: 1000px) {
-    #post-header footer, #about-header footer, #contact-header footer {
+    #post-header footer, #page-header footer, #about-header footer, #contact-header footer {
       padding-left: 70px; } }
   @media screen and (max-width: 999px) and (max-width: 499px) {
-    #post-header footer, #about-header footer, #contact-header footer {
+    #post-header footer, #page-header footer, #about-header footer, #contact-header footer {
       padding-right: 35px; } }
   @media screen and (max-width: 999px) and (min-width: 500px) and (max-width: 999px) {
-    #post-header footer, #about-header footer, #contact-header footer {
+    #post-header footer, #page-header footer, #about-header footer, #contact-header footer {
       padding-right: 60px; } }
   @media screen and (max-width: 999px) and (min-width: 1000px) {
-    #post-header footer, #about-header footer, #contact-header footer {
+    #post-header footer, #page-header footer, #about-header footer, #contact-header footer {
       padding-right: 70px; } }
   @media screen and (max-width: 999px) {
-    #post-header.info-is-active footer, #about-header.info-is-active footer, #contact-header.info-is-active footer {
+    #post-header.info-is-active footer, #page-header.info-is-active footer, #about-header.info-is-active footer, #contact-header.info-is-active footer {
       transform: translate(0, 0) translateZ(0); } }
-  #post-header .info-toggle, #about-header .info-toggle, #contact-header .info-toggle {
+  #post-header .info-toggle, #page-header .info-toggle, #about-header .info-toggle, #contact-header .info-toggle {
     top: 0;
     right: 0; }
 
@@ -1756,7 +1801,8 @@ article.post {
     -webkit-font-smoothing: antialiased; }
 
 .scroll-down {
-  bottom: 5%; }
+  bottom: 5%;
+  z-index: 23; }
   .scroll-down::after {
     content: 'Scroll Down'; }
   @media screen and (max-width: 499px) {
@@ -1966,6 +2012,31 @@ html {
 
 body {
   background: white; }
+
+.perfect-contain.with-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 22;
+  background: rgba(0, 0, 0, 0.75); }
+  .perfect-contain.with-video video {
+    max-height: 95%;
+    max-width: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(0); }
+
+#video-close {
+  right: 0; }
+
+#video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) translateZ(0); }
 
 .animate #p-laris, .animate #graphics {
   opacity: 1;
@@ -2187,7 +2258,7 @@ body {
   left: 0;
   right: 0; }
 
-#about-header .perfect-contain, .page-masthead .perfect-contain {
+#about-header .perfect-contain, #page-header .perfect-contain {
   margin: 0 0.5%;
   height: 95%; }
 
