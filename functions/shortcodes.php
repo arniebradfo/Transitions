@@ -31,7 +31,7 @@
 		if ($atts['video'] != '') {
 
 			$video_lightbox .= '	<div class="perfect-contain with-video" id="header-video">';
-			$video_lightbox .= '		<video src="'. $atts['video'] .'" controls></video>';
+			$video_lightbox .= '		<video src="'. $atts['video'] .'" controls>Your browser does not support the video tag.</video>';
 			$video_lightbox .= '		<div class="icon-capsule" id="video-close">';
 			$video_lightbox .= '			<svg class="icon icon-close" >';
 			$video_lightbox .= '				<use xlink:href="#icon-close"></use>';
@@ -159,7 +159,35 @@
 		return $output;
 	}
 
+	function home_video_func( $atts, $content = "" ) {
+		$atts = shortcode_atts( array(
+			'style' => '',
+			'src' => '',
+			'autoplay' => 'true',
+			'loop' => 'true',
+			'muted' => 'true',
+			'controls' => 'false'
+		), $atts, 'home_video' );
+		
+		$output = '';
+
+		$output .='		<div id="home-video-container" '.($atts['style'] != '' ? 'style="'.$atts['style'].'"' : '').'>';
+		$output .='			<video class="home-video"  ';
+		$output .='				src="'. $atts['src'] .'" ';
+		$output .= 				($atts['autoplay'] == 'true' ? 'autoplay ' : '');
+		$output .= 				($atts['loop']     == 'true' ? 'loop '     : '');
+		$output .= 				($atts['muted']    == 'true' ? 'muted '    : '');
+		$output .= 				($atts['controls'] == 'true' ? 'controls ' : '');
+		$output .='			>Your browser does not support the video tag.</video>';
+		$output .='		</div>';
+
+		return $output;
+
+	}
+
+
 	// Add all shortcodes
+	add_shortcode( 'home_video', 'home_video_func' );	
 	add_shortcode( 'scroll_to_top', 'scroll_to_top_func' );	
 	add_shortcode( 'rule', 'rule_func' );	
 	add_shortcode( 'pagehead', 'pagehead_func' );

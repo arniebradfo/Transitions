@@ -2021,7 +2021,7 @@ body {
   right: 0;
   background: rgba(0, 0, 0, 0.75);
   opacity: 0.0;
-  z-index: 0;
+  z-index: -99;
   transition: all 0.07s ease;
   backface-visibility: hidden; }
   .perfect-contain.with-video::before {
@@ -2038,7 +2038,7 @@ body {
     left: 50%;
     transform-origin: 50% 50%;
     transform: translate(-50%, -50%) scale(0.5) translateZ(0);
-    transition: all 0.1s ease;
+    transition: all 0.12s ease;
     backface-visibility: hidden;
     cursor: pointer; }
   .perfect-contain.with-video.opened {
@@ -2046,6 +2046,15 @@ body {
     opacity: 1.0; }
     .perfect-contain.with-video.opened video {
       transform: translate(-50%, -50%) scale(1) translateZ(0); }
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+#home-video-container video {
+  opacity: 0;
+  animation: fadeInOpacity 1s ease 0.5s 1 forwards; }
 
 #video-close {
   right: 0; }
@@ -2890,22 +2899,29 @@ maybe add a cover over the entire page when scrolling
 so that all elements are not hoverable
 
 */
-.perfect-contain {
+.perfect-contain, #home-video-container {
   position: relative;
   overflow: hidden; }
-  .perfect-contain img {
+  .perfect-contain img, .perfect-contain .home-video, #home-video-container img, #home-video-container .home-video {
     min-height: 100%;
     min-width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0); }
-  .perfect-contain .height {
+  .perfect-contain .height, #home-video-container .height {
     height: 101%;
     width: auto; }
-  .perfect-contain .width {
+  .perfect-contain .width, #home-video-container .width {
     width: 101%;
     height: auto; }
+
+#home-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
 
 .img-row {
   width: 100%;

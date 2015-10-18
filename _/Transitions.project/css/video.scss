@@ -18,12 +18,12 @@
 		left: 50%;
 		transform-origin: 50% 50%;
 		@include transform(translate(-50%,-50%) scale(0.5));
-		@include transition( all, 0.1s);
+		@include transition( all, 0.12s);
 		cursor: pointer;
 	}
 	
 	opacity: 0.0;
-	z-index: 0;
+	z-index: -99;
 	@include transition( all, 0.07s);
 	&.opened{
 		z-index: index($z-of, '.perfect-contain.with-video');
@@ -31,6 +31,18 @@
 		video{
 			@include transform(translate(-50%,-50%) scale(1));
 		}
+	}
+}
+
+@keyframes fadeInOpacity{
+	0%{   opacity: 0; }
+	100%{ opacity: 1; }
+}
+
+#home-video-container{
+	video{
+		opacity: 0;
+		animation: fadeInOpacity 1s ease 0.5s 1 forwards; 
 	}
 }
 

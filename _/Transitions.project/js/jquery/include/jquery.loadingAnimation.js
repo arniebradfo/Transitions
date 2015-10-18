@@ -200,7 +200,7 @@ function animateOut($href) {
 	;
 	// if this is the home page, animate the home page elements
 	if ( $('#home-header').length ) {
-		$('#total-animation').addClass('above-the-top');
+		$('#total-animation, #home-video-container').addClass('above-the-top');
 		$('#home-bg').addClass('fade');
 		$('#home-nav').removeClass('above-the-top').addClass('fade');
 	}

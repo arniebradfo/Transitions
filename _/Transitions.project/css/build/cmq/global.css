@@ -1985,7 +1985,7 @@ body {
 	right: 0;
 	background: rgba(0, 0, 0, 0.75);
 	opacity: 0.0;
-	z-index: 0;
+	z-index: -99;
 	-webkit-transition: all 0.07s ease;
 	-o-transition: all 0.07s ease;
 	transition: all 0.07s ease;
@@ -2013,9 +2013,9 @@ body {
 	transform-origin: 50% 50%;
 	-webkit-transform: translate(-50%, -50%) scale(0.5) translateZ(0);
 	transform: translate(-50%, -50%) scale(0.5) translateZ(0);
-	-webkit-transition: all 0.1s ease;
-	-o-transition: all 0.1s ease;
-	transition: all 0.1s ease;
+	-webkit-transition: all 0.12s ease;
+	-o-transition: all 0.12s ease;
+	transition: all 0.12s ease;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	cursor: pointer;
@@ -2029,6 +2029,13 @@ body {
 .perfect-contain.with-video.opened video {
 	-webkit-transform: translate(-50%, -50%) scale(1) translateZ(0);
 	transform: translate(-50%, -50%) scale(1) translateZ(0);
+}
+
+#home-video-container video {
+	opacity: 0;
+	-webkit-animation: fadeInOpacity 1s ease 0.5s 1 forwards;
+	-o-animation: fadeInOpacity 1s ease 0.5s 1 forwards;
+	animation: fadeInOpacity 1s ease 0.5s 1 forwards;
 }
 
 #video-close {
@@ -2883,12 +2890,16 @@ so that all elements are not hoverable
 
 */
 
-.perfect-contain {
+.perfect-contain,
+#home-video-container {
 	position: relative;
 	overflow: hidden;
 }
 
-.perfect-contain img {
+.perfect-contain img,
+.perfect-contain .home-video,
+#home-video-container img,
+#home-video-container .home-video {
 	min-height: 100%;
 	min-width: 100%;
 	position: absolute;
@@ -2898,14 +2909,24 @@ so that all elements are not hoverable
 	transform: translate3d(-50%, -50%, 0);
 }
 
-.perfect-contain .height {
+.perfect-contain .height,
+#home-video-container .height {
 	height: 101%;
 	width: auto;
 }
 
-.perfect-contain .width {
+.perfect-contain .width,
+#home-video-container .width {
 	width: 101%;
 	height: auto;
+}
+
+#home-video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 }
 
 .img-row {
@@ -4644,6 +4665,42 @@ picture {
 
 100% {
 	opacity: 0;
+}
+
+}
+
+@-webkit-keyframes fadeInOpacity {
+
+0% {
+	opacity: 0;
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@-o-keyframes fadeInOpacity {
+
+0% {
+	opacity: 0;
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes fadeInOpacity {
+
+0% {
+	opacity: 0;
+}
+
+100% {
+	opacity: 1;
 }
 
 }

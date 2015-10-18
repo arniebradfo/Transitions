@@ -4,6 +4,7 @@
 	function resizeOrder(){
 		setWindowHeight();
 		perfectCenterImage();
+		perfectCenterImage('#home-video-container','.home-video');
 		// perfectCenterRings();
 	}
 
@@ -26,6 +27,7 @@
 	$(window).load(function() {
 		// alert("window has loaded!");
 		perfectCenterImage();
+		perfectCenterImage('#home-video','video');
 		loadLoadingAmimation(theTiming);
 		clickDiversion();	
 	});

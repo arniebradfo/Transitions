@@ -15,7 +15,9 @@ ToDo list
 	- X - add a a scroll to top shorcode 
 	- X - make it work on posts
 	- X - make it work on pages
-- add video home page
+- make sure menu can be configured properly
+- X - add video home page
+- replace references to bolierplate theme
 - add ajax loading
 - clear html validation
 - 0 - add video chrome
