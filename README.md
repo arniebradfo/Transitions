@@ -15,8 +15,11 @@ ToDo list
 	- X- add a a scroll to top shorcode 
 	- X- make it work on posts
 	- X- make it work on pages
+- make ul and icon set
 - make sure menu can be configured properly
-	- add icons
+	- X-add icons
+	- make icons a little smaller
+	- output regular names on category pages
 - X- add video home page
 	- add play/pause, mute/unmute buttons?
 - replace references to bolierplate theme
