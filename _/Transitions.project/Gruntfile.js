@@ -100,7 +100,7 @@ module.exports = function(grunt) {
 
 	svgstore: {
 		options: {
-		prefix : 'icon-', // This will prefix each <symbol> ID
+		prefix : 'nav-', // This will prefix each <symbol> ID
 		svg: { // will be added as attributes to the resulting SVG
 			style : "display: none;"
 		},
@@ -115,10 +115,10 @@ module.exports = function(grunt) {
 		},
 		default : {
 		files: {
-			// 'svg/build/svg-defs-nav.svg':      ['svg/full/nav/*.svg'],
-			// 'svg/build/svg-defs-social.svg':   ['svg/full/social/*.svg'],
-			// 'svg/build/svg-defs-logos.svg':    ['svg/full/logos/*.svg'],
-			'svg/build/svg-defs-icons.svg':    ['svg/full/icons/*.svg']
+			'svg/build/svg-defs-nav.svg':      ['svg/full/nav/*.svg']
+			// 'svg/build/svg-defs-social.svg':   ['svg/full/social/*.svg']
+			// 'svg/build/svg-defs-logos.svg':    ['svg/full/logos/*.svg']
+			//'svg/build/svg-defs-icons.svg':    ['svg/full/icons/*.svg']
 		}
 		}
 	},
