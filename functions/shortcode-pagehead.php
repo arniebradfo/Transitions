@@ -11,7 +11,7 @@
 			'id' =>  (is_page(get_the_ID()) ? 'page-header' : 'post-header' ),
 			'class' => ( is_page(get_the_ID()) ? 'page-masthead' : 'post-masthead' ),
 			'title' => ( is_page(get_the_ID()) ? '' : get_the_title() ),
-			'deck' => '',
+			'deck' => 'the_deck',
 			'style' => '',
 			'svgdefs' => '',
 			'featured_image' => 'true',
@@ -19,12 +19,16 @@
 			'scroll_down' => ''
 		), $atts, 'pagehead' );
 
+		$ID = get_the_ID();
+		$output  = '';
+
 		if ($atts['video'] != '' && $atts['scroll_down'] == '') {
 			$atts['scroll_down'] = 'false';
 		}
 
-		$ID = get_the_ID();
-		$output  = '';
+		if ($atts['deck'] == 'the_deck') {
+			$atts['deck'] = get_post_meta ( $ID, 'deck', true );
+		}
 
 		// add the video lightbox
 		$video_lightbox = '';

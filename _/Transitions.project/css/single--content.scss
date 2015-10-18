@@ -15,12 +15,27 @@
 			width: 100%;
 		}
 	}
-	// // for long paragraphs ?? Make a specal class??
-	// @include screenSize(L) {
-	// 	p{
-	// 		column-count: 2;
-	// 	}		
-	// }
+	ul, ol {
+		list-style: inside;
+	}
+}
+
+.media-content{
+	display: flex;
+	margin: $textMargins 0;
+	img{
+		flex-wrap: wrap;
+		margin:10px 30px 0 0;
+	}
+	&__text{
+		flex-wrap: wrap;
+		flex-grow: 1;
+	}
+}
+@include screenSize(0,S) {
+	.media-content{
+		flex-direction: column;
+	}
 }
 
 #post-content-rule{
@@ -72,7 +87,7 @@ article.post{
 		content: 'Scroll To The Top';
 	}	
 }
-@include screenSize(L){
+@include screenSize(L) {
 	.scroll-down, .scroll-to-top{
 		&::after{
 			opacity: 0;

@@ -347,6 +347,8 @@ function readyLoadingAmimation() {
 		#post-content h5, 
 		#post-content h6, 
 		#post-content p, 
+		#post-content ul, 
+		#post-content ol, 
 		#post-content span, 
 		#post-content picture, 
 		#post-content img, 

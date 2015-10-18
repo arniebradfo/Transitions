@@ -1739,7 +1739,22 @@ ul.navigation {
     margin-bottom: 0.5%; }
   #post-content picture img {
     width: 100%; }
+  #post-content ul, #post-content ol {
+    list-style: inside; }
 
+.media-content {
+  display: flex;
+  margin: 0.8rem 0; }
+  .media-content img {
+    flex-wrap: wrap;
+    margin: 10px 30px 0 0; }
+  .media-content__text {
+    flex-wrap: wrap;
+    flex-grow: 1; }
+
+@media screen and (max-width: 499px) {
+  .media-content {
+    flex-direction: column; } }
 #post-content-rule {
   height: 2px;
   position: absolute;

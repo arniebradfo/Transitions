@@ -11,6 +11,7 @@
 	require_once('functions/shortcode-home_video.php');
 	require_once('functions/shortcode-pagehead.php');
 	require_once('functions/shortcode-pagewrapper.php');
+	// require_once('functions/shortcode-media_content.php');
 
 	// BAKE PLUGINS INTO THEME: http://alexking.org/blog/2012/07/09/include-plugin-in-wordpress-theme
 	// Options Framework (https://github.com/devinsays/options-framework-plugin)

@@ -12,14 +12,16 @@ ToDo list
 	- X- add a shortcodes.php file that get pulled into functions
 	- X- add a header shortcode
 	- X- add a body shortcode
-	- X- add a a scroll to top shorcode 
+	- X- add a a scroll to top shorcode
 	- X- make it work on posts
 	- X- make it work on pages
-- make ul and icon set
-- make sure menu can be configured properly
-	- X-add icons
+- X- make ul and icon set
+- make example pages
+- X- fix deck output
+- X- make sure menu can be configured properly
+	- X- add icons
 	- make icons a little smaller
-	- output regular names on category pages
+	- X- output regular names on category pages
 - X- add video home page
 	- add play/pause, mute/unmute buttons?
 - replace references to bolierplate theme
