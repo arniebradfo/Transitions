@@ -6,19 +6,21 @@
  */
 
 	// CUSTOM SHORTCODES
-	// require_once('functions/shortcode-boilerplate.php');
-	require_once('functions/shortcodes.php');
-	require_once('functions/shortcode-home_video.php');
-	require_once('functions/shortcode-pagehead.php');
-	require_once('functions/shortcode-pagewrapper.php');
-	// require_once('functions/shortcode-media_content.php');
+	// require_once( dirname( __FILE__ ) .'/_/shortcodes/shortcode-boilerplate.php');
+	require_once( dirname( __FILE__ ) .'/_/shortcodes/shortcodes.php');
+	require_once( dirname( __FILE__ ) .'/_/shortcodes/shortcode-home_video.php');
+	require_once( dirname( __FILE__ ) .'/_/shortcodes/shortcode-pagehead.php');
+	require_once( dirname( __FILE__ ) .'/_/shortcodes/shortcode-pagewrapper.php');
+	// require_once( dirname( __FILE__ ) .'/_/shortcodes/shortcode-media_content.php');
 
 	// BAKE PLUGINS INTO THEME: http://alexking.org/blog/2012/07/09/include-plugin-in-wordpress-theme
 	// Options Framework (https://github.com/devinsays/options-framework-plugin)
 	if ( !function_exists( 'optionsframework_init' ) ) {
 		define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/_/inc/' );
-		require_once dirname( __FILE__ ) . '/_/inc/options-framework.php';
+		require_once dirname( __FILE__ ) .'/_/inc/options-framework.php';
 	}
+	require_once( dirname( __FILE__ ) .'/_/bakeins/plugin-save_with_keyboard/save_with_keyboard.php');
+	require_once( dirname( __FILE__ ) .'/_/bakeins/plugin-Disable_wpautop/Disable_wpautop.php');
 
 	// Allow svg uploads - from CSS-tricks (http://css-tricks.com/snippets/wordpress/allow-svg-through-wordpress-media-uploader/)
 	function cc_mime_types( $mimes ){

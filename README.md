@@ -16,6 +16,10 @@ ToDo list
 	- X- make it work on posts
 	- X- make it work on pages
 - X- make ul and icon set
+- bake in plugins
+	- ctrl s
+	- code editor
+	
 - make example pages
 - X- fix deck output
 - X- make sure menu can be configured properly
