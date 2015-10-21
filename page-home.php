@@ -12,27 +12,16 @@ Template Name: Home Page
 
 ?>
 
-
-<!-- <div 
-	id="wrapper-home" 
-	style="
-		display: block; 
-		z-index: 999;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background-color:black;
-	"
-></div> -->
-
 <div id="home-bg"></div>
 
 <header id="home-header" >
 
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
 	<?php the_content(); ?>
 
+	<?php endwhile; endif; ?>
+	
 	<nav id="home-nav" class="nav foot-nav" role="navigation">
 		<?php 
 		wp_nav_menu( array(

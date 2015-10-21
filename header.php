@@ -187,7 +187,7 @@
 		</div>
 	</div> <!-- loading wrapper -->
 
-	<?php if ( !is_front_page() ) { // NOT THE FRONT PAGE ?>
+	<?php if ( !is_front_page() ): // NOT THE FRONT PAGE ?>
 
 	<?php echo file_get_contents(get_template_directory_uri() . '/_/svg/build/svg-defs-social.svg'); ?>
 
@@ -225,4 +225,4 @@
 
 	<div id="wrapper">
 
-	<?php } // END IF is not the front page?>
+	<?php endif;  // END IF is not the front page?>
