@@ -108,6 +108,7 @@
 	}
 	img{ // --------------------------------------------------------------------< IMG HERE
 		height: 110%;
+		width: auto;
 		z-index:index($z-of,'.post-link img');
 		opacity: 0.9;
 		top:0;

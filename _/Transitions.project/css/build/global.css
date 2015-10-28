@@ -4,7 +4,7 @@ Theme URI: 			https://github.com/arniebradfo/Transitions
 Description: 		A custom WordPress theme with magical page load and unload transitions. Based on the HTML5 Reset Theme.
 Author: 			Arniebradfo
 Author URI: 		http://www.polaris.graphics
-Version: 			2.0.1
+Version: 			2.0.2
 GitHub Theme URI: 	https://github.com/arniebradfo/Transitions
 GitHub Branch:    	master
 */
@@ -1336,6 +1336,7 @@ body {
     backface-visibility: hidden; }
   .post-link img {
     height: 110%;
+    width: auto;
     z-index: 1;
     opacity: 0.9;
     top: 0;
