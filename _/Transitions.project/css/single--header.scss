@@ -25,9 +25,9 @@ $headerPictureHeightSmall:100% - $headerBottomMarginSmall;
 	overflow: hidden;
 	color: white;
 	
-	h1, footer, .icon-capsule{
+	h1, .post-meta-data, .icon-capsule{
 		position: absolute;
-	}
+	} 
 	h1{
 		bottom:$headerBottomMargin;
 		left: 0;
@@ -66,7 +66,7 @@ $headerPictureHeightSmall:100% - $headerBottomMarginSmall;
 		}
 	}
 	
-	footer{
+	.post-meta-data{
 		top:0;
 		right:0;
 		width: 100%;
@@ -105,7 +105,7 @@ $headerPictureHeightSmall:100% - $headerBottomMarginSmall;
 		}
 	}
 	@include screenSize(0,L) {
-		footer{
+		.post-meta-data{
 			background: $colorBG;
 			color: $colorBlack5;
 			@include dimension(1,padding-left, padding-right);
@@ -113,7 +113,7 @@ $headerPictureHeightSmall:100% - $headerBottomMarginSmall;
 			@include transform(translate(0,-100%));
 		}
 		&.info-is-active{
-			footer{
+			.post-meta-data{
 				@include transform(translate(0,0));
 			}
 		}

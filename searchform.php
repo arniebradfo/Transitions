@@ -1,4 +1,4 @@
-<form role="search" method="get" id="search-form" action="<?php echo home_url( '/' ); ?>">
+<form method="get" id="search-form" action="<?php echo home_url( '/' ); ?>">
 
 	<label for="s" class="screen-reader-text" style="display:none;"><?php _e('Search for:','html5reset'); ?></label>
 

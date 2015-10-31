@@ -55,11 +55,11 @@
 
 		<div class="image-overlay"></div>
 		
-		<footer class="post-meta-data">
+		<div class="post-meta-data">
 			<p><?php posted_on(); ?></p>
 			<p><?php _e('Posted in:','html5reset'); ?> <?php the_category(',') ?> </p>
 			<?php the_tags('<p>' . __('Tags: ','html5reset'), ', ', '</p>'); ?>
-		</footer>
+		</div>
 
 		<div class="icon-capsule info-toggle" >
 			<svg class="icon icon-info" >

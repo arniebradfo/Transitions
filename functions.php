@@ -394,7 +394,7 @@
 			if( sizeof($social_links) > 0 ){
 				foreach ($social_links as $site) {
 					// foreach ($social_links as $site){
-						$social_list .= '<li><a href="' . $site[0] . '" target="_blank" class="icon-capsule dark fill social"  id="social-' . $site[1] . '"> 
+						$social_list .= '<li><a href="' . $site[0] . '" target="_blank" class="icon-capsule dark fill social social-' . $site[1] . '"> 
 						<svg class="icon" ><use xlink:href="#social-' . $site[1] . '">
 						</use></svg></a></li>';
 					// }

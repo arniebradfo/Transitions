@@ -88,23 +88,23 @@
 		}
 
 		// add the featured image in a perfect contain
-		$footer = '';
+		$meta = '';
 		if (!is_page(get_the_ID()) ){
 
-			$footer .= '	<footer class="post-meta-data">';
-			$footer .= '		<p> Posted on: '. get_the_date() .' By: <a href="'. get_the_author_link() .'">'. get_the_author() .'</a></p>';
-			$footer .= '		<p> Posted in: ' . get_the_category_list(', ') .'</p>';
-			$footer .= '		<p> Tags: '. get_the_tag_list('',', ') .'</p>';
-			$footer .= '	</footer>';
+			$meta .= '	<div class="post-meta-data">';
+			$meta .= '		<p> Posted on: '. get_the_date() .' By: <a href="'. get_the_author_link() .'">'. get_the_author() .'</a></p>';
+			$meta .= '		<p> Posted in: ' . get_the_category_list(', ') .'</p>';
+			$meta .= '		<p> Tags: '. get_the_tag_list('',', ') .'</p>';
+			$meta .= '	</div>';
 
-			$footer .= '	<div class="icon-capsule info-toggle">';
-			$footer .= '		<svg class="icon icon-info" >';
-			$footer .= '			<use xlink:href="#icon-info"></use>';
-			$footer .= '		</svg>';
-			$footer .= '		<svg class="icon icon-close" >';
-			$footer .= '			<use xlink:href="#icon-close"></use>';
-			$footer .= '		</svg>';
-			$footer .= '	</div>';
+			$meta .= '	<div class="icon-capsule info-toggle">';
+			$meta .= '		<svg class="icon icon-info" >';
+			$meta .= '			<use xlink:href="#icon-info"></use>';
+			$meta .= '		</svg>';
+			$meta .= '		<svg class="icon icon-close" >';
+			$meta .= '			<use xlink:href="#icon-close"></use>';
+			$meta .= '		</svg>';
+			$meta .= '	</div>';
 		}
 
 		$output .=		($atts['svgdefs'] !== '' ? file_get_contents($atts['svgdefs']) : '' );
@@ -115,7 +115,7 @@
 		$output .=  			$atts['title'];
 		$output .= '			<span>'. $atts['deck'] .'</span>';
 		$output .= '		</h1>';
-		$output .=      	$footer;
+		$output .=      	$meta;
 		$output .=      	$scroll_down;
 		$output .=      	$video_lightbox;		
 		$output .= '	</header>';

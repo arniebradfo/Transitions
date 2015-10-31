@@ -77,7 +77,7 @@
 		h2{
 			right: 0;
 		}
-		h2, footer{
+		h2, .post-meta-data{
 			@include dimension(1,padding-right);
 		}
 		.nav-arrow-tall{
@@ -90,7 +90,7 @@
 		h2{
 			left: 0;
 		}
-		h2, footer{
+		h2, .post-meta-data{
 			@include dimension(1,padding-left);
 		}
 		.nav-arrow-tall{
@@ -103,12 +103,12 @@
 	}
 	@include screenSize(L) {
 		.right-post{
-			h2, footer > p{
+			h2, .post-meta-data > p{
 				@include transform( translate(-3em,0) );
 			}
 		}
 		.left-post{
-			h2, footer > p{
+			h2, .post-meta-data > p{
 				@include transform( translate(3em,0) );
 			}
 		}

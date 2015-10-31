@@ -4,7 +4,7 @@ Theme URI: 			https://github.com/arniebradfo/Transitions
 Description: 		A custom WordPress theme with magical page load and unload transitions. Based on the HTML5 Reset Theme.
 Author: 			Arniebradfo
 Author URI: 		http://www.polaris.graphics
-Version: 			2.0.2
+Version: 			2.0.3
 GitHub Theme URI: 	https://github.com/arniebradfo/Transitions
 GitHub Branch:    	master
 */
@@ -1310,43 +1310,43 @@ body {
 	transform: translate(-50%, -10px) translateZ(0);
 }
 
-#social-facebook:hover .icon {
+.social-facebook:hover .icon {
 	fill: #3b5998;
 }
 
-#social-twitter:hover .icon {
+.social-twitter:hover .icon {
 	fill: #00aced;
 }
 
-#social-instagram:hover .icon {
+.social-instagram:hover .icon {
 	fill: #517fa4;
 }
 
-#social-google-plus:hover .icon {
+.social-google-plus:hover .icon {
 	fill: #dd4b39;
 }
 
-#social-github:hover .icon {
+.social-github:hover .icon {
 	fill: #000;
 }
 
-#social-codepen:hover .icon {
+.social-codepen:hover .icon {
 	fill: #000;
 }
 
-#social-linkedin:hover .icon {
+.social-linkedin:hover .icon {
 	fill: #007bb6;
 }
 
-#social-pinterest:hover .icon {
+.social-pinterest:hover .icon {
 	fill: #cb2027;
 }
 
-#social-dribbble:hover .icon {
+.social-dribbble:hover .icon {
 	fill: #ea4c89;
 }
 
-#social-behance:hover .icon {
+.social-behance:hover .icon {
 	fill: #000;
 }
 
@@ -1455,7 +1455,6 @@ body {
 	color: white;
 }
 
-.post-link picture,
 .post-link .image-overlay {
 	position: absolute;
 	top: 0;
@@ -1481,7 +1480,7 @@ body {
 
 .post-link img,
 .post-link h2,
-.post-link footer,
+.post-link .post-meta-data,
 .post-link a.post-permalink {
 	position: absolute;
 	display: block;
@@ -1535,7 +1534,7 @@ body {
 	z-index: 5;
 }
 
-.post-link footer {
+.post-link .post-meta-data {
 	width: 101%;
 	bottom: -1%;
 	padding-left: 0.8rem;
@@ -1551,7 +1550,7 @@ body {
 	opacity: 0;
 }
 
-.post-link footer p {
+.post-link .post-meta-data p {
 	font-family: "Raleway", Helvetica, Arial, sans-serif;
 	font-weight: 900;
 	letter-spacing: 0.4px;
@@ -1569,11 +1568,11 @@ body {
 	opacity: 0;
 }
 
-.post-link footer p:first-child {
+.post-link .post-meta-data p:first-child {
 	padding-top: 0.4rem;
 }
 
-.post-link footer p:last-child {
+.post-link .post-meta-data p:last-child {
 	padding-bottom: 0.4rem;
 }
 
@@ -1651,16 +1650,16 @@ ul.navigation .page-next {
 }
 
 #post-header h1,
-#post-header footer,
+#post-header .post-meta-data,
 #post-header .icon-capsule,
 #page-header h1,
-#page-header footer,
+#page-header .post-meta-data,
 #page-header .icon-capsule,
 #about-header h1,
-#about-header footer,
+#about-header .post-meta-data,
 #about-header .icon-capsule,
 #contact-header h1,
-#contact-header footer,
+#contact-header .post-meta-data,
 #contact-header .icon-capsule {
 	position: absolute;
 }
@@ -1689,10 +1688,10 @@ ul.navigation .page-next {
 	padding-top: 0.8rem;
 }
 
-#post-header footer,
-#page-header footer,
-#about-header footer,
-#contact-header footer {
+#post-header .post-meta-data,
+#page-header .post-meta-data,
+#about-header .post-meta-data,
+#contact-header .post-meta-data {
 	top: 0;
 	right: 0;
 	width: 100%;
@@ -1706,35 +1705,35 @@ ul.navigation .page-next {
 	color: #4d4d4d;
 }
 
-#post-header footer a,
-#page-header footer a,
-#about-header footer a,
-#contact-header footer a {
+#post-header .post-meta-data a,
+#page-header .post-meta-data a,
+#about-header .post-meta-data a,
+#contact-header .post-meta-data a {
 	color: #1a1a1a;
 }
 
-#post-header footer a:hover,
-#post-header footer a:focus,
-#page-header footer a:hover,
-#page-header footer a:focus,
-#about-header footer a:hover,
-#about-header footer a:focus,
-#contact-header footer a:hover,
-#contact-header footer a:focus {
+#post-header .post-meta-data a:hover,
+#post-header .post-meta-data a:focus,
+#page-header .post-meta-data a:hover,
+#page-header .post-meta-data a:focus,
+#about-header .post-meta-data a:hover,
+#about-header .post-meta-data a:focus,
+#contact-header .post-meta-data a:hover,
+#contact-header .post-meta-data a:focus {
 	color: #333333;
 }
 
-#post-header footer a:active,
-#page-header footer a:active,
-#about-header footer a:active,
-#contact-header footer a:active {
+#post-header .post-meta-data a:active,
+#page-header .post-meta-data a:active,
+#about-header .post-meta-data a:active,
+#contact-header .post-meta-data a:active {
 	color: white;
 }
 
-#post-header footer p,
-#page-header footer p,
-#about-header footer p,
-#contact-header footer p {
+#post-header .post-meta-data p,
+#page-header .post-meta-data p,
+#about-header .post-meta-data p,
+#contact-header .post-meta-data p {
 	font-family: "Raleway", Helvetica, Arial, sans-serif;
 	font-weight: 900;
 	letter-spacing: 0.4px;
@@ -1745,17 +1744,17 @@ ul.navigation .page-next {
 	text-align: right;
 }
 
-#post-header footer p:first-child,
-#page-header footer p:first-child,
-#about-header footer p:first-child,
-#contact-header footer p:first-child {
+#post-header .post-meta-data p:first-child,
+#page-header .post-meta-data p:first-child,
+#about-header .post-meta-data p:first-child,
+#contact-header .post-meta-data p:first-child {
 	padding-top: 0.4rem;
 }
 
-#post-header footer p:last-child,
-#page-header footer p:last-child,
-#about-header footer p:last-child,
-#contact-header footer p:last-child {
+#post-header .post-meta-data p:last-child,
+#page-header .post-meta-data p:last-child,
+#about-header .post-meta-data p:last-child,
+#contact-header .post-meta-data p:last-child {
 	padding-bottom: 0.4rem;
 }
 
@@ -3003,25 +3002,25 @@ so that all elements are not hoverable
 
 @media screen and (min-width: 500px) {
 
-.post-link footer p:first-child {
+.post-link .post-meta-data p:first-child {
 	padding-top: 0.8rem;
 }
 
-.post-link footer p:last-child {
+.post-link .post-meta-data p:last-child {
 	padding-bottom: 0.8rem;
 }
 
-#post-header footer p:first-child,
-#page-header footer p:first-child,
-#about-header footer p:first-child,
-#contact-header footer p:first-child {
+#post-header .post-meta-data p:first-child,
+#page-header .post-meta-data p:first-child,
+#about-header .post-meta-data p:first-child,
+#contact-header .post-meta-data p:first-child {
 	padding-top: 0.8rem;
 }
 
-#post-header footer p:last-child,
-#page-header footer p:last-child,
-#about-header footer p:last-child,
-#contact-header footer p:last-child {
+#post-header .post-meta-data p:last-child,
+#page-header .post-meta-data p:last-child,
+#about-header .post-meta-data p:last-child,
+#contact-header .post-meta-data p:last-child {
 	padding-bottom: 0.8rem;
 }
 
@@ -3245,7 +3244,7 @@ h2.page-title,
 	padding-right: 14.5px;
 }
 
-.post-link footer {
+.post-link .post-meta-data {
 	min-height: 60px;
 }
 
@@ -3275,10 +3274,10 @@ ul.navigation {
 	margin-right: 60px;
 }
 
-#post-header footer,
-#page-header footer,
-#about-header footer,
-#contact-header footer {
+#post-header .post-meta-data,
+#page-header .post-meta-data,
+#about-header .post-meta-data,
+#contact-header .post-meta-data {
 	min-height: 60px;
 }
 
@@ -3318,12 +3317,12 @@ ul.navigation {
 }
 
 #adjacent-posts .right-post h2,
-#adjacent-posts .right-post footer {
+#adjacent-posts .right-post .post-meta-data {
 	padding-right: 60px;
 }
 
 #adjacent-posts .left-post h2,
-#adjacent-posts .left-post footer {
+#adjacent-posts .left-post .post-meta-data {
 	padding-left: 60px;
 }
 
@@ -3494,17 +3493,17 @@ body.admin-bar #blanket {
 
 @media screen and (max-width: 999px) and (min-width: 500px) and (max-width: 999px) {
 
-#post-header footer,
-#page-header footer,
-#about-header footer,
-#contact-header footer {
+#post-header .post-meta-data,
+#page-header .post-meta-data,
+#about-header .post-meta-data,
+#contact-header .post-meta-data {
 	padding-left: 60px;
 }
 
-#post-header footer,
-#page-header footer,
-#about-header footer,
-#contact-header footer {
+#post-header .post-meta-data,
+#page-header .post-meta-data,
+#about-header .post-meta-data,
+#contact-header .post-meta-data {
 	padding-right: 60px;
 }
 
@@ -3512,17 +3511,17 @@ body.admin-bar #blanket {
 
 @media screen and (max-width: 999px) and (min-width: 1000px) {
 
-#post-header footer,
-#page-header footer,
-#about-header footer,
-#contact-header footer {
+#post-header .post-meta-data,
+#page-header .post-meta-data,
+#about-header .post-meta-data,
+#contact-header .post-meta-data {
 	padding-left: 70px;
 }
 
-#post-header footer,
-#page-header footer,
-#about-header footer,
-#contact-header footer {
+#post-header .post-meta-data,
+#page-header .post-meta-data,
+#about-header .post-meta-data,
+#contact-header .post-meta-data {
 	padding-right: 70px;
 }
 
@@ -3632,43 +3631,43 @@ h2.page-title,
 	flex-basis: 70px;
 }
 
-#social-facebook::after {
+.social-facebook::after {
 	content: 'facebook';
 }
 
-#social-twitter::after {
+.social-twitter::after {
 	content: 'twitter';
 }
 
-#social-instagram::after {
+.social-instagram::after {
 	content: 'instagram';
 }
 
-#social-google-plus::after {
+.social-google-plus::after {
 	content: 'google+';
 }
 
-#social-github::after {
+.social-github::after {
 	content: 'github';
 }
 
-#social-codepen::after {
+.social-codepen::after {
 	content: 'codepen';
 }
 
-#social-linkedin::after {
+.social-linkedin::after {
 	content: 'linkedin';
 }
 
-#social-pinterest::after {
+.social-pinterest::after {
 	content: 'pinterest';
 }
 
-#social-dribbble::after {
+.social-dribbble::after {
 	content: 'dribbble';
 }
 
-#social-behance::after {
+.social-behance::after {
 	content: 'behance';
 }
 
@@ -3694,11 +3693,11 @@ h2.page-title,
 	padding-right: 17px;
 }
 
-.post-link footer {
+.post-link .post-meta-data {
 	min-height: 70px;
 }
 
-.post-link footer {
+.post-link .post-meta-data {
 	padding-right: 1rem;
 	min-height: 0;
 }
@@ -3709,56 +3708,56 @@ h2.page-title,
 	opacity: 0;
 }
 
-.post-link:hover footer,
+.post-link:hover .post-meta-data,
 .post-link:hover h2 {
 	opacity: 1;
 	-webkit-transform: translate(0, 0) translateZ(0);
 	transform: translate(0, 0) translateZ(0);
 }
 
-.post-link:hover footer > p,
+.post-link:hover .post-meta-data > p,
 .post-link:hover h2 > p {
 	-webkit-transform: translate(0, 0) translateZ(0);
 	transform: translate(0, 0) translateZ(0);
 	opacity: 1;
 }
 
-.post-link:hover footer > p:nth-child(1),
+.post-link:hover .post-meta-data > p:nth-child(1),
 .post-link:hover h2 > p:nth-child(1) {
 	-webkit-transition-delay: 0.2s;
 	-o-transition-delay: 0.2s;
 	transition-delay: 0.2s;
 }
 
-.post-link:hover footer > p:nth-child(2),
+.post-link:hover .post-meta-data > p:nth-child(2),
 .post-link:hover h2 > p:nth-child(2) {
 	-webkit-transition-delay: 0.3s;
 	-o-transition-delay: 0.3s;
 	transition-delay: 0.3s;
 }
 
-.post-link:hover footer > p:nth-child(3),
+.post-link:hover .post-meta-data > p:nth-child(3),
 .post-link:hover h2 > p:nth-child(3) {
 	-webkit-transition-delay: 0.4s;
 	-o-transition-delay: 0.4s;
 	transition-delay: 0.4s;
 }
 
-.post-link:hover footer > p:nth-child(4),
+.post-link:hover .post-meta-data > p:nth-child(4),
 .post-link:hover h2 > p:nth-child(4) {
 	-webkit-transition-delay: 0.5s;
 	-o-transition-delay: 0.5s;
 	transition-delay: 0.5s;
 }
 
-.post-link:hover footer > p:nth-child(5),
+.post-link:hover .post-meta-data > p:nth-child(5),
 .post-link:hover h2 > p:nth-child(5) {
 	-webkit-transition-delay: 0.6s;
 	-o-transition-delay: 0.6s;
 	transition-delay: 0.6s;
 }
 
-.post-link:hover footer > p:nth-child(6),
+.post-link:hover .post-meta-data > p:nth-child(6),
 .post-link:hover h2 > p:nth-child(6) {
 	-webkit-transition-delay: 0.7s;
 	-o-transition-delay: 0.7s;
@@ -3859,17 +3858,17 @@ ul.navigation {
 	font-size: 3rem;
 }
 
-#post-header footer,
-#page-header footer,
-#about-header footer,
-#contact-header footer {
+#post-header .post-meta-data,
+#page-header .post-meta-data,
+#about-header .post-meta-data,
+#contact-header .post-meta-data {
 	min-height: 70px;
 }
 
-#post-header footer,
-#page-header footer,
-#about-header footer,
-#contact-header footer {
+#post-header .post-meta-data,
+#page-header .post-meta-data,
+#about-header .post-meta-data,
+#contact-header .post-meta-data {
 	padding-top: 0.8rem;
 }
 
@@ -3951,23 +3950,23 @@ ul.navigation {
 }
 
 #adjacent-posts .right-post h2,
-#adjacent-posts .right-post footer {
+#adjacent-posts .right-post .post-meta-data {
 	padding-right: 70px;
 }
 
 #adjacent-posts .left-post h2,
-#adjacent-posts .left-post footer {
+#adjacent-posts .left-post .post-meta-data {
 	padding-left: 70px;
 }
 
 #adjacent-posts .right-post h2,
-#adjacent-posts .right-post footer > p {
+#adjacent-posts .right-post .post-meta-data > p {
 	-webkit-transform: translate(-3em, 0) translateZ(0);
 	transform: translate(-3em, 0) translateZ(0);
 }
 
 #adjacent-posts .left-post h2,
-#adjacent-posts .left-post footer > p {
+#adjacent-posts .left-post .post-meta-data > p {
 	-webkit-transform: translate(3em, 0) translateZ(0);
 	transform: translate(3em, 0) translateZ(0);
 }
@@ -3982,72 +3981,72 @@ ul.navigation {
 	transform: translate(-50px, 0) translateZ(0);
 }
 
-#adjacent-posts .left-post:hover footer,
+#adjacent-posts .left-post:hover .post-meta-data,
 #adjacent-posts .left-post:hover h2,
-#adjacent-posts .right-post:hover footer,
+#adjacent-posts .right-post:hover .post-meta-data,
 #adjacent-posts .right-post:hover h2 {
 	opacity: 1;
 	-webkit-transform: translate(0, 0) translateZ(0);
 	transform: translate(0, 0) translateZ(0);
 }
 
-#adjacent-posts .left-post:hover footer > p,
+#adjacent-posts .left-post:hover .post-meta-data > p,
 #adjacent-posts .left-post:hover h2 > p,
-#adjacent-posts .right-post:hover footer > p,
+#adjacent-posts .right-post:hover .post-meta-data > p,
 #adjacent-posts .right-post:hover h2 > p {
 	-webkit-transform: translate(0, 0) translateZ(0);
 	transform: translate(0, 0) translateZ(0);
 	opacity: 1;
 }
 
-#adjacent-posts .left-post:hover footer > p:nth-child(1),
+#adjacent-posts .left-post:hover .post-meta-data > p:nth-child(1),
 #adjacent-posts .left-post:hover h2 > p:nth-child(1),
-#adjacent-posts .right-post:hover footer > p:nth-child(1),
+#adjacent-posts .right-post:hover .post-meta-data > p:nth-child(1),
 #adjacent-posts .right-post:hover h2 > p:nth-child(1) {
 	-webkit-transition-delay: 0.2s;
 	-o-transition-delay: 0.2s;
 	transition-delay: 0.2s;
 }
 
-#adjacent-posts .left-post:hover footer > p:nth-child(2),
+#adjacent-posts .left-post:hover .post-meta-data > p:nth-child(2),
 #adjacent-posts .left-post:hover h2 > p:nth-child(2),
-#adjacent-posts .right-post:hover footer > p:nth-child(2),
+#adjacent-posts .right-post:hover .post-meta-data > p:nth-child(2),
 #adjacent-posts .right-post:hover h2 > p:nth-child(2) {
 	-webkit-transition-delay: 0.3s;
 	-o-transition-delay: 0.3s;
 	transition-delay: 0.3s;
 }
 
-#adjacent-posts .left-post:hover footer > p:nth-child(3),
+#adjacent-posts .left-post:hover .post-meta-data > p:nth-child(3),
 #adjacent-posts .left-post:hover h2 > p:nth-child(3),
-#adjacent-posts .right-post:hover footer > p:nth-child(3),
+#adjacent-posts .right-post:hover .post-meta-data > p:nth-child(3),
 #adjacent-posts .right-post:hover h2 > p:nth-child(3) {
 	-webkit-transition-delay: 0.4s;
 	-o-transition-delay: 0.4s;
 	transition-delay: 0.4s;
 }
 
-#adjacent-posts .left-post:hover footer > p:nth-child(4),
+#adjacent-posts .left-post:hover .post-meta-data > p:nth-child(4),
 #adjacent-posts .left-post:hover h2 > p:nth-child(4),
-#adjacent-posts .right-post:hover footer > p:nth-child(4),
+#adjacent-posts .right-post:hover .post-meta-data > p:nth-child(4),
 #adjacent-posts .right-post:hover h2 > p:nth-child(4) {
 	-webkit-transition-delay: 0.5s;
 	-o-transition-delay: 0.5s;
 	transition-delay: 0.5s;
 }
 
-#adjacent-posts .left-post:hover footer > p:nth-child(5),
+#adjacent-posts .left-post:hover .post-meta-data > p:nth-child(5),
 #adjacent-posts .left-post:hover h2 > p:nth-child(5),
-#adjacent-posts .right-post:hover footer > p:nth-child(5),
+#adjacent-posts .right-post:hover .post-meta-data > p:nth-child(5),
 #adjacent-posts .right-post:hover h2 > p:nth-child(5) {
 	-webkit-transition-delay: 0.6s;
 	-o-transition-delay: 0.6s;
 	transition-delay: 0.6s;
 }
 
-#adjacent-posts .left-post:hover footer > p:nth-child(6),
+#adjacent-posts .left-post:hover .post-meta-data > p:nth-child(6),
 #adjacent-posts .left-post:hover h2 > p:nth-child(6),
-#adjacent-posts .right-post:hover footer > p:nth-child(6),
+#adjacent-posts .right-post:hover .post-meta-data > p:nth-child(6),
 #adjacent-posts .right-post:hover h2 > p:nth-child(6) {
 	-webkit-transition-delay: 0.7s;
 	-o-transition-delay: 0.7s;
@@ -4222,56 +4221,56 @@ ul.navigation {
 	opacity: 0.65;
 }
 
-.post-link.info-is-active footer,
+.post-link.info-is-active .post-meta-data,
 .post-link.info-is-active h2 {
 	opacity: 1;
 	-webkit-transform: translate(0, 0) translateZ(0);
 	transform: translate(0, 0) translateZ(0);
 }
 
-.post-link.info-is-active footer > p,
+.post-link.info-is-active .post-meta-data > p,
 .post-link.info-is-active h2 > p {
 	-webkit-transform: translate(0, 0) translateZ(0);
 	transform: translate(0, 0) translateZ(0);
 	opacity: 1;
 }
 
-.post-link.info-is-active footer > p:nth-child(1),
+.post-link.info-is-active .post-meta-data > p:nth-child(1),
 .post-link.info-is-active h2 > p:nth-child(1) {
 	-webkit-transition-delay: 0.2s;
 	-o-transition-delay: 0.2s;
 	transition-delay: 0.2s;
 }
 
-.post-link.info-is-active footer > p:nth-child(2),
+.post-link.info-is-active .post-meta-data > p:nth-child(2),
 .post-link.info-is-active h2 > p:nth-child(2) {
 	-webkit-transition-delay: 0.3s;
 	-o-transition-delay: 0.3s;
 	transition-delay: 0.3s;
 }
 
-.post-link.info-is-active footer > p:nth-child(3),
+.post-link.info-is-active .post-meta-data > p:nth-child(3),
 .post-link.info-is-active h2 > p:nth-child(3) {
 	-webkit-transition-delay: 0.4s;
 	-o-transition-delay: 0.4s;
 	transition-delay: 0.4s;
 }
 
-.post-link.info-is-active footer > p:nth-child(4),
+.post-link.info-is-active .post-meta-data > p:nth-child(4),
 .post-link.info-is-active h2 > p:nth-child(4) {
 	-webkit-transition-delay: 0.5s;
 	-o-transition-delay: 0.5s;
 	transition-delay: 0.5s;
 }
 
-.post-link.info-is-active footer > p:nth-child(5),
+.post-link.info-is-active .post-meta-data > p:nth-child(5),
 .post-link.info-is-active h2 > p:nth-child(5) {
 	-webkit-transition-delay: 0.6s;
 	-o-transition-delay: 0.6s;
 	transition-delay: 0.6s;
 }
 
-.post-link.info-is-active footer > p:nth-child(6),
+.post-link.info-is-active .post-meta-data > p:nth-child(6),
 .post-link.info-is-active h2 > p:nth-child(6) {
 	-webkit-transition-delay: 0.7s;
 	-o-transition-delay: 0.7s;
@@ -4292,20 +4291,20 @@ ul.navigation {
 	opacity: 0;
 }
 
-#post-header footer,
-#page-header footer,
-#about-header footer,
-#contact-header footer {
+#post-header .post-meta-data,
+#page-header .post-meta-data,
+#about-header .post-meta-data,
+#contact-header .post-meta-data {
 	background: white;
 	color: gray;
 	-webkit-transform: translate(0, -100%) translateZ(0);
 	transform: translate(0, -100%) translateZ(0);
 }
 
-#post-header.info-is-active footer,
-#page-header.info-is-active footer,
-#about-header.info-is-active footer,
-#contact-header.info-is-active footer {
+#post-header.info-is-active .post-meta-data,
+#page-header.info-is-active .post-meta-data,
+#about-header.info-is-active .post-meta-data,
+#contact-header.info-is-active .post-meta-data {
 	-webkit-transform: translate(0, 0) translateZ(0);
 	transform: translate(0, 0) translateZ(0);
 }
@@ -4314,17 +4313,17 @@ ul.navigation {
 
 @media screen and (max-width: 999px) and (max-width: 499px) {
 
-#post-header footer,
-#page-header footer,
-#about-header footer,
-#contact-header footer {
+#post-header .post-meta-data,
+#page-header .post-meta-data,
+#about-header .post-meta-data,
+#contact-header .post-meta-data {
 	padding-left: 35px;
 }
 
-#post-header footer,
-#page-header footer,
-#about-header footer,
-#contact-header footer {
+#post-header .post-meta-data,
+#page-header .post-meta-data,
+#about-header .post-meta-data,
+#contact-header .post-meta-data {
 	padding-right: 35px;
 }
 
@@ -4491,7 +4490,7 @@ h2.page-title,
 	font-size: 1rem;
 }
 
-.post-link footer {
+.post-link .post-meta-data {
 	min-height: 35px;
 }
 
@@ -4521,10 +4520,10 @@ ul.navigation {
 	margin-right: 35px;
 }
 
-#post-header footer,
-#page-header footer,
-#about-header footer,
-#contact-header footer {
+#post-header .post-meta-data,
+#page-header .post-meta-data,
+#about-header .post-meta-data,
+#contact-header .post-meta-data {
 	min-height: 35px;
 }
 
@@ -4574,12 +4573,12 @@ ul.navigation {
 }
 
 #adjacent-posts .right-post h2,
-#adjacent-posts .right-post footer {
+#adjacent-posts .right-post .post-meta-data {
 	padding-right: 35px;
 }
 
 #adjacent-posts .left-post h2,
-#adjacent-posts .left-post footer {
+#adjacent-posts .left-post .post-meta-data {
 	padding-left: 35px;
 }
 

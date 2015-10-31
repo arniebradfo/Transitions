@@ -136,7 +136,7 @@
 			$adjacent_posts .='<div class="image-overlay"></div>';
 
 			$adjacent_posts .='
-				<footer class="post-meta-data">
+				<div class="post-meta-data">
 					<p>Posted on:
 						<time class="entry-date" datetime="'. get_the_date( 'c' , $post['id'] ) .'" pubdate>'
 							. get_the_date( 'm/d/Y' , $post['id'] ) .
@@ -162,7 +162,7 @@
 				$adjacent_posts .= '</p>';
 			}
 					
-			$adjacent_posts .='</footer>';
+			$adjacent_posts .='</div>';
 			
 			$adjacent_posts .='
 				<div class="icon-capsule info-toggle" >

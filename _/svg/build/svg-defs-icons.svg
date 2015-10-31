@@ -41,10 +41,6 @@
 		<title>close</title>
 			<path d="M2 2l11 11M13 2l-11 11" />
 	</symbol>
-	<symbol viewBox="0 0 15 15" id="icon-plus">
-		<title>plus</title>
-		<use xlink:href="#icon-close" transform="rotate(45 7.5 7.5)"></use>
-	</symbol>
 
 	<symbol viewBox="0 0 15 15" id="icon-info">
 		<title>info</title>

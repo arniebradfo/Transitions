@@ -63,7 +63,7 @@
 		*/
 		if (true == of_get_option('head_favicon')) {
 			echo '<meta name=”mobile-web-app-capable” content=”yes”>';
-			echo '<link rel="shortcut icon" sizes=”1024x1024” href="' . of_get_option("head_favicon") . '" />';
+			echo '<link rel="shortcut icon" href="' . of_get_option("head_favicon") . '" />';
 		}
 
 
@@ -193,7 +193,7 @@
 
 	<div id="blanket" ></div>
 
-	<header id="header" role="banner"><div id="header-wrapper">
+	<header id="header" ><div id="header-wrapper">
 
 			<a 	id="home-link"
 				href="<?php echo esc_url( home_url( '/' ) ); ?>" 
@@ -201,7 +201,7 @@
 				rel="home">		
 				<?php 
 					if (of_get_option('site_logo')){
-						echo '<img src="' . of_get_option("site_logo") . '">';
+						echo '<img src="' . of_get_option("site_logo") . '" alt="site logo">';
 					}else{ echo 
 						'<h1>'
 							. bloginfo( 'name' ) .
@@ -211,7 +211,7 @@
 				?>
 			</a>
 
-			<nav id="nav" class="nav" role="navigation">
+			<nav id="nav" class="nav">
 				<?php 
 					wp_nav_menu( array(
 						'theme_location' => 'primary',

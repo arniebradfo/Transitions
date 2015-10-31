@@ -2,7 +2,7 @@
 
 // --------------------------------------------------------------- POST HOVER STATE STYLES MIXIN
 @mixin postActiveState {
-	footer,h2{
+	.post-meta-data, h2{
 		opacity: 1;
 		@include transform( translate(0,0));
 		> p{
@@ -88,9 +88,7 @@
 	@include screenSize(0,L) { .image-overlay { display: none; } }
 
 	// ------------------------------------------- POST LINK ELEMENTS
-	picture
-	,.image-overlay
-	{
+	.image-overlay{
 		@include absoluteFill;
 	}
 	.image-overlay{
@@ -101,7 +99,7 @@
 		@include transition();
 	}
 
-	img, h2, footer, a.post-permalink{ // --------------------------------------< IMG HERE
+	img, h2, .post-meta-data, a.post-permalink{ // --------------------------------------< IMG HERE
 		position:absolute;
 		display: block;
 		@include transition();
@@ -141,7 +139,7 @@
 		opacity: 0;
 		z-index:index($z-of,'.post-link footer a.post-permalink');
 	}
-	footer{
+	.post-meta-data{
 		width: 101%; // extra 1% to try and delete that black line - kinda works
 		bottom:-1%;
 
@@ -186,7 +184,7 @@
 		}
 	}
 	@include screenSize(L) {
-		footer{
+		.post-meta-data{
 			padding-right: 1rem;
 			min-height: 0;
 		}
