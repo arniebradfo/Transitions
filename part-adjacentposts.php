@@ -124,7 +124,7 @@
 					            	$currentSrc = wp_get_attachment_image_src( $post['thumbID'], $i );
 					            	$adjacent_posts .=  ($currentSrc[3] !== false ?$currentSrc[0].' ' .$currentSrc[1].'w, ':'');
 					            }
-					            $adjacent_posts .=  $post['thumbSrc'] .' '.$post['thumbWidth'].'w';
+					            $adjacent_posts .=  $post['thumbSrc'] .' '.$post['thumbWidth'].'w"';
 					     $adjacent_posts .='       
 					     sizes="(max-width: '. $post['thumbWidth'].'px) '. $imgSize .', '. $post['thumbWidth'].'px"
 					/>';
