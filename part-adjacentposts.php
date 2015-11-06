@@ -138,7 +138,7 @@
 			$adjacent_posts .='
 				<div class="post-meta-data">
 					<p>Posted on:
-						<time class="entry-date" datetime="'. get_the_date( 'c' , $post['id'] ) .'" pubdate>'
+						<time class="entry-date" datetime="'. get_the_date( 'c' , $post['id'] ) .'" >'
 							. get_the_date( 'm/d/Y' , $post['id'] ) .
 						'</time>
 						by:

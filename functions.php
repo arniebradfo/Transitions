@@ -104,24 +104,6 @@
 	}
 	add_filter( 'wp_title', 'html5reset_wp_title', 10, 2 );
 
-	// create a custom video post type : ( https://codex.wordpress.org/Post_Types )
-	// not exactly what I want to do...
-	// function create_video_post_type() {
-	// 	register_post_type( 'video_post',
-	// 		array(
-	// 			'labels' => array(
-	// 				'name' => __( 'Videos' ),
-	// 				'singular_name' => __( 'Video' )
-	// 			),
-	// 			'public' => true,
-	// 			'has_archive' => true,
-	// 			'menu_position' => 5,
-	// 		)
-	// 	);
-	// }
-	// add_action( 'init', 'create_video_post_type' );
-
-
 	// add image sizes to the wp uploader
 	// SYNTAX - add_image_size( $name, $width, $height, $crop );
 	add_image_size( 'imgXS',  250  );
@@ -134,8 +116,6 @@
 	add_image_size( 'img4XL', 4000 );
 	add_image_size( 'imgSsq', 550, 550, true );
 	// add_image_size( 'imgMsq',  825, 825, true );
-
-
 
 //OLD STUFF BELOW
 
@@ -306,7 +286,7 @@
 	function posted_on() {
 		printf('
 				Posted on:
-					<time class="entry-date" datetime="%2$s" pubdate>%2$s</time>
+					<time class="entry-date" datetime="%2$s" >%2$s</time>
 				by:
 				<span class="byline author vcard">%3$s</span>
 				',
@@ -330,7 +310,7 @@
 			$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
 			$class_names = ' class="'. esc_attr( $class_names ) . '"';
 
-			$output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
+			$output .= $indent . '<li ' . $value . $class_names .'>';
 
 			$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
 			$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';

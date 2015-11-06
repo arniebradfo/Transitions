@@ -12,7 +12,6 @@
 			<span> <?php echo get_post_custom_values( 'deck' )[0]; ?> </span>
 		</h2>
 		
-		<div class="perfect-contain">
 			<?php 
 				$thumbID = get_post_thumbnail_id(get_the_ID());
 				$thumbSrc = wp_get_attachment_image_src( $thumbID, 'full' )[0];
@@ -39,19 +38,6 @@
 			            25vw
 			           "
 			/>
-		</div>
-
-		<picture>
-			<!--[if IE 9]><video style="display: none;"><![endif]-->
-			<?php $thumbID = get_post_thumbnail_id(get_the_ID()); ?>
-			<source srcset="<?php echo wp_get_attachment_image_src( $thumbID, 'imgSsq' )[0]; ?>" 	media="(min-width: 750px)">
-			<source srcset="<?php echo wp_get_attachment_image_src( $thumbID, 'imgM' )[0]; 	?>" 	media="(min-width: 500px)">
-			<source srcset="<?php echo wp_get_attachment_image_src( $thumbID, 'imgS' )[0]; 	?>" 	media="(min-width: 250px)">
-			<source srcset="<?php echo wp_get_attachment_image_src( $thumbID, 'imgXS' )[0];	?>" 	media="(min-width: 0px)">
-			<!--[if IE 9]></video><![endif]-->
-			<img srcset="<?php // ??? - not sure if its nessasary to put anything here - ??? ?>" alt="<?php echo get_post_meta($thumbID, '_wp_attachment_image_alt', true); ?>">
-			<noscript><?php the_post_thumbnail('sizeM'); ?></noscript>
-		</picture>
 
 		<div class="image-overlay"></div>
 		

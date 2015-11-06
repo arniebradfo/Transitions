@@ -22,7 +22,7 @@ Template Name: Home Page
 
 	<?php endwhile; endif; ?>
 	
-	<nav id="home-nav" class="nav foot-nav" role="navigation">
+	<nav id="home-nav" class="nav foot-nav">
 		<?php 
 		wp_nav_menu( array(
 			'theme_location' => 'secondary',
