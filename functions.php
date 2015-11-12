@@ -22,6 +22,9 @@
 	require_once( dirname( __FILE__ ) .'/_/plugins/save_with_keyboard/save_with_keyboard.php');
 	require_once( dirname( __FILE__ ) .'/_/plugins/Disable_wpautop/Disable_wpautop.php');
 
+	// CONTENT FILTERS
+	require_once( dirname( __FILE__ ) .'/_/filters/img-row.php');
+
 	// Allow svg uploads - from CSS-tricks (http://css-tricks.com/snippets/wordpress/allow-svg-through-wordpress-media-uploader/)
 	function cc_mime_types( $mimes ){
 		$mimes['svg'] = 'image/svg+xml';

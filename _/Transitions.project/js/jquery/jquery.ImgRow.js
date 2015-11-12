@@ -14,7 +14,7 @@ function imgRow(selector) {
     // - and divide by the outer width to get a decimal percentage
     margin = (parseFloat($(this).css("margin-bottom"), 10)) / ($(this).outerWidth());
     marginRight = margin * 100 + "%";
-    // subtract subtract the total child margin from the total width to find the usable width
+    // subtract the total child margin from the total width to find the usable width
     usableWidth = (1 - ((($(this).find("img").length) - 1) * margin));
 
     // for each child img of "selector" - add a width/height as value in the ratios array
@@ -33,7 +33,7 @@ function imgRow(selector) {
     $.each(ratios, function(i) {
       obj = {
         // divide each item in the ratios array by the total array
-        // as set that as the css width in percentage
+        // and set that as the css width in percentage
         width: ((ratios[i] / ratioSum) * usableWidth) * 100 + "%",
         // set the margin-right equal to the parent margin-bottom
         marginRight: marginRight

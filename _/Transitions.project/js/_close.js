@@ -10,7 +10,7 @@
 
 	$(document).ready(function(){
 		// alert("doc is ready!");
-		imgRow(".img-row");
+		// imgRow(".img-row");
 		gMap();
 		readyLoadingAmimation();
 		resizeOrder();
@@ -20,7 +20,7 @@
 		scrollToTop();
 		currentLinks();
 		videoPlayer();
-		//fireFoxLimits(); // this is done with css now
+		// fireFoxLimits(); // this is done with css now
 	});
 
 	var theTiming = 1000; // WHY 1000?
