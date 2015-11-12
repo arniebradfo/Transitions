@@ -17,10 +17,10 @@ ToDo list
 	- X- make it work on pages
 - X- make ul and icon set
 - bake in plugins
-	- ctrl s
-	- code editor
+	- X- ctrl s
+	- 0- code editor
 	
-- make example pages
+- X -make example pages
 - X- fix deck output
 - X- make sure menu can be configured properly
 	- X- add icons
@@ -32,5 +32,6 @@ ToDo list
 - add ajax loading
 	- make sure the same header and footer load on every page
 - clear html validation
+	- fix div child of button element with label element
 - 0- add video chrome
 - X- replace all picture elemets with img srcset

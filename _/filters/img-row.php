@@ -68,7 +68,8 @@ function arniebradfo_img_row ( $content ) {
 			} 
 
 			if ( preg_match('/sizes="([^"]*)"/', $img_match) ) {
-				$img_replace = preg_replace('/sizes="[^"]*"/', 'sizes="'. round($fractional_width, 2) .'vw"', $img_replace );
+				$img_replace = preg_replace('/sizes="[^"]*"/', '', $img_replace );				
+				$img_replace = preg_replace('/(\/?>)$/', ' sizes="'. round($fractional_width, 2) .'vw" />', $img_replace );
 			}
 
 			$img_replacer[] = [
