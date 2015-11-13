@@ -16,22 +16,21 @@ ToDo list
 	- X- make it work on posts
 	- X- make it work on pages
 - X- make ul and icon set
-- bake in plugins
+- X- bake in plugins
 	- X- ctrl s
 	- 0- code editor
-	
-- X -make example pages
+- X- make example pages
 - X- fix deck output
 - X- make sure menu can be configured properly
 	- X- add icons
-	- make icons a little smaller
 	- X- output regular names on category pages
 - X- add video home page
-	- add play/pause, mute/unmute buttons?
+	- X- add play/pause, mute/unmute buttons?
 - replace references to bolierplate theme
 - add ajax loading
 	- make sure the same header and footer load on every page
-- clear html validation
-	- fix div child of button element with label element
+- X- clear html validation
+	- X- fix div child of button element with label element
 - 0- add video chrome
 - X- replace all picture elemets with img srcset
+- fix icon bug

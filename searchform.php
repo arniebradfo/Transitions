@@ -4,12 +4,14 @@
 
 	<input type="search" class="search-term" id="s" name="s" placeholder="looking for something?" autocomplete="off" />
 
-	<button type="submit" class="search-button" id="searchsubmit" value="<?php _e('Search','html5reset'); ?>" >
-		<div class="icon-capsule dark search-icon">
-			<svg class="icon icon-search" >
-				<use xlink:href="#icon-search"></use>
-			</svg>
-		</div>
-	</button>
+	<label for="searchsubmit" class="icon-capsule dark search-icon search-button">
+		<svg class="icon icon-search" >
+			<use xlink:href="#icon-search"></use>
+		</svg>
+	</label>
+
+	<button type="submit" id="searchsubmit" value="<?php _e('Search','html5reset'); ?>" style="display:none;" ></button>
+
+
 
 </form>
