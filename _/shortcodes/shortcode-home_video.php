@@ -19,6 +19,7 @@
 		$output = '';
 
 		$output .='		<div id="home-video-container" '.($atts['style'] != '' ? 'style="'.$atts['style'].'"' : '').'>';
+		
 		$output .='			<video class="home-video"  ';
 		$output .='				src="'. $atts['src'] .'" ';
 		$output .= 				($atts['autoplay'] == 'true' ? 'autoplay ' : '');
@@ -26,6 +27,16 @@
 		$output .= 				($atts['muted']    == 'true' ? 'muted '    : '');
 		$output .= 				($atts['controls'] == 'true' ? 'controls ' : '');
 		$output .='			>Your browser does not support the video tag.</video>';
+
+		$output .='			<div class="icon-capsule mute-toggle muted" >';
+		$output .='				<svg class="icon icon-muted" >';
+		$output .='					<use xlink:href="#icon-muted"></use>';
+		$output .='				</svg>';
+		$output .='				<svg class="icon icon-unmuted" >';
+		$output .='					<use xlink:href="#icon-unmuted"></use>';
+		$output .='				</svg>';
+		$output .='			</div>';
+
 		$output .='		</div>';
 
 		return $output;

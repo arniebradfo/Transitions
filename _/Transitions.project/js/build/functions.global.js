@@ -317,7 +317,8 @@ function readyLoadingAmimation() {
 		.post-edit-link,
 
 		#home-nav,
-		#home-nav .menu-item
+		#home-nav .menu-item,
+		.mute-toggle
 	');
 	
 	// adds the .below-the-fold class to all of the elements above - sets them up for initial animation
@@ -646,6 +647,26 @@ function videoPlayer(){
 		video.pause();
 	});
 }
+
+function homeVideoPlayer(){
+	if( $('.home-video') ){
+
+		var $video = $('.home-video');
+		var video  = $video.get(0);
+		var $muteToggle = $('.mute-toggle');
+
+		$muteToggle.on("click", function(){
+			if (video.muted){
+				$muteToggle.addClass('unmuted').removeClass('muted');
+				video.muted = false;			
+			} else {
+				$muteToggle.addClass('muted').removeClass('unmuted');
+				video.muted = true;			
+			}
+		});	
+
+	}
+}
 // jquery.viewportSize.js
 
 function setWindowHeight() {
@@ -711,6 +732,7 @@ function setWindowHeight() {
 		scrollToTop();
 		currentLinks();
 		videoPlayer();
+		homeVideoPlayer();
 		// fireFoxLimits(); // this is done with css now
 	});
 
@@ -720,7 +742,7 @@ function setWindowHeight() {
 		perfectCenterImage();
 		perfectCenterImage('#home-video','video');
 		loadLoadingAmimation(theTiming);
-		clickDiversion();	
+		clickDiversion();
 	});
 
 	//back-forward-cache compensation - chrome should skip it

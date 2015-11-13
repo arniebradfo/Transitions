@@ -20,6 +20,7 @@
 		scrollToTop();
 		currentLinks();
 		videoPlayer();
+		homeVideoPlayer();
 		// fireFoxLimits(); // this is done with css now
 	});
 
@@ -29,7 +30,7 @@
 		perfectCenterImage();
 		perfectCenterImage('#home-video','video');
 		loadLoadingAmimation(theTiming);
-		clickDiversion();	
+		clickDiversion();
 	});
 
 	//back-forward-cache compensation - chrome should skip it

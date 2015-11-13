@@ -2249,6 +2249,22 @@ body {
 @-moz-document url-prefix() {
   .ring {
     display: none; } }
+.mute-toggle {
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .mute-toggle .icon-muted, .mute-toggle .icon-unmuted {
+    transition: all 0.25s ease;
+    backface-visibility: hidden; }
+  .mute-toggle.muted .icon-muted {
+    opacity: 1; }
+  .mute-toggle.muted .icon-unmuted {
+    opacity: 0; }
+  .mute-toggle.unmuted .icon-muted {
+    opacity: 0; }
+  .mute-toggle.unmuted .icon-unmuted {
+    opacity: 1; }
+
 #home-bg {
   z-index: 17;
   position: absolute;

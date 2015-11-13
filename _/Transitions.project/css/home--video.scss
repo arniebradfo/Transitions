@@ -1,0 +1,32 @@
+// home--video.scss
+
+
+
+.home-video{
+	
+}
+
+.mute-toggle{
+	position: absolute;
+	top: 0;	
+	right: 0;
+	.icon-muted, .icon-unmuted{
+		@include transition;
+	}
+	&.muted{
+		.icon-muted{
+			opacity: 1;
+		}
+		.icon-unmuted{
+			opacity: 0;
+		}
+	}
+	&.unmuted{
+		.icon-muted{
+			opacity: 0;
+		}
+		.icon-unmuted{
+			opacity: 1;
+		}
+	}
+}

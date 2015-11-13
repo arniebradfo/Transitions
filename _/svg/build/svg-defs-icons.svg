@@ -87,5 +87,18 @@
 		<title>play</title>
 		<polygon points="4.5,2.3 13.5,7.5 4.5,12.7 "/>
 	</symbol>
+
+	<symbol viewBox="0 0 15 15" id="icon-muted">
+		<title>muted</title>
+		<polygon class="st1" points="14,5.4 11.1,5.4 7.5,2.5 7.5,12.5 11.1,9.6 14,9.6 " />
+		<path class="st1" d="M5.3,9.7c-1.2-1.2-1.2-3.2,0-4.5" />
+		<path class="st1" d="M3,12.1C0.5,9.6,0.5,5.5,3,3" /> 
+	</symbol>
+	<symbol viewBox="0 0 15 15" id="icon-unmuted">
+		<title>unmuted</title>
+		<polygon class="st1" points="14,5.4 11.1,5.4 7.5,2.5 7.5,12.5 11.1,9.6 14,9.6 " />
+		<line class="st1" x1="0.8" y1="5.3" x2="5.3" y2="9.7" />
+		<line class="st1" x1="5.3" y1="5.3" x2="0.8" y2="9.7" />
+	</symbol>
 	
 </svg>

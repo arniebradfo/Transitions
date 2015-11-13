@@ -76,7 +76,8 @@ function readyLoadingAmimation() {
 		.post-edit-link,
 
 		#home-nav,
-		#home-nav .menu-item
+		#home-nav .menu-item,
+		.mute-toggle
 	');
 	
 	// adds the .below-the-fold class to all of the elements above - sets them up for initial animation
