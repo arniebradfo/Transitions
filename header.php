@@ -201,7 +201,7 @@
 				rel="home">		
 				<?php 
 					if (of_get_option('inline_svg_logo')){
-						var_dump(of_get_option('inline_svg_logo'));
+						echo of_get_option('inline_svg_logo');
 					} elseif (of_get_option('site_logo')){
 						echo '<img src="' . of_get_option("site_logo") . '" alt="site logo">';
 					} else{ echo 
