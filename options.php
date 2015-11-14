@@ -87,6 +87,12 @@ function optionsframework_options() {
 		'desc' => __('select image file for logo', 'html5reset'),
 		'id' => 'site_logo',
 		'type' => 'upload');
+	$options[] = array(
+		'name' => __('Inline SVG Site logo', 'html5reset'),
+		'desc' => __('add svg to be included inline instead of a logo', 'html5reset'),
+		'id' => 'inline_svg_logo',
+		'std' => '',
+		'type' => 'textarea');
 
 // ------------------------------------------------------ Icons
 	$options[] = array(

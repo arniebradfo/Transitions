@@ -200,9 +200,11 @@
 				title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" 
 				rel="home">		
 				<?php 
-					if (of_get_option('site_logo')){
+					if (of_get_option('inline_svg_logo')){
+						var_dump(of_get_option('inline_svg_logo'));
+					} elseif (of_get_option('site_logo')){
 						echo '<img src="' . of_get_option("site_logo") . '" alt="site logo">';
-					}else{ echo 
+					} else{ echo 
 						'<h1>'
 							. bloginfo( 'name' ) .
 							'<span>' . bloginfo( 'description' ) .
