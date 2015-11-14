@@ -5,11 +5,41 @@
 .home-video{
 	
 }
+.please-unmute-me{
+	@include absoluteFill;
+	opacity: 0;
+	// animation: blinking 0.5s linear infinite normal ;
+	&::after{
+		content: 'UnMute Me!';
+		@include transform(translate(0,-50%) rotate(0deg));
+		top:50%;
+		bottom: auto;
+		left: auto;
+		right: 100%;
+		text-align: right;
+		color: white;
+		// animation: unMuteMe 8s linear 3s 1 forwards;
+	}
+}
+// @keyframes blinking{
+// 	0%{   opacity: 0; }
+// 	40%{  opacity: 1; }
+// 	100%{ opacity: 1; }
+// }
+// @keyframes unMuteMe{
+// 	0%{   content: 'UnMute Me!'; }
+// 	60%{  content: 'Please!'; }
+// 	70%{  content: 'Please, UnMute Me!'; }
+// 	99%{  content: 'Fine Then'; }
+// 	100%{ content: ''; }
+// }
+
 
 .mute-toggle{
 	position: absolute;
 	top: 0;	
 	right: 0;
+	cursor: pointer;
 	.icon-muted, .icon-unmuted{
 		@include transition;
 	}

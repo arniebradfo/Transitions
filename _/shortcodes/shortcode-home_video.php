@@ -13,11 +13,26 @@
 			'autoplay' => 'true',
 			'loop' => 'true',
 			'muted' => 'true',
+			'mute_toggle' => 'false',
+			'unmute_text' => 'false',
 			'controls' => 'false'
 		), $atts, 'home_video' );
-		
+
+		$mute_toggle = '';
 		$output = '';
 
+		if ($atts['mute_toggle'] == 'true') {
+			$mute_toggle .='	<div class="icon-capsule mute-toggle muted " >';
+			$mute_toggle .='		<svg class="icon icon-muted" >';
+			$mute_toggle .='			<use xlink:href="#icon-muted"></use>';
+			$mute_toggle .='		</svg>';
+			$mute_toggle .='		<svg class="icon icon-unmuted" >';
+			$mute_toggle .='			<use xlink:href="#icon-unmuted"></use>';
+			$mute_toggle .='		</svg>';
+			$mute_toggle .= 		($atts['unmute_text'] == 'true') ? '<div class="please-unmute-me"></div>' : '' ;
+			$mute_toggle .='	</div>';
+		}
+		
 		$output .='		<div id="home-video-container" '.($atts['style'] != '' ? 'style="'.$atts['style'].'"' : '').'>';
 		
 		$output .='			<video class="home-video"  ';
@@ -28,14 +43,7 @@
 		$output .= 				($atts['controls'] == 'true' ? 'controls ' : '');
 		$output .='			>Your browser does not support the video tag.</video>';
 
-		$output .='			<div class="icon-capsule mute-toggle muted" >';
-		$output .='				<svg class="icon icon-muted" >';
-		$output .='					<use xlink:href="#icon-muted"></use>';
-		$output .='				</svg>';
-		$output .='				<svg class="icon icon-unmuted" >';
-		$output .='					<use xlink:href="#icon-unmuted"></use>';
-		$output .='				</svg>';
-		$output .='			</div>';
+		$output .=			$mute_toggle;
 
 		$output .='		</div>';
 

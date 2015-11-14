@@ -33,4 +33,4 @@ ToDo list
 	- X- fix div child of button element with label element
 - 0- add video chrome
 - X- replace all picture elemets with img srcset
-- fix icon bug
+- X- fix icon bug

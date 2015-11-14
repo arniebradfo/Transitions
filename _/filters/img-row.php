@@ -56,7 +56,7 @@ function arniebradfo_img_row ( $content ) {
 			$margin_right = ( $i+1 == count($imgs) ? 0 : $margin );
 			$img_match = $img['html'];
 			$img_replace = $img['html'];
-			$style = 'width:'. round($fractional_width, 2) .'%;margin-right:'. round($margin_right, 2) .'%;';
+			$style = 'width:'. round($fractional_width, 2, PHP_ROUND_HALF_DOWN) .'%;margin-right:'. round($margin_right, 2, PHP_ROUND_HALF_DOWN).'%;';
 
 			// if there is a style, pull contents, edit and replace
 			if ( preg_match('/style="([^"]*)"/', $img_match, $style_match ) ) {

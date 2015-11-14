@@ -18,14 +18,17 @@ function videoPlayer(){
 		} else {
 			video.pause();
 		}
-	})
+	});
 
-	$('#video-close').on("click", function(){
+    function closeVideo(e) {
 		$videoBox.removeClass('opened');
 		// video animate out
 		// video display none
 		video.pause();
-	});
+    }
+
+	$('#video-close').on("click", closeVideo );
+	// video.addEventListener('ended',closeVideo,false);
 }
 
 function homeVideoPlayer(){
@@ -34,8 +37,10 @@ function homeVideoPlayer(){
 		var $video = $('.home-video');
 		var video  = $video.get(0);
 		var $muteToggle = $('.mute-toggle');
+		var $unMuteMeText = $('.please-unmute-me');
 
 		$muteToggle.on("click", function(){
+			$unMuteMeText.remove();
 			if (video.muted){
 				$muteToggle.addClass('unmuted').removeClass('muted');
 				video.muted = false;			

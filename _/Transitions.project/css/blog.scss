@@ -187,6 +187,7 @@
 		.post-meta-data{
 			padding-right: 1rem;
 			min-height: 0;
+			max-width: 600px;
 		}
 		h2{
 			@include transform( translate(0,-1em));

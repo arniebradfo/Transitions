@@ -4,7 +4,7 @@ Theme URI: 			https://github.com/arniebradfo/Transitions
 Description: 		A custom WordPress theme with magical page load and unload transitions. Based on the HTML5 Reset Theme.
 Author: 			Arniebradfo
 Author URI: 		http://www.polaris.graphics
-Version: 			2.0.7
+Version: 			2.0.8
 GitHub Theme URI: 	https://github.com/arniebradfo/Transitions
 GitHub Branch:    	master
 */
@@ -1602,7 +1602,8 @@ body {
   @media screen and (min-width: 1000px) {
     .post-link .post-meta-data {
       padding-right: 1rem;
-      min-height: 0; }
+      min-height: 0;
+      max-width: 600px; }
     .post-link h2 {
       -webkit-transform: translate(0, -1em) translateZ(0);
               transform: translate(0, -1em) translateZ(0);
@@ -2004,10 +2005,10 @@ ul.navigation {
 article.post {
   position: relative; }
 
-.scroll-down, .scroll-to-top {
+.scroll-down, .scroll-to-top, .please-unmute-me {
   position: absolute;
   right: 0; }
-  .scroll-down::after, .scroll-to-top::after {
+  .scroll-down::after, .scroll-to-top::after, .please-unmute-me::after {
     font-family: "Raleway", Helvetica, Arial, sans-serif;
     font-weight: 900;
     letter-spacing: 0.4px;
@@ -2829,10 +2830,29 @@ body {
 @-moz-document url-prefix() {
   .ring {
     display: none; } }
+.please-unmute-me {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0; }
+  .please-unmute-me::after {
+    content: 'UnMute Me!';
+    -webkit-transform: translate(0, -50%) rotate(0deg) translateZ(0);
+            transform: translate(0, -50%) rotate(0deg) translateZ(0);
+    top: 50%;
+    bottom: auto;
+    left: auto;
+    right: 100%;
+    text-align: right;
+    color: white; }
+
 .mute-toggle {
   position: absolute;
   top: 0;
-  right: 0; }
+  right: 0;
+  cursor: pointer; }
   .mute-toggle .icon-muted, .mute-toggle .icon-unmuted {
     -webkit-transition: all 0.25s ease;
          -o-transition: all 0.25s ease;
