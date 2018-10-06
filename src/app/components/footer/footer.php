@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage Transitions
  * @since 1.0
  * @version 1.2
  */
@@ -23,7 +23,7 @@
 
 				if ( has_nav_menu( 'social' ) ) :
 				?>
-					<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'twentyseventeen' ); ?>">
+					<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'transitions' ); ?>">
 						<?php
 							wp_nav_menu(
 								array(
@@ -31,7 +31,7 @@
 									'menu_class'     => 'social-links-menu',
 									'depth'          => 1,
 									'link_before'    => '<span class="screen-reader-text">',
-									'link_after'     => '</span>' . twentyseventeen_get_svg( array( 'icon' => 'chain' ) ),
+									'link_after'     => '</span>' . transitions_get_svg( array( 'icon' => 'chain' ) ),
 								)
 							);
 						?>

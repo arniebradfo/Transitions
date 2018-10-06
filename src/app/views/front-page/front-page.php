@@ -7,7 +7,7 @@
  * Learn more: https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage Transitions
  * @since 1.0
  * @version 1.0
  */
@@ -31,25 +31,25 @@ get_header(); ?>
 
 		<?php
 		// Get each of our panels and show the post data.
-		if ( 0 !== twentyseventeen_panel_count() || is_customize_preview() ) : // If we have pages to show.
+		if ( 0 !== transitions_panel_count() || is_customize_preview() ) : // If we have pages to show.
 
 			/**
-			 * Filter number of front page sections in Twenty Seventeen.
+			 * Filter number of front page sections in Transitions.
 			 *
-			 * @since Twenty Seventeen 1.0
+			 * @since Transitions 1.0
 			 *
 			 * @param int $num_sections Number of front page sections.
 			 */
-			$num_sections = apply_filters( 'twentyseventeen_front_page_sections', 4 );
-			global $twentyseventeencounter;
+			$num_sections = apply_filters( 'transitions_front_page_sections', 4 );
+			global $transitionscounter;
 
 			// Create a setting and control for each of the sections available in the theme.
 			for ( $i = 1; $i < ( 1 + $num_sections ); $i++ ) {
-				$twentyseventeencounter = $i;
-				twentyseventeen_front_page_section( null, $i );
+				$transitionscounter = $i;
+				transitions_front_page_section( null, $i );
 			}
 
-	endif; // The if ( 0 !== twentyseventeen_panel_count() ) ends here.
+	endif; // The if ( 0 !== transitions_panel_count() ) ends here.
 	?>
 
 	</main><!-- #main -->

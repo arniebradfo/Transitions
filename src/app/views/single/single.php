@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage Transitions
  * @since 1.0
  * @version 1.0
  */
@@ -30,8 +30,8 @@ get_header(); ?>
 
 				the_post_navigation(
 					array(
-						'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'twentyseventeen' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
-						'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'twentyseventeen' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
+						'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'transitions' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'transitions' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . transitions_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
+						'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'transitions' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'transitions' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . transitions_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
 					)
 				);
 

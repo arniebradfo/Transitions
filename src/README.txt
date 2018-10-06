@@ -1,4 +1,4 @@
-=== Twenty Seventeen ===
+=== Transitions ===
 Contributors: the WordPress team
 Requires at least: WordPress 4.7
 Tested up to: WordPress 5.0-trunk
@@ -18,8 +18,8 @@ It does things AND stuff!
 
 == Copyright ==
 
-Twenty Seventeen WordPress Theme, Copyright 2016 WordPress.org
-Twenty Seventeen is distributed under the terms of the GNU GPL
+Transitions WordPress Theme, Copyright 2016 WordPress.org
+Transitions is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -31,7 +31,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Twenty Seventeen bundles the following third-party resources:
+Transitions bundles the following third-party resources:
 
 normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: MIT

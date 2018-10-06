@@ -24,9 +24,15 @@ const buildCSS = () => {
         .pipe(combineMq({
             beautify: true
         }))
-        // .pipe(rename('hesh.css'))
+        // .pipe(rename('style.css'))
         .pipe(gulp.dest(dist))
         .pipe(livereload())
+}
+
+const copyPhpTemplates = () => {
+	return gulp.src(['./src/**/*.php', './src/README.txt', './src/screenshot.png'])
+		.pipe(rename({dirname: ''}))
+		.pipe(gulp.dest(dist))
 }
 
 // const minifyCSS = () => {
@@ -105,7 +111,7 @@ const buildCSS = () => {
 
 // const minify = gulp.series(gulp.parallel(minifyCSS, minifyJS))
 // const build = gulp.series(gulp.parallel(buildCSS, buildJS), minify)
-const build = gulp.series(gulp.parallel(buildCSS));
+const build = gulp.series(gulp.parallel(buildCSS,copyPhpTemplates));
 
 gulp.task('default', build)
 // gulp.task('default', gulp.series(build, watch))
