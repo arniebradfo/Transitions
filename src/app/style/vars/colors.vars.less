@@ -1,0 +1,84 @@
+// // COLORS //
+// @turquoise_Color:  #00FFCE;
+// @turquoiseDark_Color:  darken(@turquoise_Color, 10%);
+// @blue_Color:       #00D8FF;
+// @navy_Color:       #0064A2;
+// // @navyDark_Color:   #004862; //#00436C;
+// @navyDark_Color:   #00436C;
+// @purpleDark_Color: #1E0041;
+
+// @disabled_Opacity: .3;
+
+// // THEMES //
+// :root, .dark-color-theme {
+
+// 	background-image: var(--bg_Gradient);
+// 	color: var(--fg_Color);
+
+// 	--disabled_Opacity: @disabled_Opacity;
+
+// 	@fgPrimary_Color: white;
+// 	--fgStrong_Color: fade(@fgPrimary_Color, 100%);
+// 	--fg_Color:       fade(@fgPrimary_Color, 60%);
+// 	--fgWeak_Color:   fade(@fgPrimary_Color, 40%);
+// 	--fgDisabled_Color:   fade(@fgPrimary_Color, @disabled_Opacity * 100%);
+// 	// --fgOnAccent_Color: @navyDark_Color;
+// 	--fgOnAccent_Color: fade(black, 60%);
+
+// 	--bg_Color: @navyDark_Color;
+// 	--bgTransparent_Color: fade(@navyDark_Color, 20%);
+// 	--bg_Gradient: linear-gradient(to bottom right, @navyDark_Color, @purpleDark_Color);
+// 	--bgOverlay0_Color: fade(white, 3%);
+// 	--bgOverlay1_Color: fade(white, 10%);
+// 	--bgOverlay2_Color: fade(white, 20%);
+
+// 	@bgHover_Opacity: .4;
+// 	--bgHover_Opacity: @bgHover_Opacity;
+
+// 	--accentStrong_Color: white;
+// 	--accent_Color: @blue_Color;
+// 	--accentWeak_Color: @turquoise_Color;
+// 	--accentWeakFade2_Color: fade(@turquoise_Color, 50%);
+// 	--accentWeakFade_Color: fade(@turquoise_Color, (@bgHover_Opacity * 100%));
+// 	--accentWeakDark_Color: @turquoiseDark_Color;
+
+// 	--accent_Gradient: linear-gradient(to bottom right, var(--accentWeak_Color), var(--accent_Color));
+
+// 	@iconBg_Color: fade(@fgPrimary_Color, 80%);
+// 	.iconBg_Var(icon_Pointer_Down,      @iconBg_Color);
+// 	.iconBg_Var(icon_Pointers_Vertical, @iconBg_Color);
+// 	.iconBg_Var(icon_X,                 @iconBg_Color);
+
+// }
+
+// .light-color-theme {
+
+// 	color: var(--fg_Color);
+
+// 	@fgPrimary_Color: black;
+// 	--fgStrong_Color: fade(@fgPrimary_Color, 80%);
+// 	--fg_Color:       fade(@fgPrimary_Color, 60%);
+// 	--fgWeak_Color:   fade(@fgPrimary_Color, 45%);
+// 	--fgDisabled_Color:   fade(@fgPrimary_Color, @disabled_Opacity * 100%);
+
+// 	--bg_Color: white;
+// 	--bgTransparent_Color: fade(white, 20%);
+// 	--bgOverlay0_Color: fade(@navyDark_Color, 5%);
+// 	--bgOverlay1_Color: fade(@navyDark_Color, 10%);
+// 	--bgOverlay2_Color: fade(@navyDark_Color, 20%);
+
+// 	--accentStrong_Color: @navyDark_Color;
+
+// 	@iconBg_Color: fade(@fgPrimary_Color, 80%);
+// 	.iconBg_Var(icon_Pointer_Down,      @iconBg_Color);
+// 	.iconBg_Var(icon_Pointers_Vertical, @iconBg_Color);
+// 	.iconBg_Var(icon_X,                 @iconBg_Color);
+
+// }
+
+
+// // MIXINS //
+// .highlighted_Colors() {
+//   background-color: var(--accentWeak_Color);
+//   color: var(--fgStrong_Color);
+// }
