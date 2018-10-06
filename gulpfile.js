@@ -9,29 +9,31 @@ const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 const svgstore = require('gulp-svgstore')
 
-// const buildCSS = () => {
-//     return gulp.src('./src/hesh.dev.less')
-//         .pipe(less({
-//             plugins: [ require('less-plugin-glob') ]
-//         }))
-//         .pipe(autoprefixer({
-//             browsers: ['last 2 versions'],
-//             flexbox: 'no-2009'
-//             // cascade: false
-//         }))
-//         .pipe(combineMq({
-//             beautify: true
-//         }))
-//         .pipe(rename('hesh.css'))
-//         .pipe(gulp.dest('./dist'))
-//         .pipe(livereload())
-// }
+const dist = '../transitions';
+
+const buildCSS = () => {
+    return gulp.src('./src/app/style/style.less')
+        .pipe(less({
+            plugins: [ require('less-plugin-glob') ]
+        }))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            flexbox: 'no-2009'
+            // cascade: false
+        }))
+        .pipe(combineMq({
+            beautify: true
+        }))
+        // .pipe(rename('hesh.css'))
+        .pipe(gulp.dest(dist))
+        .pipe(livereload())
+}
 
 // const minifyCSS = () => {
 //     return gulp.src('./dist/hesh.css')
 //         .pipe(cssnano())
 //         .pipe(rename(path => path.basename += '.min'))
-//         .pipe(gulp.dest('./dist'))
+//         .pipe(gulp.dest(dist))
 // }
 
 // const buildJS = () => {
@@ -82,7 +84,7 @@ const svgstore = require('gulp-svgstore')
 //         './src/hesh.dev.js',
 //     ])
 //         .pipe(concat('hesh.js'))
-//         .pipe(gulp.dest('./dist'))
+//         .pipe(gulp.dest(dist))
 //         .pipe(livereload())
 // }
 
@@ -90,7 +92,7 @@ const svgstore = require('gulp-svgstore')
 //     return gulp.src('./dist/hesh.js')
 //         .pipe(uglify())
 //         .pipe(rename(path => path.basename += '.min'))
-//         .pipe(gulp.dest('./dist'))
+//         .pipe(gulp.dest(dist))
 // }
 
 // const watch = () => {
@@ -103,6 +105,7 @@ const svgstore = require('gulp-svgstore')
 
 // const minify = gulp.series(gulp.parallel(minifyCSS, minifyJS))
 // const build = gulp.series(gulp.parallel(buildCSS, buildJS), minify)
+const build = gulp.series(gulp.parallel(buildCSS));
 
-// gulp.task('build', build)
+gulp.task('default', build)
 // gulp.task('default', gulp.series(build, watch))
