@@ -9,7 +9,7 @@ const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 const svgstore = require('gulp-svgstore')
 
-const dist = '../transitions';
+const dist = '../transitions-dist';
 
 const buildCSS = () => {
     return gulp.src('./src/app/style/style.less')
