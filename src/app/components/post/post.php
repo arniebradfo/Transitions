@@ -22,32 +22,18 @@
 			the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		}
 		?>
+	<p>Tagged: <?php the_tags() ?> </p>
 
 	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
 		<a href="<?php the_permalink(); ?>">
-			<?php the_post_thumbnail( 'transitions-featured-image' ); ?>
+			<?php the_post_thumbnail( 'small' ); ?>
 		</a>
 	<?php endif; ?>
 
 	<div>
-		<?php
-		/* translators: %s: Name of current post */
-		the_content(
-			sprintf(
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-				get_the_title()
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
-				'after'       => '</div>',
-				'link_before' => '<span class="page-number">',
-				'link_after'  => '</span>',
-			)
-		);
-		?>
+		<?php // the_content(); ?>
+		Lorem Ipsum
+		<?php wp_link_pages(); ?>
 	</div>
 
 </article><!-- #post-## -->

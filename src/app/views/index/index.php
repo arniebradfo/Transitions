@@ -17,10 +17,29 @@
 
 get_header(); ?>
 
-	<?php if ( is_home() && ! is_front_page() ) : ?>
+
+	<?php if ( is_home() && !is_front_page() ) : ?>
 		<h1><?php single_post_title(); ?></h1>
+
+	<?php elseif ( is_archive() ) : ?>
+		<?php
+			the_archive_title( '<h1>', '</h1>' );
+			the_archive_description( '<p>', '</p>' );
+		?>
+
+	<?php elseif ( is_search() ) : ?>
+		<h1>
+			Search Results for: 
+			<?php get_search_query() ?>!!!
+		</h1>
+		<p>
+			Search Again!!?
+			<?php get_search_form(); ?>
+		</p>
+
 	<?php else : ?>
 		<h2>Posts</h2>
+
 	<?php endif; ?>
 
 	<?php if ( have_posts() ) : ?>

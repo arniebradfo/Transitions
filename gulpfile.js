@@ -33,6 +33,7 @@ const copyPhpTemplates = () => {
 	return gulp.src(['./src/**/*.php', './src/README.txt', './src/screenshot.png'])
 		.pipe(rename({dirname: ''}))
 		.pipe(gulp.dest(dist))
+		.pipe(livereload())
 }
 
 // const minifyCSS = () => {
@@ -101,17 +102,16 @@ const copyPhpTemplates = () => {
 //         .pipe(gulp.dest(dist))
 // }
 
-// const watch = () => {
-//     livereload.listen()
-//     gulp.watch([
-//         './src/**/*',
-//         './*.php',
-//     ], build)
-// }
+const watch = () => {
+    livereload.listen()
+    gulp.watch([
+        './src/**/*'
+    ], build)
+}
 
 // const minify = gulp.series(gulp.parallel(minifyCSS, minifyJS))
 // const build = gulp.series(gulp.parallel(buildCSS, buildJS), minify)
-const build = gulp.series(gulp.parallel(buildCSS,copyPhpTemplates));
+const build = gulp.series(gulp.parallel(buildCSS, copyPhpTemplates));
 
 gulp.task('default', build)
-// gulp.task('default', gulp.series(build, watch))
+gulp.task('dev', gulp.series(build, watch))
