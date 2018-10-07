@@ -29,27 +29,8 @@ if ( post_password_required() ) {
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
 	?>
-		<h2 class="comments-title">
-			<?php
-			$comments_number = get_comments_number();
-			if ( '1' === $comments_number ) {
-				/* translators: %s: post title */
-				printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'transitions' ), get_the_title() );
-			} else {
-				printf(
-					/* translators: 1: number of comments, 2: post title */
-					_nx(
-						'%1$s Reply to &ldquo;%2$s&rdquo;',
-						'%1$s Replies to &ldquo;%2$s&rdquo;',
-						$comments_number,
-						'comments title',
-						'transitions'
-					),
-					number_format_i18n( $comments_number ),
-					get_the_title()
-				);
-			}
-			?>
+		<h2>
+			Comments!
 		</h2>
 
 		<ol class="comment-list">
@@ -59,7 +40,7 @@ if ( post_password_required() ) {
 						'avatar_size' => 100,
 						'style'       => 'ol',
 						'short_ping'  => true,
-						'reply_text'  => transitions_get_svg( array( 'icon' => 'mail-reply' ) ) . __( 'Reply', 'transitions' ),
+						'reply_text'  => 'Reply',
 					)
 				);
 			?>
@@ -68,8 +49,8 @@ if ( post_password_required() ) {
 		<?php
 		the_comments_pagination(
 			array(
-				'prev_text' => transitions_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous', 'transitions' ) . '</span>',
-				'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'transitions' ) . '</span>' . transitions_get_svg( array( 'icon' => 'arrow-right' ) ),
+				'prev_text' => 'PREVIOUS!!',
+				'next_text' => 'NEXT!!',
 			)
 		);
 
@@ -79,7 +60,7 @@ if ( post_password_required() ) {
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
 
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'transitions' ); ?></p>
+		<p>Comments are closed!!</p>
 	<?php
 	endif;
 
