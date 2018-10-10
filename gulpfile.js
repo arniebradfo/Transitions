@@ -41,6 +41,13 @@ const clean = () => {
 	return del([ dist ],{ force: true });
 }
 
+const buildSvg = () => {
+	return gulp.src(['./src/app/icons/*.svg'])
+		.pipe(svgstore())
+		.pipe(rename({ name: 'icon-defs.php' }))
+		.pipe(gulp.dest('./src/app/components/icon'))
+}
+
 // const minifyCSS = () => {
 //     return gulp.src('./dist/hesh.css')
 //         .pipe(cssnano())

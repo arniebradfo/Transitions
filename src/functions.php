@@ -76,54 +76,57 @@ add_action( 'after_setup_theme', 'transitions_theme_setup' );
 	// }
 	// add_action( 'admin_init', 'add_editor_styles' );
 
-	// this guy sucks - https://codex.wordpress.org/Content_Width
-	if ( ! isset( $content_width ) ) { 
-		$content_width = 2000;
-	}
+// this guy sucks - https://codex.wordpress.org/Content_Width
+if ( ! isset( $content_width ) ) { 
+	$content_width = 2000;
+}
 
-	function load_theme_scripts_and_styles() {
-		// Load Custom Styles
-		wp_register_style( 'style', get_stylesheet_uri() );
-		wp_enqueue_style( 'style' );
-		// Remove widget css from head - https://wordpress.org/support/topic/remove-css-from-head
+function load_theme_scripts_and_styles() {
+	// Load Custom Styles
+	wp_register_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'style' );
+	// Remove widget css from head - https://wordpress.org/support/topic/remove-css-from-head
 
-		// Load jQuery scripts - jq v1.12.0 is for < IE8 
-		wp_deregister_script( 'jquery' ); // if using vanilla .js
-		// google Hosted jQuery
-		// wp_register_script( 'jquery', "http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js", false, null, false, true);
-		// wp_enqueue_script( 'jquery' );
+	// Load jQuery scripts - jq v1.12.0 is for < IE8 
+	wp_deregister_script( 'jquery' ); // if using vanilla .js
+	// google Hosted jQuery
+	// wp_register_script( 'jquery', "http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js", false, null, false, true);
+	// wp_enqueue_script( 'jquery' );
 
-		// add the wp comment-reply.js to manage comments
-		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
-			wp_enqueue_script( 'comment-reply' );
+	// add the wp comment-reply.js to manage comments
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
+		wp_enqueue_script( 'comment-reply' );
 
-		// Load Custom Scripts
-		// wp_register_script( 'wpajaxjs', get_template_directory_uri()."/_/js/wpajax.js", false, false, true );
-		// wp_enqueue_script( 'wpajaxjs' );
+	// Load Custom Scripts
+	// wp_register_script( 'wpajaxjs', get_template_directory_uri()."/_/js/wpajax.js", false, false, true );
+	// wp_enqueue_script( 'wpajaxjs' );
 
-	}
-	add_action( 'wp_enqueue_scripts', 'load_theme_scripts_and_styles' ); 
+}
+add_action( 'wp_enqueue_scripts', 'load_theme_scripts_and_styles' ); 
 
-	// DISABLE EMOJIs  -  http://wordpress.stackexchange.com/questions/185577/disable-emojicons-introduced-with-wp-4-2
-	function disable_wp_emojicons() {
-		// all actions related to emojis
-		remove_action( 'admin_print_styles', 'print_emoji_styles' );
-		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-		remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-		remove_action( 'wp_print_styles', 'print_emoji_styles' );
-		remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-		remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-		remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-		// filter to remove TinyMCE emojis
-		function disable_emojicons_tinymce( $plugins ) {
-			if ( is_array( $plugins ) ) {
-				return array_diff( $plugins, array( 'wpemoji' ) );
-			} else {
-				return array();
-			}
+// DISABLE EMOJIs  -  http://wordpress.stackexchange.com/questions/185577/disable-emojicons-introduced-with-wp-4-2
+function disable_wp_emojicons() {
+	// all actions related to emojis
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+	// filter to remove TinyMCE emojis
+	function disable_emojicons_tinymce( $plugins ) {
+		if ( is_array( $plugins ) ) {
+			return array_diff( $plugins, array( 'wpemoji' ) );
+		} else {
+			return array();
 		}
-		add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 	}
-	add_action( 'init', 'disable_wp_emojicons' );
+	add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+}
+add_action( 'init', 'disable_wp_emojicons' );
 
- ?>
+// shortcode component includes
+include_once('icon.php') 
+
+?>

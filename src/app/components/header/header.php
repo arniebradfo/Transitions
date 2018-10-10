@@ -24,6 +24,7 @@
 
 <body <?php body_class(); ?>>
 
+<?php get_template_part('icon-defs'); ?>
 <?php get_template_part('nav', 'primary'); ?>
 
 <div class="wrapper">
