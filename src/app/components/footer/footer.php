@@ -14,6 +14,17 @@
 
 ?>
 
+</div><!-- .wrapper -->
+
+<nav>
+	<?php wp_nav_menu( array(
+		'theme_location' => 'footer',
+		'menu_id'        => 'footer-nav',
+	)); ?>
+
+	<?php get_search_form(); ?>
+</nav>
+
 <?php wp_footer(); ?>
 
 </body>

@@ -24,3 +24,6 @@
 
 <body <?php body_class(); ?>>
 
+<?php get_template_part('nav', 'primary'); ?>
+
+<div class="wrapper">

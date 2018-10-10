@@ -15,10 +15,12 @@
  * @version 1.0
  */
 
-get_header(); ?>
+get_header(); 
 
+?>
 
-	<?php if ( is_home() && !is_front_page() ) : ?>
+	<?php if ( is_home() && !is_front_page() ) : 
+		// the "Homepage" is a static page and this is the "Posts page"  ?>
 		<h1><?php single_post_title(); ?></h1>
 
 	<?php elseif ( is_archive() ) : ?>
@@ -37,36 +39,28 @@ get_header(); ?>
 			<?php get_search_form(); ?>
 		</p>
 
-	<?php else : ?>
-		<h2>Posts</h2>
+	<?php else : // this is the "Latest Posts Page" ?>
+		<?php get_template_part('heading', 'home'); ?>
 
 	<?php endif; ?>
 
 	<?php if ( have_posts() ) : ?>
 	
-		<?php
-		/* Start the Loop */
-		while ( have_posts() ) :
+		<?php while ( have_posts() ) : // start "the loop"
 			the_post();
 
-			/*
-				* Include the Post-Format-specific template for the content.
-				* If you want to override this in a child theme, then include a file
-				* called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				*/
 			get_template_part( 'post', get_post_format() );
 
 		endwhile;
 
 		the_posts_pagination();
 
-	else : ?>
+	else : // if there are no posts ?>
 
 		<p>there are no posts!!!</p>
 
-	<?php endif;
-	?>
-
+	<?php endif; ?>
 
 <?php
+
 get_footer();

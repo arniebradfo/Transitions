@@ -16,14 +16,17 @@ function transitions_theme_setup() {
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
+	add_theme_support('custom-logo');
+		
 	add_theme_support( 'post-formats', array( 'link', 'video', 'aside', 'audio', 'chat', 'gallery', 'image', 'quote', 'status' ) );
 	add_post_type_support( 'post', 'post-formats' );
 	add_post_type_support( 'page', 'post-formats' );
 
 	// Nav Menus
 	register_nav_menus( array(
-		'primary'   => __( 'Navigation Menu', 'transitions' ),
-		'secondary' => __( 'Footer Menu', 'transitions' ),
+		'primary' => 'Primary Navigation',
+		'home'    => 'Home Navigation',
+		'footer'  => 'Footer Navigation',
 	) );
 
 	// featured images aka thumbnails
@@ -55,17 +58,17 @@ function transitions_theme_setup() {
 add_action( 'after_setup_theme', 'transitions_theme_setup' );
 
 	// Widgets
-	function wpajax_widget_setup() {
-		register_sidebar( array(
-			'name'          => __( 'Sidebar Widgets', 'wpajax' ),
-			'id'            => 'sidebar-primary',
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		) );
-	}
-	add_action( 'widgets_init', 'wpajax_widget_setup' );
+	// function wpajax_widget_setup() {
+	// 	register_sidebar( array(
+	// 		'name'          => __( 'Sidebar Widgets', 'wpajax' ),
+	// 		'id'            => 'sidebar-primary',
+	// 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	// 		'after_widget'  => '</div>',
+	// 		'before_title'  => '<h3 class="widget-title">',
+	// 		'after_title'   => '</h3>',
+	// 	) );
+	// }
+	// add_action( 'widgets_init', 'wpajax_widget_setup' );
 
 	// add custom css to style inside the tinyMCE editor
 	// function add_editor_styles() {
