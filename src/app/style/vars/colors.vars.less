@@ -1,3 +1,27 @@
+// COLORS //
+
+
+
+@hover_Color: red;
+@hover_Opacity: 1;
+
+@active_Color: blue;
+@active_Opacity: 0.7;
+
+@disabled_Opacity: 0.3;
+@disabled_Color: rgba(0,0,0, @disabled_Opacity);
+
+
+:root{
+	--disabled_Opacity: @disabled_Opacity;
+
+}
+
+
+
+
+
+
 // // COLORS //
 // @turquoise_Color:  #00FFCE;
 // @turquoiseDark_Color:  darken(@turquoise_Color, 10%);
@@ -77,8 +101,8 @@
 // }
 
 
-// // MIXINS //
-// .highlighted_Colors() {
-//   background-color: var(--accentWeak_Color);
-//   color: var(--fgStrong_Color);
-// }
+// MIXINS //
+.highlighted_Colors() {
+  background-color: var(--accentWeak_Color);
+  color: var(--fgStrong_Color);
+}

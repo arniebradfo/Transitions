@@ -1,4 +1,4 @@
-<button class="nav__button">
+<button class="nav__button button--icon">
 	<?php echo do_shortcode('[icon name="Menu" /]'); ?>
 </button>
 

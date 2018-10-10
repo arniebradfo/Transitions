@@ -2,7 +2,7 @@
 /**
  * icon component
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * @link ???
  *
  * @package WordPress
  * @subpackage Transitions
@@ -13,6 +13,7 @@
 
 function transitions_component_icon( $atts, $content=null, $tag='' ) {
 	$output = '<svg ';
+	$atts['class'] = isset($atts['class']) ? 'icon ' . $atts['class'] : 'icon';
 	foreach($atts as $att => $val)
 		if ($att == 'name') continue;
 		$output .= $att.'="'.$val.'" '; // echo all attributes from the shorcode

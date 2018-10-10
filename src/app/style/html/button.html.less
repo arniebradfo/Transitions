@@ -1,0 +1,63 @@
+button, 
+[type="button"], 
+[type="reset"], 
+[type="submit"],
+.button
+{
+	
+	// RESETS //
+	-webkit-appearance: none;
+	border: initial;
+	background: initial;
+	margin: 0;
+	// padding: 0;
+
+	height: @button_Size;
+	padding: 0 @s16;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	.transition(color);
+
+	&.button--icon{
+		width: @button_Size;
+		padding: 0;
+	}
+
+	position: relative;
+	&::before, &::after{
+		content: '';
+		.absolute(0);
+		border: @border_Size solid transparent;
+		z-index: -1;
+		border-radius: @border_Radius;
+		.transition(opacity transform)
+	}
+
+	&::after{
+		background-color: black;
+		opacity: 0;
+	}
+
+
+	&.button--fill{
+		&::before{
+			background-color: wheat;			
+		}
+	}
+	&.button--outline{
+		&::before{
+			border-color: gray;			
+		}
+	}
+
+
+	&:hover{
+		color: white;		
+		&::after{
+			@buttonHover_Scale: ((@button_Size+2) / @button_Size);
+			transform: scale(1.05); // TODO: use unitless() 
+			opacity: 1;
+		}
+	}
+}

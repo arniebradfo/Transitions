@@ -1,57 +1,33 @@
-// @s8:  8px; // root value
-// @s1:  1px; // subtract 1 to make things odd...
-// @s2:  (@s8 * 0.25);
-// @s4:  (@s8 * 0.50);
-// @s6:  (@s8 * 0.75);
-// // @s8:  8px;
-// @s10: (@s8 * 1.25);
-// @s12: (@s8 * 1.50);
-// @s16: (@s8 * 2);
-// @s24: (@s8 * 3);
-// @s32: (@s8 * 4);
-// @s40: (@s8 * 5);
+@s8:  8px; // root value
 
-// @icon_Size: 11px; // @s12 -1;
-// @button_Size: @s8*4;
-// @focusBorder_Size: @s1;
+@s1:  1px;
+@s2:  2px; // (@s8 * 0.25);
+@s4:  4px; // (@s8 * 0.50);
+@s6:  6px; // (@s8 * 0.75);
+// @s8:  8px;
+@s10: 10px; // (@s8 * 1.25);
+@s12: 12px; // (@s8 * 1.50);
+@s16: (@s8 * 2);
+@s24: (@s8 * 3);
+@s32: (@s8 * 4);
+@s40: (@s8 * 5);
 
-// @borderSm_Radius: @s4;
-// @border_Radius: @s6;
-
-// @centerColumn_MaxWidth:   @s8 * 118;
-
-// @postHorizontal_Padding:  @s8 * 3;
-// @postHorizontal_Margin:   @postHorizontal_Padding + @s8 * 6;
-// @postHorizontal_MarginSm: @postHorizontal_Padding + @s8;
-
-// .inlineBackground_Spacing() {
-// 	@top:    0.25em;
-// 	@bottom: 0.1em;
-// 	@sides:  0.4em;
-
-//   padding: @top @sides @bottom;
-//   margin-bottom: -@bottom;
-//   margin-top: -@top;
-// }
+@icon_Size: 11px; // @s12 -1; // TODO: change later
+@button_Size: @s40;
+@border_Size: @s4;
+@borderSm_Size: @s1;
+@border_Radius: (@button_Size / 2);
 
 
+// MEDIA QUERIES //
 
-// // MEDIA QUERIES //
+@mobile_Breakpoint:  700px;  // < 768px
+@tablet_Breakpoint:  1100px; // < 1080px
+@laptop_Breakpoint:  1400px; // > 1366px
+@desktop_Breakpoint: 2000px; // > 1920px
+@tv_Breakpoint:      9999px; // ???
 
-// // this must match:
-// // export const MOBILE_BREAKPOINT = 700;
-// // in ./root.component.less
-// @MOBILE_BREAKPOINT: (8px * 120);
-
-// @mobile_Breakpoint:  @MOBILE_BREAKPOINT;
-
-// @mobileSm_Breakpoint: 700px; // < 768px
-// @tablet_Breakpoint:  1100px; // < 1080px
-// @laptop_Breakpoint:  1400px; // > 1366px
-// @desktop_Breakpoint: 2000px; // > 1920px
-// @tv_Breakpoint:      9999px; // ???
-
-// @mobilePlusOne_Breakpoint: (@mobile_Breakpoint + 1);
-// @state-mobile: ~'screen and (max-width: @{mobile_Breakpoint})';
-// @state-not-mobile: ~'screen and (min-width: @{mobilePlusOne_Breakpoint})';
+@mobilePlusOne_Breakpoint: (@mobile_Breakpoint + 1);
+@state-mobile: ~'screen and (max-width: @{mobile_Breakpoint})';
+@state-not-mobile: ~'screen and (min-width: @{mobilePlusOne_Breakpoint})';
 
