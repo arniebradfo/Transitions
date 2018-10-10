@@ -1,4 +1,5 @@
 const gulp = require('gulp')
+const del = require('del');
 const livereload = require('gulp-livereload')
 const rename = require('gulp-rename')
 const less = require('gulp-less')
@@ -34,6 +35,10 @@ const copyPhpTemplates = () => {
 		.pipe(rename({dirname: ''}))
 		.pipe(gulp.dest(dist))
 		.pipe(livereload())
+}
+
+const clean = () => {
+	return del([ dist ],{ force: true });
 }
 
 // const minifyCSS = () => {
@@ -111,7 +116,7 @@ const watch = () => {
 
 // const minify = gulp.series(gulp.parallel(minifyCSS, minifyJS))
 // const build = gulp.series(gulp.parallel(buildCSS, buildJS), minify)
-const build = gulp.series(gulp.parallel(buildCSS, copyPhpTemplates));
+const build = gulp.series(clean, gulp.parallel(buildCSS, copyPhpTemplates));
 
 gulp.task('default', build)
 gulp.task('dev', gulp.series(build, watch))
