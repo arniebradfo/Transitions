@@ -21,6 +21,7 @@ TODOs that are done!
 	- links
 	- color vars
 	- size vars
+	- typography 
 - style nav-primary
 - style heading-home
 
