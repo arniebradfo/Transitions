@@ -1,5 +1,5 @@
 <button class="nav__button button--icon">
-	<?php echo do_shortcode('[icon name="Menu" /]'); ?>
+	<?php echo trns_icon_component(['name'=>'Menu']) ?>
 </button>
 
 <nav class="nav">

@@ -40,6 +40,13 @@ const buildSvg = () => {
 		.pipe(gulp.dest('./src/app/components/icon'))
 }
 
+const buildJs = () => {
+	return gulp.src(['./src/**/*.js'])
+		.pipe(concat('script.js'))
+		.pipe(gulp.dest(dist))
+		.pipe(livereload())
+}
+
 const copyPhpTemplates = () => {
 	return gulp.src(['./src/**/*.php', './src/README.txt', './src/screenshot.png'])
 		.pipe(rename({dirname: ''}))
@@ -60,7 +67,7 @@ const watch = () => {
 }
 
 
-const build = gulp.series(clean, buildSvg, gulp.parallel(buildCss, copyPhpTemplates));
+const build = gulp.series(clean, buildSvg, gulp.parallel(buildJs, buildCss, copyPhpTemplates));
 gulp.task('default', build)
 gulp.task('dev', gulp.series(build, watch))
 

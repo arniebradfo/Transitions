@@ -11,17 +11,18 @@
  */
 
 
-function transitions_component_icon( $atts, $content=null, $tag='' ) {
+function trns_icon_component( $atts, $content=null, $tag='' ) {
+
 	$output = '<svg ';
-	$atts['class'] = isset($atts['class']) ? 'icon ' . $atts['class'] : 'icon';
+	$atts['class'] = isset($atts['class']) ? "icon {$atts['class']}" : 'icon';
 	foreach($atts as $att => $val)
 		if ($att == 'name') continue;
-		$output .= $att.'="'.$val.'" '; // echo all attributes from the shorcode
+		$output .= " $att=\"$val\""; // echo all attributes from the shorcode
 	$output .= '>';
-	$output .= '<use xlink:href="#icon_'.$atts['name'].'"></use>'; 
+	$output .= "<use xlink:href=\"#icon_{$atts['name']}\"></use>"; 
 	$output .= '</svg>';
 	return $output;
 }
-add_shortcode( 'icon', 'transitions_component_icon' );
+// add_shortcode( 'tnst-icon', 'trns_icon_component' );
 
 ?>
