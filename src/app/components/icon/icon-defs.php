@@ -1,86 +1,51 @@
-<svg 
-	xmlns="http://www.w3.org/2000/svg" 
-	xmlns:xlink="http://www.w3.org/1999/xlink"
-	id="icon_Defs"
-	style="	
-		height: 0;
-		width:  0;
-		position: absolute;
-		visibility: hidden;
-	"
-	>
-	<symbol id="icon_Arrow_Down" viewBox="0 0 11 11">
-		<path d="M0,5.507V5h0.907L5,9.093V0h1v9.093L10.093,5H11v0.507L5.507,11H5.493L0,5.507z M0,0 M11,11" />
-	</symbol>
-	<symbol id="icon_Arrow_Left" viewBox="0 0 11 11">
-		<path d="M5.493,0H6v0.907L1.907,5H11v1H1.907L6,10.093V11H5.493L0,5.507V5.493L5.493,0z M0,0 M11,11" />
-	</symbol>
-	<symbol id="icon_Arrow_Right" viewBox="0 0 11 11">
-		<path d="M5.507,11H5v-0.907L9.093,6H0V5h9.093L5,0.907V0h0.507L11,5.493v0.014L5.507,11z M0,0 M11,11" />
-	</symbol>
-	<symbol id="icon_Arrow_Up" viewBox="0 0 11 11">
-		<path d="M11,5.493V6h-0.907L6,1.907V11H5V1.907L0.907,6H0V5.493L5.493,0h0.014L11,5.493z M0,0 M11,11" />
-	</symbol>
-	<symbol id="icon_Comment" viewBox="0 0 11 11">
-		<path d="M11,0H0v8h2v3l3.6-3H11V0z M10,7H5.238L3,8.865V7H1V1h9V7z M9,3H2V2h7V3z M6,5H2V4h4V5z M0,0 M11,11" />
-	</symbol>
-	<symbol id="icon_Contract" viewBox="0 0 11 11">
-		<path d="M5,10H4V7.707L0.707,11H0v-0.707L3.293,7H1V6h4V10z M10.293,0L7,3.293V1H6v4h4V4H7.707L11,0.707V0H10.293z M0,0 M11,11"
-		/>
-	</symbol>
-	<symbol id="icon_Expand" viewBox="0 0 11 11">
-		<path d="M11,0v4h-1V1.707L6.707,5H6V4.293L9.293,1H7V0H11z M4.293,6L1,9.293V7H0v4h4v-1H1.707L5,6.707V6H4.293z M0,0 M11,11"
-		/>
-	</symbol>
-	<symbol id="icon_Link" viewBox="0 0 11 11">
-		<path d="M3.789,7.009c-0.512-0.569-0.778-1.281-0.778-2c0-0.769,0.292-1.536,0.877-2.121l2-2c1.17-1.17,3.072-1.17,4.242,0
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon_Arrow_Down" viewBox="0 0 11 11">
+<path d="M0,5.507V5h0.907L5,9.093V0h1v9.093L10.093,5H11v0.507L5.507,11H5.493L0,5.507z M0,0 M11,11"/>
+</symbol><symbol id="icon_Arrow_Left" viewBox="0 0 11 11">
+<path d="M5.493,0H6v0.907L1.907,5H11v1H1.907L6,10.093V11H5.493L0,5.507V5.493L5.493,0z M0,0 M11,11"/>
+</symbol><symbol id="icon_Arrow_Right" viewBox="0 0 11 11">
+<path d="M5.507,11H5v-0.907L9.093,6H0V5h9.093L5,0.907V0h0.507L11,5.493v0.014L5.507,11z M0,0 M11,11"/>
+</symbol><symbol id="icon_Arrow_Up" viewBox="0 0 11 11">
+<path d="M11,5.493V6h-0.907L6,1.907V11H5V1.907L0.907,6H0V5.493L5.493,0h0.014L11,5.493z M0,0 M11,11"/>
+</symbol><symbol id="icon_Comment" viewBox="0 0 11 11">
+<path d="M11,0H0v8h2v3l3.6-3H11V0z M10,7H5.238L3,8.865V7H1V1h9V7z M9,3H2V2h7V3z M6,5H2V4h4V5z M0,0 M11,11"/>
+</symbol><symbol id="icon_Contract" viewBox="0 0 11 11">
+<path d="M5,10H4V7.707L0.707,11H0v-0.707L3.293,7H1V6h4V10z M10.293,0L7,3.293V1H6v4h4V4H7.707L11,0.707V0H10.293z M0,0 M11,11"/>
+</symbol><symbol id="icon_Expand" viewBox="0 0 11 11">
+<path d="M11,0v4h-1V1.707L6.707,5H6V4.293L9.293,1H7V0H11z M4.293,6L1,9.293V7H0v4h4v-1H1.707L5,6.707V6H4.293z M0,0 M11,11"/>
+</symbol><symbol id="icon_Link" viewBox="0 0 11 11">
+<path d="M3.789,7.009c-0.512-0.569-0.778-1.281-0.778-2c0-0.769,0.292-1.536,0.877-2.121l2-2c1.17-1.17,3.072-1.17,4.242,0
 	c1.189,1.188,1.138,3.106-0.119,4.362l-0.76,0.759H9.009V4.838l0.295-0.295c0.874-0.876,0.927-2.142,0.119-2.948
 	c-0.779-0.779-2.049-0.779-2.828,0l-2,2c-0.779,0.779-0.779,2.049,0,2.828l0.414,0.414v0.172H3.789z M5.13,10.13l2-2
 	c1.132-1.132,1.158-2.945,0.099-4.121h-1.22v0.172l0.414,0.414c0.779,0.779,0.779,2.049,0,2.828l-2,2
 	c-0.779,0.779-2.049,0.779-2.828,0s-0.779-2.049,0-2.828l0.414-0.414V5.009H1.767L0.888,5.888C0.303,6.473,0.011,7.24,0.011,8.009
-	s0.292,1.536,0.877,2.121C2.058,11.3,3.96,11.3,5.13,10.13z M0,0 M11,11" />
-	</symbol>
-	<symbol id="icon_Lock" viewBox="0 0 11 11">
-		<path d="M8,5V2.5C8,1.121,6.879,0,5.5,0S3,1.121,3,2.5V5H2v6h7V5H8z M4,2.5C4,1.673,4.673,1,5.5,1S7,1.673,7,2.5V5H4V2.5z M8,10H3V6
-	h5V10z M0,0 M11,11" />
-	</symbol>
-	<symbol id="icon_Mail" viewBox="0 0 11 11">
-		<path d="M10,4.545L11,4v5H0V4l1,0.545V8h9V4.545z M10,2H1v0.406l4.5,2.455L10,2.406V2 M11,1v2L5.5,6L0,3V1H11L11,1z M0,0 M11,11"
-		/>
-	</symbol>
-	<symbol id="icon_Menu" viewBox="0 0 11 11">
-		<path d="M11,2H0V1h11V2z M11,5H0v1h11V5z M11,9H0v1h11V9z M0,0 M11,11" />
-	</symbol>
-	<symbol id="icon_Pointer_Down" viewBox="0 0 11 11">
-		<path d="M0,3.507V3h0.907L5.5,7.593L10.093,3H11v0.507L5.507,9H5.493L0,3.507z M0,0 M11,11" />
-	</symbol>
-	<symbol id="icon_Pointer_Left" viewBox="0 0 11 11">
-		<path d="M7.493,0H8v0.907L3.407,5.5L8,10.093V11H7.493L2,5.507V5.493L7.493,0z M0,11 M11,0" />
-	</symbol>
-	<symbol id="icon_Pointer_Right" viewBox="0 0 11 11">
-		<path d="M3.507,11H3v-0.907L7.593,5.5L3,0.907V0h0.507L9,5.493v0.014L3.507,11z M11,0 M0,11" />
-	</symbol>
-	<symbol id="icon_Pointer_Up" viewBox="0 0 11 11">
-		<path d="M11,7.493V8h-0.907L5.5,3.407L0.907,8H0V7.493L5.493,2h0.014L11,7.493z M0,0 M11,11" />
-	</symbol>
-	<symbol id="icon_Pointers_Horizontal" viewBox="0 0 11 11">
-		<path d="M3.413,0H4v0.95L1.188,5.5L4,10.05V11H3.413L0.012,5.5L3.413,0z M7.587,0H7v0.95L9.812,5.5L7,10.05V11h0.587l3.401-5.5
-	L7.587,0z M0,0 M11,11" />
-	</symbol>
-	<symbol id="icon_Pointers_Vertical" viewBox="0 0 11 11">
-		<path d="M11,3.413V4h-0.95L5.5,1.188L0.95,4H0V3.413l5.5-3.401L11,3.413z M11,7.587V7h-0.95L5.5,9.812L0.95,7H0v0.587l5.5,3.401
-	L11,7.587z M0,0 M11,11" />
-	</symbol>
-	<symbol id="icon_Search" viewBox="0 0 11 11">
-		<path d="M7,0C4.794,0,3,1.794,3,4c0,0.923,0.326,1.763,0.853,2.44L0,10.293V11h0.707L4.56,7.147C5.237,7.674,6.077,8,7,8
-	c2.206,0,4-1.794,4-4S9.206,0,7,0z M7,7C5.346,7,4,5.654,4,4s1.346-3,3-3s3,1.346,3,3S8.654,7,7,7z M0,0 M11,11" />
-	</symbol>
-	<symbol id="icon_Unlock" viewBox="0 0 11 11">
-		<path d="M4,5V2.5C4,1.673,4.673,1,5.5,1S7,1.673,7,2.5v1h1v-1C8,1.121,6.879,0,5.5,0S3,1.121,3,2.5V5H2v6h7V5H4z M8,10H3V6h5V10z M0,0 M11,11"
-		/>
-	</symbol>
-	<symbol id="icon_X" viewBox="0 0 11 11">
-		<path d="M11,11h-0.707L5.5,6.207L0.707,11H0v-0.707L4.793,5.5L0,0.707V0h0.707L5.5,4.793L10.293,0H11v0.707L6.207,5.5L11,10.293V11z
-	 M0,0 M11,11" />
-	</symbol>
-</svg>
+	s0.292,1.536,0.877,2.121C2.058,11.3,3.96,11.3,5.13,10.13z M0,0 M11,11"/>
+</symbol><symbol id="icon_Lock" viewBox="0 0 11 11">
+<path d="M8,5V2.5C8,1.121,6.879,0,5.5,0S3,1.121,3,2.5V5H2v6h7V5H8z M4,2.5C4,1.673,4.673,1,5.5,1S7,1.673,7,2.5V5H4V2.5z M8,10H3V6
+	h5V10z M0,0 M11,11"/>
+</symbol><symbol id="icon_Mail" viewBox="0 0 11 11">
+<path d="M10,4.545L11,4v5H0V4l1,0.545V8h9V4.545z M10,2H1v0.406l4.5,2.455L10,2.406V2 M11,1v2L5.5,6L0,3V1H11L11,1z M0,0 M11,11"/>
+</symbol><symbol id="icon_Menu" viewBox="0 0 11 11">
+<path d="M11,2H0V1h11V2z M11,5H0v1h11V5z M11,9H0v1h11V9z M0,0 M11,11"/>
+</symbol><symbol id="icon_Pointer_Down" viewBox="0 0 11 11">
+<path d="M0,3.507V3h0.907L5.5,7.593L10.093,3H11v0.507L5.507,9H5.493L0,3.507z M0,0 M11,11"/>
+</symbol><symbol id="icon_Pointer_Left" viewBox="0 0 11 11">
+<path d="M7.493,0H8v0.907L3.407,5.5L8,10.093V11H7.493L2,5.507V5.493L7.493,0z M0,11 M11,0"/>
+</symbol><symbol id="icon_Pointer_Right" viewBox="0 0 11 11">
+<path d="M3.507,11H3v-0.907L7.593,5.5L3,0.907V0h0.507L9,5.493v0.014L3.507,11z M11,0 M0,11"/>
+</symbol><symbol id="icon_Pointer_Up" viewBox="0 0 11 11">
+<path d="M11,7.493V8h-0.907L5.5,3.407L0.907,8H0V7.493L5.493,2h0.014L11,7.493z M0,0 M11,11"/>
+</symbol><symbol id="icon_Pointers_Horizontal" viewBox="0 0 11 11">
+<path d="M3.413,0H4v0.95L1.188,5.5L4,10.05V11H3.413L0.012,5.5L3.413,0z M7.587,0H7v0.95L9.812,5.5L7,10.05V11h0.587l3.401-5.5
+	L7.587,0z M0,0 M11,11"/>
+</symbol><symbol id="icon_Pointers_Vertical" viewBox="0 0 11 11">
+]<path d="M11,3.413V4h-0.95L5.5,1.188L0.95,4H0V3.413l5.5-3.401L11,3.413z M11,7.587V7h-0.95L5.5,9.812L0.95,7H0v0.587l5.5,3.401
+	L11,7.587z M0,0 M11,11"/>
+</symbol><symbol id="icon_Search" viewBox="0 0 11 11">
+<path d="M7,0C4.794,0,3,1.794,3,4c0,0.923,0.326,1.763,0.853,2.44L0,10.293V11h0.707L4.56,7.147C5.237,7.674,6.077,8,7,8
+	c2.206,0,4-1.794,4-4S9.206,0,7,0z M7,7C5.346,7,4,5.654,4,4s1.346-3,3-3s3,1.346,3,3S8.654,7,7,7z M0,0 M11,11"/>
+</symbol><symbol id="icon_Unlock" viewBox="0 0 11 11">
+<path d="M4,5V2.5C4,1.673,4.673,1,5.5,1S7,1.673,7,2.5v1h1v-1C8,1.121,6.879,0,5.5,0S3,1.121,3,2.5V5H2v6h7V5H4z M8,10H3V6h5V10z M0,0 M11,11"/>
+</symbol><symbol id="icon_X" viewBox="0 0 11 11">
+<path d="M11,11h-0.707L5.5,6.207L0.707,11H0v-0.707L4.793,5.5L0,0.707V0h0.707L5.5,4.793L10.293,0H11v0.707L6.207,5.5L11,10.293V11z
+	 M0,0 M11,11"/>
+</symbol></svg>

@@ -12,7 +12,7 @@ const svgstore = require('gulp-svgstore')
 
 const dist = '../transitions-dist';
 
-const buildCSS = () => {
+const buildCss = () => {
     return gulp.src('./src/app/style/style.less')
         .pipe(less({
             plugins: [ require('less-plugin-glob') ]
@@ -30,6 +30,16 @@ const buildCSS = () => {
         .pipe(livereload())
 }
 
+const buildSvg = () => {
+	return gulp.src(['./src/app/icons/*.svg'])
+		.pipe(svgstore({ inlineSvg: true }))
+		.pipe(rename({ 
+			basename: 'icon-defs',
+			extname: '.php',			
+		}))
+		.pipe(gulp.dest('./src/app/components/icon'))
+}
+
 const copyPhpTemplates = () => {
 	return gulp.src(['./src/**/*.php', './src/README.txt', './src/screenshot.png'])
 		.pipe(rename({dirname: ''}))
@@ -41,12 +51,19 @@ const clean = () => {
 	return del([ dist ],{ force: true });
 }
 
-const buildSvg = () => {
-	return gulp.src(['./src/app/icons/*.svg'])
-		.pipe(svgstore())
-		.pipe(rename({ name: 'icon-defs.php' }))
-		.pipe(gulp.dest('./src/app/components/icon'))
+const watch = () => {
+    livereload.listen()
+    gulp.watch([
+		'./src/**/*',
+		'!./**/icon-defs.php'
+    ], build)
 }
+
+
+const build = gulp.series(clean, buildSvg, gulp.parallel(buildCss, copyPhpTemplates));
+gulp.task('default', build)
+gulp.task('dev', gulp.series(build, watch))
+
 
 // const minifyCSS = () => {
 //     return gulp.src('./dist/hesh.css')
@@ -114,16 +131,3 @@ const buildSvg = () => {
 //         .pipe(gulp.dest(dist))
 // }
 
-const watch = () => {
-    livereload.listen()
-    gulp.watch([
-        './src/**/*'
-    ], build)
-}
-
-// const minify = gulp.series(gulp.parallel(minifyCSS, minifyJS))
-// const build = gulp.series(gulp.parallel(buildCSS, buildJS), minify)
-const build = gulp.series(clean, gulp.parallel(buildCSS, copyPhpTemplates));
-
-gulp.task('default', build)
-gulp.task('dev', gulp.series(build, watch))

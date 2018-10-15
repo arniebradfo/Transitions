@@ -24,7 +24,10 @@
 
 <body <?php body_class(); ?>>
 
-<?php get_template_part('icon-defs'); ?>
+<div class="visually-hidden">
+	<?php get_template_part('icon-defs'); ?>
+</div>
+
 <?php get_template_part('nav', 'primary'); ?>
 
 <div class="wrapper">
