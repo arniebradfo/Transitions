@@ -1,0 +1,55 @@
+// nav-primary.less
+
+// TODO: put all colors in a colors.vars.less file
+
+@nav_Margin: @s8;
+
+.nav__button{
+	.absolute(0 0 x x);
+	z-index: @navButton_Zindex;
+	margin: @nav_Margin;
+}
+
+
+.nav{
+	.absolute(0 0 x x);
+	max-width:  calc(100% - (@nav_Margin*2));
+	max-height: calc(100% - (@nav_Margin*2));
+	z-index: @nav_Zindex;
+	background-color: white;
+	border-radius: @border_Radius;
+	margin: @nav_Margin;
+
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+.nav__header{
+	background-color: fade(black, 10%);
+
+	height: @button_Size;
+	padding: 0 @s16;
+	display: flex;
+	align-items: center;
+	flex: 0 0 auto;	
+}
+.nav__footer{
+	background-color: fade(black, 10%);
+	padding: 0 @s16;
+	display: flex;		
+	flex: 0 0 auto;
+}
+.nav__menu{
+	padding: 0 @s16;
+	flex: 1 1 auto;
+}
+
+.nav__overlay{
+	// display: none;
+
+	.absolute(0 0 0 0);
+	background-color: black;
+	opacity: 0.5;
+	z-index: @navOverlay_Zindex;
+}
+

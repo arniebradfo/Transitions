@@ -39,7 +39,7 @@ left:   4px;
 
 .position (
     @position: static;
-    @args: initial
+    @args: 0
 ) {
 	position: @position;
 	@length: length(@args);
@@ -69,13 +69,13 @@ left:   4px;
 	}
     .positions();
 }
-.absolute (@args:initial) {
+.absolute (@args:0) {
 	.position(absolute, @args);
 	will-change: transform; // forces a new layer?
 }
-.fixed (@args:initial) {
+.fixed (@args:0) {
   .position(fixed, @args);
 }
-.relative (@args:initial) {
+.relative (@args:0) {
   .position(relative, @args);
 }

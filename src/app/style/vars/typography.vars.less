@@ -16,10 +16,12 @@
 // font: font-style font-variant font-weight font-size/line-height font-family;
 
 // HEADING //
-@heading1_Font:     normal normal @light_Weight     (@s8 * 5) ~'/' (@s8 * 6)    @font_Family ; // h1
-@heading2_Font:     normal normal @light_Weight     (@s8 * 4) ~'/' (@s8 * 5)    @font_Family ; // h2
-@heading3_Font:     normal normal @light_Weight     (@s8 * 3) ~'/' (@s8 * 4)    @font_Family ; // h3
-@heading4_Font:     normal normal @regular_Weight   (@s8 * 2) ~'/' (@s8 * 3)    @font_Family ; // h4
+@heading1_Font:     normal normal @bold_Weight   (@s8 * 5) ~'/' (@s8 * 6)    @font_Family ; // h1
+@heading2_Font:     normal normal @bold_Weight   (@s8 * 4) ~'/' (@s8 * 5)    @font_Family ; // h2
+@heading3_Font:     normal normal @bold_Weight   (@s8 * 3) ~'/' (@s8 * 4)    @font_Family ; // h3
+@heading4_Font:     normal normal @bold_Weight   (@s8 * 2) ~'/' (@s8 * 3)    @font_Family ; // h4
+@heading5_Font:     normal normal @bold_Weight   (@s8 * 1) ~'/' (@s8 * 2)    @font_Family ; // h4
+@heading6_Font:     normal normal @bold_Weight   (@s8 * 2) ~'/' (@s8 * 1)    @font_Family ; // h4
 
 // META //
 @meta_Font:         normal normal @bold_Weight      @s12 ~'/' @s12    @font_Family ; // h5
@@ -41,6 +43,8 @@
 .heading2_Type()  { font: @heading2_Font; }
 .heading3_Type()  { font: @heading3_Font; }
 .heading4_Type()  { font: @heading4_Font; }
+.heading4_Type()  { font: @heading4_Font; }
+.heading4_Type()  { font: @heading4_Font; }
 .meta_Type()      { font: @meta_Font;   text-transform: uppercase; }
 .metaSm_Type()    { font: @metaSm_Font; text-transform: uppercase; }
 .body_Type()      { font: @body_Font; }
@@ -48,7 +52,9 @@
 .quote_Type()     { font: @quote_Font; }
 .monoSpace_Type() { font: @monoSpace_Font; }
 
-.all_Type() { letter-spacing: 0.1em; }
+.all_Type() { 
+	// letter-spacing: 0.1em; 
+}
 
 
 // VARS //
