@@ -1,4 +1,4 @@
-<button class="nav__button button--icon">
+<button class="nav__button button--icon jsTarget-navButton">
 	<?php echo trns_icon_component(['name'=>'Menu', 'class'=>'nav__open-icon']) ?>
 	<?php // echo trns_icon_component(['name'=>'X', 'class'=>'nav__close-icon']) ?>
 </button>
@@ -24,4 +24,4 @@
 
 </header>
 
-<div class="nav__overlay"></div>
+<div class="nav__overlay jsTarget-navOverlay"></div>
