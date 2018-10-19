@@ -10,25 +10,44 @@
 
 ?>
 
-<div style="max-width:100px;">
-<?php // TODO: ^^ remove max-width:100px
-	if (has_custom_logo()) {
-		$customLogo = get_custom_logo();
-		$logoAndTitle = true; // TODO: customizer settings
-		if ($logoAndTitle){
-			preg_match('/(<img[^>]+>)/', $customLogo, $customLogo);
-			$customLogo = $customLogo[0];
-		}
-		echo $customLogo;
-	}
-?>
-</div>
+<header class="heading">
 
-<h1><?php bloginfo( 'name' ); ?></h1>
+	<div class="heading__wrapper">
+	
+		<div class="heading__logo">		
+			<?php // TODO: ^^ remove max-width:100px
+			if (has_custom_logo()) {
+				$customLogo = get_custom_logo();
+				$logoAndTitle = true; // TODO: customizer settings
+				if ($logoAndTitle){
+					preg_match('/(<img)([^>]+>)/', $customLogo, $customLogo);
+					$customLogo = $customLogo[0];
+					// $customLogo = preg_replace('/class="[^]"/')
 
-<p><em><?php bloginfo( 'description' ); ?></em></p>
+				}
+				echo $customLogo;
+			}
+			get_theme_mod( 'custom_logo' );
+			?>
+		</div>
 
-<?php wp_nav_menu( array(
-	'theme_location' => 'home',
-	'menu_id'        => 'home-nav',
-)); ?>
+		<h1 class="heading__title">
+			<?php bloginfo( 'name' ); ?>
+		</h1>
+
+		<hr class="heading__rule" />
+
+		<p class="heading__description">
+			<?php bloginfo( 'description' ); ?>
+		</p>
+
+		<?php wp_nav_menu( array(
+			'theme_location'  => 'home',
+			'container_class' => 'heading__menu',
+			'container'       => 'nav'
+		)); ?>
+
+	</div>
+	
+
+</header>

@@ -15,7 +15,6 @@
 		'theme_location'  => 'primary',
 		'container_class' => 'nav__menu',
 		'container'       => 'nav'
-		
 	)); ?>
 
 	<div class="nav__footer">

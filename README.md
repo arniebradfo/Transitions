@@ -15,6 +15,7 @@ TODOs that are done!
 - output js
 
 ## TODO List
+- basic layout first?
 - style basic elements
 	- headings
 	- buttons
