@@ -1,22 +1,38 @@
 // COLORS //
 
-@primary_Color: black;
 @primary_Opacity: 1;
+@primary_Color: fade(black, @primary_Opacity*100%);
 
-@hover_Color: red;
+@secondary_Opacity: 0.6;
+@secondary_Color: fade(black, @secondary_Opacity*100%);
+
+@tertiary_Opacity: 0.1;
+@tertiary_Color: fade(black, @tertiary_Opacity*100%);
+
 @hover_Opacity: 1;
+@hover_Color: red;
 
-@active_Color: blue;
 @active_Opacity: 0.7;
+@active_Color: blue;
 
-@focus_Color: rgb(9, 255, 0);
 @focus_Opacity: 0.7;
+@focus_Color: rgb(9, 255, 0);
 
 @disabled_Opacity: 0.3;
 @disabled_Color: rgba(0,0,0, @disabled_Opacity);
 
-@background: fade(black, 10%);
-
+@primaryBg_Color: white;
+// https://medium.com/the-missing-bit/mitigating-css-gradient-banding-45b88493d228
+@background_Overlay: linear-gradient(-45deg, fade(black, 20%), fade(black, 05%));
+@backgroundFull_Overlay:
+	linear-gradient(-40deg, fade(black, 5%), fade(black, 0.2%)),
+	linear-gradient(-52deg, fade(black, 4%), fade(black, 0.7%)),
+	linear-gradient(-58deg, fade(black, 5%), fade(black, 0.3%)),
+	linear-gradient(-71deg, fade(black, 6%), fade(black, 0.6%)),
+	linear-gradient(-88deg, fade(black, 8%), fade(black, 0.1%)),
+	linear-gradient(-45deg, fade(black, 6%), fade(black, 0.3%));
+// @backgroundFull_Overlay: svg-gradient(to bottom right,  fade(black, 05%), fade(black, 20%));
+// @backgroundFull_Overlay: linear-gradient(-45deg, darken(white, 10%), black);
 
 :root{
 	--disabled_Opacity: @disabled_Opacity;
