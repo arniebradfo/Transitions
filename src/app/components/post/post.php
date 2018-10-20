@@ -13,27 +13,48 @@
 ?>
 
 <!-- post.php -->
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article <?php post_class('post'); ?> id="post-<?php the_ID(); ?>">
+
+	<header class="heading heading__post">
+
+		<p class="post__meta">
+			<time class="post__meta-date" datetime="<?php the_time('c');?>"><?php the_date(); ?></time>
+			&#47;
+			<span class"post__meta-author"><?php the_author(); ?></span>
+		</p>
+
+
+		<?php if ( is_single() ) : ?>
+			<h1 class="post__title"><?php the_title(); ?></h1>
+			
+		<?php elseif ( is_front_page() && is_home() ) : ?>
+			<h3 class="post__title"><a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark"><?php the_title(); ?><a/></h3>
+
+		<?php else : ?>
+			<h2 class="post__title"><a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark"><?php the_title(); ?><a/></h2>
+
+		<?php endif; ?>
+		
+
+		<hr class="post__title-rule" />
+		<p><?php the_tags(''); ?> </p>
+
+		<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
+			<a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail( 'small' ); ?>
+			</a>
+		<?php endif; ?>
+
+	</header>
+
+
+	<div class="post__content">
 		<?php
-		if ( is_single() ) {
-			the_title( '<h1>', '</h1>' );
-		} elseif ( is_front_page() && is_home() ) {
-			the_title( '<h3><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
-		} else {
-			the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		}
+		if (is_single())
+			the_content(); 
+		else
+			the_excerpt();
 		?>
-	<p>Tagged: <?php the_tags() ?> </p>
-
-	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
-		<a href="<?php the_permalink(); ?>">
-			<?php the_post_thumbnail( 'small' ); ?>
-		</a>
-	<?php endif; ?>
-
-	<div>
-		<?php // the_content(); ?>
-		Lorem Ipsum
 		<?php wp_link_pages(); ?>
 	</div>
 
