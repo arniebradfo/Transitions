@@ -10,20 +10,19 @@
 
 ?>
 
+<!-- searchform.php -->
 <?php $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
-
-<form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<label for="<?php echo $unique_id; ?>">
-		<span class="screen-reader-text">Search!!</span>
-	</label>
+<form class="searchform" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<input 
+		class="searchform__input"
 		type="search" 
 		id="<?php echo $unique_id; ?>" 
-		placeholder="SEARCH PLACEHOLDER!!" 
+		placeholder="Search" 
 		value="<?php echo get_search_query(); ?>" 
 		name="s" 
 		/>
-	<button type="submit" >
-		DO THE SEARCH!!
+	<button class="searchform__button" type="submit" >
+		🔍
 	</button>
-</form>
+</form><!--/ searchform.php -->
+

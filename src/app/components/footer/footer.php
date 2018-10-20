@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the footer
+ * The template for doing the foot, as a verb
  *
  * Contains the closing of the #content div and all content after.
  *
@@ -13,19 +13,36 @@
  */
 
 ?>
+<!-- footer.php -->
+</main><!-- .main -->
 
-</div><!-- .wrapper -->
+<footer class="footer">
 
-<nav>
-	<?php wp_nav_menu( array(
-		'theme_location' => 'footer',
-		'menu_id'        => 'footer-nav',
-	)); ?>
+	<div class="footer__wrapper">
 
-	<?php get_search_form(); ?>
-</nav>
+		<?php get_search_form(); ?>
+
+		<?php wp_nav_menu( array(
+			'theme_location'  => 'footer',
+			'container_class' => 'footer__menu',
+			'container'       => 'nav',
+			'menu_class'      => 'menu footer__menu-list',
+			'depth'           => 1
+		)); ?>
+
+	</div>
+
+	<p class="footer__copyright">
+		<?php get_template_part('logo'); ?>
+		<small class="footer__copyright-text">
+			&copy;<?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>
+		</small>
+	</p>
+
+</footer>
 
 <?php wp_footer(); ?>
 
 </body>
-</html>
+</html><!--/ footer.php -->
+

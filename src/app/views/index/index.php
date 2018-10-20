@@ -18,6 +18,7 @@
 get_header(); 
 
 ?>
+<!-- index.php -->
 
 	<?php if ( is_home() && !is_front_page() ) : 
 		// the "Homepage" is a static page and this is the "Posts page"  ?>
@@ -44,22 +45,27 @@ get_header();
 
 	<?php endif; ?>
 
-	<?php if ( have_posts() ) : ?>
+
+	<div class="post-list">
+		<?php if ( have_posts() ) : ?>
+		
+			<?php 
+			while ( have_posts() ) : // start "the loop"
+				the_post();
+				get_template_part( 'post', get_post_format() );
+			endwhile;
+
+			the_posts_pagination();
+			?>
+
+		<?php else : // if there are no posts ?>
+			<p>there are no posts!!!</p>
+
+		<?php endif; ?>
+	</div>
 	
-		<?php while ( have_posts() ) : // start "the loop"
-			the_post();
 
-			get_template_part( 'post', get_post_format() );
-
-		endwhile;
-
-		the_posts_pagination();
-
-	else : // if there are no posts ?>
-
-		<p>there are no posts!!!</p>
-
-	<?php endif; ?>
+<!--/ index.php -->
 
 <?php
 

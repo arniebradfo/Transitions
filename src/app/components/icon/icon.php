@@ -13,7 +13,8 @@
 
 function trns_icon_component( $atts, $content=null, $tag='' ) {
 
-	$output = '<svg ';
+	$output = '<!-- icon.php -->';
+	$output.= '<svg ';
 	$atts['class'] = isset($atts['class']) ? "icon {$atts['class']}" : 'icon';
 	foreach($atts as $att => $val)
 		if ($att == 'name') continue;
@@ -21,6 +22,7 @@ function trns_icon_component( $atts, $content=null, $tag='' ) {
 	$output .= '>';
 	$output .= "<use xlink:href=\"#icon_{$atts['name']}\"></use>"; 
 	$output .= '</svg>';
+	$output = '<!--/ icon.php -->';
 	return $output;
 }
 // add_shortcode( 'tnst-icon', 'trns_icon_component' );

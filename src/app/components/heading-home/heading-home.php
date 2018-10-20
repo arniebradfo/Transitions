@@ -10,25 +10,13 @@
 
 ?>
 
-<header class="heading">
+<!-- heading-home.php -->
+<section class="heading">
 
 	<div class="heading__wrapper">
 	
 		<div class="heading__logo">		
-			<?php // TODO: ^^ remove max-width:100px
-			if (has_custom_logo()) {
-				$customLogo = get_custom_logo();
-				$logoAndTitle = true; // TODO: customizer settings
-				if ($logoAndTitle){
-					preg_match('/(<img)([^>]+>)/', $customLogo, $customLogo);
-					$customLogo = $customLogo[0];
-					// $customLogo = preg_replace('/class="[^]"/')
-
-				}
-				echo $customLogo;
-			}
-			get_theme_mod( 'custom_logo' );
-			?>
+			<?php get_template_part('logo'); ?>
 		</div>
 
 		<h1 class="heading__title">
@@ -45,10 +33,11 @@
 			'theme_location'  => 'home',
 			'container_class' => 'heading__menu',
 			'container'       => 'nav',
-			'menu_class'      => 'menu heading__menu-list'
+			'menu_class'      => 'menu heading__menu-list',
+			'depth'           => 1		
 		)); ?>
 
 	</div>
 	
 
-</header>
+</section><!--/ heading-home.php -->

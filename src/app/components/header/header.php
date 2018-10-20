@@ -12,7 +12,7 @@
  * @version 1.0
  */
 
-?><!DOCTYPE html>
+?><!DOCTYPE html><!-- header.php -->
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -30,4 +30,4 @@
 
 <?php get_template_part('nav', 'primary'); ?>
 
-<div class="wrapper">
+<main class="main"><!--/ header.php -->

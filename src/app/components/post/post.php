@@ -12,6 +12,7 @@
 
 ?>
 
+<!-- post.php -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php
 		if ( is_single() ) {
@@ -36,4 +37,4 @@
 		<?php wp_link_pages(); ?>
 	</div>
 
-</article><!-- #post-## -->
+</article><!--/ post.php -->

@@ -1,3 +1,4 @@
+<!-- nav-primary.php -->
 <button class="nav__button button--icon jsTarget-navButton">
 	<?php echo trns_icon_component(['name'=>'Menu', 'class'=>'nav__open-icon']) ?>
 	<?php // echo trns_icon_component(['name'=>'X', 'class'=>'nav__close-icon']) ?>
@@ -15,7 +16,7 @@
 		'theme_location'  => 'primary',
 		'container_class' => 'nav__menu',
 		'container'       => 'nav',
-		'menu_class'      => 'nav__menu-list'
+		'menu_class'      => 'menu nav__menu-list'
 	)); ?>
 
 	<div class="nav__footer">
@@ -24,4 +25,4 @@
 
 </header>
 
-<div class="nav__overlay jsTarget-navOverlay"></div>
+<div class="nav__overlay jsTarget-navOverlay"></div><!--/ nav-primary.php -->

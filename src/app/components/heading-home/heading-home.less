@@ -14,11 +14,10 @@
 	// }
 }
 .heading__wrapper{
-	margin: 0 auto;
-	max-width: @column_MaxWidth;
-	padding: @s32 @column_Padding;
+	@column_Rules();
 }
 .heading__logo{
+	// TODO: account for other sizes?
 	.custom-logo{
 		height: @s8*24;
 		max-width: 100%;
@@ -31,11 +30,5 @@
 .heading__description{}
 .heading__menu{}
 .heading__menu-list{
-	padding: 0;
-	margin: 0;
-	display: flex;
-
-	.menu-item{
-		margin: 0 @s8 @s8 0;
-	}
+	.menu-list();
 }
