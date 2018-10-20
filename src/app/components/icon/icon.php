@@ -22,7 +22,7 @@ function trns_icon_component( $atts, $content=null, $tag='' ) {
 	$output .= '>';
 	$output .= "<use xlink:href=\"#icon_{$atts['name']}\"></use>"; 
 	$output .= '</svg>';
-	$output = '<!--/ icon.php -->';
+	$output .= '<!--/ icon.php -->';
 	return $output;
 }
 // add_shortcode( 'tnst-icon', 'trns_icon_component' );
