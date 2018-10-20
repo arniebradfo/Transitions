@@ -14,7 +14,8 @@
 	<?php wp_nav_menu( array(
 		'theme_location'  => 'primary',
 		'container_class' => 'nav__menu',
-		'container'       => 'nav'
+		'container'       => 'nav',
+		'menu_class'      => 'nav__menu-list'
 	)); ?>
 
 	<div class="nav__footer">

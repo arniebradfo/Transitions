@@ -44,7 +44,8 @@
 		<?php wp_nav_menu( array(
 			'theme_location'  => 'home',
 			'container_class' => 'heading__menu',
-			'container'       => 'nav'
+			'container'       => 'nav',
+			'menu_class'      => 'menu heading__menu-list'
 		)); ?>
 
 	</div>
