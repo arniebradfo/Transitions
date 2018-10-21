@@ -16,12 +16,6 @@ TODOs that are done!
 - basic layout
 	- reduce .php to just index, no single
 	- add site name to heading if not post page
-
-## TODO List
-- basic layout
-	- post list
-		- proper height
-		- post navigation
 	- single post
 		- margins 
 		- comments
@@ -29,12 +23,17 @@ TODOs that are done!
 		- heading without featured media
 		- footer move copyright
 		- next-post under footer
+
+## TODO List
+- basic layout
+	- post list
+		- post navigation
+		- proper height
 	- single page 
 		- subtitle
 		- remove date
 	- heading archive
 	- heading search
-
 - style basic elements
 	- headings
 	- buttons

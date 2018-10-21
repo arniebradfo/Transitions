@@ -21,16 +21,20 @@
 			<a class="heading__site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<?php bloginfo( 'name' ); ?>
 			</a>
+
 	<?php else : ?>
 		<a class="heading__wrapper heading__wrapper--post-link" 
 			href="<?php echo esc_url( get_permalink() ) ?>" 
 			rel="bookmark">
+			
 	<?php endif; ?>
 
 		<?php if ( '' !== get_the_post_thumbnail() ): ?>
 			<div class="heading__featured-media"> 
 				<?php the_post_thumbnail( 'small', ['class'=>'heading__img'] ); ?>
 			</div>
+		<?php elseif ( is_singular() ): ?>
+			<div class="heading__featured-media heading__featured-media--empty"></div> 
 		<?php endif; ?> 
 	
 		<p class="heading__meta">

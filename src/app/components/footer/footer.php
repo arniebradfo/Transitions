@@ -32,15 +32,18 @@
 
 	</div>
 
-	<p class="footer__copyright">
-		<?php get_template_part('logo'); ?>
-		<small class="footer__copyright-text">
-			&copy;<?php echo date("Y"); ?> 
-			<a class="footer__site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<?php bloginfo( 'name' ); ?>
-			</a>
-		</small>
-	</p>
+	<?php 
+	if ( ! is_single() ) 
+		get_template_part('copyright', 'footer'); 
+
+	elseif ($adjcent_post = get_next_post()) { 
+		// TODO: option to go forwards or backwards with the adject post
+		$posts = array($adjcent_post); 
+		if (have_posts()) : while (have_posts()) : the_post() ;
+			get_template_part('heading', 'post');
+		endwhile; endif;
+	
+	} ?>
 
 </footer>
 
