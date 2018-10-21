@@ -15,9 +15,13 @@ TODOs that are done!
 - output js
 - basic layout
 	- reduce .php to just index, no single
+	- add site name to heading if not post page
 
 ## TODO List
 - basic layout
+	- post list
+		- proper height
+		- post navigation
 	- single post
 		- margins 
 		- comments
@@ -28,10 +32,8 @@ TODOs that are done!
 	- single page 
 		- subtitle
 		- remove date
-	- add site-name to heading if not post page
-	- post navigation
-	- heading-archive
-	- heading-search
+	- heading archive
+	- heading search
 
 - style basic elements
 	- headings

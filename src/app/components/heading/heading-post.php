@@ -18,6 +18,9 @@
 
 	<?php if ( is_singular() ) : ?>
 		<div class="heading__wrapper">
+			<a class="heading__site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<?php bloginfo( 'name' ); ?>
+			</a>
 	<?php else : ?>
 		<a class="heading__wrapper heading__wrapper--post-link" 
 			href="<?php echo esc_url( get_permalink() ) ?>" 

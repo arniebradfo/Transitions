@@ -35,7 +35,10 @@
 	<p class="footer__copyright">
 		<?php get_template_part('logo'); ?>
 		<small class="footer__copyright-text">
-			&copy;<?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>
+			&copy;<?php echo date("Y"); ?> 
+			<a class="footer__site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<?php bloginfo( 'name' ); ?>
+			</a>
 		</small>
 	</p>
 

@@ -7,7 +7,7 @@
 <header class="nav">
 		
 	<div class="nav__header">
-		<a class="nav_title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+		<a class="nav__site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<?php bloginfo( 'name' ); ?>
 		</a>
 	</div>
