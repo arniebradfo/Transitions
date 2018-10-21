@@ -23,17 +23,18 @@ TODOs that are done!
 		- heading without featured media
 		- footer move copyright
 		- next-post under footer
+	- post list navigation
 
 ## TODO List
 - basic layout
-	- post list
-		- post navigation
-		- proper height
-	- single page 
+	- heading post
+		- proper height for list items
+	- heading page 
 		- subtitle
 		- remove date
 	- heading archive
 	- heading search
+	- heading adjcent post
 - style basic elements
 	- headings
 	- buttons

@@ -48,8 +48,6 @@ get_header();
 				the_post();
 				get_template_part( 'post', get_post_format() );
 			endwhile;
-
-			the_posts_pagination();
 			?>
 
 		<?php else : // if there are no posts ?>
@@ -59,6 +57,9 @@ get_header();
 
 	<?php if( ! is_singular() ) 
 		echo '</div>'; ?>
+	
+	<?php if( ! is_singular() && have_posts()) 
+		get_template_part('pagination'); ?>
 	
 <!--/ index.php -->
 <?php
