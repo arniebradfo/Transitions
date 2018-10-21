@@ -13,9 +13,11 @@ TODOs that are done!
 - output template parts
 - output combine php functions
 - output js
+- basic layout first
 
 ## TODO List
-- basic layout first?
+- basic layout first
+	- reduce .php to just index, no single?
 - style basic elements
 	- headings
 	- buttons

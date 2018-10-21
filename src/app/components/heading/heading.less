@@ -1,21 +1,18 @@
-// heading.less
+// HEADING //
+// heading.less //
 
 .heading{
-	background: @backgroundFull_Overlay;
-	
-	// position: relative;
-	// &:before{
-	//	filter: blur(10px);
-	// 	content: '';
-	// 	.absolute();
-	// 	background: @backgroundFull_Overlay;
-	// 	z-index: -1;
-	// 	opacity: 0.2;
-	// }
+	position: relative;
 }
 .heading__wrapper{
 	@column_Rules();
 }
+.heading__wrapper--post-link{
+	position: relative;
+	display: block;
+	padding: 0 @column_Padding;
+}
+
 .heading__logo{
 	// TODO: account for other sizes?
 	.custom-logo{
@@ -27,8 +24,37 @@
 .heading__rule{
 	&:extend(.hr--short);
 }
-.heading__description{}
+.heading__subtitle{}
+
 .heading__menu{}
 .heading__menu-list{
 	.menu-list();
 }
+
+.heading__featured-media{
+	.absolute();
+	background: @backgroundFull_Overlay;
+	z-index: -1;
+}
+.heading__img{
+	height: 100%;
+	width:  100%;
+	object-fit: cover;
+	opacity: 0.2;
+}
+
+.heading__tags{
+	padding: 0 @column_Padding;
+}
+
+
+// POST LIST //
+.heading--post-list{
+	.heading__featured-media{
+		border-radius: @border_Radius;
+		overflow: hidden;
+	}
+}
+
+// POST PAGE //
+.heading--post-page{}

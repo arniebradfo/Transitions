@@ -11,10 +11,15 @@
 ?>
 
 <!-- heading-home.php -->
-<section class="heading">
+<section class="heading heading--home">
 
 	<div class="heading__wrapper">
-	
+
+		<div class="heading__featured-media"> 
+			<?php if ( '' !== get_the_post_thumbnail() && ! is_single() )
+				the_post_thumbnail( 'small', ['class'=>'heading__img'] ); ?>
+		</div>
+
 		<div class="heading__logo">		
 			<?php get_template_part('logo'); ?>
 		</div>
@@ -25,7 +30,7 @@
 
 		<hr class="heading__rule" />
 
-		<p class="heading__description">
+		<p class="heading__subtitle">
 			<?php bloginfo( 'description' ); ?>
 		</p>
 
