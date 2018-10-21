@@ -19,12 +19,21 @@
 
 	<div class="post__content">
 		<?php
-		if (is_single())
+		if (is_singular()):
+
 			the_content(); 
-		else
+
+			wp_link_pages();
+			
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+
+		else:
 			the_excerpt();
 		?>
-		<?php wp_link_pages(); ?>
+		<?php endif; ?>
 	</div>
 
 </article><!--/ post.php -->

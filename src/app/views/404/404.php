@@ -12,7 +12,6 @@
 
 get_header(); ?>
 
-
 <h1>
 	FUCK!
 </h1>
@@ -21,7 +20,7 @@ get_header(); ?>
 	NOOOOOOOO!
 </p>
 
-<?php get_search_form(); ?>
+<?php echo get_search_form(); ?>
 
 <?php
 get_footer();

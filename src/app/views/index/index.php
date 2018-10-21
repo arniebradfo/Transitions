@@ -20,33 +20,27 @@ get_header();
 ?>
 <!-- index.php -->
 
-	<?php if ( is_home() && !is_front_page() ) : 
-		// the "Homepage" is a static page and this is the "Posts page"  ?>
-		<h1><?php single_post_title(); ?></h1>
+	<?php
+	if( is_singular() ) {
+		// print nothing, just skip to loop
 
-	<?php elseif ( is_archive() ) : ?>
-		<?php
-			the_archive_title( '<h1>', '</h1>' );
-			the_archive_description( '<p>', '</p>' );
-		?>
+	} elseif ( is_home() && !is_front_page() ){
+		get_template_part('heading', 'archive');
 
-	<?php elseif ( is_search() ) : ?>
-		<h1>
-			Search Results for: 
-			<?php get_search_query() ?>!!!
-		</h1>
-		<p>
-			Search Again!!?
-			<?php get_search_form(); ?>
-		</p>
+	} elseif( is_archive() ) {
+		get_template_part('heading', 'archive');
 
-	<?php else : // this is the "Latest Posts Page" ?>
-		<?php get_template_part('heading', 'home'); ?>
+	} elseif( is_search() ) {
+		get_template_part('heading', 'search');
 
-	<?php endif; ?>
+	} else {
+		get_template_part('heading', 'home');
 
+	} ?>
 
-	<div class="post-list">
+	<?php if( ! is_singular() ) 
+		echo '<div class="post-list">'; ?>
+
 		<?php if ( have_posts() ) : ?>
 		
 			<?php 
@@ -62,11 +56,11 @@ get_header();
 			<p>there are no posts!!!</p>
 
 		<?php endif; ?>
-	</div>
+
+	<?php if( ! is_singular() ) 
+		echo '</div>'; ?>
 	
-
 <!--/ index.php -->
-
 <?php
 
 get_footer();

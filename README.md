@@ -13,11 +13,26 @@ TODOs that are done!
 - output template parts
 - output combine php functions
 - output js
-- basic layout first
+- basic layout
+	- reduce .php to just index, no single
 
 ## TODO List
-- basic layout first
-	- reduce .php to just index, no single?
+- basic layout
+	- single post
+		- margins 
+		- comments
+		- heading when is singular
+		- heading without featured media
+		- footer move copyright
+		- next-post under footer
+	- single page 
+		- subtitle
+		- remove date
+	- add site-name to heading if not post page
+	- post navigation
+	- heading-archive
+	- heading-search
+
 - style basic elements
 	- headings
 	- buttons
@@ -27,6 +42,8 @@ TODOs that are done!
 	- typography 
 - style nav-primary
 - style heading-home
+- password protected?
+- 
 
 ## TODO Later
 - rel and aria
