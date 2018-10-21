@@ -1,0 +1,57 @@
+<?php
+/**
+ * Displays post heading
+ *
+ * @package WordPress
+ * @subpackage Twenty_Seventeen
+ * @since 1.0
+ * @version 1.0
+ */
+
+?>
+
+<?php # this all takes place in 'the loop' ?>
+
+<!-- heading-post.php -->
+<section class="heading">
+
+	<?php if ( is_singular() ) : ?>
+		<div class="heading__wrapper">
+	<?php else : ?>
+		<a class="heading__wrapper heading__wrapper--link" href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
+	<?php endif; ?>
+
+		<?php if ( '' !== get_the_post_thumbnail() && ! is_single() )
+			the_post_thumbnail( 'small' ); ?>
+	
+		<p class="heading__meta">
+			<time class="heading__meta-date" datetime="<?php the_time('c');?>"><?php the_date(); ?></time>
+			&#47;
+			<?php # TODO: add author link? ?>
+			<span class"heading__meta-author"><?php the_author(); ?></span>
+		</p>
+
+		<?php if ( is_single() ) : ?>
+			<h1 class="heading__title"><?php the_title(); ?></h1>
+			
+		<?php elseif ( is_front_page() && is_home() ) : ?>
+			<h3 class="heading__title"><?php the_title(); ?></h3>
+
+		<?php else : ?>
+			<h2 class="heading__title"><?php the_title(); ?></h2>
+
+		<?php endif; ?>
+
+		<hr class="heading__rule" />
+
+		<?php if (!is_singular()) echo '</a>'; ?>
+
+	<?php if ( is_singular() ) : ?>
+		<p class="heading__tags"><?php the_tags(''); ?></p>		
+		</div>
+	<?php else : ?>
+		</a>
+		<p class="heading__tags"><?php the_tags(''); ?></p>
+	<?php endif; ?>	
+
+</section><!--/ heading-home.php -->

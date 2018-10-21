@@ -1,0 +1,34 @@
+// heading.less
+
+.heading{
+	background: @backgroundFull_Overlay;
+	
+	// position: relative;
+	// &:before{
+	//	filter: blur(10px);
+	// 	content: '';
+	// 	.absolute();
+	// 	background: @backgroundFull_Overlay;
+	// 	z-index: -1;
+	// 	opacity: 0.2;
+	// }
+}
+.heading__wrapper{
+	@column_Rules();
+}
+.heading__logo{
+	// TODO: account for other sizes?
+	.custom-logo{
+		height: @s8*24;
+		max-width: 100%;
+	}
+}
+.heading__title{}
+.heading__rule{
+	&:extend(.hr--short);
+}
+.heading__description{}
+.heading__menu{}
+.heading__menu-list{
+	.menu-list();
+}

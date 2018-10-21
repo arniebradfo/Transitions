@@ -27,6 +27,7 @@ TODOs that are done!
 - style heading-home
 
 ## TODO Later
+- rel and aria
 - output screenshot
 - output readme
 
