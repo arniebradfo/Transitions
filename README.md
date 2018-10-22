@@ -45,7 +45,7 @@ TODOs that are done!
 - style nav-primary
 - style heading-home
 - password protected?
-- 
+
 
 ## TODO Later
 - rel and aria
