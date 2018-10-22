@@ -17,7 +17,7 @@
 
 		<div class="heading__featured-media"> 
 			<?php if ( '' !== get_the_post_thumbnail() && ! is_single() )
-				the_post_thumbnail( 'small', ['class'=>'heading__img'] ); ?>
+				the_post_thumbnail( 'full', ['class'=>'heading__img'] ); ?>
 		</div>
 
 		<div class="heading__logo">		

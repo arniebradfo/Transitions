@@ -32,25 +32,21 @@
 			<div class="heading__featured-media heading__featured-media--empty"></div> 
 
 		<?php endif; ?> 
-	
-		<p class="heading__meta">
-
-			<time class="heading__meta-date" datetime="<?php the_time('c');?>">
-				<?php the_date(); ?>
-			</time>
-			&#47;
-			<a class"heading__meta-author" 
-				href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-				<?php the_author(); ?>
-			</a>
-			
-		</p>
 
 		<h1 class="heading__title"><?php the_title(); ?></h1>
 
 		<hr class="heading__rule" />
 
-		<?php the_tags('<p class="heading__tags">', ' ', '</p>'); ?>
+		<?php 
+			$subtitle = get_post_meta(get_the_ID(), 'subtitle', true); 
+			if ($subtitle):
+		?>
+		
+			<p class="heading__subtitle">
+				<?php echo $subtitle; ?>
+			</p>
+
+		<?php endif; ?>
 
 	</div>
 

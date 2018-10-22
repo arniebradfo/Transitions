@@ -17,11 +17,13 @@
 	id="post-<?php the_ID(); ?>">
 
 	<?php 
-		if ( is_singular() )
+		if ( is_page() )
+			get_template_part('heading', 'page');	
+		elseif ( is_singular() )
 			get_template_part('heading', 'post'); 
 		else 
 			get_template_part('heading', 'postList'); 
-		?>
+	?>
 
 	<div class="post__content">
 		<?php

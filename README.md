@@ -32,23 +32,26 @@ TODOs that are done!
 	- heading adjacent post
 	- heading post
 	- heading for home page 2+
-
-## TODO List
-- basic layout
 	- heading page
 		- subtitle
 		- remove date
-	- all headings refine
-	- proper heights for everything
+	
+
+## TODO List
 - style basic elements
+	- typography 
 	- headings
 	- buttons
 	- links
+	- search input
 	- color vars
 	- size vars
-	- typography 
-- style nav-primary
-- style heading-home
+- finer css
+	- proper heights for headings
+	- layer image and gradients properly
+	- hover and interaction
+	- nav-primary loading
+	- loading
 - password protected?
 
 
