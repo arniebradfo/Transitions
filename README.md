@@ -24,17 +24,22 @@ TODOs that are done!
 		- footer move copyright
 		- next-post under footer
 	- post list navigation
+	- design all headings
+	- standardize heading?
+		- [links on links](https://www.sarasoueidan.com/blog/nested-links/)
+	- heading archive
+	- heading search
+	- heading adjacent post
+	- heading post
 
 ## TODO List
 - basic layout
-	- heading post
-		- proper height for list items
-	- heading page 
+	- heading for home page 2+
+	- heading page
 		- subtitle
 		- remove date
-	- heading archive
-	- heading search
-	- heading adjcent post
+	- all headings refine
+	- proper heights for everything
 - style basic elements
 	- headings
 	- buttons

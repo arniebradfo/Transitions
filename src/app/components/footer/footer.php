@@ -36,11 +36,11 @@
 	if ( ! is_single() ) 
 		get_template_part('copyright', 'footer'); 
 
-	elseif ($adjcent_post = get_next_post()) { 
+	elseif ($adjacent_post = get_previous_post()) { 
 		// TODO: option to go forwards or backwards with the adject post
-		$posts = array($adjcent_post); 
+		$posts = array($adjacent_post); 
 		if (have_posts()) : while (have_posts()) : the_post() ;
-			get_template_part('heading', 'post');
+			get_template_part('heading', 'postAdjacent');
 		endwhile; endif;
 	
 	} ?>

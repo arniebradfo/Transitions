@@ -6,11 +6,10 @@
 }
 .heading__wrapper{
 	@column_Rules();
-}
-.heading__wrapper--post-link{
-	position: relative;
-	display: block;
-	padding: 0 @column_Padding;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
 }
 
 .heading__logo{
@@ -42,6 +41,17 @@
 	object-fit: cover;
 	opacity: 0.2;
 }
+.heading__cover-link{
+	display: block;
+	.absolute();
+
+	z-index: 1;
+}
+.heading__meta,
+.heading__tags{
+	position: relative;
+	z-index: 2;
+}
 
 
 
@@ -53,6 +63,11 @@
 		overflow: hidden;
 	}
 	.heading__tags{
+		padding: 0 @column_Padding;
+	}
+	.heading__wrapper{
+		position: relative;
+		display: block;
 		padding: 0 @column_Padding;
 	}
 }

@@ -16,12 +16,16 @@
 <article <?php post_class('post post--'.(is_singular() ? 'full' : 'in-list' )); ?> 
 	id="post-<?php the_ID(); ?>">
 
-	<?php get_template_part('heading', 'post'); ?>
+	<?php 
+		if ( is_singular() )
+			get_template_part('heading', 'post'); 
+		else 
+			get_template_part('heading', 'postList'); 
+		?>
 
 	<div class="post__content">
 		<?php
-		if (is_singular()){
-
+		if ( is_singular() ) {
 
 			the_content(); 
 
@@ -32,11 +36,11 @@
 				comments_template();
 
 			if ( is_single() )
-				get_template_part('copyright', 'footer');
-	
+				get_template_part('copyright', 'post');
 
 		} else {
 			the_excerpt();
+			echo '<a href="'.esc_url( get_permalink() ).'">Read more</a>';
 		} ?>
 	</div>
 
