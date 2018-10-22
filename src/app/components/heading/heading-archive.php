@@ -24,10 +24,17 @@
 		<div class="heading__featured-media"></div>
 
 		<p class="heading__meta">
-			Page #<?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
+			Page #<?php echo get_page_number(); ?>
 		</p>
 
-		<?php the_archive_title( '<h1 class="heading__title">', '</h1>' ); ?>	
+		<h1 class="heading__title">
+			<?php 
+			if (is_home())
+				echo 'Posts';
+			else
+				echo get_the_archive_title(); 
+			?>
+		</h1>
 
 		<?php the_archive_description( '<hr class="heading__rule" />', '' );
 			# TODO: add class="heading__subtitle to the archive description" ?>

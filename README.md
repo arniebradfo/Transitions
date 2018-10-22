@@ -31,10 +31,10 @@ TODOs that are done!
 	- heading search
 	- heading adjacent post
 	- heading post
+	- heading for home page 2+
 
 ## TODO List
 - basic layout
-	- heading for home page 2+
 	- heading page
 		- subtitle
 		- remove date

@@ -29,7 +29,7 @@
 	
 		<p class="heading__meta">
 			<time class="heading__meta-date" datetime="<?php the_time('c');?>">
-				<?php the_date(); ?>
+				<?php echo get_the_date(); ?>
 			</time>
 			&#47;
 			<a class"heading__meta-author" 

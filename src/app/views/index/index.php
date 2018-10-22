@@ -24,17 +24,17 @@ get_header();
 	if( is_singular() ) {
 		// print nothing, just skip to loop
 
-	} elseif ( is_home() && !is_front_page() ){
-		get_template_part('heading', 'archive');
-
-	} elseif( is_archive() ) {
-		get_template_part('heading', 'archive');
+	} elseif ( is_front_page() && get_page_number() < 2 ){
+		get_template_part('heading', 'home');
 
 	} elseif( is_search() ) {
 		get_template_part('heading', 'search');
 
+	} elseif( is_archive() ) {
+		get_template_part('heading', 'archive');
+
 	} else {
-		get_template_part('heading', 'home');
+		get_template_part('heading', 'archive');
 
 	} ?>
 

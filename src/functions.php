@@ -122,6 +122,10 @@ function disable_wp_emojicons() {
 }
 add_action( 'init', 'disable_wp_emojicons' );
 
+function get_page_number(){
+	return (get_query_var('paged')) ? get_query_var('paged') : 1;
+}
+
 // shortcode component includes
 include_once('icon.php');
 
