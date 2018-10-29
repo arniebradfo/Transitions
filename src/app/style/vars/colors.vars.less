@@ -1,15 +1,18 @@
 // COLORS //
 
-@primary_Opacity: 1;
-@primary_Color: fade(black, @primary_Opacity*100%);
+@fgStrong_Opacity: 1;
+@fgStrong_Color: fade(black, @fgStrong_Opacity*100%);
 
-@secondary_Opacity: 0.6;
-@secondary_Color: fade(black, @secondary_Opacity*100%);
+@fgPrimary_Opacity: 0.7;
+@fgPrimary_Color: fade(black, @fgPrimary_Opacity*100%);
 
-@tertiary_Opacity: 0.1;
-@tertiary_Color: fade(black, @tertiary_Opacity*100%);
+@fgWeak_Opacity: 0.4;
+@fgWeak_Color: fade(black, @fgWeak_Opacity*100%);
 
-@textShadow_Color: fade(black, 35%);
+@fgWeaker_Opacity: 0.1;
+@fgWeaker_Color: fade(black, @fgWeaker_Opacity*100%);
+
+@textShadow_Color: fade(black, 30%);
 
 @hover_Opacity: 1;
 @hover_Color: red;
@@ -21,20 +24,21 @@
 @focus_Color: rgb(9, 255, 0);
 
 @disabled_Opacity: 0.3;
-@disabled_Color: rgba(0,0,0, @disabled_Opacity);
+@disabled_Color: fade(black, @disabled_Opacity*100%);
 
-@primaryBg_Color: white;
+@bgPrimary_Color: white;
 // https://medium.com/the-missing-bit/mitigating-css-gradient-banding-45b88493d228
-@background_Overlay: linear-gradient(-45deg, fade(black, 20%), fade(black, 05%));
-@backgroundFull_Overlay:
+@bgOverlay_Color: fade(black, 10%);
+@bgOverlay_Gradient: linear-gradient(-45deg, fade(black, 20%), fade(black, 05%));
+@bgOverlayLg_Gradient:
 	linear-gradient(-40deg, fade(black, 5%), fade(black, 0.2%)),
 	linear-gradient(-52deg, fade(black, 4%), fade(black, 0.7%)),
 	linear-gradient(-58deg, fade(black, 5%), fade(black, 0.3%)),
 	linear-gradient(-71deg, fade(black, 6%), fade(black, 0.6%)),
 	linear-gradient(-88deg, fade(black, 8%), fade(black, 0.1%)),
 	linear-gradient(-45deg, fade(black, 6%), fade(black, 0.3%));
-// @backgroundFull_Overlay: svg-gradient(to bottom right,  fade(black, 05%), fade(black, 20%));
-// @backgroundFull_Overlay: linear-gradient(-45deg, darken(white, 10%), black);
+// @bgOverlayLg_Gradient: svg-gradient(to bottom right,  fade(black, 05%), fade(black, 20%));
+// @bgOverlayLg_Gradient: linear-gradient(-45deg, darken(white, 10%), black);
 
 :root{
 	// --disabled_Opacity: @disabled_Opacity;
@@ -42,6 +46,6 @@
 
 
 .highlighted_Colors() {
-  background-color: @primary_Color;
-  color: @primaryBg_Color;
+  background-color: @fgPrimary_Color;
+  color: @bgPrimary_Color;
 }
