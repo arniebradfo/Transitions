@@ -35,11 +35,13 @@ TODOs that are done!
 	- heading page
 		- subtitle
 		- remove date
+- style basic elements
+	- typography - headings
 	
 
 ## TODO List
 - style basic elements
-	- typography 
+	- add and uncomment basic elements
 	- buttons
 	- color vars
 	- size vars

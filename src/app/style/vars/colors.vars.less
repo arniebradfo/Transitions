@@ -37,12 +37,11 @@
 // @backgroundFull_Overlay: linear-gradient(-45deg, darken(white, 10%), black);
 
 :root{
-	--disabled_Opacity: @disabled_Opacity;
+	// --disabled_Opacity: @disabled_Opacity;
 }
 
 
-// MIXINS //
 .highlighted_Colors() {
-  background-color: var(--accentWeak_Color);
-  color: var(--fgStrong_Color);
+  background-color: @primary_Color;
+  color: @primaryBg_Color;
 }

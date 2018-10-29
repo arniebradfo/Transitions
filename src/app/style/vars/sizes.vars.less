@@ -15,6 +15,7 @@
 @border_Size: @s4;
 @borderSm_Size: @s1;
 @border_Radius: (@button_Size / 2);
+@borderSm_Radius: @s4;
 
 @column_MaxWidth: @s8*90;
 @column_Padding: @s32;
@@ -25,6 +26,16 @@
 	max-width: @column_MaxWidth;
 	padding: @s32 @column_Padding;
 };
+
+.inlineBackground_Spacing(
+	@top:    0.25em;
+	@bottom: 0.1em;
+	@sides:  0.4em;
+) {
+	padding: @top @sides @bottom;
+	margin-bottom: -@bottom;
+	margin-top: -@top;
+}
 
 
 // MEDIA QUERIES //
