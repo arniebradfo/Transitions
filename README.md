@@ -40,22 +40,23 @@ TODOs that are done!
 ## TODO List
 - style basic elements
 	- typography 
-	- headings
 	- buttons
-	- links
-	- search input
 	- color vars
 	- size vars
+	- headings
+	- links
+	- search input
 - finer css
 	- proper heights for headings
 	- layer image and gradients properly
 	- hover and interaction
 	- nav-primary loading
 	- loading
-- password protected?
+- password protected? 
 
 
 ## TODO Later
+- document build and release process
 - rel and aria
 - output screenshot
 - output readme
