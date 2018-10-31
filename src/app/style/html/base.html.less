@@ -1,11 +1,11 @@
 *, *::before, *::after{
 	box-sizing: border-box;
+	background-origin: border-box;
 	margin-left: 0;
 	margin-right: 0;
 	-webkit-tap-highlight-color: transparent;
 	.antialias();
 	.all_Type();
-	color: @fgPrimary_Color;
 	// z-index: 0;
 }
 
@@ -16,6 +16,7 @@ html, body{
 	margin: 0;
 	padding: 0;
 	.body_Type();
+	color: @fgPrimary_Color;
 }
 
 html{

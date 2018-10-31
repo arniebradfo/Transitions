@@ -37,11 +37,11 @@ TODOs that are done!
 		- remove date
 - style basic elements
 	- typography - headings
+	- add and uncomment basic elements
 	
 
 ## TODO List
 - style basic elements
-	- add and uncomment basic elements
 	- buttons
 	- color vars
 	- size vars

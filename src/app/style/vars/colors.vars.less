@@ -14,6 +14,14 @@
 
 @textShadow_Color: fade(black, 30%);
 
+@accentBright_Color:  hsl(175, 100%, 50%);
+@accentPrimary_Color: hsl(200, 55%, 50%);
+@accentDeep_Color: hsl(215, 100%, 25%);
+@accentColor_List: @accentDeep_Color, @accentPrimary_Color ,@accentBright_Color;
+@accent_Gradient: linear-gradient(-45deg, @accentColor_List);
+// https://developer.mozilla.org/en-US/docs/Web/CSS/background
+// https://codepen.io/P1N2O/pen/pyBNzX
+
 @hover_Opacity: 1;
 @hover_Color: red;
 

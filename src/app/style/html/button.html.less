@@ -26,24 +26,33 @@ button,
 	}
 
 	position: relative;
-	&::before, &::after{
+	&::before, 
+	&::after{
 		content: '';
 		.absolute(0);
-		border: @border_Size solid transparent;
 		z-index: -1;
 		border-radius: @border_Radius;
-		.transition(opacity transform)
+		.transition(opacity transform background-position background-color);
 	}
 
 	&::after{
-		background-color: black;
-		opacity: 0;
+		// background-color: black;
+		border: @border_Size solid fade(black, 20%);
+		background-color: white;
+		background-image: linear-gradient(-45deg, @accentDeep_Color, @accentPrimary_Color, transparent, transparent);
+		@bgSize: (4 - 1) * 100%;
+		background-size: @bgSize @bgSize;
+		background-position: 0% 0%;
+		opacity: 1;
 	}
-
+	// normal - nothing, fill or outline
+	// hover - gradient, larger scale
+	// active - darker gradient, smaller scale
+	// focus - outline
 
 	&.button--fill{
 		&::before{
-			background-color: wheat;			
+			background-color: pink;
 		}
 	}
 	&.button--outline{
@@ -54,11 +63,26 @@ button,
 
 
 	&:hover{
-		color: white;		
+		color: white;
 		&::after{
-			@buttonHover_Scale: ((@button_Size+2) / @button_Size);
-			transform: scale(1.05); // TODO: use unitless() 
+			@buttonHover_Scale: unit((@button_Size + @s4) / @button_Size);
+			transform: scale(@buttonHover_Scale);
 			opacity: 1;
+			background-position: 50% 50%;
+			background-color: @accentBright_Color;
+			transition-duration: @hover_Duration;
+		}
+	}
+
+	&:active{
+		color: white;
+		&::after{
+			@buttonHover_Scale: unit((@button_Size - @s4) / @button_Size);
+			transform: scale(@buttonHover_Scale);
+			opacity: 1;
+			background-position: 100% 100%;
+			background-color: @accentBright_Color;
+			transition-duration: @active_Duration;
 		}
 	}
 }
