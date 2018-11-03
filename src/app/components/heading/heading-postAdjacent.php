@@ -48,9 +48,13 @@
 
 		<hr class="heading__rule" />
 
-		<?php the_tags('<p class="heading__tags">', ' ', '</p>'); ?>
+		<?php echo preg_replace( 
+			'/<a\s/',
+			'<a class="heading__tag button" ', // all links need classes
+			get_the_tag_list('<p class="heading__tags">', ' ', '</p>')
+		); ?>
 
-		<a class="heading__next-button" 
+		<a class="heading__next-button button button--fill" 
 			href="<?php echo esc_url( get_permalink() ) ?>" 
 			rel="bookmark">
 			Read more

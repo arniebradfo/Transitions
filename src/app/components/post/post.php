@@ -42,8 +42,10 @@
 
 		} else {
 			the_excerpt();
-			echo '<a href="'.esc_url( get_permalink() ).'">Read more</a>';
 		} ?>
 	</div>
+	<?php if (! is_singular() ): ?>
+		<a href="<?php echo esc_url( get_permalink() ); ?>" class="button button--emphasis">Read more</a>
+	<?php endif; ?>
 
 </article><!--/ post.php -->

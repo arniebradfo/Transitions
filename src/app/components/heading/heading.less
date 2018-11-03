@@ -73,7 +73,9 @@
 		overflow: hidden;
 	}
 	.heading__tags{
-		padding: 0 @column_Padding;
+		// padding: 0;
+		margin-right: (@column_Padding - @s16);
+		margin-left:  (@column_Padding - @s16);
 	}
 	.heading__wrapper{
 		position: relative;
@@ -83,4 +85,9 @@
 }
 
 // POST PAGE //
-.heading--post-page{}
+.heading--post-full{
+	.heading__tags{
+		margin-right: -@s16;
+		margin-left:  -@s16;
+	}
+}

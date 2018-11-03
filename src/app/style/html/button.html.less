@@ -15,7 +15,7 @@
 
 	height: @button_Size;
 	padding: 0 @s16;
-	display: flex;
+	display: inline-flex;
 	align-content: center;
 	justify-content: center;
 	.transition(color);
@@ -52,12 +52,17 @@
 
 	&.button--fill{
 		&::after{
-			background-color: white;
+			background-color: @bgPrimary_Color;
 		}
 	}
 	&.button--outline{
 		&::after{
 			border-color: fade(black, 20%);
+		}
+	}
+	&.button--emphasis{
+		&::after{
+			background-color: @bgOverlay_Color;
 		}
 	}
 

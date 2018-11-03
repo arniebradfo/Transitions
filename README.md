@@ -38,12 +38,12 @@ TODOs that are done!
 - style basic elements
 	- typography - headings
 	- add and uncomment basic elements
+	- heading buttons
 	
 
 ## TODO List
 - style basic elements
 	- buttons
-	- 
 	- links
 	- color vars
 	- size vars

@@ -50,7 +50,11 @@
 
 		<hr class="heading__rule" />
 
-		<?php the_tags('<p class="heading__tags">', ' ', '</p>'); ?>
+		<?php echo preg_replace( 
+			'/<a\s/',
+			'<a class="heading__tag button" ', // all links need classes
+			get_the_tag_list('<p class="heading__tags">', ' ', '</p>')
+		); ?>
 
 	</div>
 
