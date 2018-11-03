@@ -34,13 +34,24 @@
 			<?php bloginfo( 'description' ); ?>
 		</p>
 
-		<?php wp_nav_menu( array(
-			'theme_location'  => 'home',
-			'container_class' => 'heading__menu',
-			'container'       => 'nav',
-			'menu_class'      => 'menu heading__menu-list',
-			'depth'           => 1		
-		)); ?>
+		<?php 
+		echo preg_replace( 
+			'/<a\sclass="/',
+			'<a class="button--fill ', // the first link gets a fill
+			preg_replace( 
+				'/<a\s/',
+				'<a class="heading__menu-link button" ', // all links need classes
+				wp_nav_menu( array(
+					'theme_location'  => 'home',
+					'container_class' => 'heading__menu',
+					'container'       => 'nav',
+					'menu_class'      => 'menu heading__menu-list',
+					'depth'           => 1,
+					'echo'            => false // so we can preg_replace
+				))
+			), 1 
+		);
+		?>
 
 	</div>
 	

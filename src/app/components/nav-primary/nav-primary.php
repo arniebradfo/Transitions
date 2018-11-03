@@ -1,5 +1,5 @@
 <!-- nav-primary.php -->
-<button class="nav__button button--icon jsTarget-navButton">
+<button class="nav__button button--icon button--fill button--outline jsTarget-navButton">
 	<?php echo trns_icon_component(['name'=>'Menu', 'class'=>'nav__open-icon']) ?>
 	<?php // echo trns_icon_component(['name'=>'X', 'class'=>'nav__close-icon']) ?>
 </button>

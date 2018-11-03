@@ -43,10 +43,11 @@ TODOs that are done!
 ## TODO List
 - style basic elements
 	- buttons
+	- 
+	- links
 	- color vars
 	- size vars
 	- headings
-	- links
 	- search input
 - finer css
 	- proper heights for headings
