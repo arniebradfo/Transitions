@@ -1,6 +1,6 @@
 /** nav-primary.js */
 
-// anyonomous wrapper
+// anonymous wrapper
 (function(){
 
 	// attach to html on load

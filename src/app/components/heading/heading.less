@@ -20,6 +20,7 @@
 	display: inline-flex;
 	align-items: center;
 	// .heading4_Type();
+	
 }
 
 .heading__logo{
@@ -83,6 +84,10 @@
 	.subtitle_Type();
 	display: inline;
 }
+.heading__flex-splitter{
+	flex: 1 1 auto;
+}
+
 
 
 
@@ -107,6 +112,11 @@
 
 // POST PAGE //
 .heading--post-full{
+	.heading__wrapper{
+		@viewHeight: 70;
+		height: 70 *1vh;
+		height: calc(@1vh * 70);
+	}
 	.heading__tags{
 		margin-right: -@s16;
 		margin-left:  -@s16;
