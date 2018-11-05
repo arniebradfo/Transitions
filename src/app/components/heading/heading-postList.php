@@ -27,7 +27,7 @@
 			</div>
 		<?php endif; ?> 
 	
-		<p class="heading__meta">
+		<div class="heading__meta">
 			<time class="heading__meta-date" datetime="<?php the_time('c');?>">
 				<?php echo get_the_date(); ?>
 			</time>
@@ -36,7 +36,7 @@
 				href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
 				<?php the_author(); ?>
 			</a>
-		</p>
+		</div>
 
 		<h2 class="heading__title"><?php the_title(); ?></h2>
 

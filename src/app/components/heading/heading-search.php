@@ -11,9 +11,9 @@
 
 		<div class="heading__featured-media"></div>
 
-		<p class="heading__meta">
+		<div class="heading__meta">
 			Page #<?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
-		</p>
+		</div>
 
 		<h1 class="heading__title">
 			<?php echo get_search_query() ?>

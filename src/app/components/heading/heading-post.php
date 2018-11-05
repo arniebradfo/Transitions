@@ -33,7 +33,7 @@
 
 		<?php endif; ?> 
 	
-		<p class="heading__meta">
+		<div class="heading__meta">
 
 			<time class="heading__meta-date" datetime="<?php the_time('c');?>">
 				<?php the_date(); ?>
@@ -44,7 +44,7 @@
 				<?php the_author(); ?>
 			</a>
 			
-		</p>
+		</div>
 
 		<h1 class="heading__title"><?php the_title(); ?></h1>
 

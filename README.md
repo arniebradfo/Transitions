@@ -40,21 +40,29 @@ TODOs that are done!
 	- add and uncomment basic elements
 	- heading buttons
 	- buttons
-	- links
-	
+	- links half-ass
+	- headings
+		- homepage spacing
+
 
 ## TODO List
 - style basic elements
 	- headings
+		- spacing
+		- vh unit js
 	- search input
+	- pagination
 	- color vars
 	- size vars
+	- nav layout
+	- nav links
 - finer css
 	- proper heights for headings
 	- layer image and gradients properly
 	- hover and interaction
 	- nav-primary loading
 	- loading
+	- links for reals
 - password protected? 
 
 

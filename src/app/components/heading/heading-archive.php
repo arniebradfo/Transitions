@@ -23,9 +23,9 @@
 
 		<div class="heading__featured-media"></div>
 
-		<p class="heading__meta">
+		<div class="heading__meta">
 			Page #<?php echo get_page_number(); ?>
-		</p>
+		</div>
 
 		<h1 class="heading__title">
 			<?php 

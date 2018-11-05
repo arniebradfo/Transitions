@@ -6,28 +6,48 @@
 }
 .heading__wrapper{
 	@column_Rules();
+	padding-top: 0;
+	padding-bottom: @s8; 
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 
 }
 
+.heading__site-title{
+	height: @button_Size;
+	margin: @s8 0;
+	display: inline-flex;
+	align-items: center;
+	// .heading4_Type();
+}
+
 .heading__logo{
+	margin: @s32 0;
 	// TODO: account for other sizes?
 	.custom-logo{
 		height: @s8*24;
 		max-width: 100%;
 	}
 }
-.heading__title{}
+.heading__title{
+	margin: 0;
+	margin-bottom: @s16;
+}
 .heading__rule{
 	&:extend(.hr--short);
+	margin: 0;
+	margin-bottom: @s16;
 }
 .heading__subtitle{
 	.subtitle_Type();
+	margin: 0;
+	margin-bottom: @s32 * 2;
 }
 
-.heading__menu{}
+.heading__menu{
+	margin-bottom: @s8;
+}
 .heading__menu-list{
 	.menu-list();
 	margin: 0 -@s16;
