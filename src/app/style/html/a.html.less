@@ -1,4 +1,25 @@
 a{
 	color: inherit;
 	text-decoration: unset;
+
+	color: @fgStrong_Color;
+	.text_Shadow();
+
+	&:not(.button) {
+
+		.transition(color);
+
+		&:hover{
+			color: @accentBright_Color;
+			transition-duration: @hover_Duration;
+		}
+
+		&:active{
+			color: @accentDeep_Color;
+			transition-duration: @active_Duration;
+		}
+
+
+
+	}
 }

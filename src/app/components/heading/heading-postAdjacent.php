@@ -54,7 +54,7 @@
 			get_the_tag_list('<p class="heading__tags">', ' ', '</p>')
 		); ?>
 
-		<a class="heading__next-button button button--fill" 
+		<a class="heading__primary-button button button--fill" 
 			href="<?php echo esc_url( get_permalink() ) ?>" 
 			rel="bookmark">
 			Read more

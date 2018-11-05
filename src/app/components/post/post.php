@@ -44,8 +44,11 @@
 			the_excerpt();
 		} ?>
 	</div>
+	
 	<?php if (! is_singular() ): ?>
-		<a href="<?php echo esc_url( get_permalink() ); ?>" class="button button--emphasis">Read more</a>
+		<a class="post__primary-button button button--emphasis" href="<?php echo esc_url( get_permalink() ); ?>">
+			Read more
+		</a>
 	<?php endif; ?>
 
 </article><!--/ post.php -->

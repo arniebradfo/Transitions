@@ -39,16 +39,16 @@ TODOs that are done!
 	- typography - headings
 	- add and uncomment basic elements
 	- heading buttons
+	- buttons
+	- links
 	
 
 ## TODO List
 - style basic elements
-	- buttons
-	- links
-	- color vars
-	- size vars
 	- headings
 	- search input
+	- color vars
+	- size vars
 - finer css
 	- proper heights for headings
 	- layer image and gradients properly
