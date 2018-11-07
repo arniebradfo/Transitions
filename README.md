@@ -73,6 +73,7 @@ TODOs that are done!
 - rel and aria
 - output screenshot
 - output readme
+- merge all headings
 
 ## Build scheme
 based on angular
