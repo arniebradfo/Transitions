@@ -10,10 +10,13 @@
 
 ?>
 
-<?php # this all takes place in 'the loop' ?>
-
+<?php 
+	# this all takes place in 'the loop'
+	$has_featured_media = '' !== get_the_post_thumbnail();
+	$featured_media_class_suffix = ( $has_featured_media ? 'has' : 'lacks') . '-featured-media';
+?>
 <!-- heading-post.php -->
-<header class="heading heading--post-list">
+<header class="heading heading--post-list heading--<?php echo $featured_media_class_suffix; ?>">
 
 	<div class="heading__wrapper">
 

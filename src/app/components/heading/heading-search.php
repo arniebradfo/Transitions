@@ -1,5 +1,5 @@
 <!--heading-archive.php-->
-<header class="heading heading--search">
+<header class="heading heading--search heading--lacks-featured-media">
 
 	<div class="heading__wrapper">
 
@@ -9,7 +9,7 @@
 			<?php bloginfo( 'name' ); ?>
 		</a>
 
-		<div class="heading__featured-media"></div>
+		<div class="heading__featured-media heading__featured-media--empty"></div> 
 
 		<div class="heading__meta">
 			Page #<?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>

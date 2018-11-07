@@ -10,17 +10,15 @@
 
 ?>
 
+
 <!-- heading-home.php -->
-<section class="heading heading--home">
+<section class="heading heading--home heading--lacks-featured-media">
 
 	<div class="heading__wrapper">
 
 		<div class="heading__flex-splitter"></div>
 
-		<div class="heading__featured-media"> 
-			<?php if ( '' !== get_the_post_thumbnail() && ! is_single() )
-				the_post_thumbnail( 'full', ['class'=>'heading__img'] ); ?>
-		</div>
+		<div class="heading__featured-media heading__featured-media--empty"></div> 
 
 		<div class="heading__logo">		
 			<?php get_template_part('logo'); ?>

@@ -10,10 +10,13 @@
 
 ?>
 
-<?php # this all takes place in 'the loop' ?>
-
+<?php 
+	# this all takes place in 'the loop'
+	$has_featured_media = '' !== get_the_post_thumbnail();
+	$featured_media_class_suffix = ( $has_featured_media ? 'has' : 'lacks') . '-featured-media';
+?>
 <!-- heading-post.php -->
-<header class="heading heading--page">
+<header class="heading heading--page heading--<?php echo $featured_media_class_suffix; ?>">
 
 	<div class="heading__wrapper">
 
@@ -25,7 +28,7 @@
 
 		<div class="heading__flex-splitter"></div>		
 
-		<?php if ( '' !== get_the_post_thumbnail() ): ?>
+		<?php if ( $has_featured_media ): ?>
 			<div class="heading__featured-media"> 
 				<?php the_post_thumbnail( 'full', ['class'=>'heading__img'] ); ?>
 			</div>

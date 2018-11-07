@@ -46,7 +46,7 @@
 	</div>
 	
 	<?php if (! is_singular() ): ?>
-		<a class="post__primary-button button button--emphasis" href="<?php echo esc_url( get_permalink() ); ?>">
+		<a class="post__primary-button button button--outline" href="<?php echo esc_url( get_permalink() ); ?>">
 			Read more
 		</a>
 	<?php endif; ?>

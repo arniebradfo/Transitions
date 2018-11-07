@@ -11,7 +11,7 @@
 ?>
 
 <!--heading-archive.php-->
-<header class="heading heading--archive">
+<header class="heading heading--archive heading--lacks-featured-media">
 
 	<div class="heading__wrapper">
 
@@ -21,7 +21,7 @@
 			<?php bloginfo( 'name' ); ?>
 		</a>
 
-		<div class="heading__featured-media"></div>
+		<div class="heading__featured-media heading__featured-media--empty"></div> 
 
 		<div class="heading__meta">
 			Page #<?php echo get_page_number(); ?>

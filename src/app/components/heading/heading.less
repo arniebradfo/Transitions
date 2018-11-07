@@ -1,5 +1,6 @@
 // HEADING //
 // heading.less //
+// .heading--has-featured-media | .heading--lacks-featured-media
 
 .heading_Height(@viewHeight: 70){
 	height: @viewHeight *1vh;
@@ -115,6 +116,7 @@
 .heading--post-full{
 	.heading__wrapper{
 		.heading_Height();
+		
 	}
 	.heading__tags{
 		margin-right: -@s16;
@@ -134,6 +136,15 @@
 
 // POST LIST //
 .heading--post-list{
+	&.heading--has-featured-media{
+		.heading__wrapper{
+			.heading_Height(30);
+		}
+	}
+	.heading__wrapper{
+		position: relative;
+		padding: 0 @column_Padding;
+	}
 	.heading__featured-media{
 		border-radius: @border_Radius;
 		overflow: hidden;
@@ -142,12 +153,6 @@
 		// padding: 0;
 		margin-right: (@column_Padding - @s16);
 		margin-left:  (@column_Padding - @s16);
-	}
-	.heading__wrapper{
-		.heading_Height(40);
-		position: relative;
-		// display: block;
-		padding: 0 @column_Padding;
 	}
 }
 
