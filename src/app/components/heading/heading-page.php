@@ -13,7 +13,7 @@
 <?php # this all takes place in 'the loop' ?>
 
 <!-- heading-post.php -->
-<header class="heading heading--post-full">
+<header class="heading heading--page">
 
 	<div class="heading__wrapper">
 
@@ -22,6 +22,8 @@
 			rel="home">
 			<?php bloginfo( 'name' ); ?>
 		</a>
+
+		<div class="heading__flex-splitter"></div>		
 
 		<?php if ( '' !== get_the_post_thumbnail() ): ?>
 			<div class="heading__featured-media"> 

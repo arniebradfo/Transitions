@@ -1,5 +1,5 @@
 <!--heading-archive.php-->
-<header class="heading heading--archive">
+<header class="heading heading--search">
 
 	<div class="heading__wrapper">
 

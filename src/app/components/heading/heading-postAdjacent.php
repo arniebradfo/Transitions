@@ -13,7 +13,7 @@
 <?php # this all takes place in 'the loop' ?>
 
 <!-- heading-post.php -->
-<header class="heading heading--post-full">
+<header class="heading heading--post-adjacent">
 
 	<div class="heading__wrapper">
 
@@ -30,6 +30,8 @@
 			<div class="heading__featured-media heading__featured-media--empty"></div> 
 
 		<?php endif; ?> 
+
+		<div class="heading__flex-splitter"></div>		
 	
 		<div class="heading__meta">
 

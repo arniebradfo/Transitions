@@ -26,6 +26,8 @@
 				<?php the_post_thumbnail( 'full', ['class'=>'heading__img'] ); ?>
 			</div>
 		<?php endif; ?> 
+
+		<div class="heading__flex-splitter"></div>		
 	
 		<div class="heading__meta">
 			<time class="heading__meta-date" datetime="<?php the_time('c');?>">

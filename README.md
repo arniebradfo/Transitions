@@ -43,13 +43,15 @@ TODOs that are done!
 	- links half-ass
 	- headings
 		- homepage spacing
+		- vh unit js
 
 
 ## TODO List
 - style basic elements
 	- headings
+		- post list spacing
+		- .has-featured-image
 		- spacing
-		- vh unit js
 	- search input
 	- pagination
 	- color vars

@@ -15,6 +15,8 @@
 
 	<div class="heading__wrapper">
 
+		<div class="heading__flex-splitter"></div>
+
 		<div class="heading__featured-media"> 
 			<?php if ( '' !== get_the_post_thumbnail() && ! is_single() )
 				the_post_thumbnail( 'full', ['class'=>'heading__img'] ); ?>
