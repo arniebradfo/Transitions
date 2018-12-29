@@ -15,10 +15,25 @@
  * @version 1.0
  */
 
-get_header(); 
+?><!DOCTYPE html><!-- index.php -->
+<html <?php language_attributes(); ?>>
+<head>
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
 
-?>
-<!-- index.php -->
+<?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+
+<div class="visually-hidden">
+	<?php get_template_part('icon-defs'); ?>
+</div>
+
+<?php get_template_part('nav', 'primary'); ?>
+
+<main class="main">
 
 	<?php
 	if( is_singular() ) {
@@ -61,7 +76,40 @@ get_header();
 	<?php if( ! is_singular() && have_posts()) 
 		get_template_part('pagination'); ?>
 	
-<!--/ index.php -->
-<?php
+</main><!-- .main -->
 
-get_footer();
+<footer class="footer">
+
+	<div class="footer__wrapper">
+
+		<?php get_search_form(); ?>
+
+		<?php wp_nav_menu( array(
+			'theme_location'  => 'footer',
+			'container_class' => 'footer__menu',
+			'container'       => 'nav',
+			'menu_class'      => 'menu footer__menu-list',
+			'depth'           => 1
+		)); ?>
+
+	</div>
+
+	<?php 
+	if ( ! is_single() ) 
+		get_template_part('copyright', 'footer'); 
+
+	elseif ($adjacent_post = get_previous_post()) { 
+		// TODO: option to go forwards or backwards with the adject post
+		$posts = array($adjacent_post); 
+		if (have_posts()) : while (have_posts()) : the_post() ;
+			get_template_part('heading', 'postAdjacent');
+		endwhile; endif;
+	
+	} ?>
+
+</footer>
+
+<?php wp_footer(); ?>
+
+</body>
+</html><!--/ index.php -->
