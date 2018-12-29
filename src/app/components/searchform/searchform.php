@@ -12,7 +12,12 @@
 
 <!-- searchform.php -->
 <?php $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
-<form class="searchform" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<form 
+	class="searchform" 
+	role="search" 
+	method="get" 
+	action="<?php echo esc_url( home_url( '/' ) ); ?>"
+	>
 	<input 
 		class="searchform__input"
 		type="search" 
@@ -25,4 +30,3 @@
 		🔍
 	</button>
 </form><!--/ searchform.php -->
-

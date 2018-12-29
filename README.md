@@ -55,11 +55,13 @@ TODOs that are done!
 - combine header and footer
 - style basic elements
 	- search input
+		- general text input less
 	- pagination
+	- nav 
+		- layout
+		- link styles
 	- color vars
 	- size vars
-	- nav layout
-	- nav links
 - finer css
 	- proper heights for headings
 	- layer image and gradients properly
