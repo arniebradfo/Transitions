@@ -85,4 +85,3 @@ gulp.task('dev', gulp.series(build, watch))
 //         .pipe(rename(path => path.basename += '.min'))
 //         .pipe(gulp.dest(dist))
 // }
-

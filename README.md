@@ -1,8 +1,11 @@
 # Transitions
 A custom WordPress theme with magical page load and unload transitions.
 
-## fd From `Wordpress` project
+## cd From `Wordpress` project
 $ `cd wp-content/themes/transitions`
+
+## DEV
+$ `gulp dev` to build and watch for development
 
 
 ## DoneDid 
@@ -47,6 +50,7 @@ TODOs that are done!
 
 
 ## TODO List
+- combine header and footer
 - style basic elements
 	- headings
 		- post list spacing

@@ -29,8 +29,11 @@
     "gulp-rename": "^1.2.2",
     "gulp-svgstore": "^7.0.0",
     "gulp-uglify": "^3.0.0",
-    "less-plugin-glob": "^2.0.1",
+    "less-plugin-glob": "^3.0.0",
     "normalize.css": "^8.0.0",
-    "sanitize.css": "^7.0.3"
+    "sanitize.css": "^8.0.0"
+  },
+  "dependencies": {
+    "natives": "^1.1.6"
   }
 }
