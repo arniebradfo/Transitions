@@ -17,56 +17,28 @@
 
 ?><!DOCTYPE html><!-- index.php -->
 <html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
 
-<?php wp_head(); ?>
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
-<div class="visually-hidden">
-	<?php get_template_part('icon-defs'); ?>
-</div>
-
-<?php get_template_part('nav', 'primary'); ?>
-
-<?php get_template_part('main'); ?>
-
-<footer class="footer">
-
-	<div class="footer__wrapper">
-
-		<?php get_search_form(); ?>
-
-		<?php wp_nav_menu( array(
-			'theme_location'  => 'footer',
-			'container_class' => 'footer__menu',
-			'container'       => 'nav',
-			'menu_class'      => 'menu footer__menu-list',
-			'depth'           => 1
-		)); ?>
-
+	<div class="visually-hidden">
+		<?php get_template_part('icon-defs'); ?>
 	</div>
 
-	<?php 
-	if ( ! is_single() ) 
-		get_template_part('copyright', 'footer'); 
+	<?php get_template_part('nav', 'primary'); ?>
 
-	elseif ($adjacent_post = get_previous_post()) { 
-		// TODO: option to go forwards or backwards with the adject post
-		$posts = array($adjacent_post); 
-		if (have_posts()) : while (have_posts()) : the_post() ;
-			get_template_part('heading', 'postAdjacent');
-		endwhile; endif;
-	
-	} ?>
+	<?php get_template_part('main'); ?>
 
-</footer>
+	<?php get_template_part('foot'); ?>
 
-<?php wp_footer(); ?>
+	<?php wp_footer(); ?>
 
 </body>
+
 </html><!--/ index.php -->
