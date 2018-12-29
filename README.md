@@ -47,15 +47,13 @@ TODOs that are done!
 	- headings
 		- homepage spacing
 		- vh unit js
+		- post list spacing
+		- .has-featured-image
 
 
 ## TODO List
 - combine header and footer
 - style basic elements
-	- headings
-		- post list spacing
-		- .has-featured-image
-		- spacing
 	- search input
 	- pagination
 	- color vars
