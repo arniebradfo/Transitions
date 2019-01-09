@@ -27,10 +27,10 @@
 .nav__header{
 	background: @bgOverlay_Gradient;
 
-	height: @button_Size;
-	padding: 0 @s16;
+	// height: @button_Size;
+	padding: @s32 @s32 @s16;
 	display: flex;
-	align-items: center;
+	flex-direction: column;
 	flex: 0 0 auto;	
 }
 .nav__footer{
@@ -42,6 +42,17 @@
 .nav__menu{
 	padding: 0 @s16;
 	flex: 1 1 auto;
+}
+
+.nav__logo{
+	margin-bottom: @s8;
+	.custom-logo{
+		height: @s8*8;
+		max-width: 100%;
+	}
+}
+.nav__site-title{
+	.heading3_Type();
 }
 
 .nav__overlay{

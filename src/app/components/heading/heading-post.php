@@ -20,7 +20,7 @@
 
 	<div class="heading__wrapper">
 
-		<a class="heading__site-title" 
+		<a class="heading__site-title  button--large" 
 			href="<?php echo esc_url( home_url( '/' ) ); ?>" 
 			rel="home">
 			<?php bloginfo( 'name' ); ?>

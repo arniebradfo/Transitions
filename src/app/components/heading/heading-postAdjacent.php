@@ -20,7 +20,7 @@
 
 	<div class="heading__wrapper">
 
-		<a class="heading__cover-link" 
+		<a class="heading__cover-link button--custom" 
 			href="<?php echo esc_url( get_permalink() ) ?>" 
 			rel="bookmark"></a>
 

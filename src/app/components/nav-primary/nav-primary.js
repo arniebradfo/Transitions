@@ -18,9 +18,9 @@
 	
 	function toggleNav(event) {
 		if (navOpen)
-		closeNav();
+			closeNav();
 		else 
-		openNav();
+			openNav();
 	}
 	
 	function openNav(event) {
@@ -36,7 +36,7 @@
 	}
 	
 	attachNavEvents();
-	closeNav();
+	openNav();
 
 })();
 	

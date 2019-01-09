@@ -49,10 +49,10 @@ TODOs that are done!
 		- vh unit js
 		- post list spacing
 		- .has-featured-image
+- combine header and footer
 
 
 ## TODO List
-- combine header and footer
 - style basic elements
 	- search input
 		- general text input less

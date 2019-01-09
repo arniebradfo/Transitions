@@ -1,5 +1,10 @@
-.button(){
-	
+
+
+// inline - a-link 
+// large - a
+// all-caps - button, .button
+
+.button--base(){
 	// RESETS //
 	-webkit-appearance: none;
 	border: initial;
@@ -7,35 +12,28 @@
 	margin: 0;
 	padding: 0;
 	outline: 0;
-	display: flex;
+	cursor: pointer;	
+	color: inherit;
+	text-decoration: unset;
+	
+	.text_Shadow();
+	font-weight: @bold_Weight;
+	color: @fgStrong_Color;
+	
+	display: inline-flex;
 	align-items: center;
 	
-	.meta_Type();
-	.text_Shadow();
-	color: @fgStrong_Color;
-
-	height: @button_Size;
-	padding: 0 @s16;
-	display: inline-flex;
-	align-content: center;
-	justify-content: center;
 	.transition(color);
-
-	&.button--icon{
-		width: @button_Size;
-		padding: 0;
-	}
 
 	position: relative;
 	// &::before, 
 	&::after{
 		content: '';
-		.absolute(0);
+		.absolute(-@s8);
 		z-index: -1;
 		border-radius: @border_Radius;
 		border: @border_Size solid transparent;
 		background-color: transparent;
-
 		.transition(opacity transform background-position background-color);
 	}
 
@@ -50,23 +48,6 @@
 	// hover - gradient, larger scale
 	// active - darker gradient, smaller scale
 	// focus - outline
-
-	&.button--fill{
-		&::after{
-			background-color: @bgPrimary_Color;
-		}
-	}
-	&.button--outline{
-		&::after{
-			border-color: @fgWeaker_Color;
-		}
-	}
-	&.button--emphasis{
-		&::after{
-			background-color: @bgOverlay_Color;
-		}
-	}
-
 
 	&:hover{
 		color: @fgStrong_Color;
@@ -93,10 +74,64 @@
 	}
 }
 
+.button--fill(){
+	&::after{
+		background-color: @bgPrimary_Color;
+	}
+}
+
+.button--outline(){
+	&::after{
+		border-color: @fgWeaker_Color;
+	}
+}
+
+.button--emphasis(){
+	&::after{
+		background-color: @bgOverlay_Color;
+	}
+}
+
+.button--large(){
+	height: @button_Size;
+	padding: 0 @s16;
+	// display: flex;	
+
+	// &::before, 
+	&::after{
+		.absolute(0);
+	}
+}
+
+.button--icon{
+	width: @button_Size;
+	padding: 0;
+	justify-content: center;
+}
+
+a{
+	.button--base();
+}
+
 button, 
 [type="button"], 
 [type="reset"], 
 [type="submit"],
 .button{
-	.button();
+	.button--base();
+	.button--large();
+	.meta_Type();
+}
+
+.button--fill{.button--fill();}
+.button--outline{.button--outline();}
+.button--emphasis{.button--emphasis();}
+.button--large{.button--large();}
+.button--icon{.button--icon();}
+
+.button--custom{
+	// &::before, 
+	&::after{
+		content: none;
+	}
 }
