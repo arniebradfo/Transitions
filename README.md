@@ -51,9 +51,16 @@ TODOs that are done!
 		- .has-featured-image
 - combine header and footer
 
+interaction principles
+- grows when hovered
+- shrinks when pressed
+- flash animates when when tapped
 
 ## TODO List
 - style basic elements
+	- you NEED a standard link style! but do i?
+		- raise and lower underline
+		- segmented on the nav
 	- search input
 		- general text input less
 	- pagination
