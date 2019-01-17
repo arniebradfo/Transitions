@@ -15,7 +15,9 @@
 		</a>
 	</div>
 	
-	<?php wp_nav_menu( array(
+	<?php trns_wp_nav_menu( array(
+		'link_class'       => 'button--in-list',
+		// 'first_link_class' => 'button--fill',
 		'theme_location'  => 'primary',
 		'container_class' => 'nav__menu',
 		'container'       => 'nav',

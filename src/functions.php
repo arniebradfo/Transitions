@@ -129,4 +129,38 @@ function get_page_number(){
 // shortcode component includes
 include_once('icon.php');
 
+// adds $link_class and $first_link_class
+function trns_wp_nav_menu( $args = array() ) {
+
+	$link_class = isset($args['link_class']) ? $args['link_class'] : false;
+	$first_link_class = isset($args['first_link_class']) ? $args['first_link_class'] : false;
+
+	// have to implement echo.
+	$echo = isset($args['echo']) ? $args['echo'] : true;
+	$args['echo'] = false;
+
+	$menu = wp_nav_menu( $args );
+
+	if ($link_class)
+		$menu = preg_replace( 
+			'/<a\s/',
+			'<a class="'.$link_class.'" ',
+			$menu
+		);
+
+	if ($first_link_class)
+		$menu = preg_replace( 
+			'/<a\sclass="/',
+			'<a class="'.$first_link_class.' ',
+			$menu, 
+			1 
+		);
+
+	if ($echo)
+		echo $menu;
+	else 
+		return $menu;
+
+}
+
 ?>
