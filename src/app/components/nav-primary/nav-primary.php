@@ -10,7 +10,7 @@
 		<div class="nav__logo">		
 			<?php get_template_part('logo'); ?>
 		</div>
-		<a class="nav__site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+		<a class="button--in-list nav__site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<?php bloginfo( 'name' ); ?>
 		</a>
 	</div>

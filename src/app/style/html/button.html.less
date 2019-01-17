@@ -1,9 +1,3 @@
-
-
-// inline - a-link 
-// large - a
-// all-caps - button, .button
-
 .button--base(){
 	// RESETS //
 	-webkit-appearance: none;
@@ -103,6 +97,43 @@
 	}
 }
 
+.button--in-list(){
+	
+	// RESET
+	// &::before, 
+	&::after{
+		content: none;
+	}
+
+	// combine this with the other button above
+	// border: @border_Size solid transparent;
+	background-color: transparent;
+	.transition(opacity transform background-position background-color);
+
+	background-image: linear-gradient(-45deg, @accentDeep_Color, @accentPrimary_Color, transparent, transparent);
+	@bgSize: (4 - 1) * 100%;
+	background-size: @bgSize @bgSize;
+	background-position: 0% 0%;
+
+	&:hover{
+		background-position: 50% 50%;
+		background-color: @accentBright_Color;
+		transition-duration: @hover_Duration;
+	}
+	&:active{
+		background-position: 100% 100%;
+		background-color: @accentBright_Color;
+		transition-duration: @active_Duration;
+	}
+
+
+}
+
+
+
+
+// CLASSES //
+
 .button--icon{
 	width: @button_Size;
 	padding: 0;
@@ -128,8 +159,10 @@ button,
 .button--emphasis{.button--emphasis();}
 .button--large{.button--large();}
 .button--icon{.button--icon();}
+.button--in-list{.button--in-list();}
 
 .button--custom{
+	// removes background changes
 	// &::before, 
 	&::after{
 		content: none;
