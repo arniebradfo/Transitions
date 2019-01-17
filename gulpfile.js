@@ -38,6 +38,7 @@ const buildSvg = () => {
 			extname: '.php',			
 		}))
 		.pipe(gulp.dest('./src/app/components/icon'))
+		.pipe(livereload())
 }
 
 const buildJs = () => {
@@ -61,9 +62,20 @@ const clean = () => {
 const watch = () => {
     livereload.listen()
     gulp.watch([
-		'./src/**/*',
+		'./src/**/*.less',
+		'./src/**/*.css',
+	], buildCss)
+	gulp.watch([
+		'./src/**/*.js',
+	], buildJs)
+	gulp.watch([
+		'./src/**/*.php',
+		'./src/**/*.html',
 		'!./**/icon-defs.php'
-    ], build)
+	], copyPhpTemplates)
+	gulp.watch([
+		'./src/**/*.svg',
+	], buildSvg)
 }
 
 
