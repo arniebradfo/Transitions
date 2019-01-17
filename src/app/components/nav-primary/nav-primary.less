@@ -39,8 +39,23 @@
 	flex: 0 0 auto;
 }
 .nav__menu{
-	padding: 0 @s16;
+	padding: @s16 0;
 	flex: 1 1 auto;
+}
+.nav__menu-list{
+	padding: 0;
+	margin: 0;
+
+	.sub-menu{
+		border-left: @border_Size solid @fgWeaker_Color;
+		padding: 0;
+		margin-left: @s32; 
+	}
+}
+.nav__link{
+	display: flex;
+	padding: @s8 @s32;
+	margin-bottom: @s1;
 }
 
 .nav__logo{
