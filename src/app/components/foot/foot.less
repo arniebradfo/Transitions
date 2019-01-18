@@ -7,18 +7,28 @@
 }
 .footer__wrapper{
 	@column_Rules();
-	padding: @s4 @s16;
+	padding: @s8 @s16;
 
 	display: flex;
 	align-items: center;
-	
+	flex-wrap: wrap;
+
 	.searchform{
 		flex: 1 1 auto;
 	}
 }
 .footer__menu{
 	flex: 0 0 auto;
+	flex-wrap: wrap;
+	max-width: 100%;
 }
 .footer__menu-list{
 	.menu-list();
+	.menu-item{
+		margin: 0;
+	}
+}
+
+.footer__menu-link{
+	
 }

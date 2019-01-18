@@ -37,6 +37,7 @@ TODOs that are done!
 	- heading page
 		- subtitle
 		- remove date
+- combine header and footer
 - style basic elements
 	- typography - headings
 	- add and uncomment basic elements
@@ -51,12 +52,11 @@ TODOs that are done!
 	- X - you NEED a standard link style! but do i?
 		- X - raise and lower underline
 		- X - segmented on the nav
-- combine header and footer
+	- search input
+		- general text input less
 
 ## TODO List
 - style basic elements
-	- search input
-		- general text input less
 	- pagination
 	- nav 
 		- layout

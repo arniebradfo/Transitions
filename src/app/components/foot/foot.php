@@ -17,6 +17,7 @@
 		<?php get_search_form(); ?>
 
 		<?php trns_wp_nav_menu( array(
+			'link_class'      => 'button footer__menu-link',
 			'theme_location'  => 'footer',
 			'container_class' => 'footer__menu',
 			'container'       => 'nav',
