@@ -11,21 +11,21 @@
 	@visibility: none; // hidden | visible
 	@backface: hidden;
 ) {
-	.addVisibiltyToBegining() when (@visibility = visible) {
+	.addVisibilityToBeginning() when (@visibility = visible) {
 		visibility: visible;
 		transition+: visibility 0ms;
 	}
-	.addVisibiltyToBegining();
+	.addVisibilityToBeginning();
 
     .for(length(@properties)); .-each(@i) {
 	    transition+: extract(@properties, @i) @duration @timing;
 	}
 
-	.addVisibiltyToEnd() when (@visibility = hidden) {
+	.addVisibilityToEnd() when (@visibility = hidden) {
 		visibility: hidden;
 		transition+: visibility 0ms linear @duration;
 	}
-	.addVisibiltyToEnd();
+	.addVisibilityToEnd();
 
 	backface-visibility: @backface;
 }
