@@ -56,13 +56,16 @@ TODOs that are done!
 		- general text input less
 
 ## TODO List
+
 - style basic elements
 	- pagination
-	- nav 
 		- layout
+	- nav 
 		- link styles
+		- layout - correct min-width
 	- color vars
 	- size vars
+- proper icons and shadows
 - finer css
 	- proper heights for headings
 	- layer image and gradients properly
@@ -70,6 +73,10 @@ TODOs that are done!
 	- nav-primary loading
 	- loading
 	- links for reals
+- what to do about the logo
+- current item style on pagination & menus
+	- button current style? `.current-menu-item`
+		- button current style? 
 - password protected? 
 
 

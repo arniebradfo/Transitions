@@ -10,8 +10,9 @@
 
 .nav{
 	.absolute(0 0 x x);
+	width: @s8 * 50; // effectively min-width
 	max-width:  calc(100% - (@nav_Margin*2));
-	max-height: calc(100% - (@nav_Margin*2));
+	max-height: calc(100% - (@nav_Margin*8));
 	z-index: @nav_Zindex;
 	background-color: @bgPrimary_Color;
 	border-radius: @border_Radius;
@@ -31,13 +32,14 @@
 }
 .nav__footer{
 	// background: @bgOverlay_Gradient;
-	padding: 0 @s16 @s8;
+	padding: @s8 @s16;
 	display: flex;		
 	flex: 0 0 auto;
 }
 .nav__menu{
-	padding: @s16 0;
+	padding: @s16 0 @s8;
 	flex: 1 1 auto;
+	overflow: scroll;
 }
 .nav__menu-list{
 	padding: 0;
@@ -79,7 +81,7 @@
 // STATES //
 .jsState-navOpen{
 	.nav__overlay, .nav{
-		display: block;		
+		// display: block; // flex;
 	}
 }
 
