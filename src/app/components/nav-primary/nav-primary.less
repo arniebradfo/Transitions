@@ -6,7 +6,10 @@
 	z-index: @navButton_Zindex;
 	margin: @nav_Margin;
 }
-
+.nav__icon{
+	margin: -@icon_Size/2;
+	.transition(opacity transform)
+}
 
 .nav{
 	.absolute(0 0 x x);
@@ -84,11 +87,38 @@
 	.nav__overlay, .nav{
 		// display: block; // flex;
 	}
+
+	// BUTTON //
+	.nav__button{}
+	.nav__close-icon{
+		opacity: 1;
+		transform: rotate(360deg);
+	}
+	.nav__open-icon{
+		opacity: 0;
+		transform: rotate(360deg);
+	}
 }
 
 .jsState-navClosed{
 	.nav__overlay, .nav{
 		display: none;
+	}
+
+	// BUTTON //
+	.nav__button{
+		// &:extend(  // too specific
+		// 	.button--fill all, 
+		// 	.button--outline all
+		// );
+	}
+	.nav__close-icon{
+		opacity: 0;
+		transform: rotate(0deg);
+	}
+	.nav__open-icon{
+		opacity: 1;
+		transform: rotate(0deg);
 	}
 }
 

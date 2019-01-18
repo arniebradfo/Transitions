@@ -62,9 +62,10 @@ TODOs that are done!
 		- layout - correct min-width
 	- color vars
 	- size vars
+- proper icons and shadows for them
 
 ## TODO List
-- proper icons and shadows for them
+- nav animations
 - finer css
 	- proper heights for headings
 	- layer image and gradients properly
