@@ -168,3 +168,13 @@ button,
 		content: none;
 	}
 }
+
+.button--current{
+	&, &:hover, &:active{
+		color: @fgWeak_Color;
+	}
+	&::after{
+		content: none;
+		// TODO: dot underneath?
+	}
+}
