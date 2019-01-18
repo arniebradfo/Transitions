@@ -135,7 +135,11 @@
 // CLASSES //
 
 .button--icon{
-	width: @button_Size;
+	width:  @buttonLg_Size;
+	height: @buttonLg_Size;
+	&:after{
+		border-radius: @buttonLg_Size;
+	}
 	padding: 0;
 	justify-content: center;
 }

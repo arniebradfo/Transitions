@@ -1,4 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon_Arrow_Down" viewBox="0 0 14 14">
+<svg xmlns="http://www.w3.org/2000/svg"><symbol id="dropShadow">
+	<filter id="dropshadow" height="130%">
+	<feGaussianBlur in="SourceAlpha" stdDeviation="2"/> <!-- stdDeviation is how much to blur -->
+	<feOffset dx="0" dy="0" result="offsetblur"/> <!-- how much to offset -->
+	<feComponentTransfer>
+		<feFuncA type="linear" slope="0.7"/> <!-- slope is the opacity of the shadow -->
+	</feComponentTransfer>
+	<feMerge> 
+		<feMergeNode/> <!-- this contains the offset blurred image -->
+		<feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+	</feMerge>
+	</filter>
+</symbol><symbol id="icon_Arrow_Down" viewBox="0 0 14 14">
   <title>icon_Arrow_Down</title>
   <path d="M1,7.414V6H2.414L6,9.586V0H8V9.586L11.586,6H13V7.414l-6,6Z"/>
 </symbol><symbol id="icon_Arrow_Left" viewBox="0 0 14 14">
