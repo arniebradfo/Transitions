@@ -1,7 +1,83 @@
 // input.less
+.placeholder(@rules) {
+
+    &::-webkit-input-placeholder {
+        @rules();
+    }
+    &:-moz-placeholder {
+        @rules();
+    }
+    &::-moz-placeholder {
+        @rules();
+    }
+    &:-ms-input-placeholder {
+        @rules();
+    }
+}
 
 .input(){
+	
+	// RESETS //
+	-webkit-appearance: none;
 	outline: none;
+	border: initial;
+	background: initial;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	color: inherit;
+	
+	color: @fgStrong_Color;
+	.text_Shadow();
+	font-weight: @bold_Weight;
+
+	height: @button_Size;
+	padding: 0 @s16;
+
+	border-radius: @border_Radius;
+	border: @border_Size solid;
+	border-color: @fgWeaker_Color;
+	background-color: @bgPrimary_Color;
+	.transition(color border-color background-color);
+
+	@placeholder_Rules:{
+		color: @fgWeak_Color;
+		.meta_Type(); // Why so error? Compiles fine.
+		.transition(color);
+		opacity: 1;
+	};
+	.placeholder(@placeholder_Rules);
+
+	&:hover{
+		border-color: @accentBright_Color;
+		transition-duration: @hover_Duration;
+		.placeholder({
+			color: @fgPrimary_Color;
+			transition-duration: @hover_Duration;
+		});
+	}
+
+	&:focus{
+		border-color: @accentPrimary_Color;
+		transition-duration: @focus_Duration;
+		.placeholder({
+			color: @fgPrimary_Color;
+			transition-duration: @hover_Duration;
+		});
+	}
+	
+	&:active{
+		border-color: @accentDeep_Color;
+		transition-duration: @active_Duration;
+		.placeholder({
+			color: @accentDeep_Color;
+			transition-duration: @hover_Duration;
+		});
+	}
+
+
+
+
 }
 
 input{

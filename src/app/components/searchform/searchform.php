@@ -26,7 +26,7 @@
 		value="<?php echo get_search_query(); ?>" 
 		name="s" 
 		/>
-	<button class="searchform__button" type="submit" >
-		🔍
+	<button class="searchform__button button--icon" type="submit" >
+		<?php echo trns_icon_component(['name'=>'Search', 'class'=>'searchform__button-icon']) ?>
 	</button>
 </form><!--/ searchform.php -->

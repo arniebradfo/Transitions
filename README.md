@@ -7,7 +7,6 @@ $ `cd wp-content/themes/transitions`
 ## DEV
 $ `gulp dev` to build and watch for development
 
-
 ## DoneDid 
 TODOs that are done!
 - output style
@@ -49,18 +48,13 @@ TODOs that are done!
 		- vh unit js
 		- post list spacing
 		- .has-featured-image
+	- X - you NEED a standard link style! but do i?
+		- X - raise and lower underline
+		- X - segmented on the nav
 - combine header and footer
-
-interaction principles
-- grows when hovered
-- shrinks when pressed
-- flash animates when when tapped
 
 ## TODO List
 - style basic elements
-	- you NEED a standard link style! but do i?
-		- raise and lower underline
-		- segmented on the nav
 	- search input
 		- general text input less
 	- pagination
@@ -89,3 +83,8 @@ interaction principles
 ## Build scheme
 based on angular
 outputs an external dist folder that wp uses
+
+## Interaction principles?
+- grows when hovered
+- shrinks when pressed
+- flash animates when when tapped
