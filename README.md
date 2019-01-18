@@ -54,9 +54,6 @@ TODOs that are done!
 		- X - segmented on the nav
 	- search input
 		- general text input less
-
-## TODO List
-
 - style basic elements
 	- pagination
 		- layout
@@ -65,7 +62,9 @@ TODOs that are done!
 		- layout - correct min-width
 	- color vars
 	- size vars
-- proper icons and shadows
+
+## TODO List
+- proper icons and shadows for them
 - finer css
 	- proper heights for headings
 	- layer image and gradients properly

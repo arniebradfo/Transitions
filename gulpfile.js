@@ -75,7 +75,7 @@ const watch = () => {
 	], copyPhpTemplates)
 	gulp.watch([
 		'./src/**/*.svg',
-	], buildSvg)
+	], gulp.series(buildSvg, copyPhpTemplates))
 }
 
 

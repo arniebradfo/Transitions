@@ -1,5 +1,4 @@
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 11 11" style="enable-background:new 0 0 11 11;" xml:space="preserve">
-<path d="M3.413,0H4v0.95L1.188,5.5L4,10.05V11H3.413L0.012,5.5L3.413,0z M7.587,0H7v0.95L9.812,5.5L7,10.05V11h0.587l3.401-5.5
-	L7.587,0z M0,0 M11,11"/>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+  <title>icon_Pointers_Horizontal</title>
+  <path d="M9.205,0l4.7,7-4.7,7H8V12.206L11.5,7,8,1.794V0ZM6,14V12.206L2.5,7,6,1.794V0H4.8L.1,7l4.7,7Z"/>
 </svg>

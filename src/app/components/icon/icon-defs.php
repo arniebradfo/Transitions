@@ -1,51 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon_Arrow_Down" viewBox="0 0 11 11">
-<path d="M0,5.507V5h0.907L5,9.093V0h1v9.093L10.093,5H11v0.507L5.507,11H5.493L0,5.507z M0,0 M11,11"/>
-</symbol><symbol id="icon_Arrow_Left" viewBox="0 0 11 11">
-<path d="M5.493,0H6v0.907L1.907,5H11v1H1.907L6,10.093V11H5.493L0,5.507V5.493L5.493,0z M0,0 M11,11"/>
-</symbol><symbol id="icon_Arrow_Right" viewBox="0 0 11 11">
-<path d="M5.507,11H5v-0.907L9.093,6H0V5h9.093L5,0.907V0h0.507L11,5.493v0.014L5.507,11z M0,0 M11,11"/>
-</symbol><symbol id="icon_Arrow_Up" viewBox="0 0 11 11">
-<path d="M11,5.493V6h-0.907L6,1.907V11H5V1.907L0.907,6H0V5.493L5.493,0h0.014L11,5.493z M0,0 M11,11"/>
-</symbol><symbol id="icon_Comment" viewBox="0 0 11 11">
-<path d="M11,0H0v8h2v3l3.6-3H11V0z M10,7H5.238L3,8.865V7H1V1h9V7z M9,3H2V2h7V3z M6,5H2V4h4V5z M0,0 M11,11"/>
-</symbol><symbol id="icon_Contract" viewBox="0 0 11 11">
-<path d="M5,10H4V7.707L0.707,11H0v-0.707L3.293,7H1V6h4V10z M10.293,0L7,3.293V1H6v4h4V4H7.707L11,0.707V0H10.293z M0,0 M11,11"/>
-</symbol><symbol id="icon_Expand" viewBox="0 0 11 11">
-<path d="M11,0v4h-1V1.707L6.707,5H6V4.293L9.293,1H7V0H11z M4.293,6L1,9.293V7H0v4h4v-1H1.707L5,6.707V6H4.293z M0,0 M11,11"/>
-</symbol><symbol id="icon_Link" viewBox="0 0 11 11">
-<path d="M3.789,7.009c-0.512-0.569-0.778-1.281-0.778-2c0-0.769,0.292-1.536,0.877-2.121l2-2c1.17-1.17,3.072-1.17,4.242,0
-	c1.189,1.188,1.138,3.106-0.119,4.362l-0.76,0.759H9.009V4.838l0.295-0.295c0.874-0.876,0.927-2.142,0.119-2.948
-	c-0.779-0.779-2.049-0.779-2.828,0l-2,2c-0.779,0.779-0.779,2.049,0,2.828l0.414,0.414v0.172H3.789z M5.13,10.13l2-2
-	c1.132-1.132,1.158-2.945,0.099-4.121h-1.22v0.172l0.414,0.414c0.779,0.779,0.779,2.049,0,2.828l-2,2
-	c-0.779,0.779-2.049,0.779-2.828,0s-0.779-2.049,0-2.828l0.414-0.414V5.009H1.767L0.888,5.888C0.303,6.473,0.011,7.24,0.011,8.009
-	s0.292,1.536,0.877,2.121C2.058,11.3,3.96,11.3,5.13,10.13z M0,0 M11,11"/>
-</symbol><symbol id="icon_Lock" viewBox="0 0 11 11">
-<path d="M8,5V2.5C8,1.121,6.879,0,5.5,0S3,1.121,3,2.5V5H2v6h7V5H8z M4,2.5C4,1.673,4.673,1,5.5,1S7,1.673,7,2.5V5H4V2.5z M8,10H3V6
-	h5V10z M0,0 M11,11"/>
-</symbol><symbol id="icon_Mail" viewBox="0 0 11 11">
-<path d="M10,4.545L11,4v5H0V4l1,0.545V8h9V4.545z M10,2H1v0.406l4.5,2.455L10,2.406V2 M11,1v2L5.5,6L0,3V1H11L11,1z M0,0 M11,11"/>
-</symbol><symbol id="icon_Menu" viewBox="0 0 11 11">
-<path d="M11,2H0V1h11V2z M11,5H0v1h11V5z M11,9H0v1h11V9z M0,0 M11,11"/>
-</symbol><symbol id="icon_Pointer_Down" viewBox="0 0 11 11">
-<path d="M0,3.507V3h0.907L5.5,7.593L10.093,3H11v0.507L5.507,9H5.493L0,3.507z M0,0 M11,11"/>
-</symbol><symbol id="icon_Pointer_Left" viewBox="0 0 11 11">
-<path d="M7.493,0H8v0.907L3.407,5.5L8,10.093V11H7.493L2,5.507V5.493L7.493,0z M0,11 M11,0"/>
-</symbol><symbol id="icon_Pointer_Right" viewBox="0 0 11 11">
-<path d="M3.507,11H3v-0.907L7.593,5.5L3,0.907V0h0.507L9,5.493v0.014L3.507,11z M11,0 M0,11"/>
-</symbol><symbol id="icon_Pointer_Up" viewBox="0 0 11 11">
-<path d="M11,7.493V8h-0.907L5.5,3.407L0.907,8H0V7.493L5.493,2h0.014L11,7.493z M0,0 M11,11"/>
-</symbol><symbol id="icon_Pointers_Horizontal" viewBox="0 0 11 11">
-<path d="M3.413,0H4v0.95L1.188,5.5L4,10.05V11H3.413L0.012,5.5L3.413,0z M7.587,0H7v0.95L9.812,5.5L7,10.05V11h0.587l3.401-5.5
-	L7.587,0z M0,0 M11,11"/>
-</symbol><symbol id="icon_Pointers_Vertical" viewBox="0 0 11 11">
-]<path d="M11,3.413V4h-0.95L5.5,1.188L0.95,4H0V3.413l5.5-3.401L11,3.413z M11,7.587V7h-0.95L5.5,9.812L0.95,7H0v0.587l5.5,3.401
-	L11,7.587z M0,0 M11,11"/>
-</symbol><symbol id="icon_Search" viewBox="0 0 11 11">
-<path d="M7,0C4.794,0,3,1.794,3,4c0,0.923,0.326,1.763,0.853,2.44L0,10.293V11h0.707L4.56,7.147C5.237,7.674,6.077,8,7,8
-	c2.206,0,4-1.794,4-4S9.206,0,7,0z M7,7C5.346,7,4,5.654,4,4s1.346-3,3-3s3,1.346,3,3S8.654,7,7,7z M0,0 M11,11"/>
-</symbol><symbol id="icon_Unlock" viewBox="0 0 11 11">
-<path d="M4,5V2.5C4,1.673,4.673,1,5.5,1S7,1.673,7,2.5v1h1v-1C8,1.121,6.879,0,5.5,0S3,1.121,3,2.5V5H2v6h7V5H4z M8,10H3V6h5V10z M0,0 M11,11"/>
-</symbol><symbol id="icon_X" viewBox="0 0 11 11">
-<path d="M11,11h-0.707L5.5,6.207L0.707,11H0v-0.707L4.793,5.5L0,0.707V0h0.707L5.5,4.793L10.293,0H11v0.707L6.207,5.5L11,10.293V11z
-	 M0,0 M11,11"/>
+<svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon_Arrow_Down" viewBox="0 0 14 14">
+  <title>icon_Arrow_Down</title>
+  <path d="M1,7.414V6H2.414L6,9.586V0H8V9.586L11.586,6H13V7.414l-6,6Z"/>
+</symbol><symbol id="icon_Arrow_Left" viewBox="0 0 14 14">
+  <title>icon_Arrow_Left</title>
+  <path d="M6.586,1H8V2.414L4.414,6H14V8H4.414L8,11.586V13H6.586l-6-6Z"/>
+</symbol><symbol id="icon_Arrow_Right" viewBox="0 0 14 14">
+  <title>icon_Arrow_Right</title>
+  <path d="M7.414,13H6V11.586L9.586,8H0V6H9.586L6,2.414V1H7.414l6,6Z"/>
+</symbol><symbol id="icon_Arrow_Up" viewBox="0 0 14 14">
+  <title>icon_Arrow_Up</title>
+  <path d="M13,6.586V8H11.586L8,4.414V14H6V4.414L2.414,8H1V6.586l6-6Z"/>
+</symbol><symbol id="icon_Comment" viewBox="0 0 14 14">
+  <title>icon_Comment</title>
+  <path d="M11,4H2V2h9Zm3,6H7L2,14V10H0V0H14ZM13,1H1V9H3v2.919L6.649,9H13ZM8,5H2V7H8Z"/>
+</symbol><symbol id="icon_Contract" viewBox="0 0 14 14">
+  <title>icon_Contract</title>
+  <path d="M6,8v5H4V11.414L1.414,14H0V12.586L2.586,10H1V8Zm8-6.586V0H12.586L10,2.586V1H8V6h5V4H11.414Z"/>
+</symbol><symbol id="icon_Expand" viewBox="0 0 14 14">
+  <title>icon_Expand</title>
+  <path d="M3.414,12H5v2H0V9H2v1.586L4.586,8H6V9.414ZM9,0V2h1.586L8,4.586V6H9.414L12,3.414V5h2V0Z"/>
+</symbol><symbol id="icon_Link" viewBox="0 0 14 14">
+  <title>icon_Link</title>
+  <path d="M6,10A3.975,3.975,0,0,1,3.172,8.828l-2-2A4,4,0,1,1,6.828,1.172L7,1.344V3H5.828l-.414-.414a2.047,2.047,0,0,0-2.828,0,2,2,0,0,0,0,2.828l2,2a2.047,2.047,0,0,0,2.828,0L7.828,7H9V8.656l-.172.172A3.975,3.975,0,0,1,6,10Zm6.828-2.828-2-2a4,4,0,0,0-5.656,0L5,5.344V7H6.172l.414-.414a2.047,2.047,0,0,1,2.828,0l2,2a2,2,0,0,1,0,2.828,2.047,2.047,0,0,1-2.828,0L8.172,11H7v1.656l.172.172a4,4,0,1,0,5.656-5.656Z"/>
+</symbol><symbol id="icon_Lock" viewBox="0 0 14 14">
+  <title>icon_Lock</title>
+  <path d="M11,6V4A4,4,0,0,0,3,4V6H1v8H13V6ZM5,4A2,2,0,0,1,9,4V6H5Zm6,8H3V8h8Z"/>
+</symbol><symbol id="icon_Mail" viewBox="0 0 14 14">
+  <title>icon_Mail</title>
+  <path d="M14,7v6H0V7L2,8.143V11H12V8.143Zm0-6V5L7,9,0,5V1H14ZM7,7.848l5-2.857V3H2V4.991Z"/>
+</symbol><symbol id="icon_Menu" viewBox="0 0 14 14">
+  <title>icon_Menu</title>
+  <path d="M14,3H0V1H14Zm0,3H0V8H14Zm0,5H0v2H14Z"/>
+</symbol><symbol id="icon_Pointer_Down" viewBox="0 0 14 14">
+  <title>icon_Pointer_Down</title>
+  <path d="M14,4.414l-7,7-7-7V3H1.414L7,8.586,12.586,3H14Z"/>
+</symbol><symbol id="icon_Pointer_Left" viewBox="0 0 14 14">
+  <title>icon_Pointer_Left</title>
+  <path d="M9.586,14l-7-7,7-7H11V1.414L5.414,7,11,12.586V14Z"/>
+</symbol><symbol id="icon_Pointer_Right" viewBox="0 0 14 14">
+  <title>icon_Pointer_Right</title>
+  <path d="M4.414,0l7,7-7,7H3V12.586L8.586,7,3,1.414V0Z"/>
+</symbol><symbol id="icon_Pointer_Up" viewBox="0 0 14 14">
+  <title>icon_Pointer_Up</title>
+  <path d="M0,9.586l7-7,7,7V11H12.586L7,5.414,1.414,11H0Z"/>
+</symbol><symbol id="icon_Pointers_Horizontal" viewBox="0 0 14 14">
+  <title>icon_Pointers_Horizontal</title>
+  <path d="M9.205,0l4.7,7-4.7,7H8V12.206L11.5,7,8,1.794V0ZM6,14V12.206L2.5,7,6,1.794V0H4.8L.1,7l4.7,7Z"/>
+</symbol><symbol id="icon_Pointers_Vertical" viewBox="0 0 14 14">
+  <title>icon_Pointers_Vertical</title>
+  <path d="M0,4.8,7,.1l7,4.7V6H12.206L7,2.5,1.794,6H0ZM14,8H12.206L7,11.5,1.794,8H0V9.205l7,4.7,7-4.7Z"/>
+</symbol><symbol id="icon_Search" viewBox="0 0 14 14">
+  <title>icon_Search</title>
+  <path d="M8.5,0A5.494,5.494,0,0,0,3.972,8.614L0,12.586V14H1.414l3.972-3.972A5.5,5.5,0,1,0,8.5,0Zm0,9A3.5,3.5,0,1,1,12,5.5,3.5,3.5,0,0,1,8.5,9Z"/>
+</symbol><symbol id="icon_Unlock" viewBox="0 0 14 14">
+  <title>icon_Unlock</title>
+  <path d="M5,6V4A2,2,0,0,1,9,4h2A4,4,0,0,0,3,4V6H1v8H13V6Zm6,6H3V8h8Z"/>
+</symbol><symbol id="icon_X" viewBox="0 0 14 14">
+  <title>icon_X</title>
+  <path d="M14,12.586V14H12.586L7,8.414,1.414,14H0V12.586L5.586,7,0,1.414V0H1.414L7,5.586,12.586,0H14V1.414L8.414,7Z"/>
 </symbol></svg>
