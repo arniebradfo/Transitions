@@ -21,7 +21,10 @@
 
 		<hr class="heading__rule" />
 
-		<?php echo get_search_form(); ?>
+		
+		<div class="heading__searchform" >
+			<?php echo get_search_form(); ?>
+		</div>
 	
 	</div>
 

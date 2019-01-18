@@ -37,7 +37,7 @@
 	
 	attachNavEvents();
 	closeNav();
-	openNav(); // for debug!
+	// openNav(); // for debug!
 
 })();
 	
