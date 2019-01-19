@@ -186,8 +186,6 @@
 
 	.heading--post-list{}
 
-
-
 	// &:normal //
 	// Text moves up
 	// border is revealed
@@ -199,6 +197,14 @@
 		@offset: @border_Size*2 + @s4;
 
 		.heading__featured-media{
+
+			// white gradient
+			// background color shift under it from
+			// - blue
+			// - to black
+			// overall opacity changes too
+
+			// just animate a transform..?
 
 			&:after{
 				background-image: 
@@ -263,4 +269,20 @@
 		}
 
 	}
+
+	.heading__cover-link:hover{
+		// background: red;
+		//  ~ .heading__wrapper:after {
+		// 	border-color: @accentPrimary_Color;
+		// }
+		~ .heading__rule{
+			background-color: @accentPrimary_Color;
+		}
+		~ .heading__title{
+			color: @fgStrong_Color;
+		}
+
+	}
+
+
 }
