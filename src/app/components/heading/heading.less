@@ -63,8 +63,13 @@
 
 .heading__featured-media{
 	.absolute();
-	background: @bgOverlayLg_Gradient;
-	z-index: -1;
+	
+	&:after{
+		content: '';
+		.absolute(0);
+		background: @bgOverlayLg_Gradient;
+		// z-index: -1;
+	}
 }
 .heading__img{
 	height: 100%;
@@ -92,6 +97,10 @@
 	flex: 1 1 auto;
 }
 
+
+// ----- //
+// TYPES //
+// ----- //
 
 
 // ARCHIVE //
@@ -167,3 +176,91 @@
 	margin: 0 -@s16;
 }
 
+
+
+// ------ //
+// STATES //
+// ------ //
+
+.post{
+
+	.heading--post-list{}
+
+
+
+	// &:normal //
+	// Text moves up
+	// border is revealed
+	.heading__wrapper{
+		transform: translate(0, 0);
+		margin-bottom: @s8;
+		padding-top: @s16;
+
+		@offset: @border_Size*2 + @s4;
+
+		.heading__featured-media{
+
+			&:after{
+				background-image: 
+					linear-gradient( 90deg, fade(white, 50%),  fade(white, 0%)),
+					linear-gradient(-45deg, fade(@accentPrimary_Color, 70%),  fade(@accentPrimary_Color, 0%), fade(@accentPrimary_Color, 0%)),
+					linear-gradient( 45deg,  fade(black, 0%), fade(black, 35%), fade(black, 50%))
+					;
+				@bgSize:  2 * 100%;
+				background-size: @bgSize @bgSize;
+				// background-position: 0% 0%;
+				.transition(background-position background-color);
+				background-color: transparent;
+
+				content: '';
+				.absolute();
+			}
+			.absolute(@offset);
+		}
+
+		position: relative;
+		&:after{
+			content: '';
+			.absolute(0);
+			border: @border_Size*2 solid transparent;
+			border-radius: @border_Radius + @offset;
+			z-index: -1;
+		}
+	}
+	.heading__rule{
+		margin: 0;
+		opacity: 0;
+		.transition(opacity);
+	}
+
+	.heading__meta, .heading__title{
+		transform: translate(0, @s24);
+		.transition(transform);
+	}
+
+	
+	&:hover{
+		.heading__wrapper {
+		// 	transform: translate(0, -@s8);
+			&:after{
+				border-color: @fgWeaker_Color;
+			}
+		}
+
+		.heading__rule{
+			opacity: 1;
+		}
+
+		.heading__meta, .heading__title{
+			transform: translate(0, 0);
+		}
+
+		.heading__featured-media{
+			&:after{
+				background-position: 100% 100%;
+				// background-color: @accentPrimary_Color;
+			}
+		}
+
+	}
+}

@@ -63,21 +63,20 @@ TODOs that are done!
 	- color vars
 	- size vars
 - proper icons and shadows for them
+- finer css
+	- nav animations 
+	- proper heights for headings
 
 ## TODO List
-- nav animations
 - finer css
-	- proper heights for headings
 	- layer image and gradients properly
-	- hover and interaction
-	- nav-primary loading
-	- loading
-	- links for reals
+	- post-link hover and interaction
+	- loading / unloading animations
+- password protected? 
 - what to do about the logo
 - current item style on pagination & menus
 	- button current style? `.current-menu-item`
 		- button current style? 
-- password protected? 
 
 
 ## TODO Later
