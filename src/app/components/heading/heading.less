@@ -196,6 +196,15 @@
 
 		@offset: @border_Size*2 + @s4;
 
+		position: relative;
+		&:after{
+			content: '';
+			.absolute(0);
+			border: @border_Size*2 solid transparent;
+			border-radius: @border_Radius + @offset;
+			z-index: -1;
+		}
+
 		.heading__featured-media{
 
 			// white gradient
@@ -207,31 +216,29 @@
 			// just animate a transform..?
 
 			&:after{
-				background-image: 
-					linear-gradient( 90deg, fade(white, 50%),  fade(white, 0%)),
-					linear-gradient(-45deg, fade(@accentPrimary_Color, 70%),  fade(@accentPrimary_Color, 0%), fade(@accentPrimary_Color, 0%)),
-					linear-gradient( 45deg,  fade(black, 0%), fade(black, 35%), fade(black, 50%))
-					;
-				@bgSize:  2 * 100%;
-				background-size: @bgSize @bgSize;
+				// background-image: 
+				// 	linear-gradient( 90deg, fade(white, 50%),  fade(white, 0%)),
+				// 	linear-gradient(-45deg, fade(@accentPrimary_Color, 70%),  fade(@accentPrimary_Color, 0%), fade(@accentPrimary_Color, 0%)),
+				// 	linear-gradient( 45deg,  fade(black, 0%), fade(black, 35%), fade(black, 50%))
+				// 	;
+				// @bgSize:  2 * 100%;
+				// background-size: @bgSize @bgSize;
 				// background-position: 0% 0%;
-				.transition(background-position background-color);
+				// background-color: transparent;
+				
+				background-image: linear-gradient( 90deg, fade(white, 100%),  fade(white, 0%));
 				background-color: transparent;
-
+				background-color: fade(black, 50%);
+				opacity: 0.3;
+				background-size: 110% 110;
+				.transition(background-color opacity);
+				
 				content: '';
 				.absolute();
 			}
 			.absolute(@offset);
 		}
 
-		position: relative;
-		&:after{
-			content: '';
-			.absolute(0);
-			border: @border_Size*2 solid transparent;
-			border-radius: @border_Radius + @offset;
-			z-index: -1;
-		}
 	}
 	.heading__rule{
 		margin: 0;
@@ -263,8 +270,9 @@
 
 		.heading__featured-media{
 			&:after{
-				background-position: 100% 100%;
-				// background-color: @accentPrimary_Color;
+				// background-position: 100% 100%;
+				background-color: black;
+				opacity: 0.5;
 			}
 		}
 
@@ -280,6 +288,14 @@
 		}
 		~ .heading__title{
 			color: @fgStrong_Color;
+		}
+
+		~ .heading__featured-media{
+			&:after{
+				// background-position: 100% 100%;
+				opacity: 0.7;
+				background-color: @accentDeep_Color;
+			}
 		}
 
 	}
