@@ -16,7 +16,7 @@
 	$featured_media_class_suffix = ( $has_featured_media ? 'has' : 'lacks') . '-featured-media';
 ?>
 <!-- heading-post.php -->
-<header class="heading heading--post-list heading--<?php echo $featured_media_class_suffix; ?>">
+<header class="heading heading--post-list heading--interactive heading--<?php echo $featured_media_class_suffix; ?>">
 
 	<div class="heading__wrapper">
 
@@ -37,7 +37,7 @@
 				<?php echo get_the_date(); ?>
 			</time>
 			&#47;
-			<a class"heading__meta-author" 
+			<a class="heading__meta-author" 
 				href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
 				<?php the_author(); ?>
 			</a>

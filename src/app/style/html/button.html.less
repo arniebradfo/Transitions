@@ -73,6 +73,11 @@
 		background-color: @bgPrimary_Color;
 	}
 }
+.button--fill-light(){
+	&::after{
+		background-color: fade(@bgPrimary_Color, @fgWeak_Opacity * 100%);
+	}
+}
 
 .button--outline(){
 	&::after{
@@ -159,6 +164,7 @@ button,
 }
 
 .button--fill{.button--fill();}
+.button--fill-light{.button--fill-light();}
 .button--outline{.button--outline();}
 .button--emphasis{.button--emphasis();}
 .button--large{.button--large();}

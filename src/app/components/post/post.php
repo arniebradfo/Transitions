@@ -13,7 +13,7 @@
 ?>
 
 <!-- post.php -->
-<article <?php post_class('post post--'.(is_singular() ? 'full' : 'in-list' )); ?> 
+<article <?php post_class('post '.(is_singular() ? 'post--full' : 'post--in-list' )); ?> 
 	id="post-<?php the_ID(); ?>">
 
 	<?php 

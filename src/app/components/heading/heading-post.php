@@ -44,7 +44,7 @@
 				<?php the_date(); ?>
 			</time>
 			&#47;
-			<a class"heading__meta-author" 
+			<a class="heading__meta-author" 
 				href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
 				<?php the_author(); ?>
 			</a>

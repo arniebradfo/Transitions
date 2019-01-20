@@ -16,9 +16,16 @@
 	$featured_media_class_suffix = ( $has_featured_media ? 'has' : 'lacks') . '-featured-media';
 ?>
 <!-- heading-post.php -->
-<header class="heading heading--post-adjacent heading--<?php echo $featured_media_class_suffix; ?>">
+<header class="heading heading--post-adjacent heading--interactive heading--<?php echo $featured_media_class_suffix; ?>">
 
 	<div class="heading__wrapper">
+
+		<?php # this comes first so the css ~ .sibling selector will work ?>
+		<a class="heading__primary-button button button--fill-light" 
+			href="<?php echo esc_url( get_permalink() ) ?>" 
+			rel="bookmark">
+			Read more
+		</a>
 
 		<a class="heading__cover-link button--custom" 
 			href="<?php echo esc_url( get_permalink() ) ?>" 
@@ -42,7 +49,7 @@
 				<?php echo get_the_date(); ?>
 			</time>
 			&#47;
-			<a class"heading__meta-author" 
+			<a class="heading__meta-author" 
 				href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
 				<?php the_author(); ?>
 			</a>
@@ -58,12 +65,6 @@
 			'<a class="heading__tag button" ', // all links need classes
 			get_the_tag_list('<p class="heading__tags">', ' ', '</p>')
 		); ?>
-
-		<a class="heading__primary-button button button--fill" 
-			href="<?php echo esc_url( get_permalink() ) ?>" 
-			rel="bookmark">
-			Read more
-		</a>
 
 	</div>
 

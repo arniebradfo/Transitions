@@ -42,13 +42,15 @@
 // https://medium.com/the-missing-bit/mitigating-css-gradient-banding-45b88493d228
 @bgOverlay_Color: fade(black, 10%);
 @bgOverlay_Gradient: linear-gradient(-45deg, fade(black, 20%), fade(black, 05%));
+@x:1.2; @y:0.07;
 @bgOverlayLg_Gradient:
-	linear-gradient(-40deg, fade(black, 2%), fade(black, 0.2%)),
-	linear-gradient(-52deg, fade(black, 2%), fade(black, 0.3%)),
-	linear-gradient(-58deg, fade(black, 3%), fade(black, 0.4%)),
-	linear-gradient(-71deg, fade(black, 3%), fade(black, 0.5%)),
-	// linear-gradient(-88deg, fade(black, 4%), fade(black, 0.6%)),
-	linear-gradient(-45deg, fade(black, 4%), fade(black, 0.7%));
+	linear-gradient(-40deg, fade(black, 2*@x), fade(black, 0*@y)),
+	linear-gradient(-52deg, fade(black, 2*@x), fade(black, 0*@y)),
+	linear-gradient(-58deg, fade(black, 3*@x), fade(black, 0*@y)),
+	linear-gradient(-71deg, fade(black, 3*@x), fade(black, 0*@y)),
+	linear-gradient(-88deg, fade(black, 4*@x), fade(black, 0*@y)),
+	linear-gradient(-36deg, fade(black, 9*@x), fade(black, 0*@y)),
+	linear-gradient(-45deg, fade(black, 4*@x), fade(black, 0*@y));
 // @bgOverlayLg_Gradient: svg-gradient(to bottom right,  fade(black, 05%), fade(black, 20%));
 // @bgOverlayLg_Gradient: linear-gradient(-45deg, darken(white, 10%), black);
 
