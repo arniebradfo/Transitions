@@ -34,7 +34,7 @@
 
 		<?php if ( '' !== get_the_post_thumbnail() ): ?>
 			<div class="heading__featured-media"> 
-				<?php the_post_thumbnail( 'full', ['class'=>'heading__img'] ); ?>
+				<?php the_post_thumbnail( 'full', ['class'=>'heading__img jsTarget-parallax--bottom'] ); ?>
 			</div>
 
 		<?php else: ?>
