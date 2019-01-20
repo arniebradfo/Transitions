@@ -11,7 +11,6 @@
 	text-decoration: unset;
 	
 	.text_Shadow();
-	font-weight: @bold_Weight;
 	color: @fgStrong_Color;
 	
 	display: inline-flex;
@@ -139,7 +138,7 @@
 
 // CLASSES //
 
-.button--icon{
+.button--icon{ // button that is only an icon
 	width:  @buttonLg_Size;
 	height: @buttonLg_Size;
 	&:after{
@@ -147,6 +146,9 @@
 	}
 	padding: 0;
 	justify-content: center;
+}
+.button__icon{ // an icon that is in a button
+	margin-left: 1em;
 }
 
 a{

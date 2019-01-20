@@ -66,19 +66,28 @@ TODOs that are done!
 - finer css
 	- nav animations 
 	- proper heights for headings
-
-## TODO List
-- finer css
 	- post-link hover and interaction
 		- layer image and gradients properly
 		- make sure everything animates smoothly
 		- undo side effects
+	
+
+## TODO List
+- finer css
+	- heading and footer parallax
+	- more left-right alignment - col rules
 	- loading / unloading animations
+		- active animations?
 - password protected? 
-- what to do about the logo
+- featured post 
+- buttons
+	- outline
+	- focus stuff
+	- click only
 - current item style on pagination & menus
 	- button current style? `.current-menu-item`
 		- button current style? 
+- what to do about the logo
 
 
 ## TODO Later
