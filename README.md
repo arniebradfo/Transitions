@@ -69,8 +69,10 @@ TODOs that are done!
 
 ## TODO List
 - finer css
-	- layer image and gradients properly
 	- post-link hover and interaction
+		- layer image and gradients properly
+		- make sure everything animates smoothly
+		- undo side effects
 	- loading / unloading animations
 - password protected? 
 - what to do about the logo
