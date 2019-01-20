@@ -51,6 +51,7 @@
 			background-position: 50% 50%;
 			background-color: @accentBright_Color;
 			transition-duration: @hover_Duration;
+			border-color: @fgWeaker_Color;
 		}
 	}
 
@@ -65,6 +66,12 @@
 			transition-duration: @active_Duration;
 		}
 	}
+
+	// &:focus{
+	// 	&::after{
+	// 		border-color: @fgWeak_Color;
+	// 	}
+	// }
 }
 
 .button--fill(){

@@ -203,8 +203,10 @@
 	}
 }
 .heading__searchform{
-
 	margin: 0 -@s16;
+	.searchform__input:not(:hover):not(:active):not(:focus){
+		.input--no-outline();
+	}
 }
 
 // ARCHIVE //

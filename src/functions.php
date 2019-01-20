@@ -128,6 +128,7 @@ function get_page_number(){
 
 // shortcode component includes
 include_once('icon.php');
+include_once('password-form.php');
 
 // adds $link_class and $first_link_class
 function trns_wp_nav_menu( $args = array() ) {

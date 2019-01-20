@@ -40,13 +40,12 @@
 	background-color: @bgPrimary_Color;
 	.transition(color border-color background-color);
 
-	@placeholder_Rules:{
+	.placeholder({
 		color: @fgWeak_Color;
 		opacity: 1;
 		.meta_Type(); // Why so error? Compiles fine.
 		.transition(color);
-	};
-	.placeholder(@placeholder_Rules);
+	});
 
 	&:hover{
 		border-color: @accentBright_Color;
@@ -75,11 +74,13 @@
 		});
 	}
 
-
-
-
 }
 
 input{
 	.input();
 }
+
+.input--no-outline(){
+	border-color: transparent;
+}
+.input--no-outline{.input--no-outline();}

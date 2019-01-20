@@ -70,27 +70,29 @@ TODOs that are done!
 		- layer image and gradients properly
 		- make sure everything animates smoothly
 		- undo side effects
+	- heading and footer parallax
+- password protected? 
 	
 
 ## TODO List
 - finer css
-	- heading and footer parallax
 	- more left-right alignment - col rules
+	- screen-size test
+	- browser test
 	- loading / unloading animations
 		- active animations?
-- password protected? 
-- featured post 
 - buttons
 	- outline
-	- focus stuff
-	- click only
-- current item style on pagination & menus
-	- button current style? `.current-menu-item`
-		- button current style? 
-- what to do about the logo
+	- focus stuff?
+	- press/touch only?
 
 
 ## TODO Later
+- current item style on pagination & menus
+	- button current style? `.current-menu-item`
+		- button current style? 
+- featured post 
+- what to do about the logo
 - document build and release process
 - rel and aria
 - output screenshot
