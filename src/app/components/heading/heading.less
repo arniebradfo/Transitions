@@ -6,6 +6,10 @@
 	height: @viewHeight *1vh;
 	height: calc(@1vh * @viewHeight);
 }
+.heading_MinHeight(@viewHeight: 20){
+	min-height: @viewHeight *1vh;
+	min-height: calc(@1vh * @viewHeight);
+}
 
 .heading{
 	position: relative;
@@ -114,9 +118,6 @@
 // ----- //
 
 
-// ARCHIVE //
-.heading--archive{}
-
 // HOME //
 .heading--home{
 	.heading__wrapper{
@@ -195,10 +196,23 @@
 }
 
 // SEARCH //
-.heading--search{}
+.heading--search{
+	.heading__wrapper{
+		.heading_MinHeight();
+	}
+}
 .heading__searchform{
+
 	margin: 0 -@s16;
 }
+
+// ARCHIVE //
+.heading--archive{
+	.heading__wrapper{
+		.heading_MinHeight();
+	}
+}
+
 
 
 

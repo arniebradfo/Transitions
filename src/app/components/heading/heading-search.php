@@ -9,9 +9,12 @@
 			<?php bloginfo( 'name' ); ?>
 		</a>
 
+		<div class="heading__flex-splitter"></div>		
+
 		<div class="heading__featured-media heading__featured-media--empty"></div> 
 
 		<div class="heading__meta">
+			Search Results: 
 			Page #<?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
 		</div>
 
@@ -19,8 +22,7 @@
 			<?php echo get_search_query() ?>
 		</h1>
 
-		<hr class="heading__rule" />
-
+		<!-- <hr class="heading__rule" /> -->
 		
 		<div class="heading__searchform" >
 			<?php echo get_search_form(); ?>
