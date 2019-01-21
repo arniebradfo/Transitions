@@ -30,6 +30,8 @@
 
 <body <?php body_class(); ?>>
 
+	<div class="visually-hidden jsTarget-transitionEnd"></div>
+	
 	<div class="visually-hidden">
 		<?php get_template_part('icon-defs'); ?>
 	</div>

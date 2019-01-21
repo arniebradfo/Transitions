@@ -1,0 +1,22 @@
+
+body{
+	opacity: 0; 
+	// transform: translate3d(0, 100px, 0); 
+	outline-color: transparent;
+	.transition(opacity transform outline-color, ease, @exitAnimation_Duration);
+
+	&.jsState-styleLoaded {
+		opacity: 1; 
+		transform: translate3d(0,0,0); 
+		outline-color: black;
+	}
+
+}
+
+.jsTarget-transitionEnd{
+	opacity: 0;
+	.transition(opacity, ease, @exitAnimation_Duration);
+}
+.jsState-styleLoaded .jsTarget-transitionEnd{
+	opacity: 1;
+}
