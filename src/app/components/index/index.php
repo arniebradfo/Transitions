@@ -23,6 +23,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
+	<?php  echo '<style type="text/css" id="critical-css">';
+		echo file_get_contents(get_template_directory_uri()."/critical.css");
+	echo '</style>'; ?>
 </head>
 
 <body <?php body_class(); ?>>

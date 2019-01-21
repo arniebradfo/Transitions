@@ -13,7 +13,10 @@ const svgstore = require('gulp-svgstore')
 const dist = '../transitions-dist';
 
 const buildCss = () => {
-    return gulp.src('./src/app/style/style.less')
+    return gulp.src([
+			'./src/app/style/style.less',
+			'./src/app/style/critical.less',
+		])
         .pipe(less({
             plugins: [ require('less-plugin-glob') ]
         }))

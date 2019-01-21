@@ -74,15 +74,21 @@ TODOs that are done!
 	- heading and footer parallax
 	- more left-right alignment - col rules
 	- screen-size test
+- 404
+- no posts
 	
 
 ## TODO List
 - finer css
 	- browser test
+	- critical css - is
+	- active animations?
 	- loading / unloading animations
-		- active animations?
-- 404
-- no posts
+		- load with css that hides
+		- add a class that removes hiding
+
+		- load with critical css class that hides
+		- remove the class with js - if we have the external stylesheet
 - buttons
 	- outline
 	- focus stuff?
