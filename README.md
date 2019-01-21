@@ -63,6 +63,7 @@ TODOs that are done!
 	- color vars
 	- size vars
 - proper icons and shadows for them
+- password protected? 
 - finer css
 	- nav animations 
 	- proper heights for headings
@@ -71,12 +72,11 @@ TODOs that are done!
 		- make sure everything animates smoothly
 		- undo side effects
 	- heading and footer parallax
-- password protected? 
+	- more left-right alignment - col rules
 	
 
 ## TODO List
 - finer css
-	- more left-right alignment - col rules
 	- screen-size test
 	- browser test
 	- loading / unloading animations

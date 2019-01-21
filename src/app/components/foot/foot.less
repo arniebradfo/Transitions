@@ -7,8 +7,7 @@
 }
 .footer__wrapper{
 	@column_Rules();
-	padding: @s8 @s16;
-
+	padding: @s8 (@column_Padding - @s16);
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -32,7 +31,4 @@
 		margin: 0;
 	}
 }
-
-.footer__menu-link{
-	
-}
+.footer__menu-link{}

@@ -18,11 +18,10 @@
 @border_Radius: (@button_Size / 2);
 @borderSm_Radius: @s4;
 
-@column_MaxWidth: @s8*90;
-@column_Padding: @s32;
-
 @1vh: var(--vh, 1vh); // vh-unit.js
 
+@column_MaxWidth: @s8*90;
+@column_Padding: @s32;
 @column_Rules:{
 	margin: 0 auto;
 	max-width: @column_MaxWidth;
@@ -50,4 +49,3 @@
 @mobilePlusOne_Breakpoint: (@mobile_Breakpoint + 1);
 @state-mobile: ~'screen and (max-width: @{mobile_Breakpoint})';
 @state-not-mobile: ~'screen and (min-width: @{mobilePlusOne_Breakpoint})';
-
