@@ -33,6 +33,16 @@ const buildCss = () => {
         .pipe(livereload())
 }
 
+const minifyCSS = () => {
+    return gulp.src([
+			dist + '/style.css',
+			dist + '/critical.css'
+		])
+        .pipe(cssnano())
+        // .pipe(rename(path => path.basename += '.min'))
+        .pipe(gulp.dest(dist))
+}
+
 const buildSvg = () => {
 	return gulp.src(['./src/app/icons/*.svg'])
 		.pipe(svgstore({ inlineSvg: true }))
@@ -49,6 +59,13 @@ const buildJs = () => {
 		.pipe(concat('script.js'))
 		.pipe(gulp.dest(dist))
 		.pipe(livereload())
+}
+
+const minifyJS = () => {
+    return gulp.src([dist + '/script.js'])
+        .pipe(uglify())
+        // .pipe(rename(path => path.basename += '.min'))
+        .pipe(gulp.dest(dist))
 }
 
 const copyPhpTemplates = () => {
@@ -83,20 +100,7 @@ const watch = () => {
 
 
 const build = gulp.series(clean, buildSvg, gulp.parallel(buildJs, buildCss, copyPhpTemplates));
+const minify = gulp.parallel(minifyCSS, minifyJS);
 gulp.task('default', build)
 gulp.task('dev', gulp.series(build, watch))
-
-
-// const minifyCSS = () => {
-//     return gulp.src('./dist/hesh.css')
-//         .pipe(cssnano())
-//         .pipe(rename(path => path.basename += '.min'))
-//         .pipe(gulp.dest(dist))
-// }
-
-// const minifyJS = () => {
-//     return gulp.src('./dist/hesh.js')
-//         .pipe(uglify())
-//         .pipe(rename(path => path.basename += '.min'))
-//         .pipe(gulp.dest(dist))
-// }
+gulp.task('package', gulp.series(build, minify))

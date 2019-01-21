@@ -9,8 +9,8 @@
 
 	function isCssMainLoaded() {
 		var sheets = document.styleSheets;
-		for (let i = 0; i < sheets.length; i++) {
-			const sheet = sheets[i];
+		for (var i = 0; i < sheets.length; i++) {
+			var sheet = sheets[i];
 			if (sheet.href.match(/\/style.css/ig))
 				return true;
 		}
