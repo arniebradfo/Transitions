@@ -73,14 +73,16 @@ TODOs that are done!
 		- undo side effects
 	- heading and footer parallax
 	- more left-right alignment - col rules
+	- screen-size test
 	
 
 ## TODO List
 - finer css
-	- screen-size test
 	- browser test
 	- loading / unloading animations
 		- active animations?
+- 404
+- no posts
 - buttons
 	- outline
 	- focus stuff?

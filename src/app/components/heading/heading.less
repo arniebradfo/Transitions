@@ -2,14 +2,16 @@
 // heading.less //
 // .heading--has-featured-media | .heading--lacks-featured-media
 
-.heading_Height(@viewHeight: 70){
-	height: @viewHeight *1vh;
-	height: calc(@1vh * @viewHeight);
-}
-.heading_MinHeight(@viewHeight: 20){
+
+.heading_MinHeight(@viewHeight: 70, @viewHeightShort: 80){
 	min-height: @viewHeight *1vh;
 	min-height: calc(@1vh * @viewHeight);
+	@media @mobileLandscape_Media{
+		min-height: @viewHeightShort *1vh;
+		min-height: calc(@1vh * @viewHeightShort);
+	}
 }
+
 
 .heading{
 	position: relative;
@@ -21,7 +23,6 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-
 }
 
 .heading__site-title{
@@ -32,12 +33,16 @@
 
 .heading__logo{
 	margin: @s32 0;
+	
 	// TODO: account for other sizes?
 	.custom-logo{
 		height: @s8*24;
 		max-width: 100%;
 		filter: drop-shadow( 0px 3px 6px @textShadow_Color);
 		// opacity: @fgPrimary_Opacity;
+		@media @mobileLandscape_Media{
+			height: @s8*16;
+		}
 	}
 }
 
@@ -55,6 +60,9 @@
 	.subtitle_Type();
 	margin: 0;
 	margin-bottom: @s32 * 2;
+	@media @mobileLandscape_Media{
+		margin-bottom: @s24;
+	}
 }
 
 .heading__menu{
@@ -122,21 +130,29 @@
 // HOME //
 .heading--home{
 	.heading__wrapper{
-		.heading_Height();
+		.heading_MinHeight();
+	}
+	@media @mobileLandscape_Media{
+		.heading__title{
+			margin-bottom: @s8;
+		}
+		.heading__rule{
+			margin-bottom: @s8;
+		}
 	}
 }
 
 // PAGE //
 .heading--page{
 	.heading__wrapper{
-		.heading_Height();
+		.heading_MinHeight();
 	}
 }
 
 // POST PAGE //
 .heading--post-full{
 	.heading__wrapper{
-		.heading_Height();
+		.heading_MinHeight();
 		
 	}
 	.heading__tags{
@@ -148,7 +164,7 @@
 // ADJACENT POST //
 .heading--post-adjacent{
 	.heading__wrapper{
-		.heading_Height();
+		.heading_MinHeight();
 		justify-content: center;
 	}
 	.heading__tags{
@@ -174,7 +190,8 @@
 .heading--post-list{
 	&.heading--has-featured-media{
 		.heading__wrapper{
-			.heading_Height(30);
+			.heading_MinHeight(30, 50);
+			// height: @s8*50;
 		}
 	}
 	.heading__wrapper{
@@ -199,7 +216,7 @@
 // SEARCH //
 .heading--search{
 	.heading__wrapper{
-		.heading_MinHeight();
+		.heading_MinHeight(50);
 	}
 }
 .heading__searchform{
@@ -212,7 +229,7 @@
 // ARCHIVE //
 .heading--archive{
 	.heading__wrapper{
-		.heading_MinHeight();
+		.heading_MinHeight(50);
 	}
 }
 

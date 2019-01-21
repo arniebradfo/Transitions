@@ -41,7 +41,7 @@
 				get_template_part('copyright', 'post');
 
 		} else {
-			the_excerpt();
+			echo '<p>' . get_the_excerpt() . '</p>';
 		} ?>
 	</div>
 	

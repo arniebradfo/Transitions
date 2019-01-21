@@ -6,12 +6,16 @@
 	padding: @s1 0;
 }
 .footer__wrapper{
-	@column_Rules();
-	padding: @s8 (@column_Padding - @s16);
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-
+	
+	@column_Rules();
+	padding: @s12 (@column_Padding - @s16) 0;
+	.searchform, .footer__menu{
+		margin-bottom: @s12;
+	}
+	
 	.searchform{
 		flex: 1 1 auto;
 	}
