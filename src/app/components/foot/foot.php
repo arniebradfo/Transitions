@@ -32,7 +32,7 @@
 		get_template_part('copyright', 'footer'); 
 
 	elseif ($adjacent_post = get_previous_post()) { 
-		// TODO: option to go forwards or backwards with the adject post
+		// TODO: option to go forwards or backwards with the adjacent post
 		$posts = array($adjacent_post); 
 		if (have_posts()) : while (have_posts()) : the_post() ;
 			get_template_part('heading', 'postAdjacent');

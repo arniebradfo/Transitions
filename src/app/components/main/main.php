@@ -27,7 +27,10 @@ if( is_singular() ) {
 } elseif( is_archive() ) {
 	get_template_part('heading', 'archive');
 
-} else {
+} elseif( is_404() ) {
+	get_template_part('heading', 'error');
+
+} else { //
 	get_template_part('heading', 'archive');
 
 } ?>
@@ -45,8 +48,11 @@ if( is_singular() ) {
 		?>
 
 	<?php else : // if there are no posts ?>
-		<p>there are no posts!!!</p>
-
+		<div class="post__content">
+			<h2>Nothing matches the request</h2>
+			<p>Sorry. Please try again.</p>
+			<?php // echo get_search_form(); ?>
+		</div>
 	<?php endif; ?>
 
 <?php if( ! is_singular() ) 
