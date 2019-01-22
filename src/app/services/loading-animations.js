@@ -31,17 +31,14 @@
 	}
 
 	var unloading = false;
-	function onUnload(event) {
-		// console.log(event);
-		if (!unloading)
-			event.preventDefault();
+	function onUnload(event) {		
+		if (unloading) return;
 
+		event.preventDefault();
 		document.body.classList.remove('jsState-styleLoaded');
 
 		document.getElementsByClassName('jsTarget-transitionEnd')[0]
-			.addEventListener('transitionend', function (transitionEvent) {
-				// console.log(transitionEvent);
-				
+			.addEventListener('transitionend', function (transitionEvent) {				
 				unloading = true;
 				switch (event.type) {
 					case 'click':
@@ -49,6 +46,9 @@
 						break;
 					case 'submit':
 						event.target.submit();
+						break;
+					case 'popstate':
+						history.go(-2);
 						break;
 					default:
 						break;
@@ -60,6 +60,7 @@
 	function bindNavigatingElements() {
 		for (var i = 0; i < document.links.length; i++) {
 			var link = document.links[i];
+			// TODO: what to do if target is external?
 			link.addEventListener('click', onUnload, false);
 		}
 		for (var i = 0; i < document.forms.length; i++) {
@@ -74,9 +75,12 @@
 	document.addEventListener('DOMContentLoaded', maybeInitialize);
 	window.addEventListener('load', maybeInitialize);
 	if (cssMain)
-		cssMain.addEventListener('load', maybeInitialize);
-	
+		cssMain.addEventListener('load', maybeInitialize);	
+
 	document.addEventListener('DOMContentLoaded', bindNavigatingElements);
+
+	history.pushState({href:window.location.href},'test', window.location.href);
+	window.addEventListener('popstate', onUnload);
 
 	// window.addEventListener('beforeunload', onUnload, false);
 	// window.addEventListener('popstate', onUnload);

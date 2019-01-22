@@ -1,16 +1,20 @@
 
 body{
 	opacity: 0; 
-	// transform: translate3d(0, 100px, 0); 
-	outline-color: transparent;
-	.transition(opacity transform outline-color, ease, @exitAnimation_Duration);
+	.transition(opacity, linear, @exitAnimation_Duration);
 
 	&.jsState-styleLoaded {
 		opacity: 1; 
-		transform: translate3d(0,0,0); 
-		outline-color: black;
 	}
 
+}
+
+.post-list{
+	transform: translate3d(0, 100px, 0); 
+	.transition(opacity transform outline-color, ease, @exitAnimation_Duration);
+	.jsState-styleLoaded &{
+		transform: translate3d(0,0,0); 
+	}
 }
 
 .jsTarget-transitionEnd{
