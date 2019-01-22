@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon_Arrow_Down" viewBox="0 0 14 14">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon_Arrow_Down" viewBox="0 0 14 14">
   <title>icon_Arrow_Down</title>
   <path d="M1,7.414V6H2.414L6,9.586V0H8V9.586L11.586,6H13V7.414l-6,6Z"/>
 </symbol><symbol id="icon_Arrow_Left" viewBox="0 0 14 14">
