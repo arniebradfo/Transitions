@@ -84,11 +84,9 @@ TODOs that are done!
 	- critical css - is
 	- active animations?
 	- loading / unloading animations
-		- load with css that hides
-		- add a class that removes hiding
-
 		- load with critical css class that hides
 		- remove the class with js - if we have the external stylesheet
+		- what happens without js
 - buttons
 	- outline
 	- focus stuff?

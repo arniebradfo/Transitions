@@ -60,7 +60,7 @@
 	function bindNavigatingElements() {
 		for (var i = 0; i < document.links.length; i++) {
 			var link = document.links[i];
-			// TODO: what to do if target is external?
+			if (link.target == '_blank') continue;
 			link.addEventListener('click', onUnload, false);
 		}
 		for (var i = 0; i < document.forms.length; i++) {
