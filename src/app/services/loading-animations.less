@@ -1,12 +1,14 @@
 
 body{
-	opacity: 0; 
 	.transition(opacity, linear, @exitAnimation_Duration);
+	
+	&.jsState-styleUnloaded {
+		opacity: 0; 
+	}
 
 	&.jsState-styleLoaded {
 		opacity: 1; 
 	}
-
 }
 
 .post-list{

@@ -23,12 +23,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
-	<?php  echo '<style type="text/css" id="critical-css">';
-		echo file_get_contents(get_template_directory_uri()."/critical.css");
-	echo '</style>'; ?>
+	<style type="text/css" id="critical-css">
+		<?php echo file_get_contents(get_template_directory_uri()."/critical.css"); ?>
+		.arniebradfo{ content:'All Killer. No Filler.'; }
+	</style>
 </head>
 
 <body <?php body_class(); ?>>
+
+	<script type="text/javascript" id="js-test">
+		document.body.classList.add('jsState-styleUnloaded');
+	</script>
 
 	<div class="visually-hidden jsTarget-transitionEnd"></div>
 	
