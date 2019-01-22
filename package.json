@@ -1,11 +1,11 @@
 {
   "name": "transitions",
-  "version": "3.0.0",
-  "description": "A wordpress theme",
+  "version": "0.0.1",
+  "description": "A custom WordPress theme with magical page load and unload transitions.",
   "main": "gulpfile.js",
   "scripts": {
     "build": "gulp build",
-    "watch": "gulp"
+    "watch": "gulp dev"
   },
   "repository": {
     "type": "git",
