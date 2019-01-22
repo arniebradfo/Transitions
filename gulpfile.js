@@ -106,7 +106,6 @@ const watch = () => {
 
 const build = gulp.series(clean, buildSvg, gulp.parallel(buildJs, buildCss, copyPhpTemplates));
 const minify = gulp.parallel(minifyCSS, minifyJS);
-gulp.task('clean', clean)
 gulp.task('default', build)
 gulp.task('dev', gulp.series(build, watch))
 gulp.task('package', gulp.series(build, minify))
