@@ -15,7 +15,8 @@
  * @version 1.0
  */
 
-?><!DOCTYPE html><!-- index.php -->
+?><!DOCTYPE html>
+<?php echo trns_ascii_logo(); ?>
 <html <?php language_attributes(); ?>>
 
 <head>
@@ -29,6 +30,7 @@
 	</style>
 </head>
 
+<!-- index.php -->
 <body <?php body_class(); ?>>
 
 	<script type="text/javascript" id="js-test">
