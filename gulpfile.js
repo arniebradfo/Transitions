@@ -10,7 +10,7 @@ const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 const svgstore = require('gulp-svgstore')
 
-const dist = '../transitions-dist';
+const dist = '../transitions';
 
 const buildCss = () => {
     return gulp.src([
@@ -76,7 +76,12 @@ const copyPhpTemplates = () => {
 }
 
 const clean = () => {
-	return del([ dist ],{ force: true });
+	return del([ 
+		dist + '/*.html',
+		dist + '/*.php',
+		dist + '/*.css',
+		dist + '/*.js'
+	],{ force: true });
 }
 
 const watch = () => {
@@ -101,6 +106,7 @@ const watch = () => {
 
 const build = gulp.series(clean, buildSvg, gulp.parallel(buildJs, buildCss, copyPhpTemplates));
 const minify = gulp.parallel(minifyCSS, minifyJS);
+gulp.task('clean', clean)
 gulp.task('default', build)
 gulp.task('dev', gulp.series(build, watch))
 gulp.task('package', gulp.series(build, minify))
