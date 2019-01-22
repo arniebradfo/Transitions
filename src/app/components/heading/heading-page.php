@@ -16,7 +16,7 @@
 	$featured_media_class_suffix = ( $has_featured_media ? 'has' : 'lacks') . '-featured-media';
 ?>
 <!-- heading-post.php -->
-<header class="heading heading--page heading--<?php echo $featured_media_class_suffix; ?>">
+<header class="heading heading--page heading--<?php echo $featured_media_class_suffix; ?>" id="heading">
 
 	<div class="heading__wrapper">
 

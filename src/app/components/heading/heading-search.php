@@ -1,5 +1,5 @@
 <!--heading-archive.php-->
-<header class="heading heading--search heading--lacks-featured-media">
+<header class="heading heading--search heading--lacks-featured-media" id="heading">
 
 	<div class="heading__wrapper">
 

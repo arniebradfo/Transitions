@@ -32,6 +32,10 @@
 
 	var unloading = false;
 	function onUnload(event) {		
+		
+		// if its an anchor link press
+		if (event.type === 'popstate' && event.state == null) return;
+
 		if (unloading) return;
 
 		event.preventDefault();
@@ -57,10 +61,19 @@
 			});
 	}
 
+	function anchorNavigation(event) {
+		// TODO: animate? body{scroll-behavior: smooth;}
+		// https://css-tricks.com/snippets/jquery/smooth-scrolling/
+	}
+
 	function bindNavigatingElements() {
 		for (var i = 0; i < document.links.length; i++) {
 			var link = document.links[i];
 			if (link.target == '_blank') continue;
+			if (link.pathname == window.location.pathname) {
+				link.addEventListener('click', anchorNavigation, false);
+				continue;
+			}				
 			link.addEventListener('click', onUnload, false);
 		}
 		for (var i = 0; i < document.forms.length; i++) {
@@ -79,7 +92,8 @@
 
 	document.addEventListener('DOMContentLoaded', bindNavigatingElements);
 
-	history.pushState({href:window.location.href},'test', window.location.href);
+	history.replaceState( { href:window.location.href },'replace');
+	history.pushState(    { href:window.location.href },'push');
 	window.addEventListener('popstate', onUnload);
 
 	// window.addEventListener('beforeunload', onUnload, false);

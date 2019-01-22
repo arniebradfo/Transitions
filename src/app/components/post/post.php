@@ -25,7 +25,7 @@
 			get_template_part('heading', 'postList'); 
 	?>
 
-	<div class="post__content">
+	<div class="post__content" <?php if ( is_singular() ) echo 'id="post-content"' ?> >
 		<?php
 		if ( is_singular() ) {
 

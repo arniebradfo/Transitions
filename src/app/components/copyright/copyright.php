@@ -1,4 +1,4 @@
-<p class="copyright">
+<p class="copyright" id ="copyright">
 	<?php get_template_part('logo'); ?>
 	<small class="copyright__text">
 		&copy;<?php echo date("Y"); ?> 

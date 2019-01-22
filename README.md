@@ -79,6 +79,8 @@ TODOs that are done!
 	
 
 ## TODO List
+- github updater
+- add ids for anchor links
 - finer css
 	- browser test
 	- critical css - is

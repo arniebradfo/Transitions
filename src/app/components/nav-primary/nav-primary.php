@@ -1,10 +1,10 @@
 <!-- nav-primary.php -->
-<button class="nav__button button--icon jsTarget-navButton">
+<button class="nav__button button--icon jsTarget-navButton" id="primary-navigation-button">
 	<?php echo trns_icon_component(['name'=>'Menu', 'class'=>'nav__icon nav__open-icon']) ?>
 	<?php echo trns_icon_component(['name'=>'X', 'class'=>'nav__icon nav__close-icon']) ?>
 </button>
 
-<header class="nav">
+<header class="nav" id="primary-navigation">
 		
 	<div class="nav__header">
 		<div class="nav__logo">		

@@ -12,7 +12,7 @@
 
 
 <!-- heading-home.php -->
-<section class="heading heading--home heading--lacks-featured-media">
+<section class="heading heading--home heading--lacks-featured-media" id="heading">
 
 	<div class="heading__wrapper">
 

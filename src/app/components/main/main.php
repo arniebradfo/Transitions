@@ -36,7 +36,7 @@ if( is_singular() ) {
 } ?>
 
 <?php if( ! is_singular() ) 
-	echo '<div class="post-list">'; ?>
+	echo '<div class="post-list" id="post-list">'; ?>
 
 	<?php if ( have_posts() ) : ?>
 	
