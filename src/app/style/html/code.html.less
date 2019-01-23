@@ -1,0 +1,25 @@
+// CODE //
+
+.code() {
+	.monoSpace_Type();
+	.inlineBackground_Spacing();
+	border-radius: @borderSm_Radius;
+	color: @fgStrong_Color;
+	background-color: @bgOverlay_Color;
+}
+.kbd() {
+	.code();
+	// border-radius: @border_Radius;
+	border-bottom: 2px solid @bgOverlay_Color;
+}
+.pre() {
+	.code();
+	padding: 0.5em 0.7em;
+	overflow: auto;
+}
+
+
+// EXPORT //
+code, samp { .code(); }
+kbd { .kbd(); }
+pre { .pre(); }
