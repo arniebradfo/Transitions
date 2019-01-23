@@ -1,0 +1,24 @@
+// js-no-hover-on-scroll.scss
+
+/*
+
+http://habrahabr.ru/post/204238/
+
+add class with "pointer-events:none;" to body onScroll using js
+
+*/
+
+#wrapper.during-scroll, #wrapper.during-scroll *{
+	pointer-events:none !important;
+}
+
+/*
+ 
+or
+require a body class for all hover state transitions
+remove that body class with js when scrolling to disable hover states taking up graphics memory
+or  
+maybe add a cover over the entire page when scrolling
+so that all elements are not hoverable
+
+*/

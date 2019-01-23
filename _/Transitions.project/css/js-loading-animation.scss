@@ -1,0 +1,38 @@
+// js-loading-animation.scss
+
+
+$threshold:50px; // must match the  thresholdExpand var in "jquery.viewportSelectors.js" 
+
+.below-the-fold{
+	opacity: 0;
+	@include transform( translateY($threshold)  ); 
+}
+
+.image-below-the-fold{
+	opacity: 0;
+	@include transform( scale(.8) );
+}
+
+.in-viewport{
+	opacity: 1;
+	@include transform( translateY(0px)  );
+	@include transition(all, .5s, $rushOut);
+}
+
+.image-in-viewport{
+	opacity: 1;
+	@include transform( scale(1) );
+	@include transition(all, .7s, $rushOut);
+}
+
+.above-the-top{
+	opacity: 0;
+	@include transform( translateY(($threshold * -1))  );
+	@include transition(all, .5s, ease-in);
+}
+
+.fade{
+	opacity: 0;
+	@include transition(all, .55s, ease-in);
+
+}

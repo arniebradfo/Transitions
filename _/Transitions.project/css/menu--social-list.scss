@@ -1,0 +1,72 @@
+// menu--social-list.scss
+
+// uses flexbox !!
+#social-list {
+	padding: 0 $sideMarginsNavL;
+	@include dimension(1,min-height);
+	margin-bottom: $menuPadding;
+	ul{	
+		display: flex;
+		justify-content: space-around;
+	}
+	li{
+		@include dimension(1,height, flex-basis);
+		display: inline-block;
+	}
+	a{
+		display: block;
+		width: auto;
+	}
+}
+
+// --------------------------------------------------------------- SOCIAL LINKS SVG
+.social{
+	&::after{
+		@include fontCaps;
+		color: white;
+		-webkit-font-smoothing: antialiased;
+		position: absolute;
+		top:100%;
+		left: 50%;
+		opacity: 0;
+		visibility: hidden;
+		@include transform(translate(-50%,-20px));
+		@include transition();
+	}
+	&:hover::after{
+		opacity: 1;
+		visibility: visible;
+		@include transform(translate(-50%,-10px));
+	}
+}
+
+// --------------------------------------------------------------- SOCIAL LINKS SVG & colors
+	
+.social-facebook:hover 		.icon{fill: 	$colorFacebook;		}
+.social-twitter:hover 		.icon{fill: 	$colorTwitter;		}
+.social-instagram:hover 	.icon{fill: 	$colorInstagram;	}
+.social-google-plus:hover 	.icon{fill: 	$colorGoogle;		}
+.social-github:hover 		.icon{fill: 	$colorGitHub;		}
+.social-codepen:hover 		.icon{fill: 	$colorCodepen;		}
+.social-linkedin:hover 		.icon{fill: 	$colorLinkedIn;		}
+.social-pinterest:hover 	.icon{fill: 	$colorPinterest;	}
+.social-dribbble:hover 		.icon{fill: 	$colorDribbble;		}
+.social-behance:hover 		.icon{fill: 	$colorBehance;		}
+
+@include screenSize(L) {
+	.social-facebook::after{content: 		'facebook';			}
+	.social-twitter::after{content: 		'twitter';			}
+	.social-instagram::after{content: 		'instagram';		}
+	.social-google-plus::after{content: 	'google+';			}
+	.social-github::after{content: 			'github';			}
+	.social-codepen::after{content: 		'codepen';			}
+	.social-linkedin::after{content: 		'linkedin';			}
+	.social-pinterest::after{content: 		'pinterest';		}
+	.social-dribbble::after{content: 		'dribbble';			}
+	.social-behance::after{content: 		'behance';			}
+}
+
+
+
+
+

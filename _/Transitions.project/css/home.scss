@@ -1,0 +1,72 @@
+// home.scss
+
+// DIMENSIONS
+$polarisCenterX:467;
+$polarisCenterY:353;
+$polarisWidth:1200;
+$polarisHeight:800;
+
+$ringHeight:1756;
+$ringWidth:$ringHeight;
+
+$ringSizeWidth: (100% * $ringWidth) / $polarisWidth;
+$ringSizeHeight: (100% * $ringHeight) / $polarisHeight;
+$ringSizeWidth: (100% * $ringWidth) / $polarisWidth;
+$ringSizeHeight: (100% * $ringHeight) / $polarisHeight;
+
+$polarisCenterXPercent:(100% * $polarisCenterX) / $polarisWidth;
+$polarisCenterYPercent:(100% * $polarisCenterY) / $polarisHeight;
+
+
+#home-bg{
+	z-index: index($z-of, '#home-bg');
+	@include absoluteFill;
+	background: $colorAnimationBG;
+}
+
+#total-animation{
+	@include absoluteFill;
+}
+
+#home-header{
+	z-index: index($z-of, '#home-header');
+	@include absoluteFill;
+	// background: $colorAnimationBG;
+	overflow: hidden;
+}
+
+.ring {
+	z-index: index($z-of, '.ring');
+	position: absolute;
+	top: 50%;	// this is reset by jquery.perfectCenterRings.js
+	left: 50%; 	// this is reset by jquery.perfectCenterRings.js
+	width: 100% ;
+	height: 100%;
+	transform-origin: top left ;
+	svg{
+		width: 300%;
+		height: 300%;
+		transform: translate(-50%,-50%);
+	}
+}
+
+#polaris-graphics-animation{
+	z-index: index($z-of, '#polaris-graphics-animation');
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+#home-nav{
+	z-index: index($z-of, '#home-nav');
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+
+
+
+
+

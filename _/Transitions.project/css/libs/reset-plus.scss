@@ -1,0 +1,14 @@
+// reset-plus.scss
+
+/*small addition to Eric Meyer's reset.css file*/
+
+*,
+*:after,
+*:before{
+	box-sizing: border-box;
+}
+
+a{
+	color: #444;
+	text-decoration: none;
+}

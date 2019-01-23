@@ -1,0 +1,81 @@
+// menu--search-form.scss
+#social-list{
+
+}
+
+#search-form {
+	display: block;
+	position: relative;
+	width: 100%;
+	@include dimension(1,height);	
+	@include transition();
+
+	@include screenSize(0,S) {	bottom: $sideMarginsS + $menuPadding ;}
+	@include screenSize(S,L) {	bottom: $sideMarginsM ;}
+	@include screenSize(L)   {	bottom: $sideMarginsL ;}	
+
+	// underline to type on...
+	&::after{
+		content: '';
+		position: absolute;
+		height: 2px;
+		background: $colorBlack5;
+		
+		@include screenSize(0,S) {
+			bottom:$sideMarginsS / 8;
+			left: $sideMarginsS - ( $sideMarginsNavS / 2 );
+			right: $sideMarginsNavS;		
+		}		
+		@include screenSize(S,L) {
+			bottom:$sideMarginsM / 4;
+			left: $sideMarginsM - ( $sideMarginsNavM / 2 );
+			right: $sideMarginsNavM;		
+		}
+		@include screenSize(L) {
+			bottom:$sideMarginsL / 4;
+			left: $sideMarginsL - ( $sideMarginsNavL / 2 );
+			right: $sideMarginsNavL;		
+		} 
+	}
+}
+
+.search-icon, .search-button, .search-term{
+	@include transition();
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.search-button {
+	width: 0;
+	height: 0;
+	border: 0px;
+	padding: 0;
+	cursor: pointer;
+	outline: none;
+}
+
+.search-term {
+	-webkit-appearance: none;
+	display: block;
+	width: 100%;
+	@include dimension(1,padding-left);
+	@include screenSize(0,S) {	padding-right: $sideMarginsNavS ;}
+	@include screenSize(S,L) {	padding-right: $sideMarginsNavM ;}
+	@include screenSize(L) {	padding-right: $sideMarginsNavL ;}
+	border: 0px;
+	height: 100%;
+	outline: none;
+	background: $colorBlack9;
+	background: rgba($colorBlack9,0);
+	@include inputPlaceholder {color: rgba(white, 0.25);}
+	&:focus, &:hover{
+		color: rgba(white, 1);
+		@include inputPlaceholder {color: rgba(white, 0.4);}
+	}
+	// &:focus + .search-button .search-icon{}
+}
+
+
+
+

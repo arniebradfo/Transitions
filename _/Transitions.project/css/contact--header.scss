@@ -1,0 +1,24 @@
+// contact--header.scss
+
+#google-container {
+	position: relative;
+	width: 100%;
+	height: 110%;
+	opacity: 0.8
+}
+
+#cd-google-map {
+	position: relative;
+	width: (100% - ($headerMargins * 2));
+	margin: 0 $headerMargins;
+	height: ($headerPictureHeight);
+	overflow: hidden;
+	background: $backgroundGradientUp;
+}
+
+#cd-zoom-in, #cd-zoom-out {
+	right: 0;
+}
+#cd-zoom-in{
+	@include dimension(.65, margin-top);
+}

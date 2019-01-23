@@ -1,0 +1,225 @@
+// _variables.scss
+
+// --------------------------------------------------------------- COLOR VARS
+
+$colorAccent: #ff5831; // that blood orange
+
+$colorPolaris1: #76CAC6;
+$colorPolaris2: #CDEBE9;
+
+$colorBlack: rgba(0,0,0,1);
+$colorBlack9: lighten($colorBlack,10%);
+$colorBlack8: lighten($colorBlack,20%);
+$colorBlack7: lighten($colorBlack,30%);
+$colorBlack6: lighten($colorBlack,40%);
+$colorBlack5: lighten($colorBlack,50%);
+$colorBlack4: lighten($colorBlack,60%);
+$colorBlack3: lighten($colorBlack,70%);
+$colorBlack2: lighten($colorBlack,80%);
+$colorBlack1: lighten($colorBlack,90%);
+$colorBlack0: lighten($colorBlack,100%);
+
+$colorText: $colorBlack7; // off black
+$colorTextPlaceHolder: rgba($colorText,0.25);
+$colorTextHighlight: darken($colorText, 5%);
+$colorTextHighlightBG: rgba($colorText, 0.2);
+
+$colorLink: $colorBlack7;
+$colorLinkHover: $colorBlack9;
+$colorLinkActive: $colorAccent;
+
+$colorSelectionBG: complement($colorLink);
+$colorSelectionText: invert($colorSelectionBG);
+
+$colorBG: white;
+
+$backgroundGradientDown:	linear-gradient(to bottom, 	$colorBlack, lighten($colorBlack5, 50%));
+$backgroundGradientUp:		linear-gradient(to top, 	$colorBlack, $colorBlack1);
+$backgroundGradientOverlay:	linear-gradient(to top, 	$colorBlack, $colorBlack6);
+
+
+$colorFooterBG: $colorBlack9;
+
+// --------------------------------------------------------------- MARGIN VARS
+$boxMargins: 0.5%;
+$headerMargins: $boxMargins;
+$imgMargins: $boxMargins;
+$textMargins: .8rem;
+
+// --------------------------------------------------------------- BUTTON VARS
+$sideMarginsL: 70px;
+$sideMarginsM: 60px;
+$sideMarginsS: 35px;
+
+$buttonBorderSize: 2px;
+$buttonSizeL:(30px) - ($buttonBorderSize * 2);
+$buttonSizeM:(28px) - ($buttonBorderSize * 2);
+$buttonSizeS:(26px) - ($buttonBorderSize * 2);
+
+$buttonIconSizeL:16px ;
+$buttonIconSizeM:14px ;
+$buttonIconSizeS:12px ;
+
+// --------------------------------------------------------------- BUTTON VARS - NAV
+$buttonNavSizeL:(40px) - ($buttonBorderSize * 2);
+$buttonNavSizeM:(35px) - ($buttonBorderSize * 2);
+$buttonNavSizeS:(30px) - ($buttonBorderSize * 2);
+
+$buttonNavIconSizeL:30px ;
+$buttonNavIconSizeM:25px ;
+$buttonNavIconSizeS:20px ;
+
+$sideMarginsNavL: ($sideMarginsL - $buttonNavSizeL) / 2 ;
+$sideMarginsNavM: ($sideMarginsM - $buttonNavSizeM) / 2 ;
+$sideMarginsNavS: ($sideMarginsS - $buttonNavSizeS) / 2 ;
+
+$menuWidth: 310px;
+$menuPadding: 10px;
+$menuMinHeight: 500px;
+$menuMinHeightS: 0;
+$menuMinHeightM: 0;
+$menuMinHeightL: 0;
+
+$rushOut:cubic-bezier(0,0,0,1); // fast into slow
+
+// --------------------------------------------------------------- FONT MIXINS
+$fontHeading: 'Raleway', Helvetica, Arial, sans-serif;
+$fontNumbers: Helvetica, Arial, sans-serif; // Raleway has oldstyle figures, so use Helvetica
+$fontBody: $fontHeading;
+
+@mixin fontHeading{
+	font-family:$fontHeading;
+	font-weight:900;
+	// letter-spacing:1px;
+	text-transform: uppercase;
+	line-height: 0.85em;
+}
+
+@mixin fontCaps{
+	font-family:$fontBody;
+	font-weight:900;
+	letter-spacing:0.4px;
+	text-transform: uppercase;
+	line-height: 1.2em;
+	font-size: 0.8rem;
+	display: block;
+} 
+
+@mixin fontSubheading{
+	font-family:$fontBody;
+	font-weight: 100;
+	letter-spacing:0.06em;
+	text-transform: uppercase;
+	line-height: .9em;
+	display: block;
+}
+
+@mixin fontNormal{
+	font-family:$fontBody;
+	font-weight:400;
+	color: $colorBlack5;
+}
+
+@mixin fontNumbers{
+	font-family: $fontNumbers;
+	font-weight: 900;
+	font-size: .8rem;
+	text-transform: uppercase;
+	display: block;
+}
+
+// --------------------------------------------------------------- ABSOULTE FILL MIXIN
+@mixin absoluteFill{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+// --------------------------------------------------------------- POST LINK ROW MAKER
+// comes from Chris Coyier's video - http://css-tricks.com/video-screencasts/132-quick-useful-case-sass-math-mixins/
+@mixin postRows($postsPerRow, $postsRowMargin, $postHeight:1, $outsideMargins:true){
+	$distance:((100%-(($postsPerRow+1)*$postsRowMargin)) / $postsPerRow);
+	$wholePosts:round($postsPerRow);
+	width: $distance;
+	padding-bottom: $distance*($postHeight);
+	margin:0 0 $postsRowMargin $postsRowMargin;
+	@if $outsideMargins == true{
+		&:nth-child(#{$wholePosts}n){	
+			margin-right: $postsRowMargin;
+		}	
+	} @else {
+		&:nth-child(#{$wholePosts}n+1){	
+			margin-left: 0;
+		}
+	}
+}
+
+// --------------------------------------------------------------- INPUT PLACEHOLDER AUTOPREFIXER
+@mixin inputPlaceholder{
+	&::-webkit-input-placeholder 	{@content;}
+	&:-moz-placeholder 				{@content;}	 	/* Firefox 18- */ 
+	&::-moz-placeholder 			{@content;}   	/* Firefox 19+ */ 
+	&:-ms-input-placeholder 		{@content;}
+}
+
+// --------------------------------------------------------------- THE DIMENSION MIXIN
+// needs CMQ(combine media queries) to be efficient ...
+// ... this mixin creates a new set of media queries for each arguement
+
+@mixin dimension( $multiplier, $propertyList... ){
+	@each $property in $propertyList{
+		@include screenSize(0,S) {
+			#{$property}:	$sideMarginsS * $multiplier;
+		}
+		@include screenSize(S,L) { 
+			#{$property}:	$sideMarginsM * $multiplier;
+		}
+		@include screenSize(L) { 
+			#{$property}:	$sideMarginsL * $multiplier;
+		}
+	}
+}
+
+// --------------------------------------------------------------- TRANSITION & TRANSFORM ADD-ONS
+// adds translateZ to all transforms to force Hardware Acceleration.
+@mixin transform($transforms){	
+	transform: $transforms translateZ(0);
+}
+// TRANSITION VARS
+$transProperties: 	all;
+$transDuration: 	0.25s;
+$transDurationFast: 0.075s;
+$transTiming: 		ease;
+$activeTiming: 0.05s;
+// adds backface visibility to all transitions to prevent "blinky" transitions.
+@mixin transition( $properties:$transProperties, $duration:$transDuration, $timing:$transTiming, $backface:hidden ) {
+	transition: $properties $duration $timing;
+	backface-visibility: $backface;
+}
+
+// --------------------------------------------------------------- CLEARFIX MIXIN
+// $order is a choice between ::before and ::after - use without the "::" prefix
+@mixin clearfix($order:after){
+	&:#{$order}{
+		content:"";
+		display:table;
+		clear:both;		
+	}
+}
+// doesn't work on ie6 or ie7
+
+// --------------------------------------------------------------- KEYFRAMES
+// can't remember what this is for...
+@keyframes bgFade {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+// --------------------------------------------------------------- CUT AND PASTE
+// empty standard media query useage
+// ... for copy & paste
+@include screenSize(L) {}
+@include screenSize(S,L) {}
+@include screenSize(0,S) {}

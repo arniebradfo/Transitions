@@ -1,56 +1,42 @@
 <?php
 /**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
  * @package WordPress
- * @subpackage Transitions
- * @since 1.0
- * @version 1.0
+ * @subpackage HTML5-Reset-WordPress-Theme
+ * @since HTML5 Reset 2.0
  */
+ get_header(); ?>
 
-?><!DOCTYPE html>
-<?php echo trns_ascii_logo(); ?>
-<html <?php language_attributes(); ?>>
+ 	<?php if ( is_front_page() && is_home() ) { 
+	  // Default homepage ?>
 
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<?php wp_head(); ?>
-	<style type="text/css" id="critical-css">
-		<?php echo file_get_contents(get_template_directory_uri()."/critical.css"); ?>
-		.arniebradfo{ content:'All Killer. No Filler.'; }
-	</style>
-</head>
+	<?php } elseif ( is_front_page() ) { 
+	  // static homepage ?>
 
-<!-- index.php -->
-<body <?php body_class(); ?>>
+	<?php } elseif ( is_home() && get_option( 'page_for_posts' ) ) { 
+	  // blog page ?>
+	  <h1 class="page-title"><?php echo get_the_title( get_option( 'page_for_posts' ) ); ?></h1>
 
-	<script type="text/javascript" id="js-test">
-		document.body.classList.add('jsState-styleUnloaded');
-	</script>
+	<?php } else { 
+	  //everyting else ?>
 
-	<div class="visually-hidden jsTarget-transitionEnd"></div>
-	
-	<div class="visually-hidden">
-		<?php get_template_part('icon-defs'); ?>
-	</div>
+	<?php } ?>
 
-	<?php get_template_part('nav', 'primary'); ?>
+	<div class="post-links clearfix">
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<?php get_template_part('main'); ?>
+		<?php get_template_part('part-postlinks'); ?>
 
-	<?php get_template_part('foot'); ?>
+	<?php endwhile; ?>
+	</div> <!-- end the clearfix post-links container -->
 
-	<?php wp_footer(); ?>
+	<?php post_navigation(); ?>
 
-</body>
+	<?php else : ?>
 
-</html><!--/ index.php -->
+		<h2 class="page-title"><?php _e('Nothing Found','html5reset'); ?></h2>
+
+	<?php endif; ?>
+
+<?php get_sidebar(); ?>
+
+<?php get_footer(); ?>

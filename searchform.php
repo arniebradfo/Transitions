@@ -1,32 +1,17 @@
-<?php
-/**
- * Template for displaying search forms in Transitions
- *
- * @package WordPress
- * @subpackage Transitions
- * @since 1.0
- * @version 1.0
- */
+<form method="get" id="search-form" action="<?php echo home_url( '/' ); ?>">
 
-?>
+	<label for="s" class="screen-reader-text" style="display:none;"><?php _e('Search for:','html5reset'); ?></label>
 
-<!-- searchform.php -->
-<?php $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
-<form 
-	class="searchform" 
-	role="search" 
-	method="get" 
-	action="<?php echo esc_url( home_url( '/' ) ); ?>"
-	>
-	<input 
-		class="searchform__input"
-		type="search" 
-		id="<?php echo $unique_id; ?>" 
-		placeholder="Search" 
-		value="<?php echo get_search_query(); ?>" 
-		name="s" 
-		/>
-	<button class="searchform__button button--icon" type="submit" >
-		<?php echo trns_icon_component(['name'=>'Search', 'class'=>'searchform__button-icon']) ?>
-	</button>
-</form><!--/ searchform.php -->
+	<input type="search" class="search-term" id="s" name="s" placeholder="looking for something?" autocomplete="off" />
+
+	<label for="searchsubmit" class="icon-capsule dark search-icon search-button">
+		<svg class="icon icon-search" >
+			<use xlink:href="#icon-search"></use>
+		</svg>
+	</label>
+
+	<button type="submit" id="searchsubmit" value="<?php _e('Search','html5reset'); ?>" style="display:none;" ></button>
+
+
+
+</form>
