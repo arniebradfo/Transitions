@@ -52,7 +52,7 @@ function trns_theme_setup() {
 	update_option('image_default_link_type', 'none');
 	update_option('image_default_align', 'none');
 	update_option('uploads_use_yearmonth_folders', 0); // keep all uploaded images in the same folder
-	update_option('use_smilies', 0); // becasue fuck smiling >:( 
+	update_option('use_smilies', 0); // because fuck smiling >:( 
 
 }
 add_action( 'after_setup_theme', 'trns_theme_setup' );
@@ -92,6 +92,12 @@ function load_theme_scripts_and_styles() {
 	// add the wp comment-reply.js to manage comments
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
+
+	// load livereload if the server and client are the same address: i.e. a development server
+	if ( $_SERVER['SERVER_ADDR'] === $_SERVER['REMOTE_ADDR'] ){
+		wp_register_script( 'livereload', 'http://localhost:35729/livereload.js', false, false, true );
+		wp_enqueue_script( 'livereload' );
+	}
 
 	// Load Custom Scripts
 	wp_register_script( 'trns-script', get_template_directory_uri()."/script.js", false, false, true );
