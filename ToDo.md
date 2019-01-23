@@ -90,11 +90,11 @@ TODOs that are done!
 	- what happens without js
 - make a release branch and process
 - mobile scroll performance issues
-	- // will-change: transform; // forces a new layer? is bad apparently
-	- view height stuff seems to help
-	- it must have to do with css selector speed?
-	- removing text shadows helps
-	- add will-change to transition function
+	- will-change: transform; // forces a new layer? is bad apparently
+	- view height 1vh unit stuff seems to help, removed --vh var
+	- removing text shadows helped a lot
+	- removed parallax listener
+	- repositioned html,body,nav{} css so we get the address bar moving in chrome android
 
 
 ## TODO Later
