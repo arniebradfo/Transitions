@@ -2,10 +2,10 @@
 ## TODO List
 - make a release branch and process
 - mobile scroll
+	- // will-change: transform; // forces a new layer? is bad apparently
 	- view height stuff seems to help
 	- it must have to do with css selector speed?
 	- removing text shadows helps
-	- 	// will-change: transform; // forces a new layer? is bad apparently
 	- add will-change to transition function
 - finer css
 	- browser test

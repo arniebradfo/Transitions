@@ -20,6 +20,6 @@
 	}
 
 	setVhCssUnit();
-	window.addEventListener('resize', setVhCssUnit);
+	// window.addEventListener('resize', setVhCssUnit);
 
 }());

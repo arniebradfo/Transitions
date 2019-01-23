@@ -2,7 +2,7 @@
 @nav_Margin: @s8;
 
 .nav__button{
-	.absolute(0 0 x x);
+	.fixed(0 0 unset unset);
 	z-index: @navButton_Zindex;
 	margin: @nav_Margin;
 }
@@ -12,7 +12,7 @@
 }
 
 .nav{
-	.absolute(0 0 x x);
+	.fixed(0 0 unset unset);
 	width: @s8 * 50; // effectively min-width
 	max-width:  calc(100% - (@nav_Margin*2));
 	max-height: calc(100% - (@nav_Margin*8));
@@ -84,7 +84,7 @@
 }
 
 .nav__overlay{
-	.absolute(-20px);
+	.fixed(-20px);
 	background-color: black;
 	opacity: 0;
 	z-index: @navOverlay_Zindex;
