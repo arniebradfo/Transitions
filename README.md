@@ -1,118 +1,28 @@
 # Transitions
 A custom WordPress theme with magical page load and unload transitions.
 
-## cd From `Wordpress` project
-$ `cd wp-content/themes/transitions`
+## Development
+- Rename the folder to `transitions-dev`
+- Install `npm i -g gulp-cli` if its not installed already.
+- Run `npm i` and 
+- Run `gulp dev` to build and watch for development
+The build process compiles the source into a parallel folder named `transitions`. 
 
-## DEV
-$ `gulp dev` to build and watch for development
+This project has a similar file setup to an angular project. The hope being eventually it might be transitioned _(he he he)_ into an Angular WP theme through some combination with my [Ng Wp Theme](https://github.com/arniebradfo/ng-wp-theme).
 
-## DoneDid 
-TODOs that are done!
-- output style
-- output components and views
-- output svg
-- output template parts
-- output combine php functions
-- output js
-- basic layout
-	- reduce .php to just index, no single
-	- add site name to heading if not post page
-	- single post
-		- margins 
-		- comments
-		- heading when is singular
-		- heading without featured media
-		- footer move copyright
-		- next-post under footer
-	- post list navigation
-	- design all headings
-	- standardize heading?
-		- [links on links](https://www.sarasoueidan.com/blog/nested-links/)
-	- heading archive
-	- heading search
-	- heading adjacent post
-	- heading post
-	- heading for home page 2+
-	- heading page
-		- subtitle
-		- remove date
-- combine header and footer
-- style basic elements
-	- typography - headings
-	- add and uncomment basic elements
-	- heading buttons
-	- buttons
-	- links half-ass
-	- headings
-		- homepage spacing
-		- vh unit js
-		- post list spacing
-		- .has-featured-image
-	- X - you NEED a standard link style! but do i?
-		- X - raise and lower underline
-		- X - segmented on the nav
-	- search input
-		- general text input less
-- style basic elements
-	- pagination
-		- layout
-	- nav 
-		- link styles
-		- layout - correct min-width
-	- color vars
-	- size vars
-- proper icons and shadows for them
-- password protected? 
-- finer css
-	- nav animations 
-	- proper heights for headings
-	- post-link hover and interaction
-		- layer image and gradients properly
-		- make sure everything animates smoothly
-		- undo side effects
-	- heading and footer parallax
-	- more left-right alignment - col rules
-	- screen-size test
-- 404
-- no posts
-- github updater
-- add ids for anchor links 
-	
-
-## TODO List
-- make a release branch and process
-- finer css
-	- browser test
-	- critical css - is
-	- active animations?
-	- loading / unloading animations
-		- load with critical css class that hides
-		- remove the class with js - if we have the external stylesheet
-		- what happens without js
-- buttons
-	- outline
-	- focus stuff?
-	- press/touch only?
-
-
-## TODO Later
-- current item style on pagination & menus
-	- button current style? `.current-menu-item`
-		- button current style? 
-- featured post 
-- what to do about the logo
-- document build and release process
-- rel and aria
-- output screenshot
-- output readme
-- merge all headings
-
-## Build scheme
-based on angular
-outputs an external dist folder that wp uses
-
-## Interaction principles?
-- grows when hovered
-- shrinks when pressed
-- flash animates when when tapped
+## Release Process
+Running `gulp package` will compile all the necessary files into a parallel folder named `transitions`. Keep this folder as a checked out version of the `release` branch and commit releases from it. Never merge `master` back into `release`.
+- Test it. (TODO: add a general test process).
+- Switch to `master` branch.
+- Add a description of the release in `ChangeLog.md`.
+- Update all version numbers including the _Stable Tag_.
+- Update WP _tested up to_ in `style.less`.
+- Recompile with `gulp package`.
+- Commit onto `master` with the version number in the commit note: `compiling vX.X.X`.
+- Switch to the `release` branch.
+- Commit onto `release` with the version number in the commit note: `updating to vX.X.X`.
+- Push everything to github.
+- Test it one final time.
+- Create a new github release at [Code > Releases > Draft New](https://github.com/arniebradfo/Transitions/releases/new): `vX.X.X @ Target:release`, Add relevant release notes from `ChangeLog.md`.
+- Close the github issues related to the release with a comment linking to the release page: _Fixed in [vX.X.X](https://github.com/arniebradfo/Transitions/releases/tag/vX.X.X)!_
+- TODO: Publish to the WP Theme Repo through SVN

@@ -69,7 +69,11 @@ const minifyJS = () => {
 }
 
 const copyPhpTemplates = () => {
-	return gulp.src(['./src/**/*.php', './src/README.txt', './src/screenshot.png'])
+	return gulp.src([
+		'./src/**/*.php', 
+		// './src/README.txt', 
+		'./src/screenshot.png'
+	])
 		.pipe(rename({dirname: ''}))
 		.pipe(gulp.dest(dist))
 		.pipe(livereload())
