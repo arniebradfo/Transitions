@@ -1,0 +1,31 @@
+// TRANSITIONS //
+// TODO: test
+@import (reference) 'for-each.util.less';
+@import (reference) '../vars/animation.vars.less';
+// makes the transitioned element appear/dissappear in visibily before/after the transition
+
+.transition(
+	@properties: all;
+	@timing: @defaultMotion_Timing;
+	@duration: @default_Duration;
+	@visibility: none; // hidden | visible
+	@backface: hidden;
+) {
+	.addVisibilityToBeginning() when (@visibility = visible) {
+		visibility: visible;
+		transition+: visibility 0ms;
+	}
+	.addVisibilityToBeginning();
+
+    .for(length(@properties)); .-each(@i) {
+	    transition+: extract(@properties, @i) @duration @timing;
+	}
+
+	.addVisibilityToEnd() when (@visibility = hidden) {
+		visibility: hidden;
+		transition+: visibility 0ms linear @duration;
+	}
+	.addVisibilityToEnd();
+
+	backface-visibility: @backface;
+}
