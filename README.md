@@ -77,7 +77,7 @@ TODOs that are done!
 - 404
 - no posts
 - github updater
-- add ids for anchor links
+- add ids for anchor links 
 	
 
 ## TODO List
