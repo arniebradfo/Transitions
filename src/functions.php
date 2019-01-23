@@ -93,6 +93,12 @@ function load_theme_scripts_and_styles() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
 
+	// load livereload if the server and client are the same address: i.e. a development server
+	if ( $_SERVER['SERVER_ADDR'] === $_SERVER['REMOTE_ADDR'] ){
+		wp_register_script( 'livereload', 'http://localhost:35729/livereload.js', false, false, true );
+		wp_enqueue_script( 'livereload' );
+	}
+
 	// Load Custom Scripts
 	wp_register_script( 'trns-script', get_template_directory_uri()."/script.js", false, false, true );
 	wp_enqueue_script( 'trns-script' );

@@ -1,5 +1,18 @@
 
-
+## TODO List
+- make a release branch and process
+- finer css
+	- browser test
+	- critical css - is
+	- active animations?
+	- loading / unloading animations
+		- load with critical css class that hides
+		- remove the class with js - if we have the external stylesheet
+		- what happens without js
+- buttons
+	- outline
+	- focus stuff?
+	- press/touch only?
 
 ## DoneDid 
 TODOs that are done!
@@ -72,22 +85,6 @@ TODOs that are done!
 - no posts
 - github updater
 - add ids for anchor links 
-	
-
-## TODO List
-- make a release branch and process
-- finer css
-	- browser test
-	- critical css - is
-	- active animations?
-	- loading / unloading animations
-		- load with critical css class that hides
-		- remove the class with js - if we have the external stylesheet
-		- what happens without js
-- buttons
-	- outline
-	- focus stuff?
-	- press/touch only?
 
 
 ## TODO Later
