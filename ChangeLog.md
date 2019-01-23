@@ -1,5 +1,8 @@
 # Change Log
 
+## 3.0.1
+Scroll performance improvements
+
 ## 3.0.0
 Initial version for bradford.digital
 

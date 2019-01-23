@@ -7,22 +7,13 @@
 @monospace_Family: @githubSystemFontMono_Family;
 
 // // WEIGHT //
-@light_Weight:       100;
+@light_Weight:       300;
 @regular_Weight:     400;
 @bold_Weight:        700;
 // @import url('https://fonts.googleapis.com/css?family=@{FONT}:@{light_Weight},@{regular_Weight},@{bold_Weight}.css');
 
 @rootFont_Size: (@s8 * 1.5);
 @rootFont_LineHeight: (@s8 * 2);
-
-.text_Shadow(@textSize:@s8){
-	// text-shadow: @textShadow_Color 0 round(@textSize/3) round(@textSize/1);
-	// text-shadow: @textShadow_Color 0 0.1em 0.25em;
-}
-.filter_Shadow(@size:3px){
-	// filter: drop-shadow( 0px @size (@size * 2) @textShadow_Color);
-}
-
 
 // TYPOGRAPHY MIXINS //
 .body_Type()      { font-size:@rootFont_Size; line-height:@rootFont_LineHeight; font-weight:@regular_Weight; font-family:@font_Family; }

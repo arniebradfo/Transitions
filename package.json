@@ -1,6 +1,6 @@
 {
   "name": "transitions",
-  "version": "3.0.0",
+  "version": "1",
   "description": "A wordpress theme",
   "main": "gulpfile.js",
   "scripts": {

@@ -52,7 +52,7 @@ function trns_theme_setup() {
 	update_option('image_default_link_type', 'none');
 	update_option('image_default_align', 'none');
 	update_option('uploads_use_yearmonth_folders', 0); // keep all uploaded images in the same folder
-	update_option('use_smilies', 0); // becasue fuck smiling >:( 
+	update_option('use_smilies', 0); // because fuck smiling >:( 
 
 }
 add_action( 'after_setup_theme', 'trns_theme_setup' );

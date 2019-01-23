@@ -1,24 +1,17 @@
 
 ## TODO List
-- make a release branch and process
-- mobile scroll
-	- // will-change: transform; // forces a new layer? is bad apparently
-	- view height stuff seems to help
-	- it must have to do with css selector speed?
-	- removing text shadows helps
-	- add will-change to transition function
+- re-implement text-shadow and parallax on mobile
 - finer css
 	- browser test
 	- critical css - is
 	- active animations?
-	- loading / unloading animations
-		- load with critical css class that hides
-		- remove the class with js - if we have the external stylesheet
-		- what happens without js
+	- better loading/unloading animations
 - buttons
 	- outline
 	- focus stuff?
 	- press/touch only?
+- does is validate?
+- add_image_size()
 
 ## DoneDid 
 TODOs that are done!
@@ -91,6 +84,17 @@ TODOs that are done!
 - no posts
 - github updater
 - add ids for anchor links 
+- loading / unloading animations
+	- load with critical css class that hides
+	- remove the class with js - if we have the external stylesheet
+	- what happens without js
+- make a release branch and process
+- mobile scroll performance issues
+	- // will-change: transform; // forces a new layer? is bad apparently
+	- view height stuff seems to help
+	- it must have to do with css selector speed?
+	- removing text shadows helps
+	- add will-change to transition function
 
 
 ## TODO Later
@@ -99,7 +103,6 @@ TODOs that are done!
 		- button current style? 
 - featured post 
 - what to do about the logo
-- document build and release process
 - rel and aria
 - output screenshot
 - output readme

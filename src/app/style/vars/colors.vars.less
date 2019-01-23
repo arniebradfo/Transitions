@@ -54,13 +54,18 @@
 // @bgOverlayLg_Gradient: svg-gradient(to bottom right,  fade(black, 05%), fade(black, 20%));
 // @bgOverlayLg_Gradient: linear-gradient(-45deg, darken(white, 10%), black);
 
-
-:root{
-	// --disabled_Opacity: @disabled_Opacity;
-}
-
+:root{}
 
 .highlighted_Colors() {
   background-color: @fgPrimary_Color;
   color: @bgPrimary_Color;
+}
+
+// TODO: re-implement these for desktop-only
+.text_Shadow(@textSize:@s8){
+	// text-shadow: @textShadow_Color 0 round(@textSize/3) round(@textSize/1);
+	// text-shadow: @textShadow_Color 0 0.1em 0.25em;
+}
+.filter_Shadow(@size:3px){
+	// filter: drop-shadow( 0px @size (@size * 2) @textShadow_Color);
 }
