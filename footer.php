@@ -9,8 +9,8 @@
 <?php if ( !is_front_page() ) {
 ?>
 
-		<footer id="footer" class="source-org vcard copyright" >
-      <nav  class="nav foot-nav" >
+		<footer id="footer" class="source-org vcard copyright" role="contentinfo">
+      <nav  class="nav foot-nav" role="navigation">
         <?php 
         wp_nav_menu( array(
           'theme_location' => 'secondary',
@@ -23,7 +23,7 @@
           echo " ";
           bloginfo('name'); 
         ?>
-        James Bradford.<br/>
+        James Bradford.</br>
         Made with ♥ on the <a href="http://wordpress.org" target="_blank">wordpress.org</a> platform.
       </small>
 		</footer>

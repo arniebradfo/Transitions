@@ -4,7 +4,7 @@ Theme URI: 			https://github.com/arniebradfo/Transitions
 Description: 		A custom WordPress theme with magical page load and unload transitions. Based on the HTML5 Reset Theme.
 Author: 			Arniebradfo
 Author URI: 		http://www.polaris.graphics
-Version: 			2.1.0
+Version: 			1.1.2
 GitHub Theme URI: 	https://github.com/arniebradfo/Transitions
 GitHub Branch:    	master
 */
@@ -440,50 +440,6 @@ use {
   backface-visibility: hidden; }
 .icon-capsule:active::after {
   color: #1a1a1a; }
-
-.icon-capsule--large {
-  height: 114.4px;
-  width: 114.4px; }
-  .icon-capsule--large::before {
-    transition: all 0.25s ease;
-    backface-visibility: hidden;
-    content: '';
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    border: 2px solid #4d4d4d;
-    cursor: pointer; }
-  .icon-capsule--large .icon {
-    color: #4d4d4d; }
-  .icon-capsule--large.info-toggle::before {
-    background: rgba(255, 255, 255, 0.6); }
-  .icon-capsule--large:hover .icon {
-    color: white; }
-  .icon-capsule--large:hover::before {
-    background: #1a1a1a;
-    border-color: #1a1a1a;
-    transform: scale(1.1) translateZ(0); }
-  .icon-capsule--large:active .icon {
-    color: white; }
-  .icon-capsule--large:active::before {
-    background: #ff5831;
-    border-color: #ff5831;
-    transform: scale(0.95) translateZ(0);
-    transition: all 0.05s ease;
-    backface-visibility: hidden; }
-  .icon-capsule--large:active::after {
-    color: #1a1a1a; }
-  .icon-capsule--large::before {
-    height: 104px;
-    width: 104px;
-    top: 3.2px;
-    left: 3.2px; }
-  .icon-capsule--large .icon {
-    height: 64px;
-    width: 64px;
-    top: 25.2px;
-    left: 25.2px;
-    line-height: 32px; }
 
 #menu-toggle.menu-is-active::before,
 .dark::before {
@@ -1079,65 +1035,65 @@ body {
   visibility: visible;
   transform: translate(-50%, -10px) translateZ(0); }
 
-.social-facebook:hover .icon {
+#social-facebook:hover .icon {
   fill: #3b5998; }
 
-.social-twitter:hover .icon {
+#social-twitter:hover .icon {
   fill: #00aced; }
 
-.social-instagram:hover .icon {
+#social-instagram:hover .icon {
   fill: #517fa4; }
 
-.social-google-plus:hover .icon {
+#social-google-plus:hover .icon {
   fill: #dd4b39; }
 
-.social-github:hover .icon {
+#social-github:hover .icon {
   fill: #000; }
 
-.social-codepen:hover .icon {
+#social-codepen:hover .icon {
   fill: #000; }
 
-.social-linkedin:hover .icon {
+#social-linkedin:hover .icon {
   fill: #007bb6; }
 
-.social-pinterest:hover .icon {
+#social-pinterest:hover .icon {
   fill: #cb2027; }
 
-.social-dribbble:hover .icon {
+#social-dribbble:hover .icon {
   fill: #ea4c89; }
 
-.social-behance:hover .icon {
+#social-behance:hover .icon {
   fill: #000; }
 
 @media screen and (min-width: 1000px) {
-  .social-facebook::after {
+  #social-facebook::after {
     content: 'facebook'; }
 
-  .social-twitter::after {
+  #social-twitter::after {
     content: 'twitter'; }
 
-  .social-instagram::after {
+  #social-instagram::after {
     content: 'instagram'; }
 
-  .social-google-plus::after {
+  #social-google-plus::after {
     content: 'google+'; }
 
-  .social-github::after {
+  #social-github::after {
     content: 'github'; }
 
-  .social-codepen::after {
+  #social-codepen::after {
     content: 'codepen'; }
 
-  .social-linkedin::after {
+  #social-linkedin::after {
     content: 'linkedin'; }
 
-  .social-pinterest::after {
+  #social-pinterest::after {
     content: 'pinterest'; }
 
-  .social-dribbble::after {
+  #social-dribbble::after {
     content: 'dribbble'; }
 
-  .social-behance::after {
+  #social-behance::after {
     content: 'behance'; } }
 #search-form {
   display: block;
@@ -1315,7 +1271,8 @@ body {
   @media screen and (max-width: 999px) {
     .post-link .image-overlay {
       display: none; } }
-  .post-link .image-overlay {
+  .post-link picture
+  , .post-link .image-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -1328,14 +1285,13 @@ body {
     opacity: 0.5;
     transition: all 0.25s ease;
     backface-visibility: hidden; }
-  .post-link img, .post-link h2, .post-link .post-meta-data, .post-link a.post-permalink {
+  .post-link img, .post-link h2, .post-link footer, .post-link a.post-permalink {
     position: absolute;
     display: block;
     transition: all 0.25s ease;
     backface-visibility: hidden; }
   .post-link img {
     height: 110%;
-    width: auto;
     z-index: 1;
     opacity: 0.9;
     top: 0;
@@ -1367,7 +1323,7 @@ body {
     right: 0;
     opacity: 0;
     z-index: 5; }
-  .post-link .post-meta-data {
+  .post-link footer {
     width: 101%;
     bottom: -1%;
     padding-left: 0.8rem;
@@ -1379,15 +1335,15 @@ body {
     transition-delay: 0.025s;
     opacity: 0; }
     @media screen and (max-width: 499px) {
-      .post-link .post-meta-data {
+      .post-link footer {
         min-height: 35px; } }
     @media screen and (min-width: 500px) and (max-width: 999px) {
-      .post-link .post-meta-data {
+      .post-link footer {
         min-height: 60px; } }
     @media screen and (min-width: 1000px) {
-      .post-link .post-meta-data {
+      .post-link footer {
         min-height: 70px; } }
-    .post-link .post-meta-data p {
+    .post-link footer p {
       font-family: "Raleway", Helvetica, Arial, sans-serif;
       font-weight: 900;
       letter-spacing: 0.4px;
@@ -1399,36 +1355,36 @@ body {
       backface-visibility: hidden;
       transform: translate(0, 1em) translateZ(0);
       opacity: 0; }
-      .post-link .post-meta-data p:first-child {
+      .post-link footer p:first-child {
         padding-top: 0.4rem; }
         @media screen and (min-width: 500px) {
-          .post-link .post-meta-data p:first-child {
+          .post-link footer p:first-child {
             padding-top: 0.8rem; } }
-      .post-link .post-meta-data p:last-child {
+      .post-link footer p:last-child {
         padding-bottom: 0.4rem; }
         @media screen and (min-width: 500px) {
-          .post-link .post-meta-data p:last-child {
+          .post-link footer p:last-child {
             padding-bottom: 0.8rem; } }
   @media screen and (max-width: 999px) {
     .post-link img {
       opacity: 0.65; }
-    .post-link.info-is-active .post-meta-data, .post-link.info-is-active h2 {
+    .post-link.info-is-active footer, .post-link.info-is-active h2 {
       opacity: 1;
       transform: translate(0, 0) translateZ(0); }
-      .post-link.info-is-active .post-meta-data > p, .post-link.info-is-active h2 > p {
+      .post-link.info-is-active footer > p, .post-link.info-is-active h2 > p {
         transform: translate(0, 0) translateZ(0);
         opacity: 1; }
-        .post-link.info-is-active .post-meta-data > p:nth-child(1), .post-link.info-is-active h2 > p:nth-child(1) {
+        .post-link.info-is-active footer > p:nth-child(1), .post-link.info-is-active h2 > p:nth-child(1) {
           transition-delay: 0.2s; }
-        .post-link.info-is-active .post-meta-data > p:nth-child(2), .post-link.info-is-active h2 > p:nth-child(2) {
+        .post-link.info-is-active footer > p:nth-child(2), .post-link.info-is-active h2 > p:nth-child(2) {
           transition-delay: 0.3s; }
-        .post-link.info-is-active .post-meta-data > p:nth-child(3), .post-link.info-is-active h2 > p:nth-child(3) {
+        .post-link.info-is-active footer > p:nth-child(3), .post-link.info-is-active h2 > p:nth-child(3) {
           transition-delay: 0.4s; }
-        .post-link.info-is-active .post-meta-data > p:nth-child(4), .post-link.info-is-active h2 > p:nth-child(4) {
+        .post-link.info-is-active footer > p:nth-child(4), .post-link.info-is-active h2 > p:nth-child(4) {
           transition-delay: 0.5s; }
-        .post-link.info-is-active .post-meta-data > p:nth-child(5), .post-link.info-is-active h2 > p:nth-child(5) {
+        .post-link.info-is-active footer > p:nth-child(5), .post-link.info-is-active h2 > p:nth-child(5) {
           transition-delay: 0.6s; }
-        .post-link.info-is-active .post-meta-data > p:nth-child(6), .post-link.info-is-active h2 > p:nth-child(6) {
+        .post-link.info-is-active footer > p:nth-child(6), .post-link.info-is-active h2 > p:nth-child(6) {
           transition-delay: 0.7s; }
     .post-link.info-is-active a.post-permalink {
       opacity: 0; }
@@ -1438,30 +1394,29 @@ body {
     .post-link.info-is-active .image-overlay {
       opacity: 0; } }
   @media screen and (min-width: 1000px) {
-    .post-link .post-meta-data {
+    .post-link footer {
       padding-right: 1rem;
-      min-height: 0;
-      max-width: 600px; }
+      min-height: 0; }
     .post-link h2 {
       transform: translate(0, -1em) translateZ(0);
       opacity: 0; }
-    .post-link:hover .post-meta-data, .post-link:hover h2 {
+    .post-link:hover footer, .post-link:hover h2 {
       opacity: 1;
       transform: translate(0, 0) translateZ(0); }
-      .post-link:hover .post-meta-data > p, .post-link:hover h2 > p {
+      .post-link:hover footer > p, .post-link:hover h2 > p {
         transform: translate(0, 0) translateZ(0);
         opacity: 1; }
-        .post-link:hover .post-meta-data > p:nth-child(1), .post-link:hover h2 > p:nth-child(1) {
+        .post-link:hover footer > p:nth-child(1), .post-link:hover h2 > p:nth-child(1) {
           transition-delay: 0.2s; }
-        .post-link:hover .post-meta-data > p:nth-child(2), .post-link:hover h2 > p:nth-child(2) {
+        .post-link:hover footer > p:nth-child(2), .post-link:hover h2 > p:nth-child(2) {
           transition-delay: 0.3s; }
-        .post-link:hover .post-meta-data > p:nth-child(3), .post-link:hover h2 > p:nth-child(3) {
+        .post-link:hover footer > p:nth-child(3), .post-link:hover h2 > p:nth-child(3) {
           transition-delay: 0.4s; }
-        .post-link:hover .post-meta-data > p:nth-child(4), .post-link:hover h2 > p:nth-child(4) {
+        .post-link:hover footer > p:nth-child(4), .post-link:hover h2 > p:nth-child(4) {
           transition-delay: 0.5s; }
-        .post-link:hover .post-meta-data > p:nth-child(5), .post-link:hover h2 > p:nth-child(5) {
+        .post-link:hover footer > p:nth-child(5), .post-link:hover h2 > p:nth-child(5) {
           transition-delay: 0.6s; }
-        .post-link:hover .post-meta-data > p:nth-child(6), .post-link:hover h2 > p:nth-child(6) {
+        .post-link:hover footer > p:nth-child(6), .post-link:hover h2 > p:nth-child(6) {
           transition-delay: 0.7s; }
     .post-link:hover a.post-permalink {
       opacity: 0; }
@@ -1564,48 +1519,47 @@ ul.navigation {
       margin-right: 70px;
       transform: translate(15px, 50%) translateZ(0); } }
 
-.perfect-contain {
-  margin: 0.5% 0.5% 0 0.5%;
-  width: 99%;
-  height: 94.5%;
-  overflow: hidden;
-  background: linear-gradient(to top, black, #e6e6e6); }
-  .perfect-contain img {
-    opacity: 0.4; }
-
-#post-header, #page-header, #about-header, #contact-header {
+#post-header, #about-header, #contact-header {
   position: relative;
   display: block;
   width: 100%;
   overflow: hidden;
   color: white; }
-  #post-header h1, #post-header .post-meta-data, #post-header .icon-capsule, #page-header h1, #page-header .post-meta-data, #page-header .icon-capsule, #about-header h1, #about-header .post-meta-data, #about-header .icon-capsule, #contact-header h1, #contact-header .post-meta-data, #contact-header .icon-capsule {
+  #post-header picture, #about-header picture, #contact-header picture {
+    margin: 0.5% 0.5% 0 0.5%;
+    width: 99%;
+    height: 94.5%;
+    overflow: hidden;
+    background: linear-gradient(to top, black, #e6e6e6); }
+    #post-header picture img, #about-header picture img, #contact-header picture img {
+      opacity: 0.4; }
+  #post-header h1, #post-header footer, #post-header .icon-capsule, #about-header h1, #about-header footer, #about-header .icon-capsule, #contact-header h1, #contact-header footer, #contact-header .icon-capsule {
     position: absolute; }
-  #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
+  #post-header h1, #about-header h1, #contact-header h1 {
     bottom: 5%;
     left: 0;
     max-width: 80%;
     margin-bottom: 4rem;
     color: inherit; }
     @media screen and (max-width: 499px) {
-      #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
+      #post-header h1, #about-header h1, #contact-header h1 {
         margin-left: 35px; } }
     @media screen and (min-width: 500px) and (max-width: 999px) {
-      #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
+      #post-header h1, #about-header h1, #contact-header h1 {
         margin-left: 60px; } }
     @media screen and (min-width: 1000px) {
-      #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
+      #post-header h1, #about-header h1, #contact-header h1 {
         margin-left: 70px; } }
     @media screen and (max-width: 499px) {
-      #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
+      #post-header h1, #about-header h1, #contact-header h1 {
         margin-right: 35px; } }
     @media screen and (min-width: 500px) and (max-width: 999px) {
-      #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
+      #post-header h1, #about-header h1, #contact-header h1 {
         margin-right: 60px; } }
     @media screen and (min-width: 1000px) {
-      #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
+      #post-header h1, #about-header h1, #contact-header h1 {
         margin-right: 70px; } }
-    #post-header h1 span, #page-header h1 span, #about-header h1 span, #contact-header h1 span {
+    #post-header h1 span, #about-header h1 span, #contact-header h1 span {
       font-family: "Raleway", Helvetica, Arial, sans-serif;
       font-weight: 100;
       letter-spacing: 0.06em;
@@ -1614,21 +1568,21 @@ ul.navigation {
       display: block;
       padding-top: 0.8rem; }
   @media screen and (min-width: 1000px) {
-    #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
+    #post-header h1, #about-header h1, #contact-header h1 {
       font-size: 6rem; }
-      #post-header h1 span, #page-header h1 span, #about-header h1 span, #contact-header h1 span {
+      #post-header h1 span, #about-header h1 span, #contact-header h1 span {
         font-size: 3rem; } }
   @media screen and (min-width: 750px) and (max-width: 999px) {
-    #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
+    #post-header h1, #about-header h1, #contact-header h1 {
       font-size: 4.5rem; }
-      #post-header h1 span, #page-header h1 span, #about-header h1 span, #contact-header h1 span {
+      #post-header h1 span, #about-header h1 span, #contact-header h1 span {
         font-size: 2.25rem; } }
   @media screen and (max-width: 749px) {
-    #post-header h1, #page-header h1, #about-header h1, #contact-header h1 {
+    #post-header h1, #about-header h1, #contact-header h1 {
       font-size: 3.5rem; }
-      #post-header h1 span, #page-header h1 span, #about-header h1 span, #contact-header h1 span {
+      #post-header h1 span, #about-header h1 span, #contact-header h1 span {
         font-size: 1.75rem; } }
-  #post-header .post-meta-data, #page-header .post-meta-data, #about-header .post-meta-data, #contact-header .post-meta-data {
+  #post-header footer, #about-header footer, #contact-header footer {
     top: 0;
     right: 0;
     width: 100%;
@@ -1638,24 +1592,24 @@ ul.navigation {
     padding-right: 1.6rem;
     color: #4d4d4d; }
     @media screen and (max-width: 499px) {
-      #post-header .post-meta-data, #page-header .post-meta-data, #about-header .post-meta-data, #contact-header .post-meta-data {
+      #post-header footer, #about-header footer, #contact-header footer {
         min-height: 35px; } }
     @media screen and (min-width: 500px) and (max-width: 999px) {
-      #post-header .post-meta-data, #page-header .post-meta-data, #about-header .post-meta-data, #contact-header .post-meta-data {
+      #post-header footer, #about-header footer, #contact-header footer {
         min-height: 60px; } }
     @media screen and (min-width: 1000px) {
-      #post-header .post-meta-data, #page-header .post-meta-data, #about-header .post-meta-data, #contact-header .post-meta-data {
+      #post-header footer, #about-header footer, #contact-header footer {
         min-height: 70px; } }
     @media screen and (min-width: 1000px) {
-      #post-header .post-meta-data, #page-header .post-meta-data, #about-header .post-meta-data, #contact-header .post-meta-data {
+      #post-header footer, #about-header footer, #contact-header footer {
         padding-top: 0.8rem; } }
-    #post-header .post-meta-data a, #page-header .post-meta-data a, #about-header .post-meta-data a, #contact-header .post-meta-data a {
+    #post-header footer a, #about-header footer a, #contact-header footer a {
       color: #1a1a1a; }
-      #post-header .post-meta-data a:hover, #post-header .post-meta-data a:focus, #page-header .post-meta-data a:hover, #page-header .post-meta-data a:focus, #about-header .post-meta-data a:hover, #about-header .post-meta-data a:focus, #contact-header .post-meta-data a:hover, #contact-header .post-meta-data a:focus {
+      #post-header footer a:hover, #post-header footer a:focus, #about-header footer a:hover, #about-header footer a:focus, #contact-header footer a:hover, #contact-header footer a:focus {
         color: #333333; }
-      #post-header .post-meta-data a:active, #page-header .post-meta-data a:active, #about-header .post-meta-data a:active, #contact-header .post-meta-data a:active {
+      #post-header footer a:active, #about-header footer a:active, #contact-header footer a:active {
         color: white; }
-    #post-header .post-meta-data p, #page-header .post-meta-data p, #about-header .post-meta-data p, #contact-header .post-meta-data p {
+    #post-header footer p, #about-header footer p, #contact-header footer p {
       font-family: "Raleway", Helvetica, Arial, sans-serif;
       font-weight: 900;
       letter-spacing: 0.4px;
@@ -1664,43 +1618,43 @@ ul.navigation {
       font-size: 0.8rem;
       display: block;
       text-align: right; }
-      #post-header .post-meta-data p:first-child, #page-header .post-meta-data p:first-child, #about-header .post-meta-data p:first-child, #contact-header .post-meta-data p:first-child {
+      #post-header footer p:first-child, #about-header footer p:first-child, #contact-header footer p:first-child {
         padding-top: 0.4rem; }
         @media screen and (min-width: 500px) {
-          #post-header .post-meta-data p:first-child, #page-header .post-meta-data p:first-child, #about-header .post-meta-data p:first-child, #contact-header .post-meta-data p:first-child {
+          #post-header footer p:first-child, #about-header footer p:first-child, #contact-header footer p:first-child {
             padding-top: 0.8rem; } }
-      #post-header .post-meta-data p:last-child, #page-header .post-meta-data p:last-child, #about-header .post-meta-data p:last-child, #contact-header .post-meta-data p:last-child {
+      #post-header footer p:last-child, #about-header footer p:last-child, #contact-header footer p:last-child {
         padding-bottom: 0.4rem; }
         @media screen and (min-width: 500px) {
-          #post-header .post-meta-data p:last-child, #page-header .post-meta-data p:last-child, #about-header .post-meta-data p:last-child, #contact-header .post-meta-data p:last-child {
+          #post-header footer p:last-child, #about-header footer p:last-child, #contact-header footer p:last-child {
             padding-bottom: 0.8rem; } }
   @media screen and (max-width: 999px) {
-    #post-header .post-meta-data, #page-header .post-meta-data, #about-header .post-meta-data, #contact-header .post-meta-data {
+    #post-header footer, #about-header footer, #contact-header footer {
       background: white;
       color: gray;
       transform: translate(0, -100%) translateZ(0); } }
   @media screen and (max-width: 999px) and (max-width: 499px) {
-    #post-header .post-meta-data, #page-header .post-meta-data, #about-header .post-meta-data, #contact-header .post-meta-data {
+    #post-header footer, #about-header footer, #contact-header footer {
       padding-left: 35px; } }
   @media screen and (max-width: 999px) and (min-width: 500px) and (max-width: 999px) {
-    #post-header .post-meta-data, #page-header .post-meta-data, #about-header .post-meta-data, #contact-header .post-meta-data {
+    #post-header footer, #about-header footer, #contact-header footer {
       padding-left: 60px; } }
   @media screen and (max-width: 999px) and (min-width: 1000px) {
-    #post-header .post-meta-data, #page-header .post-meta-data, #about-header .post-meta-data, #contact-header .post-meta-data {
+    #post-header footer, #about-header footer, #contact-header footer {
       padding-left: 70px; } }
   @media screen and (max-width: 999px) and (max-width: 499px) {
-    #post-header .post-meta-data, #page-header .post-meta-data, #about-header .post-meta-data, #contact-header .post-meta-data {
+    #post-header footer, #about-header footer, #contact-header footer {
       padding-right: 35px; } }
   @media screen and (max-width: 999px) and (min-width: 500px) and (max-width: 999px) {
-    #post-header .post-meta-data, #page-header .post-meta-data, #about-header .post-meta-data, #contact-header .post-meta-data {
+    #post-header footer, #about-header footer, #contact-header footer {
       padding-right: 60px; } }
   @media screen and (max-width: 999px) and (min-width: 1000px) {
-    #post-header .post-meta-data, #page-header .post-meta-data, #about-header .post-meta-data, #contact-header .post-meta-data {
+    #post-header footer, #about-header footer, #contact-header footer {
       padding-right: 70px; } }
   @media screen and (max-width: 999px) {
-    #post-header.info-is-active .post-meta-data, #page-header.info-is-active .post-meta-data, #about-header.info-is-active .post-meta-data, #contact-header.info-is-active .post-meta-data {
+    #post-header.info-is-active footer, #about-header.info-is-active footer, #contact-header.info-is-active footer {
       transform: translate(0, 0) translateZ(0); } }
-  #post-header .info-toggle, #page-header .info-toggle, #about-header .info-toggle, #contact-header .info-toggle {
+  #post-header .info-toggle, #about-header .info-toggle, #contact-header .info-toggle {
     top: 0;
     right: 0; }
 
@@ -1740,22 +1694,7 @@ ul.navigation {
     margin-bottom: 0.5%; }
   #post-content picture img {
     width: 100%; }
-  #post-content ul, #post-content ol {
-    list-style: inside; }
 
-.media-content {
-  display: flex;
-  margin: 0.8rem 0; }
-  .media-content img {
-    flex-wrap: wrap;
-    margin: 10px 30px 0 0; }
-  .media-content__text {
-    flex-wrap: wrap;
-    flex-grow: 1; }
-
-@media screen and (max-width: 499px) {
-  .media-content {
-    flex-direction: column; } }
 #post-content-rule {
   height: 2px;
   position: absolute;
@@ -1795,10 +1734,10 @@ ul.navigation {
 article.post {
   position: relative; }
 
-.scroll-down, .scroll-to-top, .please-unmute-me {
+.scroll-down, .scroll-to-top {
   position: absolute;
   right: 0; }
-  .scroll-down::after, .scroll-to-top::after, .please-unmute-me::after {
+  .scroll-down::after, .scroll-to-top::after {
     font-family: "Raleway", Helvetica, Arial, sans-serif;
     font-weight: 900;
     letter-spacing: 0.4px;
@@ -1817,8 +1756,7 @@ article.post {
     -webkit-font-smoothing: antialiased; }
 
 .scroll-down {
-  bottom: 5%;
-  z-index: 23; }
+  bottom: 5%; }
   .scroll-down::after {
     content: 'Scroll Down'; }
   @media screen and (max-width: 499px) {
@@ -1916,13 +1854,13 @@ article.post {
   #adjacent-posts .right-post h2 {
     right: 0; }
   @media screen and (max-width: 499px) {
-    #adjacent-posts .right-post h2, #adjacent-posts .right-post .post-meta-data {
+    #adjacent-posts .right-post h2, #adjacent-posts .right-post footer {
       padding-right: 35px; } }
   @media screen and (min-width: 500px) and (max-width: 999px) {
-    #adjacent-posts .right-post h2, #adjacent-posts .right-post .post-meta-data {
+    #adjacent-posts .right-post h2, #adjacent-posts .right-post footer {
       padding-right: 60px; } }
   @media screen and (min-width: 1000px) {
-    #adjacent-posts .right-post h2, #adjacent-posts .right-post .post-meta-data {
+    #adjacent-posts .right-post h2, #adjacent-posts .right-post footer {
       padding-right: 70px; } }
   #adjacent-posts .right-post .nav-arrow-tall {
     top: 0;
@@ -1932,13 +1870,13 @@ article.post {
   #adjacent-posts .left-post h2 {
     left: 0; }
   @media screen and (max-width: 499px) {
-    #adjacent-posts .left-post h2, #adjacent-posts .left-post .post-meta-data {
+    #adjacent-posts .left-post h2, #adjacent-posts .left-post footer {
       padding-left: 35px; } }
   @media screen and (min-width: 500px) and (max-width: 999px) {
-    #adjacent-posts .left-post h2, #adjacent-posts .left-post .post-meta-data {
+    #adjacent-posts .left-post h2, #adjacent-posts .left-post footer {
       padding-left: 60px; } }
   @media screen and (min-width: 1000px) {
-    #adjacent-posts .left-post h2, #adjacent-posts .left-post .post-meta-data {
+    #adjacent-posts .left-post h2, #adjacent-posts .left-post footer {
       padding-left: 70px; } }
   #adjacent-posts .left-post .nav-arrow-tall {
     top: 0;
@@ -1946,31 +1884,31 @@ article.post {
   #adjacent-posts .left-post .info-toggle {
     left: 0; }
 @media screen and (min-width: 1000px) {
-  #adjacent-posts .right-post h2, #adjacent-posts .right-post .post-meta-data > p {
+  #adjacent-posts .right-post h2, #adjacent-posts .right-post footer > p {
     transform: translate(-3em, 0) translateZ(0); }
-  #adjacent-posts .left-post h2, #adjacent-posts .left-post .post-meta-data > p {
+  #adjacent-posts .left-post h2, #adjacent-posts .left-post footer > p {
     transform: translate(3em, 0) translateZ(0); }
   #adjacent-posts .nav-arrow-tall-right {
     transform: translate(50px, 0) translateZ(0); }
   #adjacent-posts .nav-arrow-tall-left {
     transform: translate(-50px, 0) translateZ(0); }
-  #adjacent-posts .left-post:hover .post-meta-data, #adjacent-posts .left-post:hover h2, #adjacent-posts .right-post:hover .post-meta-data, #adjacent-posts .right-post:hover h2 {
+  #adjacent-posts .left-post:hover footer, #adjacent-posts .left-post:hover h2, #adjacent-posts .right-post:hover footer, #adjacent-posts .right-post:hover h2 {
     opacity: 1;
     transform: translate(0, 0) translateZ(0); }
-    #adjacent-posts .left-post:hover .post-meta-data > p, #adjacent-posts .left-post:hover h2 > p, #adjacent-posts .right-post:hover .post-meta-data > p, #adjacent-posts .right-post:hover h2 > p {
+    #adjacent-posts .left-post:hover footer > p, #adjacent-posts .left-post:hover h2 > p, #adjacent-posts .right-post:hover footer > p, #adjacent-posts .right-post:hover h2 > p {
       transform: translate(0, 0) translateZ(0);
       opacity: 1; }
-      #adjacent-posts .left-post:hover .post-meta-data > p:nth-child(1), #adjacent-posts .left-post:hover h2 > p:nth-child(1), #adjacent-posts .right-post:hover .post-meta-data > p:nth-child(1), #adjacent-posts .right-post:hover h2 > p:nth-child(1) {
+      #adjacent-posts .left-post:hover footer > p:nth-child(1), #adjacent-posts .left-post:hover h2 > p:nth-child(1), #adjacent-posts .right-post:hover footer > p:nth-child(1), #adjacent-posts .right-post:hover h2 > p:nth-child(1) {
         transition-delay: 0.2s; }
-      #adjacent-posts .left-post:hover .post-meta-data > p:nth-child(2), #adjacent-posts .left-post:hover h2 > p:nth-child(2), #adjacent-posts .right-post:hover .post-meta-data > p:nth-child(2), #adjacent-posts .right-post:hover h2 > p:nth-child(2) {
+      #adjacent-posts .left-post:hover footer > p:nth-child(2), #adjacent-posts .left-post:hover h2 > p:nth-child(2), #adjacent-posts .right-post:hover footer > p:nth-child(2), #adjacent-posts .right-post:hover h2 > p:nth-child(2) {
         transition-delay: 0.3s; }
-      #adjacent-posts .left-post:hover .post-meta-data > p:nth-child(3), #adjacent-posts .left-post:hover h2 > p:nth-child(3), #adjacent-posts .right-post:hover .post-meta-data > p:nth-child(3), #adjacent-posts .right-post:hover h2 > p:nth-child(3) {
+      #adjacent-posts .left-post:hover footer > p:nth-child(3), #adjacent-posts .left-post:hover h2 > p:nth-child(3), #adjacent-posts .right-post:hover footer > p:nth-child(3), #adjacent-posts .right-post:hover h2 > p:nth-child(3) {
         transition-delay: 0.4s; }
-      #adjacent-posts .left-post:hover .post-meta-data > p:nth-child(4), #adjacent-posts .left-post:hover h2 > p:nth-child(4), #adjacent-posts .right-post:hover .post-meta-data > p:nth-child(4), #adjacent-posts .right-post:hover h2 > p:nth-child(4) {
+      #adjacent-posts .left-post:hover footer > p:nth-child(4), #adjacent-posts .left-post:hover h2 > p:nth-child(4), #adjacent-posts .right-post:hover footer > p:nth-child(4), #adjacent-posts .right-post:hover h2 > p:nth-child(4) {
         transition-delay: 0.5s; }
-      #adjacent-posts .left-post:hover .post-meta-data > p:nth-child(5), #adjacent-posts .left-post:hover h2 > p:nth-child(5), #adjacent-posts .right-post:hover .post-meta-data > p:nth-child(5), #adjacent-posts .right-post:hover h2 > p:nth-child(5) {
+      #adjacent-posts .left-post:hover footer > p:nth-child(5), #adjacent-posts .left-post:hover h2 > p:nth-child(5), #adjacent-posts .right-post:hover footer > p:nth-child(5), #adjacent-posts .right-post:hover h2 > p:nth-child(5) {
         transition-delay: 0.6s; }
-      #adjacent-posts .left-post:hover .post-meta-data > p:nth-child(6), #adjacent-posts .left-post:hover h2 > p:nth-child(6), #adjacent-posts .right-post:hover .post-meta-data > p:nth-child(6), #adjacent-posts .right-post:hover h2 > p:nth-child(6) {
+      #adjacent-posts .left-post:hover footer > p:nth-child(6), #adjacent-posts .left-post:hover h2 > p:nth-child(6), #adjacent-posts .right-post:hover footer > p:nth-child(6), #adjacent-posts .right-post:hover h2 > p:nth-child(6) {
         transition-delay: 0.7s; }
   #adjacent-posts .left-post:hover a.post-permalink, #adjacent-posts .right-post:hover a.post-permalink {
     opacity: 0; }
@@ -2028,58 +1966,6 @@ html {
 
 body {
   background: white; }
-
-.perfect-contain.with-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.75);
-  opacity: 0.0;
-  z-index: -99;
-  transition: all 0.07s ease;
-  backface-visibility: hidden; }
-  .perfect-contain.with-video::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0; }
-  .perfect-contain.with-video video {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform-origin: 50% 50%;
-    transform: translate(-50%, -50%) scale(0.5) translateZ(0);
-    transition: all 0.12s ease;
-    backface-visibility: hidden;
-    cursor: pointer; }
-  .perfect-contain.with-video.opened {
-    z-index: 22;
-    opacity: 1.0; }
-    .perfect-contain.with-video.opened video {
-      transform: translate(-50%, -50%) scale(1) translateZ(0); }
-
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-#home-video-container video {
-  opacity: 0;
-  animation: fadeInOpacity 1s ease 0.5s 1 forwards; }
-
-#video-close {
-  right: 0; }
-
-#video-play {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) translateZ(0); }
 
 .animate #p-laris, .animate #graphics {
   opacity: 1;
@@ -2234,56 +2120,6 @@ body {
   opacity: .35;
   stroke-width: 3px; }
 
-@media screen and (min-aspect-ratio: 1200 / 800) {
-  .ring {
-    top: 44.125%;
-    left: calc(50vw + -16.625vh); } }
-@media screen and (max-aspect-ratio: 1200 / 800) {
-  .ring {
-    left: 38.91667%;
-    top: calc(50vh + -3.91667vw); } }
-/*! 
- * Firefox 1.0+ Detection 
- * FireFox can't handle animationing such a large area?
- * hide the .rings so we don't see choppy animation
- */
-@-moz-document url-prefix() {
-  .ring {
-    display: none; } }
-.please-unmute-me {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0; }
-  .please-unmute-me::after {
-    content: 'UnMute Me!';
-    transform: translate(0, -50%) rotate(0deg) translateZ(0);
-    top: 50%;
-    bottom: auto;
-    left: auto;
-    right: 100%;
-    text-align: right;
-    color: white; }
-
-.mute-toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer; }
-  .mute-toggle .icon-muted, .mute-toggle .icon-unmuted {
-    transition: all 0.25s ease;
-    backface-visibility: hidden; }
-  .mute-toggle.muted .icon-muted {
-    opacity: 1; }
-  .mute-toggle.muted .icon-unmuted {
-    opacity: 0; }
-  .mute-toggle.unmuted .icon-muted {
-    opacity: 0; }
-  .mute-toggle.unmuted .icon-unmuted {
-    opacity: 1; }
-
 #home-bg {
   z-index: 17;
   position: absolute;
@@ -2335,7 +2171,7 @@ body {
   left: 0;
   right: 0; }
 
-#about-header .perfect-contain, #page-header .perfect-contain {
+#about-header picture {
   margin: 0 0.5%;
   height: 95%; }
 
@@ -2949,42 +2785,33 @@ maybe add a cover over the entire page when scrolling
 so that all elements are not hoverable
 
 */
-.perfect-contain, #home-video-container {
+.perfect-contain {
   position: relative;
   overflow: hidden; }
-  .perfect-contain img, .perfect-contain .home-video, #home-video-container img, #home-video-container .home-video {
+  .perfect-contain img {
     min-height: 100%;
     min-width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0); }
-  .perfect-contain .height, #home-video-container .height {
+  .perfect-contain .height {
     height: 101%;
     width: auto; }
-  .perfect-contain .width, #home-video-container .width {
+  .perfect-contain .width {
     width: 101%;
     height: auto; }
 
-#home-video-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; }
-
-.img-row {
+.pic-row {
   width: 100%;
-  margin: 1% 0; }
-  .img-row img {
-    width: 100%;
-    height: auto;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%; }
+  .pic-row picture {
     display: block;
     font-size: 0;
     float: left; }
-  .img-row::after {
-    content: "";
-    display: table;
-    clear: both; }
+    .pic-row picture img {
+      width: 100%;
+      display: block; }
 
 /*# sourceMappingURL=global.css.map */

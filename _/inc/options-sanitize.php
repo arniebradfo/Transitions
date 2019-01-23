@@ -7,12 +7,9 @@ add_filter( 'of_sanitize_text', 'sanitize_text_field' );
 /* Textarea */
 
 function of_sanitize_textarea($input) {
-	// global $allowedposttags;
-	// $output = wp_kses( $input, $allowedposttags);
-    // return $output;
-	
-	// breaking this for svg
-	return $input;
+	global $allowedposttags;
+	$output = wp_kses( $input, $allowedposttags);
+	return $output;
 }
 
 add_filter( 'of_sanitize_textarea', 'of_sanitize_textarea' );

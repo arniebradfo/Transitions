@@ -2,7 +2,7 @@
 
 function setWindowHeight() {
 	// if a #...-header exists
-	if($('#post-header').length || $('#page-header').length || $('#about-header').length || $('#contact-header').length){
+	if($('#post-header').length || $('#about-header').length || $('#contact-header').length){
 
 		// get the viewport height
 		windowHeight = $( window ).height();
@@ -29,9 +29,13 @@ function setWindowHeight() {
 			$('#post-header').css({
 				'height': windowHeight + 'px'
 			});
-		} else if ($('#page-header').length || $('#about-header').length || $('#contact-header').length) {
-			$('#page-header, #about-header, #contact-header').css({
+		} else if ($('#about-header').length) {
+			$('#about-header').css({
 				'height': windowHeight - headerHeight + 'px'
+			});
+		} else if ($('#contact-header').length) {
+			$('#contact-header').css({
+				'height': (windowHeight) - headerHeight  + 'px'
 			});
 		}
 	}

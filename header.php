@@ -63,7 +63,7 @@
 		*/
 		if (true == of_get_option('head_favicon')) {
 			echo '<meta name=”mobile-web-app-capable” content=”yes”>';
-			echo '<link rel="shortcut icon" href="' . of_get_option("head_favicon") . '" />';
+			echo '<link rel="shortcut icon" sizes=”1024x1024” href="' . of_get_option("head_favicon") . '" />';
 		}
 
 
@@ -187,23 +187,22 @@
 		</div>
 	</div> <!-- loading wrapper -->
 
-	<?php if ( !is_front_page() ): // NOT THE FRONT PAGE ?>
+	<?php if ( !is_front_page() ) { // NOT THE FRONT PAGE ?>
 
 	<?php echo file_get_contents(get_template_directory_uri() . '/_/svg/build/svg-defs-social.svg'); ?>
 
 	<div id="blanket" ></div>
 
-	<header id="header" ><div id="header-wrapper">
+	<header id="header" role="banner"><div id="header-wrapper">
 
 			<a 	id="home-link"
 				href="<?php echo esc_url( home_url( '/' ) ); ?>" 
+				title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" 
 				rel="home">		
 				<?php 
-					if (of_get_option('inline_svg_logo')){
-						echo of_get_option('inline_svg_logo');
-					} elseif (of_get_option('site_logo')){
-						echo '<img src="' . of_get_option("site_logo") . '" alt="site logo">';
-					} else{ echo 
+					if (of_get_option('site_logo')){
+						echo '<img src="' . of_get_option("site_logo") . '">';
+					}else{ echo 
 						'<h1>'
 							. bloginfo( 'name' ) .
 							'<span>' . bloginfo( 'description' ) .
@@ -212,7 +211,7 @@
 				?>
 			</a>
 
-			<nav id="nav" class="nav">
+			<nav id="nav" class="nav" role="navigation">
 				<?php 
 					wp_nav_menu( array(
 						'theme_location' => 'primary',
@@ -226,4 +225,4 @@
 
 	<div id="wrapper">
 
-	<?php endif;  // END IF is not the front page?>
+	<?php } // END IF is not the front page?>

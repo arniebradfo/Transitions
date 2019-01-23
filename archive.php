@@ -11,10 +11,10 @@
 			<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 
 		<?php /* If this is a category archive */ if (is_category()) { ?>
-			<h2 class="page-title"><?php // _e('Archive for the','html5reset'); ?> <?php single_cat_title(); ?> <?php //_e('Category','html5reset'); ?></h2>
+			<h2 class="page-title"><?php _e('Archive for the','html5reset'); ?> &#8216;<?php single_cat_title(); ?>&#8217; <?php _e('Category','html5reset'); ?></h2>
 
 		<?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
-			<h2 class="page-title"><?php // _e('Posts Tagged','html5reset'); ?> <?php single_tag_title(); ?></h2>
+			<h2 class="page-title"><?php _e('Posts Tagged','html5reset'); ?> &#8216;<?php single_tag_title(); ?>&#8217;</h2>
 
 		<?php /* If this is a daily archive */ } elseif (is_day()) { ?>
 			<h2 class="page-title"><?php _e('Archive for','html5reset'); ?> <?php the_time('F jS, Y'); ?></h2>
@@ -34,6 +34,7 @@
 		<?php } ?>
 
 
+
 		<?php // post_navigation(); ?>
 
 		<div class="post-links clearfix">
@@ -47,6 +48,7 @@
 		<?php post_navigation(); ?>
 
 
+			
 	<?php else : ?>
 
 		<h2 class="page-title"><?php _e('Nothing Found','html5reset'); ?></h2>

@@ -37,8 +37,7 @@ function readyLoadingAmimation() {
 
 		#post-header .post-meta-data p, 
 		#post-header .info-toggle, 
-		.scroll-down,
-		#video-play,
+		.scroll-down, 
 
 		#post-content h1, 
 		#post-content h2, 
@@ -47,11 +46,8 @@ function readyLoadingAmimation() {
 		#post-content h5, 
 		#post-content h6, 
 		#post-content p, 
-		#post-content ul, 
-		#post-content ol, 
 		#post-content span, 
 		#post-content picture, 
-		#post-content img, 
 
 		#bio h2,
 		#bio p,
@@ -76,8 +72,7 @@ function readyLoadingAmimation() {
 		.post-edit-link,
 
 		#home-nav,
-		#home-nav .menu-item,
-		.mute-toggle
+		#home-nav .menu-item
 	');
 	
 	// adds the .below-the-fold class to all of the elements above - sets them up for initial animation
@@ -203,7 +198,7 @@ function animateOut($href) {
 	;
 	// if this is the home page, animate the home page elements
 	if ( $('#home-header').length ) {
-		$('#total-animation, #home-video-container').addClass('above-the-top');
+		$('#total-animation').addClass('above-the-top');
 		$('#home-bg').addClass('fade');
 		$('#home-nav').removeClass('above-the-top').addClass('fade');
 	}

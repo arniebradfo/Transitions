@@ -4,13 +4,27 @@
  * @subpackage HTML5-Reset-WordPress-Theme
  * @since HTML5 Reset 2.0
  */
-get_header(); ?>
-	
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	
-		<?php the_content(); ?>
+ get_header(); ?>
 
-		<?php edit_post_link(__('Edit this entry','html5reset'), '<p>', '</p>'); ?>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			
+		<article class="post" id="post-<?php the_ID(); ?>">
+
+			<h2 class="page-title"><?php the_title(); ?></h2>
+
+			<?php posted_on(); ?>
+
+			<div class="entry">
+
+				<?php the_content(); ?>
+
+				<?php wp_link_pages(array('before' => __('Pages: ','html5reset'), 'next_or_number' => 'number')); ?>
+
+			</div>
+
+			<?php edit_post_link(__('Edit this entry','html5reset'), '<p>', '</p>'); ?>
+
+		</article>
 		
 		<?php // comments_template(); ?>
 
@@ -19,8 +33,3 @@ get_header(); ?>
 <?php // get_sidebar(); ?>
 
 <?php get_footer(); ?>
-<?php if (get_post_custom_values( 'script' )[0]): ?>
-	<script src="<?php echo get_post_custom_values( 'script' )[0]; ?>"></script>
-<?php endif; ?>
-
-

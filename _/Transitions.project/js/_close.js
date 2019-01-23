@@ -4,13 +4,11 @@
 	function resizeOrder(){
 		setWindowHeight();
 		perfectCenterImage();
-		perfectCenterImage('#home-video-container','.home-video');
-		// perfectCenterRings();
+		perfectCenterRings();
 	}
 
 	$(document).ready(function(){
 		// alert("doc is ready!");
-		// imgRow(".img-row");
 		gMap();
 		readyLoadingAmimation();
 		resizeOrder();
@@ -19,18 +17,15 @@
 		scrollDown();
 		scrollToTop();
 		currentLinks();
-		videoPlayer();
-		homeVideoPlayer();
-		// fireFoxLimits(); // this is done with css now
+		fireFoxLimits();
 	});
 
 	var theTiming = 1000; // WHY 1000?
 	$(window).load(function() {
 		// alert("window has loaded!");
 		perfectCenterImage();
-		perfectCenterImage('#home-video','video');
 		loadLoadingAmimation(theTiming);
-		clickDiversion();
+		clickDiversion();	
 	});
 
 	//back-forward-cache compensation - chrome should skip it

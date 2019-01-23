@@ -6,28 +6,28 @@ $headerPictureHeight:100% - $headerBottomMargin;
 $headerBottomMarginSmall:7%;
 $headerPictureHeightSmall:100% - $headerBottomMarginSmall;
 
-.perfect-contain{
-	margin: $headerMargins $headerMargins 0 $headerMargins;
-	width: (100% - ($headerMargins * 2));
-	height: ($headerPictureHeight - $headerMargins);
-	overflow: hidden;
-	background: $backgroundGradientUp;
-	img{
-		opacity: 0.4;
-	}
-}
-
-#post-header, #page-header, #about-header, #contact-header{
+#post-header, #about-header, #contact-header{
 	position: relative;
 	display: block;
 	width: 100%;
 	// height: 100%; // doesn't actually work - see 'jquery.viewportSize.js'
 	overflow: hidden;
 	color: white;
+
+	picture{
+		margin: $headerMargins $headerMargins 0 $headerMargins;
+		width: (100% - ($headerMargins * 2));
+		height: ($headerPictureHeight - $headerMargins);
+		overflow: hidden;
+		background: $backgroundGradientUp;
+		img{
+			opacity: 0.4;
+		}
+	}
 	
-	h1, .post-meta-data, .icon-capsule{
+	h1, footer, .icon-capsule{
 		position: absolute;
-	} 
+	}
 	h1{
 		bottom:$headerBottomMargin;
 		left: 0;
@@ -66,7 +66,7 @@ $headerPictureHeightSmall:100% - $headerBottomMarginSmall;
 		}
 	}
 	
-	.post-meta-data{
+	footer{
 		top:0;
 		right:0;
 		width: 100%;
@@ -105,7 +105,7 @@ $headerPictureHeightSmall:100% - $headerBottomMarginSmall;
 		}
 	}
 	@include screenSize(0,L) {
-		.post-meta-data{
+		footer{
 			background: $colorBG;
 			color: $colorBlack5;
 			@include dimension(1,padding-left, padding-right);
@@ -113,7 +113,7 @@ $headerPictureHeightSmall:100% - $headerBottomMarginSmall;
 			@include transform(translate(0,-100%));
 		}
 		&.info-is-active{
-			.post-meta-data{
+			footer{
 				@include transform(translate(0,0));
 			}
 		}

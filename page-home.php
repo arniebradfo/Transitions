@@ -12,17 +12,36 @@ Template Name: Home Page
 
 ?>
 
+
+<div 
+	id="wrapper-home" 
+	style="
+		display: block; 
+		z-index: 999;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color:black;
+	"
+></div>
+
 <div id="home-bg"></div>
 
-<header id="home-header" >
+<header id="home-header">
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<div id="total-animation">
+		<div id="ring-1" class="ring">
+			<?php echo file_get_contents(get_template_directory_uri() . '/_/svg/polaris.graphics-ring-1.svg'); ?>
+		</div>
+		<div id="ring-2" class="ring">
+			<?php echo file_get_contents(get_template_directory_uri() . '/_/svg/polaris.graphics-ring-2.svg'); ?>
+		</div>
+		<?php echo file_get_contents(get_template_directory_uri() . '/_/svg/polaris.graphics-animation-styleless.svg'); ?>
+	</div>
 
-	<?php the_content(); ?>
-
-	<?php endwhile; endif; ?>
-	
-	<nav id="home-nav" class="nav foot-nav">
+	<nav id="home-nav" class="nav foot-nav" role="navigation">
 		<?php 
 		wp_nav_menu( array(
 			'theme_location' => 'secondary',

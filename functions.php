@@ -5,25 +5,14 @@
  * @since HTML5 Reset 2.0
  */
 
-	// CUSTOM SHORTCODES
-	// require_once( dirname( __FILE__ ) .'/_/shortcodes/shortcode-boilerplate.php');
-	require_once( dirname( __FILE__ ) .'/_/shortcodes/shortcodes.php');
-	require_once( dirname( __FILE__ ) .'/_/shortcodes/shortcode-home_video.php');
-	require_once( dirname( __FILE__ ) .'/_/shortcodes/shortcode-pagehead.php');
-	require_once( dirname( __FILE__ ) .'/_/shortcodes/shortcode-pagewrapper.php');
-	// require_once( dirname( __FILE__ ) .'/_/shortcodes/shortcode-media_content.php');
 
 	// BAKE PLUGINS INTO THEME: http://alexking.org/blog/2012/07/09/include-plugin-in-wordpress-theme
 	// Options Framework (https://github.com/devinsays/options-framework-plugin)
 	if ( !function_exists( 'optionsframework_init' ) ) {
 		define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/_/inc/' );
-		require_once dirname( __FILE__ ) .'/_/inc/options-framework.php';
+		require_once dirname( __FILE__ ) . '/_/inc/options-framework.php';
 	}
-	require_once( dirname( __FILE__ ) .'/_/plugins/save_with_keyboard/save_with_keyboard.php');
-	require_once( dirname( __FILE__ ) .'/_/plugins/Disable_wpautop/Disable_wpautop.php');
 
-	// CONTENT FILTERS
-	require_once( dirname( __FILE__ ) .'/_/filters/img-row.php');
 
 	// Allow svg uploads - from CSS-tricks (http://css-tricks.com/snippets/wordpress/allow-svg-through-wordpress-media-uploader/)
 	function cc_mime_types( $mimes ){
@@ -107,18 +96,8 @@
 	}
 	add_filter( 'wp_title', 'html5reset_wp_title', 10, 2 );
 
-	// add image sizes to the wp uploader
-	// SYNTAX - add_image_size( $name, $width, $height, $crop );
-	add_image_size( 'imgXS',  250  );
-	add_image_size( 'imgS',   500  );
-	add_image_size( 'imgM',   750  );
-	add_image_size( 'imgL',   1000 );
-	add_image_size( 'imgXL',  1500 );
-	add_image_size( 'img2XL', 2000 );
-	add_image_size( 'img3XL', 3000 );
-	add_image_size( 'img4XL', 4000 );
-	add_image_size( 'imgSsq', 550, 550, true );
-	// add_image_size( 'imgMsq',  825, 825, true );
+
+
 
 //OLD STUFF BELOW
 
@@ -289,7 +268,7 @@
 	function posted_on() {
 		printf('
 				Posted on:
-					<time class="entry-date" datetime="%2$s" >%2$s</time>
+					<time class="entry-date" datetime="%2$s" pubdate>%2$s</time>
 				by:
 				<span class="byline author vcard">%3$s</span>
 				',
@@ -313,7 +292,7 @@
 			$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
 			$class_names = ' class="'. esc_attr( $class_names ) . '"';
 
-			$output .= $indent . '<li ' . $value . $class_names .'>';
+			$output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
 
 			$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
 			$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
@@ -377,7 +356,7 @@
 			if( sizeof($social_links) > 0 ){
 				foreach ($social_links as $site) {
 					// foreach ($social_links as $site){
-						$social_list .= '<li><a href="' . $site[0] . '" target="_blank" class="icon-capsule dark fill social social-' . $site[1] . '"> 
+						$social_list .= '<li><a href="' . $site[0] . '" target="_blank" class="icon-capsule dark fill social"  id="social-' . $site[1] . '"> 
 						<svg class="icon" ><use xlink:href="#social-' . $site[1] . '">
 						</use></svg></a></li>';
 					// }

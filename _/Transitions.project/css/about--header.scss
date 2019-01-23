@@ -1,7 +1,7 @@
 // about--header.scss
 
-#about-header, #page-header{
-	.perfect-contain{
+#about-header{
+	picture{
 		margin: 0 $headerMargins;
 		height: ($headerPictureHeight);
 	}

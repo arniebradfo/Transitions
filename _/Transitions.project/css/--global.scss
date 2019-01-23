@@ -64,10 +64,7 @@
 
 @import 'footer.scss';
 
-@import 'video.scss';
-
 @import 'home--animation.scss';
-@import 'home--video.scss'; 
 @import 'home.scss';
 
 @import 'about--header.scss';
@@ -78,11 +75,14 @@
 @import 'contact--header.scss';
 @import 'contact--form.scss';
 
+
+
+
 // import jq dependent
 @import 'js-loading-animation.scss';
 @import 'js-no-hover-on-scroll.scss';
 @import 'js-perfect-center.scss';
-@import 'js-img-row.scss';
+@import 'js-pic-row.scss';
 
 
 

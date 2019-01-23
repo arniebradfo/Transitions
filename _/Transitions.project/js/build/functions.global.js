@@ -278,8 +278,7 @@ function readyLoadingAmimation() {
 
 		#post-header .post-meta-data p, 
 		#post-header .info-toggle, 
-		.scroll-down,
-		#video-play,
+		.scroll-down, 
 
 		#post-content h1, 
 		#post-content h2, 
@@ -288,11 +287,8 @@ function readyLoadingAmimation() {
 		#post-content h5, 
 		#post-content h6, 
 		#post-content p, 
-		#post-content ul, 
-		#post-content ol, 
 		#post-content span, 
 		#post-content picture, 
-		#post-content img, 
 
 		#bio h2,
 		#bio p,
@@ -317,8 +313,7 @@ function readyLoadingAmimation() {
 		.post-edit-link,
 
 		#home-nav,
-		#home-nav .menu-item,
-		.mute-toggle
+		#home-nav .menu-item
 	');
 	
 	// adds the .below-the-fold class to all of the elements above - sets them up for initial animation
@@ -444,7 +439,7 @@ function animateOut($href) {
 	;
 	// if this is the home page, animate the home page elements
 	if ( $('#home-header').length ) {
-		$('#total-animation, #home-video-container').addClass('above-the-top');
+		$('#total-animation').addClass('above-the-top');
 		$('#home-bg').addClass('fade');
 		$('#home-nav').removeClass('above-the-top').addClass('fade');
 	}
@@ -529,25 +524,69 @@ function infoToggle(){
 // jquery.perfectCenter.js
 // .height & .width classes are in js-perfect-center.scss
 
-function perfectCenterImage( parent, child ){
-	parent = typeof parent !== 'undefined' ?  parent : '.perfect-contain';
-	child  = typeof child  !== 'undefined' ?  child  : 'img';
+function perfectCenterImage(){
 
-	$(parent).each(function(i){	 
+	$('.perfect-contain').each(function(i){	
 
 		//define containerRatio as containerHeight/containerWidth
 		var containerRatio = $(this).outerWidth() / $(this).outerHeight() ;
 		//define imageRatio as imageHeight/imageWidth
-		var imgRatio = $(this).find(child).outerWidth() / $(this).find(child).outerHeight() ;
+		var imgRatio = $(this).find('img').outerWidth() / $(this).find('img').outerHeight() ;
 
 		// compare the containerRatio to the imageRatio, and set the approprite class 
-		if (imgRatio >= containerRatio && !($(this).find(child).hasClass('height'))){
-			$(this).find(child).removeClass('width').addClass('height');
-		} else if (imgRatio < containerRatio && !($(this).find(child).hasClass('width'))) {
-			$(this).find(child).removeClass('height').addClass('width');
-		} 
+		if (imgRatio >= containerRatio && !($(this).find('img').hasClass('height'))){
+			$(this).find('img').removeClass('width').addClass('height');
+		} else if (imgRatio < containerRatio && !($(this).find('img').hasClass('width'))) {
+			$(this).find('img').removeClass('height').addClass('width');
+		}
 
 	});
+}
+// jquery.perfectCenterRings.js
+
+// centers the divs that contains the svg outer rings of the home page animation
+// the top right corner of the divs sync with the center of the svg rings
+function perfectCenterRings() {
+
+	// Firefox 1.0+ Detection - Sorry if sniffing isn't sexy
+	var isFirefox = typeof InstallTrigger !== 'undefined';   
+	// FireFox can't handle animationing such a large area?
+	// if FireFox, delete the large elements and skip the centering
+	if ( isFirefox && $('.ring').length ){
+		$('.ring').css({
+			'display' : 'none'
+		});
+
+	// else, if this is the home page (if rings exist)
+	} else if ($('.ring').length) {
+
+		// set the dimensions to work with 
+		var polarisCenterX	= 467,		// the horizontal center of the "O" in pOlaris
+			polarisCenterY	= 353,		// the vertical center of the "O" in pOlaris
+			polarisWidth	= 1200,		// width of the polaris svg
+			polarisHeight	= 800,		// height of the polaris svg
+			windowHeight 	= $(window).height(),
+			windowWidth 	= $(window).width();
+
+		// set the windowRatio & the polarisRatio
+		var windowRatio 		= windowWidth / windowHeight,
+			polarisRatio 		= polarisWidth / polarisHeight, // should be 3/2
+			polarisRaioInvert 	= polarisHeight / polarisWidth; 
+		
+		if ( windowRatio > polarisRatio ){ // window is wide
+			$('.ring').css({
+				'left'	: ((windowWidth-(windowHeight*(polarisRatio)))/2) + ((polarisCenterX/polarisWidth)*(windowHeight*(polarisRatio))) +'px',
+				'top'	: ((100 * polarisCenterY) / polarisHeight) +'%'
+			});
+		}
+		if ( windowRatio <= polarisRatio ){ // window is squareish/tall
+			$('.ring').css({
+				'left'	: ((100 * polarisCenterX) / polarisWidth) +'%',
+				'top'	: ((windowHeight-(windowWidth*(polarisRaioInvert)))/2) + ((polarisCenterY/polarisHeight)*(windowWidth*(polarisRaioInvert))) +'px'
+			});
+		}
+		// all the math for the above 2 if blocks is written in my design notebook #5 dated: 9/27/2014 POLARIS RINGS GEOMETRY
+	}
 }
 // jquery.scrolling.js
 
@@ -618,65 +657,11 @@ function theDelay(funks, timing){
 	clearTimeout(resizeTimer);
 	resizeTimer = setTimeout( funks, timing );
 }
-// jquery.videoPlayer.js
-
-function videoPlayer(){
-
-	var $videoBox = $('#header-video'),
-		$video    = $('#header-video video');
-	var video     = $video.get(0);
-
-	$('#video-play').on("click", function(){
-		$videoBox.addClass('opened');
-		// video animate in
-		video.play();
-	});
-
-	$video.on("click", function(){
-		if (video.paused){
-			video.play();
-		} else {
-			video.pause();
-		}
-	});
-
-    function closeVideo(e) {
-		$videoBox.removeClass('opened');
-		// video animate out
-		// video display none
-		video.pause();
-    }
-
-	$('#video-close').on("click", closeVideo );
-	// video.addEventListener('ended',closeVideo,false);
-}
-
-function homeVideoPlayer(){
-	if( $('.home-video') ){
-
-		var $video = $('.home-video');
-		var video  = $video.get(0);
-		var $muteToggle = $('.mute-toggle');
-		var $unMuteMeText = $('.please-unmute-me');
-
-		$muteToggle.on("click", function(){
-			$unMuteMeText.remove();
-			if (video.muted){
-				$muteToggle.addClass('unmuted').removeClass('muted');
-				video.muted = false;			
-			} else {
-				$muteToggle.addClass('muted').removeClass('unmuted');
-				video.muted = true;			
-			}
-		});	
-
-	}
-}
 // jquery.viewportSize.js
 
 function setWindowHeight() {
 	// if a #...-header exists
-	if($('#post-header').length || $('#page-header').length || $('#about-header').length || $('#contact-header').length){
+	if($('#post-header').length || $('#about-header').length || $('#contact-header').length){
 
 		// get the viewport height
 		windowHeight = $( window ).height();
@@ -703,9 +688,13 @@ function setWindowHeight() {
 			$('#post-header').css({
 				'height': windowHeight + 'px'
 			});
-		} else if ($('#page-header').length || $('#about-header').length || $('#contact-header').length) {
-			$('#page-header, #about-header, #contact-header').css({
+		} else if ($('#about-header').length) {
+			$('#about-header').css({
 				'height': windowHeight - headerHeight + 'px'
+			});
+		} else if ($('#contact-header').length) {
+			$('#contact-header').css({
+				'height': (windowHeight) - headerHeight  + 'px'
 			});
 		}
 	}
@@ -721,13 +710,11 @@ function setWindowHeight() {
 	function resizeOrder(){
 		setWindowHeight();
 		perfectCenterImage();
-		perfectCenterImage('#home-video-container','.home-video');
-		// perfectCenterRings();
+		perfectCenterRings();
 	}
 
 	$(document).ready(function(){
 		// alert("doc is ready!");
-		// imgRow(".img-row");
 		gMap();
 		readyLoadingAmimation();
 		resizeOrder();
@@ -736,18 +723,15 @@ function setWindowHeight() {
 		scrollDown();
 		scrollToTop();
 		currentLinks();
-		videoPlayer();
-		homeVideoPlayer();
-		// fireFoxLimits(); // this is done with css now
+		fireFoxLimits();
 	});
 
 	var theTiming = 1000; // WHY 1000?
 	$(window).load(function() {
 		// alert("window has loaded!");
 		perfectCenterImage();
-		perfectCenterImage('#home-video','video');
 		loadLoadingAmimation(theTiming);
-		clickDiversion();
+		clickDiversion();	
 	});
 
 	//back-forward-cache compensation - chrome should skip it
