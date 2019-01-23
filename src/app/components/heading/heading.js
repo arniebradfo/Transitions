@@ -38,7 +38,7 @@
 	var throttledOnScroll = throttleAnimationFrame(onScroll);
 
 
-	if (imgParallaxTop || imgParallaxBottom)
-		document.body.addEventListener('scroll', throttledOnScroll);
+	// if (imgParallaxTop || imgParallaxBottom)
+	// 	document.body.addEventListener('scroll', throttledOnScroll);
 
 }());
