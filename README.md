@@ -76,11 +76,12 @@ TODOs that are done!
 	- screen-size test
 - 404
 - no posts
+- github updater
+- add ids for anchor links
 	
 
 ## TODO List
-- github updater
-- add ids for anchor links
+- make a release branch and process
 - finer css
 	- browser test
 	- critical css - is
