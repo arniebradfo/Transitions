@@ -30,21 +30,24 @@ function trns_theme_setup() {
 	) );
 
 	// featured images aka thumbnails
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions: 150px width x 150px height (cropped)
-	update_option( 'thumbnail_size_w', 150 ); // don't depend on these 
-	update_option( 'thumbnail_size_h', 150 ); // the size of these can be edited by the user
-
-	// add image and manage image sizes
-	add_image_size( 'small', 100 );
-	update_option( 'medium_size_w', 300 ); // don't depend on these 
-	update_option( 'medium_size_h', 300 ); // the size of these can be edited by the user
-	update_option( 'medium_large_size_w', 768 );
-	update_option( 'medium_large_size_h', 768 );	
-	update_option( 'large_size_w', 1024 ); // don't depend on these 
-	update_option( 'large_size_h', 1024 ); // the size of these can be edited by the user
-	add_image_size( 'extralarge', 1600 );
-	add_image_size( 'transitions-featured-image', 2000, 1200, true );
+	// add_theme_support( 'post-thumbnails' );
+	// set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions: 150px width x 150px height (cropped)
+	// update_option( 'thumbnail_size_w', 150 ); // don't depend on these 
+	// update_option( 'thumbnail_size_h', 150 ); // the size of these can be edited by the user
+	// update_option( 'medium_size_w', 300 ); // don't depend on these 
+	// update_option( 'medium_size_h', 300 ); // the size of these can be edited by the user
+	// update_option( 'medium_large_size_w', 768 );
+	// update_option( 'medium_large_size_h', 768 );	
+	// update_option( 'large_size_w', 1024 ); // don't depend on these 
+	// update_option( 'large_size_h', 1024 ); // the size of these can be edited by the user
+	
+	// add additional image sizes
+	// we already have: thumbnail~150x150, medium~300x, medium_large=768x, large=1024x, original=x
+	// add_image_size( 'small', 100, 100 );
+	add_image_size( 'x_large', 1600, 1200 ); // 3:4 aspect ratio
+	add_image_size( 'xx_large', 2000, 1500 ); // 3:4 aspect ratio
+	add_image_size( 'x_large@2x', 3200, 2400 ); // 3:4 aspect ratio
+	add_image_size( 'xx_large@2x', 4000, 3000 ); // 3:4 aspect ratio
 	// more image sizes is good for page speed now that srcset is in wp core:
 	// http://make.wordpress.org/core/2015/11/10/responsive-images-in-wordpress-4-4/
 
@@ -56,6 +59,18 @@ function trns_theme_setup() {
 
 }
 add_action( 'after_setup_theme', 'trns_theme_setup' );
+
+// https://wpbeaches.com/remove-wordpress-default-image-sizes/
+function prefix_remove_default_images( $sizes ) {
+	// Remove default image sizes here. 
+	unset( $sizes['small']); // 150px
+	unset( $sizes['medium']); // 300px
+	unset( $sizes['large']); // 1024px
+	unset( $sizes['medium_large']); // 768px
+	unset( $sizes['thumbnail']); // 768px
+	return $sizes;
+}
+// add_filter( 'intermediate_image_sizes_advanced', 'prefix_remove_default_images' );
 
 	// Widgets
 	// function wpajax_widget_setup() {

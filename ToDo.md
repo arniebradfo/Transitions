@@ -1,6 +1,8 @@
 
 ## TODO List
+- add_image_size()
 - re-implement text-shadow and parallax on mobile
+- rounded corners on img content
 - finer css
 	- browser test
 	- critical css - is
@@ -11,7 +13,6 @@
 	- focus stuff?
 	- press/touch only?
 - does is validate?
-- add_image_size()
 
 ## DoneDid 
 TODOs that are done!
