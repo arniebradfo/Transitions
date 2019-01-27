@@ -36,6 +36,8 @@
 		// if its an anchor link press
 		if (event.type === 'popstate' && event.state == null) return;
 
+		// TODO: handle ctrl+click request
+
 		if (unloading) return;
 
 		event.preventDefault();

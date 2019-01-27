@@ -1,0 +1,22 @@
+// https://digwp.com/2011/04/admin-bar-tricks/
+
+@wpadminbar_Height: @s32;
+
+body.admin-bar{
+	// padding-top: @wpadminbar_Height;
+
+	.nav__button, 
+	.nav
+	{
+		margin-top: @wpadminbar_Height + @s8;
+	}
+
+}
+
+#wpadminbar{
+	a{
+		&:after, &:before{
+			content: none;
+		}
+	}
+}

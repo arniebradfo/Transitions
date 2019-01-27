@@ -1,8 +1,8 @@
 
 ## TODO List
-- add_image_size()
 - re-implement text-shadow and parallax on mobile
-- rounded corners on img content
+- change tags to categories
+- edit post if logged in button
 - finer css
 	- browser test
 	- critical css - is
@@ -27,7 +27,6 @@ TODOs that are done!
 	- add site name to heading if not post page
 	- single post
 		- margins 
-		- comments
 		- heading when is singular
 		- heading without featured media
 		- footer move copyright
@@ -96,6 +95,14 @@ TODOs that are done!
 	- removing text shadows helped a lot
 	- removed parallax listener
 	- repositioned html,body,nav{} css so we get the address bar moving in chrome android
+- add_image_size()
+- rounded corners on img content
+- img and img_row alignment
+	- img
+	- figure
+	- figure caption
+	- breakout block
+	- svg?
 
 
 ## TODO Later
@@ -108,6 +115,14 @@ TODOs that are done!
 - output screenshot
 - output readme
 - merge all headings
+- tables
+- comments
+- more tag
+- paginated post
+- img links
+- tags and categories
+- last post edge case
+
 
 ## Build scheme
 based on angular
