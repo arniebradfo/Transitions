@@ -45,6 +45,15 @@
 
 		<?php get_template_part('copyright', 'post'); ?>
 
+		<?php if (is_user_logged_in())
+			edit_post_link(
+				'Edit this post',
+				'<p class="post__edit">',
+				'</p>',
+				null,
+				'post__edit-button button button--outline'
+			); ?>
+
 	<?php else : ?>
 
 		<div class="post__content">
