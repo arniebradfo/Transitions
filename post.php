@@ -25,9 +25,11 @@
 			get_template_part('heading', 'postList'); 
 	?>
 
-	<div class="post__content" <?php if ( is_singular() ) echo 'id="post-content"' ?> >
-		<?php
-		if ( is_singular() ) {
+	<?php if ( is_singular() ) : ?>
+
+		<div class="post__content" id="post-content">
+
+			<?php
 
 			the_content(); 
 
@@ -37,19 +39,34 @@
 			if ( comments_open() || get_comments_number() )
 				comments_template();
 
-			if ( is_single() )
-				get_template_part('copyright', 'post');
-
-		} else {
-			echo '<p>' . get_the_excerpt() . '</p>';
-		} ?>
-	</div>
+			?>
 	
-	<?php if (! is_singular() ): ?>
+		</div>
+
+		<?php get_template_part('copyright', 'post'); ?>
+
+		<?php if (is_user_logged_in())
+			edit_post_link(
+				'Edit this post',
+				'<p class="post__edit">',
+				'</p>',
+				null,
+				'post__edit-button button button--outline'
+			); ?>
+
+	<?php else : ?>
+
+		<div class="post__content">
+			<p>
+				<?php the_excerpt(); ?>
+			<p>
+		</div>
+
 		<a class="post__primary-button button button--outline" href="<?php echo esc_url( get_permalink() ); ?>">
 			Read more
 			<?php echo trns_icon_component(['name'=>'Expand', 'class'=>'button__icon']) ?>
 		</a>
+
 	<?php endif; ?>
 
 </article><!--/ post.php -->
