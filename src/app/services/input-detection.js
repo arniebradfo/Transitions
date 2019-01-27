@@ -1,18 +1,14 @@
 // TODO: browser test
-// detects if we are using a touch or mouse inpt
+// detects if we are using a touch or mouse input
 
 // anonymous wrapper
 (function(){
 
-	function isInputMouse() { return !_isInputTouch };
-	function isInputTouch() { return _isInputTouch };
-
-	var _isInputTouch = false;
 	var _element = document.body;
 	var _touchEndTimeStamp;
 	var _cssClassInputMouse = 'jsState-inputMouse';
 	var _cssClassInputTouch = 'jsState-inputTouch';
-
+	TRANSITIONS.state.isInputTouch = false;
 
 	function constructor() {
 		_switchToMouse(); // or...
@@ -29,7 +25,7 @@
 		document.addEventListener('mousemove', _switchToMouse, true);
 		_element.classList.remove(_cssClassInputMouse);
 		_element.classList.add(_cssClassInputTouch);
-		_isInputTouch = true;
+		TRANSITIONS.state.isInputTouch = true;
 		// console.log(_cssClassInputTouch);
 	}
 
@@ -44,7 +40,7 @@
 		document.removeEventListener('mousemove', _switchToMouse, true);
 		_element.classList.add(_cssClassInputMouse);
 		_element.classList.remove(_cssClassInputTouch);
-		_isInputTouch = false;
+		TRANSITIONS.state.isInputTouch = false;
 		// console.log(_cssClassInputMouse);
 	}
 

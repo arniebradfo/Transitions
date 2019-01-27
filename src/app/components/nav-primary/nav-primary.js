@@ -8,7 +8,8 @@
 	var navOverlay = document.querySelector('.jsTarget-navOverlay');
 	var navOpenClass = 'jsState-navOpen';
 	var navClosedClass = 'jsState-navClosed';
-	var navOpen = false;
+	TRANSITIONS.state.isNavOpen = false;
+
 	
 	// listen for click/hover on button
 	function attachNavEvents() {
@@ -17,20 +18,21 @@
 	}
 	
 	function toggleNav(event) {
-		if (navOpen)
+		if (TRANSITIONS.state.isNavOpen)
 			closeNav();
 		else 
 			openNav();
 	}
 	
 	function openNav(event) {
-		navOpen = true;
+		TRANSITIONS.state.isNavOpen = true;
 		document.body.classList.add(navOpenClass);
 		document.body.classList.remove(navClosedClass);
+		
 	}
 	
 	function closeNav(event) {
-		navOpen = false;	
+		TRANSITIONS.state.isNavOpen = false;	
 		document.body.classList.remove(navOpenClass);
 		document.body.classList.add(navClosedClass);
 	}

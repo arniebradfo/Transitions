@@ -1,6 +1,8 @@
 // https://digwp.com/2011/04/admin-bar-tricks/
 
 @wpadminbar_Height: @s32;
+@wpadminbarMobile_Height: 46px;
+@wpadminbar_Media: ~'screen and (max-width: 782px)';
 
 body.admin-bar{
 	// padding-top: @wpadminbar_Height;
@@ -9,6 +11,10 @@ body.admin-bar{
 	.nav
 	{
 		margin-top: @wpadminbar_Height + @s8;
+
+		@media @wpadminbar_Media {
+			margin-top: @wpadminbarMobile_Height + @s8;
+		}
 	}
 
 }
