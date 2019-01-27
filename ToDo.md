@@ -1,108 +1,19 @@
-
-## TODO List
-- re-implement text-shadow and parallax on mobile
-- change tags to categories
-- edit post if logged in button
+# TODO List
 - finer css
 	- browser test
-	- critical css - is
+	- critical css?
 	- active animations?
 	- better loading/unloading animations
+	- add_image_size()
 - buttons
 	- outline
 	- focus stuff?
 	- press/touch only?
 - does is validate?
 
+
 ## DoneDid 
-TODOs that are done!
-- output style
-- output components and views
-- output svg
-- output template parts
-- output combine php functions
-- output js
-- basic layout
-	- reduce .php to just index, no single
-	- add site name to heading if not post page
-	- single post
-		- margins 
-		- heading when is singular
-		- heading without featured media
-		- footer move copyright
-		- next-post under footer
-	- post list navigation
-	- design all headings
-	- standardize heading?
-		- [links on links](https://www.sarasoueidan.com/blog/nested-links/)
-	- heading archive
-	- heading search
-	- heading adjacent post
-	- heading post
-	- heading for home page 2+
-	- heading page
-		- subtitle
-		- remove date
-- combine header and footer
-- style basic elements
-	- typography - headings
-	- add and uncomment basic elements
-	- heading buttons
-	- buttons
-	- links half-ass
-	- headings
-		- homepage spacing
-		- vh unit js
-		- post list spacing
-		- .has-featured-image
-	- X - you NEED a standard link style! but do i?
-		- X - raise and lower underline
-		- X - segmented on the nav
-	- search input
-		- general text input less
-- style basic elements
-	- pagination
-		- layout
-	- nav 
-		- link styles
-		- layout - correct min-width
-	- color vars
-	- size vars
-- proper icons and shadows for them
-- password protected? 
-- finer css
-	- nav animations 
-	- proper heights for headings
-	- post-link hover and interaction
-		- layer image and gradients properly
-		- make sure everything animates smoothly
-		- undo side effects
-	- heading and footer parallax
-	- more left-right alignment - col rules
-	- screen-size test
-- 404
-- no posts
-- github updater
-- add ids for anchor links 
-- loading / unloading animations
-	- load with critical css class that hides
-	- remove the class with js - if we have the external stylesheet
-	- what happens without js
-- make a release branch and process
-- mobile scroll performance issues
-	- will-change: transform; // forces a new layer? is bad apparently
-	- view height 1vh unit stuff seems to help, removed --vh var
-	- removing text shadows helped a lot
-	- removed parallax listener
-	- repositioned html,body,nav{} css so we get the address bar moving in chrome android
-- add_image_size()
-- rounded corners on img content
-- img and img_row alignment
-	- img
-	- figure
-	- figure caption
-	- breakout block
-	- svg?
+Move things here off the list, then to the __ChangeLog.md__
 
 
 ## TODO Later
@@ -120,24 +31,30 @@ TODOs that are done!
 - more tag
 - paginated post
 - img links
-- tags and categories
+- display tags and categories
 - last post edge case
+- re-implement text-shadow and parallax on mobile
+- better titles for the Archives page
 
 
 ## Build scheme
 based on angular
 outputs an external dist folder that wp uses
 
+
 ## Interaction principles?
 - grows when hovered
 - shrinks when pressed
 - flash animates when when tapped
 
+
 ## cd From `Wordpress` project
 `cd wp-content/themes/transitions-dev`
+
 
 ## ReadMe.txt
 Plugin test [readme.txt](https://generatewp.com/plugin-readme/?clone=test-plugin-readme-txt-file)
 WP Plugin [readme.txt](https://wordpress.org/plugins/readme.txt)
 Twentynineteen [readme.txt](https://github.com/WordPress/WordPress/blob/master/wp-content/themes/twentynineteen/readme.txt)
 Theme [readme.txt](https://make.wordpress.org/themes/2015/04/29/a-revised-readme/)
+

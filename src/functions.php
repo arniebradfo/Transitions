@@ -185,6 +185,10 @@ function trns_wp_nav_menu( $args = array() ) {
 
 }
 
+function trns_get_the_tag_list(){
+	
+}
+
 function trns_ascii_logo() {
 	return <<<HTML
 <!--
