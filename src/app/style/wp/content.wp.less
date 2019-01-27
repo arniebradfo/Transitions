@@ -7,19 +7,32 @@
 
 }
 
-.alignout { // not wp standard
+.alignout.alignout{ // not wp standard
 
 	@horizontal_Margin: @column_Padding;
 	@horizontal_Margin2x: @horizontal_Margin * 2;
 
-	width: calc(100vw - @horizontal_Margin2x);
 	max-width: initial;
+	width: calc(100vw - @horizontal_Margin2x);
 	margin: 0 @horizontal_Margin; // 50% is relative to parent's width
-
 	position: relative;
 	left: calc(-50vw + 50%); // magic!
 
 	// TOD0: media query that sets it to normal
+}
+
+.alignout--block.alignout--block{
+	width: 100vw;
+	max-width: initial;
+	position: relative;
+	left: calc(-50vw + 50%); // magic!
+
+	padding: @column_Padding;
+	background-color: @bgOverlay_Color;
+}
+
+.column{
+	@column_Rules();
 }
 
 
