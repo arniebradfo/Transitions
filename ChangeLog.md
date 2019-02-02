@@ -1,7 +1,7 @@
 # Change Log
 
 ## 3.0.2
-Scroll performance improvements
+Image Refinements
 - GPU intensive CSS and JS is skipped for mobile
 - image alignment in post content
 - added `.alignout` & `.alignout--block` css classes
@@ -27,7 +27,7 @@ Updates and bug fixes for Jared's Portfolio
 Initial production version
 
 ## 0.0.1
-Initial Version - more like v3.0.0.1 than anything
+Initial Version - more like v3.0.0.1 than v0.0.1
 - output style
 - output components and views
 - output svg

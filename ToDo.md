@@ -1,15 +1,18 @@
 # TODO List
+- GithubUpdater doesn't work
 - finer css
 	- browser test
 	- critical css?
 	- active animations?
 	- better loading/unloading animations
-	- add_image_size()
 - buttons
 	- outline
 	- focus stuff?
 	- press/touch only?
 - does is validate?
+- accessibility
+- logo loading
+- [favicon](https://stackoverflow.com/a/48969053/5648839)
 
 
 ## DoneDid 
