@@ -4,7 +4,7 @@
 Image Refinements
 - GPU intensive CSS and JS is skipped for mobile
 - image alignment in post content
-- added `.alignout` & `.alignout--block` css classes
+- added `.alignout` & `.alignout-section` css classes
 - added image sizes with `add_image_size()`
 - "Edit this post" if logged in button
 - added `#` to tags

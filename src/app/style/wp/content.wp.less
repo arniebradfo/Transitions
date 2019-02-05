@@ -12,27 +12,42 @@
 	@horizontal_Margin: @column_Padding;
 	@horizontal_Margin2x: @horizontal_Margin * 2;
 
-	max-width: initial;
+	max-width: @columnLg_MaxWidth; // TODO: put in sizes.vars.less
 	width: calc(100vw - @horizontal_Margin2x);
-	margin: 0 @horizontal_Margin; // 50% is relative to parent's width
 	position: relative;
-	left: calc(-50vw + 50%); // magic!
+	left: 50%;
+	transform: translateX(-50%);
+	// width: 100vw;
+	// margin: @paragraph_VerticalMargin @horizontal_Margin;
+	// margin: @column_Padding;
+	// left: calc(-50vw + 50%); // magic!
 
-	// TOD0: media query that sets it to normal
+	// TODO: media query that sets it to normal?
+
+	img&
+	// figure&,
+	// object&
+	{
+		display: block;
+	}
 }
 
-.alignout--block.alignout--block{
+.alignout-section.alignout-section{
 	width: 100vw;
 	max-width: initial;
 	position: relative;
 	left: calc(-50vw + 50%); // magic!
+	margin: @column_Padding 0;
 
-	padding: 1em @column_Padding;
+	// padding: @paragraph_VerticalMargin @column_Padding;
 	background-color: @bgOverlay_Color;
 }
 
 .column{
 	@column_Rules();
+}
+.column--lg{
+	max-width: @columnLg_MaxWidth + (@column_Padding*2); 
 }
 
 

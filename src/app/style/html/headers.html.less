@@ -1,10 +1,10 @@
 // HEADERS //
 h1, h2, h3,  {
-	margin: 1em 0 1rem;
+	margin: 1em 0 @paragraph_VerticalMargin;
 	.text_Shadow();
 }
 h4, h5, h6{
-	margin: 1em 0;
+	margin: @paragraph_VerticalMargin 0;
 	.text_Shadow();	
 }
 h1 { .heading1_Type(); }
@@ -13,3 +13,7 @@ h3 { .heading3_Type(); }
 h4 { .heading4_Type(); }
 h5 { .heading5_Type(); }
 h6 { .heading6_Type(); }
+
+p{
+	margin: @paragraph_VerticalMargin 0;
+}
