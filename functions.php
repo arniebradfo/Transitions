@@ -30,7 +30,8 @@ function trns_theme_setup() {
 	) );
 
 	// featured images aka thumbnails
-	// add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
+
 	// set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions: 150px width x 150px height (cropped)
 	// update_option( 'thumbnail_size_w', 150 ); // don't depend on these 
 	// update_option( 'thumbnail_size_h', 150 ); // the size of these can be edited by the user
@@ -192,7 +193,29 @@ function trns_get_the_tag_list(){
 function trns_ascii_logo() {
 	return <<<HTML
 <!--
-  
+		
+  ◺
+  ▢ ▢
+  ▢ ▢
+  ▢ ▢
+  ▢ ▢ ▢ ▢ ▢
+  ▢ ▢ ▢ ▢ ▢
+        ▢ ▢   ◺
+  ▢ ▢ ▢ ▢ ▢   ▢ ▢
+  ▢ ▢ ▢ ▢ ▢   ▢ ▢
+              ▢ ▢
+  ▢ ▢   ▢ ▢ ▢ ▢ ▢
+  ▢ ▢   ▢ ▢ ▢ ▢ ▢
+        ▢ ▢
+	    ▢ ▢ ▢ ▢ ▢   bradford
+		▢ ▢ ▢ ▢ ▢   digital
+
+-->
+HTML;
+
+// OTHER OPTIONS
+/*
+
   |\
   |||\
   ||||
@@ -208,10 +231,25 @@ function trns_ascii_logo() {
   ||||  |||||||||||
         ||||
         |||||||||||   bradford
-        |||||||||||   digital
+		|||||||||||   digital
 
--->
-HTML;
+  ██◣
+  ████
+  ████
+  ████
+  ██████████ 
+  ██████████
+        ████  ██◣
+  ██████████  ████
+  ██████████  ████
+              ████
+  ████  ██████████
+  ████  ██████████
+        ████
+	    ██████████  bradford
+        ██████████  digital
+
+ */
 }
 
 ?>

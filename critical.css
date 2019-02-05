@@ -1,1 +1,73 @@
-body{transition:opacity .5s linear;will-change:opacity}body.jsState-styleUnloaded{opacity:0}body.jsState-styleLoaded{opacity:1}.post-list{transform:translate3d(0,100px,0);transition:opacity .5s ease,transform .5s ease,outline-color .5s ease;will-change:opacity,transform,outline-color}.jsState-styleLoaded .post-list{transform:translateZ(0)}.jsTarget-transitionEnd{opacity:0;transition:opacity .5s ease;will-change:opacity}.jsState-styleLoaded .jsTarget-transitionEnd{opacity:1}
+/*
+write position like you would any other thickness value
+
+.absolute(0)
+=>
+position: absolute;
+top:    0;
+right:  0;
+bottom: 0;
+left:   0;
+
+.absolute(0 10px)
+=>
+position: absolute;
+top:    0;
+right:  10px;
+bottom: 0;
+left:   10px;
+
+.absolute(0 10px initial)
+=>
+position: absolute;
+top:    0;
+right:  10px;
+left:   10px;
+
+.absolute(1px 2px 3px 4px)
+=>
+position: absolute;
+top:    1px;
+right:  2px;
+bottom: 3px;
+left:   4px;
+
+*/body {
+  -webkit-transition: opacity 500ms linear;
+  transition: opacity 500ms linear;
+  will-change: opacity;
+}
+
+body.jsState-styleUnloaded {
+  opacity: 0;
+}
+
+body.jsState-styleLoaded {
+  opacity: 1;
+}
+
+.post-list {
+  -webkit-transform: translate3d(0, 100px, 0);
+  transform: translate3d(0, 100px, 0);
+  -webkit-transition: opacity 500ms ease, outline-color 500ms ease, -webkit-transform 500ms ease;
+  transition: opacity 500ms ease, outline-color 500ms ease, -webkit-transform 500ms ease;
+  transition: opacity 500ms ease, transform 500ms ease, outline-color 500ms ease;
+  transition: opacity 500ms ease, transform 500ms ease, outline-color 500ms ease, -webkit-transform 500ms ease;
+  will-change: opacity, transform, outline-color;
+}
+
+.jsState-styleLoaded .post-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.jsTarget-transitionEnd {
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease;
+  transition: opacity 500ms ease;
+  will-change: opacity;
+}
+
+.jsState-styleLoaded .jsTarget-transitionEnd {
+  opacity: 1;
+}
