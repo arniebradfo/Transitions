@@ -30,7 +30,8 @@ function trns_theme_setup() {
 	) );
 
 	// featured images aka thumbnails
-	// add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
+
 	// set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions: 150px width x 150px height (cropped)
 	// update_option( 'thumbnail_size_w', 150 ); // don't depend on these 
 	// update_option( 'thumbnail_size_h', 150 ); // the size of these can be edited by the user
