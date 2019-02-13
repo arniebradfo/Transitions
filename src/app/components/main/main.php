@@ -12,7 +12,7 @@
 
 ?>
 
-<main class="main">
+<main class="main" id="main">
 
 <?php
 if( is_singular() ) {

@@ -17,6 +17,19 @@
 - logo loading
 - [favicon](https://stackoverflow.com/a/48969053/5648839)
 - round corners of `<hr/>`
+- wider column
+- bigger text - smaller with media queries
+- parallax doesn't fire in off screen contexts
+- buttons should grow less on hover
+- buttons should have default margins
+- menu opens on hover
+- photos need to be more intense, css filters?
+- img shadow class for content.less
+- preview does not work with navigation
+- change tags to categories for real
+- add tags at the bottom?
+- unlock all password protected posts feature
+- outline class
 
 
 ## DoneDid 
