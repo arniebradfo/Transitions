@@ -48,6 +48,21 @@ HTML;
 add_filter( 'the_password_form', 'trns_password_form' );
 
 
+
+// Include Password Protected Posts in Search Results
+// https://www.isitwp.com/include-password-protected-posts-in-search-results/
+add_filter( 'posts_search', 'include_password_posts_in_search' );
+function include_password_posts_in_search( $search ) {
+    global $wpdb;
+    if( !is_user_logged_in() ) {    
+        $pattern = " AND ({$wpdb->prefix}posts.post_password = '')";
+        $search = str_replace( $pattern, '', $search );
+    }
+    return $search;
+}
+
+
+
 // MAKING IT A WIDGET
 // https://codex.wordpress.org/Widgets_API
 
