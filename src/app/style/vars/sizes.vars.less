@@ -21,7 +21,10 @@
 
 @1vh: var(--vh, 1vh); // vh-unit.js
 
-@column_MaxWidth: @s8*90;
+// this must match $content_width in ./functions.php
+@content_Width: @s8*110;
+
+@column_MaxWidth: @content_Width;
 @columnLg_MaxWidth: @s8*160;
 @column_Padding: @s32;
 @column_Rules:{
