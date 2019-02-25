@@ -15,7 +15,7 @@ function trns_icon_component( $atts, $content=null, $tag='' ) {
 
 	$output = '<!-- icon.php -->';
 	$output.= '<svg ';
-	$atts['class'] = isset($atts['class']) ? "icon {$atts['class']}" : 'icon';
+	$atts['class'] = ! empty($atts['class']) ? "icon {$atts['class']}" : 'icon';
 	foreach($atts as $att => $val)
 		if ($att == 'name') continue;
 		$output .= " $att=\"$val\""; // echo all attributes from the shorcode

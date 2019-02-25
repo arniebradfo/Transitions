@@ -162,11 +162,11 @@ include_once('password-form.php');
 // adds $link_class and $first_link_class
 function trns_wp_nav_menu( $args = array() ) {
 
-	$link_class = isset($args['link_class']) ? $args['link_class'] : false;
-	$first_link_class = isset($args['first_link_class']) ? $args['first_link_class'] : false;
+	$link_class = (! empty($args['link_class'])) ? $args['link_class'] : false;
+	$first_link_class = (! empty($args['first_link_class'])) ? $args['first_link_class'] : false;
 
 	// have to implement echo.
-	$echo = isset($args['echo']) ? $args['echo'] : true;
+	$echo = (! empty($args['echo'])) ? $args['echo'] : true;
 	$args['echo'] = false;
 
 	$menu = wp_nav_menu( $args );
@@ -190,7 +190,28 @@ function trns_wp_nav_menu( $args = array() ) {
 		echo $menu;
 	else 
 		return $menu;
+}
 
+// adds $link_class
+function trns_the_tags( $before='', $sep='', $after='', $id='', $link_class='' ) {
+	echo preg_replace( 
+		'/<a\s/',
+		'<a class="'.$link_class.'" ', // all links need classes
+		get_the_tag_list($before, $sep, $after, $id)
+	);
+}
+
+// adds $link_class and $ul_class
+function trns_the_categories( $separator='', $parents='', $post_id='', $link_class='', $ul_class='' ) {
+	echo preg_replace( 
+		'/<ul\sclass="/',
+		'<ul class="'.$ul_class.' ', // all links need classes
+		preg_replace( 
+			'/<a\s/',
+			'<a class="'.$link_class.'" ', // all links need classes
+			get_the_category_list($separator, $parents, $post_id)
+		)
+	);
 }
 
 function trns_ascii_logo() {

@@ -3,11 +3,6 @@
 	- [link](https://viastudio.com/optimizing-your-theme-for-wordpress-4-4s-responsive-images/)
 	- [another link](https://make.wordpress.org/core/2015/11/10/responsive-images-in-wordpress-4-4/)
 - FEATURES
-	- unlock all password protected posts feature
-		- make a widget
-		- make a widget area on main page
-	- change tags to categories, and...
-	- add tags somewhere?
 	- wider column
 	- bigger text - smaller with media queries
 	- password protect post form submit fails animation
@@ -22,7 +17,9 @@
 	- menu opens on hover, closes off hover
 	- photos need to be more intense, css filters?
 	- credit meta fields
+	- add tags somewhere?
 	- img shadow class for content.less - or in custom css, not theme?
+	- password protected post has a password input field in preview
 - TITLES - better titles for everything
 	- remove _PROTECTED_ from post title: [link](https://www.templatemonster.com/help/wordpress-how-to-removechange-protected-prefix-for-password-protected-posts.html)
 	- Tagged and Category with description
@@ -57,6 +54,9 @@
 ## DoneDid 
 Move things here off the list, then to the __ChangeLog.md__
 - GithubUpdater doesn't work - yes it does apparently
+- make a widget area on main page
+- change tags to categories, and...
+
 
 
 
@@ -80,6 +80,9 @@ Move things here off the list, then to the __ChangeLog.md__
 - re-implement text-shadow and parallax on mobile
 - better titles for the Archives page
 
+## Maybe TODO?
+- unlock all password protected posts feature
+	- make a widget
 
 ## Build scheme
 based on angular

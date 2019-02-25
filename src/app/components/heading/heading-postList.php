@@ -48,11 +48,8 @@
 		<hr class="heading__rule" />
 
 	</div>
-	
-	<?php echo preg_replace( 
-		'/<a\s/',
-		'<a class="heading__tag button" ', // all links need classes
-		get_the_tag_list('<p class="heading__tags">', ' ', '</p>')
-	); ?>
+
+	<?php // trns_the_tags('<p class="heading__tags">', ' ', '</p>', '', 'heading__tag button'); ?>
+	<?php trns_the_categories('', '', '', 'heading__category button', 'heading__categories'); ?>
 
 </header><!--/ heading-home.php -->
