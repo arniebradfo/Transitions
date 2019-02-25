@@ -9,6 +9,18 @@
  * @since 1.0
  */
 
+ // this guy sucks - https://codex.wordpress.org/Content_Width
+if ( ! isset( $content_width ) ) { 
+	$content_width = 656;
+}
+
+function var_dump_pre($mixed = null) { // for debug
+	echo '<pre>';
+	var_dump($mixed);
+	echo '</pre>';
+	return null;
+}
+
 function trns_theme_setup() {
 
 	// TODO: internationalize - i18n
@@ -62,6 +74,21 @@ function trns_theme_setup() {
 }
 add_action( 'after_setup_theme', 'trns_theme_setup' );
 
+// define the wp_calculate_image_sizes callback 
+function trns_wp_calculate_image_sizes( $sizes, $size) { 
+	global $content_width;
+	// make filter magic happen here... 
+	var_dump_pre($sizes);
+	var_dump_pre($size);
+	if ($size > $content_width) {
+		return $sizes;
+	} else {
+		return $sizes;
+	}
+    return $sizes; 
+}; 
+add_filter( 'wp_calculate_image_sizes', 'trns_wp_calculate_image_sizes', 10, 2 ); 
+
 
 // // https://wpbeaches.com/remove-wordpress-default-image-sizes/
 // function prefix_remove_default_images( $sizes ) {
@@ -96,12 +123,6 @@ add_action( 'widgets_init', 'trns_widget_setup' );
 // 	add_editor_style(); // path defaults to editor-style.css
 // }
 // add_action( 'admin_init', 'add_editor_styles' );
-
-
-// this guy sucks - https://codex.wordpress.org/Content_Width
-if ( ! isset( $content_width ) ) { 
-	$content_width = 768;
-}
 
 
 function load_theme_scripts_and_styles() {
