@@ -55,9 +55,9 @@
 Move things here off the list, then to the __ChangeLog.md__
 - GithubUpdater doesn't work - yes it does apparently
 - make a widget area on main page
-- change tags to categories, and...
-
-
+- change tags to categories
+- replacing `.alignout` with `.size-full`
+- replacing `.alignout-section` with `.section-size-full`
 
 
 ## TODO Later
