@@ -74,21 +74,6 @@ function trns_theme_setup() {
 }
 add_action( 'after_setup_theme', 'trns_theme_setup' );
 
-// define the wp_calculate_image_sizes callback 
-function trns_wp_calculate_image_sizes( $sizes, $size) { 
-	global $content_width;
-	// make filter magic happen here... 
-	var_dump_pre($sizes);
-	var_dump_pre($size);
-	if ($size > $content_width) {
-		return $sizes;
-	} else {
-		return $sizes;
-	}
-    return $sizes; 
-}; 
-add_filter( 'wp_calculate_image_sizes', 'trns_wp_calculate_image_sizes', 10, 2 ); 
-
 
 // // https://wpbeaches.com/remove-wordpress-default-image-sizes/
 // function prefix_remove_default_images( $sizes ) {
