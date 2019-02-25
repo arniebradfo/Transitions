@@ -15,10 +15,13 @@
 <main class="main" id="main">
 
 <?php
+
+$is_homepage = is_front_page() && get_page_number() < 2;
+
 if( is_singular() ) {
 	// print nothing, just skip to loop
 
-} elseif ( is_front_page() && get_page_number() < 2 ){
+} elseif ( $is_homepage ) { 
 	get_template_part('heading', 'home');
 
 } elseif( is_search() ) {
@@ -34,6 +37,12 @@ if( is_singular() ) {
 	get_template_part('heading', 'archive');
 
 } ?>
+
+<?php if ( $is_homepage ): ?>
+	<section id="homepage-widgets" class="homepage-widgets">
+		<?php dynamic_sidebar( 'homepage-widgets' ); ?>
+	</section>
+<?php endif; ?>
 
 <?php if( ! is_singular() ) 
 	echo '<div class="post-list" id="post-list">'; ?>

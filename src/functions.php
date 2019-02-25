@@ -77,17 +77,17 @@ add_action( 'after_setup_theme', 'trns_theme_setup' );
 
 
 // Widgets
-// function wpajax_widget_setup() {
-// 	register_sidebar( array(
-// 		'name'          => __( 'Sidebar Widgets', 'wpajax' ),
-// 		'id'            => 'sidebar-primary',
-// 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-// 		'after_widget'  => '</div>',
-// 		'before_title'  => '<h3 class="widget-title">',
-// 		'after_title'   => '</h3>',
-// 	) );
-// }
-// add_action( 'widgets_init', 'wpajax_widget_setup' );
+function trns_widget_setup() {
+	register_sidebar( array(
+		'name'          => 'Homepage Widgets',
+		'id'            => 'homepage-widgets',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'trns_widget_setup' );
 
 
 // add custom css to style inside the tinyMCE editor
