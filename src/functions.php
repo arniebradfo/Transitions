@@ -77,6 +77,7 @@ add_action( 'after_setup_theme', 'trns_theme_setup' );
 
 
 // Widgets
+// https://codex.wordpress.org/Widgetizing_Themes
 function trns_widget_setup() {
 	register_sidebar( array(
 		'name'          => 'Homepage Widgets',
