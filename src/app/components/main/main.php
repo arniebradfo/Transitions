@@ -38,7 +38,7 @@ if( is_singular() ) {
 
 } ?>
 
-<?php if ( $is_homepage ): ?>
+<?php if ( $is_homepage && is_active_sidebar('homepage-widgets') ): ?>
 	<section id="homepage-widgets" class="homepage-widgets">
 		<?php dynamic_sidebar( 'homepage-widgets' ); ?>
 	</section>
