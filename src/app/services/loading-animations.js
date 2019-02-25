@@ -51,7 +51,8 @@
 						event.target.click();
 						break;
 					case 'submit':
-						event.target.submit();
+						// event.target.submit(); // this will fail if there is a form <element name="submit"/>, which seems likely...
+						HTMLFormElement.prototype.submit.call(event.target) // ...so we use this instead? // https://trackjs.com/blog/when-form-submit-is-not-a-function/
 						break;
 					case 'popstate':
 						history.go(-2);
