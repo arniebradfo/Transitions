@@ -28,7 +28,9 @@
 .heading__site-title{
 	margin: @s12 -@s16;
 	z-index: 0;
-	.heading5_Type();
+	// .heading6_Type();
+	.bodySm_Type();
+	font-weight: @bold_Weight;
 }
 
 .heading__logo{
@@ -333,6 +335,7 @@
 
 .post--in-list{
 	@border_Offset: @border_Size*2 + @s4;
+	@border_Padding: @s4;
 	
 	.heading__wrapper{
 		transform: translate(0, 0);
@@ -342,7 +345,7 @@
 		position: relative;
 		&:after{ // hover border
 			content: '';
-			.absolute(0);
+			.absolute(0 @border_Padding);
 			border: @border_Size*2 solid transparent;
 			border-radius: @border_Radius + @border_Offset;
 			z-index: -1;
@@ -351,7 +354,7 @@
 	}
 
 	.heading__featured-media{
-		.absolute(@border_Offset);
+		.absolute(@border_Offset @border_Offset+@border_Padding );
 
 		&:before{ // shadow
 			content: none;

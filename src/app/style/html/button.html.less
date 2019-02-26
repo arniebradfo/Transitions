@@ -19,7 +19,6 @@
 	.transition(color);
 
 	position: relative;
-	// &::before, 
 	&::after{
 		content: '';
 		.absolute(-@s4);
@@ -37,16 +36,25 @@
 		background-position: 0% 0%;
 	}
 
+	// &::before{
+	// 	content: '';
+	// 	.absolute(x @s1 @s1 @s1);
+	// 	height: @s1;
+	// 	background-color: currentColor;
+	// }
+
 	// normal - nothing, fill or outline
 	// hover - gradient, larger scale
 	// active - darker gradient, smaller scale
 	// focus - outline
 
+	@buttonHover_Scale:  unit((@button_Size + @s2) / @button_Size);
+	@buttonActive_Scale: unit((@button_Size - @s2) / @button_Size);
+
 	&:hover{
 		color: @fgStrong_Color;
 		transition-duration: @hover_Duration;
 		&::after{
-			@buttonHover_Scale: unit((@button_Size + @s4) / @button_Size);
 			transform: scale(@buttonHover_Scale);
 			background-position: 50% 50%;
 			background-color: @accentBright_Color;
@@ -59,7 +67,6 @@
 		color: @fgOnColor_Color;
 		transition-duration: @active_Duration;
 		&::after{
-			@buttonActive_Scale: unit((@button_Size - @s2) / @button_Size);
 			transform: scale(@buttonActive_Scale);
 			background-position: 100% 100%;
 			background-color: @accentBright_Color;
@@ -100,6 +107,8 @@
 .button--large(){
 	height: @button_Size;
 	padding: 0 @s16;
+	// margin-right:  @s8;
+	// margin-bottom: @s8;
 	// display: flex;	
 
 	// &::before, 
@@ -160,6 +169,7 @@
 
 a{
 	.button--base();
+	// color: @accentDeep_Color;
 }
 
 button, 
