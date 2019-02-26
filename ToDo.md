@@ -1,11 +1,7 @@
 # TODO List
 - FEATURES
-	- better heights for headers
+	- bigger search header
 	- better min and max height for post header
-	- post pagination
-		- next should be next page!
-		- add pagination
-		- add 'page #' to titles
 	- parallax doesn't fire in off screen contexts
 		- other parallax bugs, seems slow
 	- menu opens on hover, closes off hover
@@ -14,6 +10,16 @@
 	- add tags somewhere?
 	- img shadow class for content.less - or in custom css, not theme?
 	- password protected post has a password input field in preview
+- PAGINATION
+	- make pagination component more robust
+		- optional _page n of x_ title
+		- bg and styles
+	- add pagination to post headers
+	- change post list name to All Posts
+	- post pagination
+		- add pagination to paginate posts
+		- add Next Post: label
+		- next should be next page!
 - BUTTONS
 	- press/touch only?
 - ANIMATIONS
@@ -60,6 +66,7 @@ Move things here off the list, then to the __ChangeLog.md__
 
 
 ## TODO Later
+- better heights for headers
 - current item style on pagination & menus
 	- button current style? `.current-menu-item`
 		- button current style? 
