@@ -12,7 +12,7 @@
  // this guy sucks - https://codex.wordpress.org/Content_Width
 if ( ! isset( $content_width ) ) { 
 	// this must match @content_Width in ./sizes.vars.less
-	$content_width = 8*110;
+	$content_width = 8*100;
 }
 
 function var_dump_pre($mixed = null) { // for debug

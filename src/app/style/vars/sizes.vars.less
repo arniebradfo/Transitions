@@ -22,11 +22,11 @@
 @1vh: var(--vh, 1vh); // vh-unit.js
 
 // this must match $content_width in ./functions.php
-@content_Width: @s8*110;
+@content_Width: @s8*100;
 
-@column_MaxWidth: @content_Width;
-@columnLg_MaxWidth: @s8*160;
 @column_Padding: @s32;
+@column_MaxWidth: @content_Width + @column_Padding*2;
+@columnLg_MaxWidth: @s8*150 + @column_Padding*2;
 @column_Rules:{
 	margin: 0 auto;
 	max-width: @column_MaxWidth;
