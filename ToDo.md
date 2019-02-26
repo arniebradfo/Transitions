@@ -1,5 +1,6 @@
 # TODO List
 - FEATURES
+	- margins get bigger at different screen widths
 	- post pagination
 		- next should be next page!
 		- add pagination
@@ -12,6 +13,7 @@
 	- add tags somewhere?
 	- img shadow class for content.less - or in custom css, not theme?
 	- password protected post has a password input field in preview
+	
 - STRUCTURAL
 	- join header into a single file?
 	- recreate `header.php` and `footer.php`

@@ -10,7 +10,9 @@
  * @version 1.0
  */
 
-?><footer class="footer" id="footer">
+?>
+
+<footer class="footer" id="footer">
 
 	<div class="footer__wrapper">
 
@@ -41,3 +43,5 @@
 	} ?>
 
 </footer>
+
+<?php wp_footer(); ?>
