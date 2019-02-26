@@ -1,12 +1,5 @@
 # TODO List
-- IMAGES - make sure responsive images work
-	- [link](https://viastudio.com/optimizing-your-theme-for-wordpress-4-4s-responsive-images/)
-	- [another link](https://make.wordpress.org/core/2015/11/10/responsive-images-in-wordpress-4-4/)
 - FEATURES
-	- wider column
-	- bigger text - smaller with media queries
-	- password protect post form submit fails animation
-	- ===
 	- round corners of `<hr/>`
 	- post pagination
 		- next should be next page!
@@ -58,6 +51,14 @@ Move things here off the list, then to the __ChangeLog.md__
 - change tags to categories
 - replacing `.alignout` with `.size-full`
 - replacing `.alignout-section` with `.section-size-full`
+- wider column - set content-width correctly
+- bigger text - smaller with media queries
+- password protect post form submit fails animation
+- IMAGES - make sure responsive images work
+	- they work ok, just need to include the full-size image
+	- [link](https://viastudio.com/optimizing-your-theme-for-wordpress-4-4s-responsive-images/)
+	- [another link](https://make.wordpress.org/core/2015/11/10/responsive-images-in-wordpress-4-4/)
+
 
 
 ## TODO Later
