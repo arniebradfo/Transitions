@@ -14,7 +14,7 @@
 
 <footer class="footer" id="footer">
 
-	<div class="footer__wrapper">
+	<div class="footer__column">
 		<div class="footer__items">
 
 			<?php get_search_form(); ?>

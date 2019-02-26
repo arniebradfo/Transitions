@@ -18,7 +18,7 @@
 <!-- heading-post.php -->
 <header class="heading heading--post-list heading--interactive heading--<?php echo $featured_media_class_suffix; ?>">
 
-	<div class="heading__wrapper">
+	<div class="heading__column">
 
 		<a class="heading__cover-link button--custom" 
 			href="<?php echo esc_url( get_permalink() ) ?>" 

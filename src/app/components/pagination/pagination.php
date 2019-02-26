@@ -1,7 +1,7 @@
 <?php if (paginate_links()) : ?>
 
 <div class="pagination">
-	<div class="pagination__wrapper">
+	<div class="pagination__column">
 		<nav class="pagination__menu">
 			<?php if (get_next_posts_link()) : ?>
 				<?php echo preg_replace(

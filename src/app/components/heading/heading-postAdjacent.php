@@ -18,7 +18,7 @@
 <!-- heading-post.php -->
 <header class="heading heading--post-adjacent heading--interactive heading--<?php echo $featured_media_class_suffix; ?>" id="adjacent-post">
 
-	<div class="heading__wrapper">
+	<div class="heading__column">
 
 		<?php # this comes first so the css ~ .sibling selector will work ?>
 		<a class="heading__primary-button button button--fill-light" 

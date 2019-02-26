@@ -14,7 +14,7 @@
 <!-- heading-home.php -->
 <section class="heading heading--home heading--lacks-featured-media" id="heading">
 
-	<div class="heading__wrapper">
+	<div class="heading__column">
 
 		<div class="heading__flex-splitter"></div>
 

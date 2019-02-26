@@ -18,7 +18,7 @@
 <!-- heading-post.php -->
 <header class="heading heading--post-full heading--<?php echo $featured_media_class_suffix; ?>" id="heading">
 
-	<div class="heading__wrapper">
+	<div class="heading__column">
 
 		<a class="heading__site-title  button--large" 
 			href="<?php echo esc_url( home_url( '/' ) ); ?>" 

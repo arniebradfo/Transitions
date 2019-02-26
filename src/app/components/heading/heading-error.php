@@ -13,7 +13,7 @@
 <!--heading-error.php-->
 <header class="heading heading--error heading--lacks-featured-media" id="heading">
 
-	<div class="heading__wrapper">
+	<div class="heading__column">
 
 		<a class="heading__site-title button--large" 
 			href="<?php echo esc_url( home_url( '/' ) ); ?>" 

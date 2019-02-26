@@ -1,6 +1,5 @@
 # TODO List
 - FEATURES
-	- rename css classes to include x__column
 	- better heights for headers
 	- better min and max height for post header
 	- post pagination
@@ -55,6 +54,7 @@ Move things here off the list, then to the __ChangeLog.md__
 	- buttons should grow less on hover
 	- margins get bigger at different screen widths - added css var --column_Padding
 	- replace @s16 with @button_Padding where appropriate
+	- rename column css classes to include x__column
 
 
 
