@@ -19,7 +19,7 @@
 
     .for(length(@properties)); .-each(@i) {
 		transition+: extract(@properties, @i) @duration @timing;
-		will-change+: extract(@properties, @i);
+		// will-change+: extract(@properties, @i);
 	}
 
 	.addVisibilityToEnd() when (@visibility = hidden) {

@@ -8,8 +8,30 @@
 .searchform__input{
 	padding-right: @buttonLg_Size + @s4;
 	// flex: 1 0 auto;
+	max-width: 100%;
+	// display: flex;
+	// align-items: center;
+	vertical-align: auto;
 }
 .searchform__button{
 	margin-left: -@buttonLg_Size;
 	z-index: 0;
+}
+
+.heading__searchform{
+	margin: @s16 0 ;
+}
+
+.searchform--title{
+	.searchform__input{
+		.heading1_Type();
+		.placeholder({
+			font-size: inherit;
+		});
+		line-height: 1.5em !important;
+		height: auto;
+		&:not(:hover):not(:active):not(:focus){
+			.input--no-outline();
+		}
+	}
 }

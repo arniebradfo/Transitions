@@ -14,17 +14,17 @@
 		<div class="heading__featured-media heading__featured-media--empty"></div> 
 
 		<div class="heading__meta">
-			Search Results: 
-			Page #<?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
+			Search results for: 
+			<!-- Page #<?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?> -->
 		</div>
 
-		<h1 class="heading__title">
+		<!-- <h1 class="heading__title">
 			<?php echo get_search_query() ?>
-		</h1>
+		</h1> -->
 
 		<!-- <hr class="heading__rule" /> -->
 		
-		<div class="heading__searchform" >
+		<div class="heading__searchform searchform--title" >
 			<?php echo get_search_form(); ?>
 		</div>
 	

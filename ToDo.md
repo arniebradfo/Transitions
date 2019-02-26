@@ -1,6 +1,6 @@
 # TODO List
 - FEATURES
-	- bigger search header
+	- tune text shadow
 	- better min and max height for post header
 	- parallax doesn't fire in off screen contexts
 		- other parallax bugs, seems slow
@@ -61,6 +61,7 @@ Move things here off the list, then to the __ChangeLog.md__
 	- margins get bigger at different screen widths - added css var --column_Padding
 	- replace @s16 with @button_Padding where appropriate
 	- rename column css classes to include x__column
+	- bigger, better search header
 
 
 
