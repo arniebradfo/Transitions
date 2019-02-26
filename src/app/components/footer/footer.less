@@ -5,13 +5,13 @@
 	background: @bgOverlayLg_Gradient;
 	padding: @s1 0;
 }
-.footer__wrapper{
+.footer__items{
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	
-	@column_Rules();
-	padding: @s12 (@column_Padding - @s16) 0;
+	margin: 0 -@s16;
+	padding-top: @s12;
+
 	.searchform, .footer__menu{
 		margin-bottom: @s12;
 	}
@@ -22,6 +22,10 @@
 	.searchform__input:not(:hover):not(:active):not(:focus){
 		.input--no-outline();
 	}
+}
+.footer__wrapper{
+	@column_Rules();
+	padding: 0 @column_PaddingVar;
 }
 .footer__menu{
 	flex: 0 0 auto;

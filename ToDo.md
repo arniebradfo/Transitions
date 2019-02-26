@@ -1,6 +1,8 @@
 # TODO List
 - FEATURES
-	- margins get bigger at different screen widths
+	- replace @s16 with button_Padding where appropriate
+	- better heights for headers
+	- better min and max height for post header
 	- post pagination
 		- next should be next page!
 		- add pagination
@@ -13,10 +15,6 @@
 	- add tags somewhere?
 	- img shadow class for content.less - or in custom css, not theme?
 	- password protected post has a password input field in preview
-	
-- STRUCTURAL
-	- join header into a single file?
-	- recreate `header.php` and `footer.php`
 - BUTTONS
 	- press/touch only?
 - ANIMATIONS
@@ -55,6 +53,7 @@ Move things here off the list, then to the __ChangeLog.md__
 	- wider column - set content-width correctly
 	- bigger text - smaller with media queries
 	- buttons should grow less on hover
+	- margins get bigger at different screen widths - added css var --column_Padding
 
 
 
@@ -85,6 +84,8 @@ Move things here off the list, then to the __ChangeLog.md__
 	- buttons should grow even less on hover
 	- underline or colorize regular link
 	- buttons should have default margins
+- STRUCTURAL
+	- join heading into a single file?
 
 ## Maybe TODO?
 - unlock all password protected posts feature

@@ -13,17 +13,15 @@
 .size-large{}
 .size-full{
 
-	@horizontal_Margin: @column_Padding;
-	@horizontal_Margin2x: @horizontal_Margin * 2;
 
 	max-width: @columnLg_MaxWidth; // TODO: put in sizes.vars.less
-	width: calc(100vw - @horizontal_Margin2x);
+	width: calc(100vw - (@column_PaddingVar * 2));
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
 	// width: 100vw;
-	// margin: @paragraph_VerticalMargin @horizontal_Margin;
-	// margin: @column_Padding;
+	// margin: @paragraph_VerticalMargin @column_PaddingVar;
+	// margin: @column_PaddingVar;
 	// left: calc(-50vw + 50%); // magic!
 
 	// TODO: media query that sets it to normal?
@@ -41,9 +39,9 @@
 	max-width: initial;
 	position: relative;
 	left: calc(-50vw + 50%); // magic!
-	margin: @column_Padding 0;
+	margin: @column_PaddingVar 0;
 
-	// padding: @paragraph_VerticalMargin @column_Padding;
+	// padding: @paragraph_VerticalMargin @column_PaddingVar;
 	background-color: @bgOverlay_Color;
 }
 
@@ -51,7 +49,7 @@
 	@column_Rules();
 }
 .column--lg{
-	max-width: @columnLg_MaxWidth + (@column_Padding*2); 
+	max-width: calc(@columnLg_MaxWidth + (@column_PaddingVar * 2)); 
 }
 
 

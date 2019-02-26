@@ -2,11 +2,14 @@
 .pagination{
 	border-top: @s1 solid @fgWeaker_Color;
 }
-.pagination__menu{
+.pagination__wrapper{
 	@column_Rules();
-	padding: @s8 (@column_Padding - @s16);
+	padding: @s8 @column_PaddingVar;
+}
+.pagination__menu{
 	display: flex;
 	align-items: baseline;
+	margin: 0 -@s16;
 }
 .pagination__primary-button{
 	flex: 0 0 auto;
