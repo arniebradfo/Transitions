@@ -3,29 +3,19 @@
 
 	// adds parallax to headings
 
+	// retrieve elements
 	var imgParallaxTop = document.querySelector('.jsTarget-parallax--top')
 	var imgParallaxBottom = document.querySelector('.jsTarget-parallax--bottom')
-	var scrollingElement = window;
-	// console.log(imgParallaxTop, imgParallaxBottom);
+	var scrollTarget = window;
+	var scrollingElement = document.documentElement;
 
-	function throttleAnimationFrame(callback) { // from HESH
-		var wait = false;
-		return function () {
-			var context = this, args = arguments;
-			if (!wait) {
-				callback.apply(context, args);
-				wait = true;
-				window.requestAnimationFrame(function () {
-					wait = false;
-				});
-			}
-		};
-	}
+	var parallaxInc = 0;
+	var scrollInc = 0;
 
-	function onScroll(event) {	
-
+	function updateParallax() {
+		console.log(parallaxInc++);
+		
 		var denominator = 2; // how much parallax?
-		var scrollingElement = event.target.scrollingElement;
 		
 		if (TRANSITIONS.state.isInputTouch){
 			imgParallaxTop.style = '';
@@ -43,9 +33,14 @@
 			imgParallaxBottom.style = 'transform: translate3D(0, -'+ parallaxDistanceBottom +'px, 0)';
 		}
 	}
-	var throttledOnScroll = throttleAnimationFrame(onScroll);
+
+	function onScroll(event) {	
+		scrollingElement = event.target.scrollingElement;
+		console.log(scrollInc++);
+		window.requestAnimationFrame(updateParallax)
+	}
 
 	if (imgParallaxTop || imgParallaxBottom)
-		scrollingElement.addEventListener('scroll', throttledOnScroll);
+		scrollTarget.addEventListener('scroll', onScroll);
 
 }());
