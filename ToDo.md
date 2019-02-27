@@ -1,7 +1,5 @@
 # TODO List
 - FEATURES
-	- header colors - lighter with no image, no gradient, border, no shadow
-	- photos need to be more intense, css filters?
 	- pagination should stack at smaller widths
 	- ===
 	- tune text shadow
@@ -11,7 +9,6 @@
 	- img shadow class for content.less - or in custom css, not theme?
 - ANIMATIONS
 	- ctrl click to open new page?
-
 	- better loading/unloading animations
 	- doesn't animate on first load sometimes
 	- critical css?
@@ -59,7 +56,9 @@ Move things here off the list, then to the __ChangeLog.md__
 	- move over _'read more'_ button a little bit
 	- better min and max height for post headers
 	- menu button bg color is stronger
+	- header colors - lighter with no image, no gradient, border, no shadow
 	- other minor changes...
+	- heading photos are more intense now
 - PAGINATION
 	- change post list name to All Posts
 	- add pagination to post headers

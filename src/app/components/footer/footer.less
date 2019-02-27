@@ -3,9 +3,10 @@
 
 .footer{
 	background: @bgOverlayLg_Gradient;
-	padding: @s1 0;
+	padding-top: @s1 0;
 	border-top: @s1 solid @bgOverlay_Color;
 	border-bottom: @s1 solid @bgOverlay_Color;
+	background-clip: padding-box;
 
 }
 .footer__items{
@@ -22,9 +23,10 @@
 	.searchform{
 		flex: 1 1 auto;
 	}
-	// .searchform__input:not(:hover):not(:active):not(:focus){
-	// 	.input--no-outline();
-	// }
+	.searchform__input:not(:hover):not(:active):not(:focus){
+		// .input--no-outline();
+		border-color: @bgOverlay_Color;
+	}
 }
 .footer__column{
 	@column_Rules();
