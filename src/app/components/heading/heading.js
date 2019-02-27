@@ -19,16 +19,19 @@
 		}
 
 		if (imgParallaxTop && window.innerHeight > scrollingElement.scrollTop) {
-			console.log(window.innerHeight, scrollingElement.scrollTop);
+
 			var parallaxDistanceTop = Math.round(scrollingElement.scrollTop / denominator);
 			imgParallaxTop.style = 'transform: translate3D(0, '+ parallaxDistanceTop +'px, 0)';
+			
 		}
 
 		var scrollBottom = scrollingElement.scrollHeight - scrollingElement.scrollTop - window.innerHeight;
+		
 		if (imgParallaxBottom && window.innerHeight > scrollBottom) {
-			console.log(window.innerHeight, scrollBottom);
+
 			var parallaxDistanceBottom = Math.round(scrollBottom / denominator);
 			imgParallaxBottom.style = 'transform: translate3D(0, -'+ parallaxDistanceBottom +'px, 0)';
+
 		}
 	}
 
