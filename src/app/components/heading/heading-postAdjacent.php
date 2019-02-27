@@ -25,7 +25,7 @@
 			href="<?php echo esc_url( get_permalink() ) ?>" 
 			rel="bookmark">
 			Read more
-			<?php echo trns_icon_component(['name'=>'Arrow_Down', 'class'=>'button__icon']) ?>
+			<?php trns_icon_component(['name'=>'Arrow_Down', 'class'=>'button__icon']) ?>
 		</a>
 
 		<a class="heading__cover-link button--custom" 

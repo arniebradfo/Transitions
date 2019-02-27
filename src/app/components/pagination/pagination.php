@@ -1,4 +1,14 @@
 <?php 
+/**
+ * pagination component
+ *
+ * @link ???
+ *
+ * @package WordPress
+ * @subpackage Transitions
+ * @since 1.0
+ * @version 1.0
+ */
 
 global $page,    // int
 	$numpages,   // int
@@ -92,7 +102,7 @@ if (isset($paginate_links)) :
 			<?php elseif (isset($primary_link)) : ?>
 				<a class="button pagination__primary-button" href="<?php echo esc_url($primary_link); ?>" >
 					<?php echo $primary_link_text; ?>
-					<?php echo trns_icon_component(['name'=>$icon_name, 'class'=>'button__icon']) ?>
+					<?php trns_icon_component(['name'=>$icon_name, 'class'=>'button__icon']) ?>
 				</a>
 
 			<?php endif; ?>

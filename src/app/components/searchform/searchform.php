@@ -27,6 +27,6 @@
 		name="s" 
 		/>
 	<button class="searchform__button button--icon" type="submit" >
-		<?php echo trns_icon_component(['name'=>'Search', 'class'=>'searchform__button-icon']) ?>
+		<?php trns_icon_component(['name'=>'Search', 'class'=>'searchform__button-icon']) ?>
 	</button>
 </form><!--/ searchform.php -->
