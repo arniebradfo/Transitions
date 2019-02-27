@@ -68,6 +68,6 @@ if( is_singular() ) {
 	echo '</div>'; ?>
 
 <?php if( ! is_singular() && have_posts()) 
-	trns_pagination_component(); ?>
+	trns_pagination_component(['class'=>'post-list__pagination']); ?>
 
 </main><!-- .main -->

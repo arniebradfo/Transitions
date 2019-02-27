@@ -1,21 +1,18 @@
 # TODO List
 - FEATURES
-	- tune text shadow
 	- better min and max height for post header
+	- menu opens on hover, closes off hover
+	- menu button bg color
 	- parallax doesn't fire in off screen contexts
 		- other parallax bugs, seems slow
-	- menu opens on hover, closes off hover
+	- header colors - lighter with no image, no gradient, border, no shadow
 	- photos need to be more intense, css filters?
+	- ===
+	- tune text shadow
+	- password protected post has a password input field in preview
 	- credit meta fields
 	- add tags somewhere?
 	- img shadow class for content.less - or in custom css, not theme?
-	- password protected post has a password input field in preview
-- PAGINATION
-	- bg and styles for header version?	
-	- post pagination
-		- add _Next Post:_ and _Next Page:_ label
-- BUTTONS
-	- press/touch only?
 - ANIMATIONS
 	- ctrl click to open new page?
 	- better loading/unloading animations
@@ -23,6 +20,8 @@
 	- critical css?
 	- active animations for post clicks
 	- logo loading? DO IT LAST!
+- BUTTONS
+	- press/touch only?
 - TESTING
 	- browser test
 	- does is validate?
@@ -49,19 +48,25 @@ Move things here off the list, then to the __ChangeLog.md__
 	- [link](https://viastudio.com/optimizing-your-theme-for-wordpress-4-4s-responsive-images/)
 	- [another link](https://make.wordpress.org/core/2015/11/10/responsive-images-in-wordpress-4-4/)
 - CSS
-	- round corners of `<hr/>`
+	- round corners of `<hr/>`, more intense color
 	- wider column - set content-width correctly
 	- bigger text - smaller with media queries
 	- buttons should grow less on hover
-	- margins get bigger at different screen widths - added css var --column_Padding
-	- replace @s16 with @button_Padding where appropriate
-	- rename column css classes to include x__column
+	- margins get bigger at different screen widths - added css var `--column_Padding`
+	- replace `@s16` with @button_Padding where appropriate
+	- rename column css classes to include `.x__column`
 	- bigger, better search header
+	- no outline for image-less posts
+	- move over _'read more'_ button a little bit
+	- other minor changes...
 - PAGINATION
 	- change post list name to All Posts
 	- add pagination to post headers
-	- optional _page n of x_ title
+	- optional _'Page n of x'_ title
 	- add pagination to paginate posts
+	- add _'Next Post:'_ and _'Next Page:'_ label
+	- bg and styles for header pagination
+	- border lines	
 
 
 

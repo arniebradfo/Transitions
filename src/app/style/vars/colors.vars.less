@@ -9,7 +9,7 @@
 @fgWeak_Opacity: 0.4;
 @fgWeak_Color: fade(black, @fgWeak_Opacity*100%);
 
-@fgWeaker_Opacity: 0.1;
+@fgWeaker_Opacity: 0.2;
 @fgWeaker_Color: fade(black, @fgWeaker_Opacity*100%);
 
 @fgOnColor_Color: fade(white, 85%);
@@ -26,33 +26,38 @@
 // https://developer.mozilla.org/en-US/docs/Web/CSS/background
 // https://codepen.io/P1N2O/pen/pyBNzX
 
-@hover_Opacity: 1;
-@hover_Color: red;
+// @hover_Opacity: 1;
+// @hover_Color: red;
 
-@active_Opacity: 0.7;
-@active_Color: blue;
+// @active_Opacity: 0.7;
+// @active_Color: blue;
 
-@focus_Opacity: 0.7;
-@focus_Color: rgb(9, 255, 0);
+// @focus_Opacity: 0.7;
+// @focus_Color: rgb(9, 255, 0);
 
 @disabled_Opacity: 0.3;
 @disabled_Color: fade(black, @disabled_Opacity*100%);
 
 @bgPrimary_Color: white;
-// https://medium.com/the-missing-bit/mitigating-css-gradient-banding-45b88493d228
 @bgOverlay_Color: fade(black, 10%);
-@bgOverlay_Gradient: linear-gradient(-45deg, fade(black, 20%), fade(black, 05%));
-@x:1.2; @y:0.1;
-@bgOverlayLg_Gradient:
-	linear-gradient(-40deg, fade(black, 2*@x), fade(black, 1*@y)),
-	linear-gradient(-52deg, fade(black, 2*@x), fade(black, 2*@y)),
-	linear-gradient(-58deg, fade(black, 3*@x), fade(black, 6*@y)),
-	linear-gradient(-71deg, fade(black, 3*@x), fade(black, 7*@y)),
-	linear-gradient(-88deg, fade(black, 4*@x), fade(black, 2*@y)),
-	linear-gradient(-36deg, fade(black, 9*@x), fade(black, 5*@y)),
-	linear-gradient(-45deg, fade(black, 4*@x), fade(black, 3*@y));
-// @bgOverlayLg_Gradient: svg-gradient(to bottom right,  fade(black, 05%), fade(black, 20%));
-// @bgOverlayLg_Gradient: linear-gradient(-45deg, darken(white, 10%), black);
+@bgOverlayInvert_Color: fade(@bgPrimary_Color, 30%);
+
+// https://medium.com/the-missing-bit/mitigating-css-gradient-banding-45b88493d228
+// @bgOverlay_Gradient: linear-gradient(-45deg, fade(black, 20%), fade(black, 05%));
+// @x:1.2; @y:0.1;
+// @bgOverlayLg_Gradient: 
+// 	linear-gradient(-40deg, fade(black, 2*@x), fade(black, 1*@y)),
+// 	linear-gradient(-52deg, fade(black, 2*@x), fade(black, 2*@y)),
+// 	linear-gradient(-58deg, fade(black, 3*@x), fade(black, 6*@y)),
+// 	linear-gradient(-71deg, fade(black, 3*@x), fade(black, 7*@y)),
+// 	linear-gradient(-88deg, fade(black, 4*@x), fade(black, 2*@y)),
+// 	linear-gradient(-36deg, fade(black, 9*@x), fade(black, 5*@y)),
+// 	linear-gradient(-45deg, fade(black, 4*@x), fade(black, 3*@y));                          // too complex...
+// @bgOverlayLg_Gradient: svg-gradient(to bottom right,  fade(black, 05%), fade(black, 20%));  // too svg
+// @bgOverlayLg_Gradient: linear-gradient(-45deg, black, white);                               // too intense
+// @bgOverlayLg_Gradient: linear-gradient(-45deg, fade(black,20%), fade(black,0%));            // too much banding
+@bgOverlayLg_Gradient: linear-gradient(-30deg, fade(black,20%), fade(white,20%));           // just right?
+@bgOverlay_Gradient: @bgOverlayLg_Gradient;
 
 :root{}
 

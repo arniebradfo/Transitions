@@ -29,6 +29,6 @@
 	
 	</div>
 
-	<?php trns_pagination_component(['display_paginate_title'=>true]); ?>
+	<?php trns_pagination_component([ 'class'=>'heading__pagination', 'display_paginate_title'=>true ]); ?>
 
 </header><!--/heading-archive.php-->

@@ -74,7 +74,7 @@
 		<div class="post__content">
 			<p>
 				<?php the_excerpt(); ?>
-			<p>
+			</p>
 			<a class="post__primary-button button button--outline" href="<?php echo esc_url( get_permalink() ); ?>">
 				Read more <?php trns_icon_component(['name'=>'Expand', 'class'=>'button__icon']) ?>
 			</a>

@@ -26,8 +26,10 @@
 }
 
 .post-pagination{
-	border-top: @s1 solid @fgWeaker_Color;
-	padding: @s32 0;
+	// border-top: @s1 solid @bgOverlay_Color;
+	border-top: @s1 solid @bgOverlay_Color;
+
+	padding: @s48 0 @s32;
 }
 .post-pagination__label{
 	.strong_Type();
@@ -47,6 +49,6 @@
 	margin-bottom: @post_Spacing;
 }
 .post__primary-button{
-	margin: 0 -@button_Padding;
+	margin: 0 -@border_Size - @s2;
 
 }
