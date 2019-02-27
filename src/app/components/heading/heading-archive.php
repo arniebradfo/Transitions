@@ -25,14 +25,14 @@
 
 		<div class="heading__featured-media heading__featured-media--empty"></div> 
 
-		<div class="heading__meta">
+		<!-- <div class="heading__meta">
 			Page #<?php echo get_page_number(); ?>
-		</div>
+		</div> -->
 
 		<h1 class="heading__title">
 			<?php 
 			if (is_home())
-				echo 'Posts';
+				echo 'All Posts';
 			else
 				echo get_the_archive_title(); 
 			?>
@@ -42,5 +42,7 @@
 			# TODO: add class="heading__subtitle to the archive description" ?>
 
 	</div>
+
+	<?php trns_pagination_component(['display_paginate_title'=>true]); ?>
 
 </header><!--/heading-archive.php-->

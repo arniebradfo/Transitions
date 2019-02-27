@@ -12,7 +12,7 @@
 
 
 <!-- heading-home.php -->
-<section class="heading heading--home heading--lacks-featured-media" id="heading">
+<header class="heading heading--home heading--lacks-featured-media" id="heading">
 
 	<div class="heading__column">
 
@@ -46,8 +46,6 @@
 			));
 		?>
 
-
 	</div>
-	
 
-</section><!--/ heading-home.php -->
+</header><!--/ heading-home.php -->

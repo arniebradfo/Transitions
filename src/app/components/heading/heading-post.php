@@ -58,6 +58,9 @@
 		<?php // trns_the_tags('<p class="heading__tags">', ' ', '</p>', '', 'heading__tag button'); ?>
 		<?php trns_the_categories('', '', '', 'heading__category button', 'heading__categories'); ?>
 
+		
 	</div>
+
+	<?php trns_pagination_component(['display_paginate_title'=>true]); ?>
 
 </header><!--/ heading-home.php -->

@@ -11,15 +11,9 @@
 	- img shadow class for content.less - or in custom css, not theme?
 	- password protected post has a password input field in preview
 - PAGINATION
-	- make pagination component more robust
-		- optional _page n of x_ title
-		- bg and styles
-	- add pagination to post headers
-	- change post list name to All Posts
+	- bg and styles for header version?	
 	- post pagination
-		- add pagination to paginate posts
-		- add Next Post: label
-		- next should be next page!
+		- add _Next Post:_ and _Next Page:_ label
 - BUTTONS
 	- press/touch only?
 - ANIMATIONS
@@ -63,7 +57,11 @@ Move things here off the list, then to the __ChangeLog.md__
 	- replace @s16 with @button_Padding where appropriate
 	- rename column css classes to include x__column
 	- bigger, better search header
-
+- PAGINATION
+	- change post list name to All Posts
+	- add pagination to post headers
+	- optional _page n of x_ title
+	- add pagination to paginate posts
 
 
 

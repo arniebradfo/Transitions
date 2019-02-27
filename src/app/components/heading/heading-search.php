@@ -15,7 +15,6 @@
 
 		<div class="heading__meta">
 			Search results for: 
-			<!-- Page #<?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?> -->
 		</div>
 
 		<!-- <h1 class="heading__title">
@@ -29,5 +28,7 @@
 		</div>
 	
 	</div>
+
+	<?php trns_pagination_component(['display_paginate_title'=>true]); ?>
 
 </header><!--/heading-archive.php-->

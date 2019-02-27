@@ -10,109 +10,127 @@
  * @version 1.0
  */
 
-global $page,    // int
-	$numpages,   // int
-	$multipage,  // bool
-	$more;       // bool
-	// var_dump_pre($page);
-	// var_dump_pre($numpages);
-	// var_dump_pre($page == $page);
+// display_paginate_title makes a title 'Page n of x' appear instead of 'Next Page'
 
-$display_paginate_title = false; // TODO: how to set this to true?
+function trns_pagination_component( $atts=[], $content=null, $tag='' ) {
 
-if (paginate_links()) {
+	if (paginate_links()) { // in a list of pages or posts
+		global $wp_query;
 
-	$paginate_links = paginate_links(['prev_next'=>false]);
+		$current_page = get_page_number();
+		$total_pages = get_total_pages();
 
-	if (get_next_posts_link()){
-		$primary_link = get_next_posts_page_link();
-		$primary_link_text = 'Next Page';
-		$icon_name = 'Arrow_Down';
+		$paginate_links = paginate_links(['prev_next'=>false]);
 
-	} elseif (get_previous_posts_link()){
-		$primary_link = get_pagenum_link(1);
-		$primary_link_text = 'First Page';
-		$icon_name = 'Arrow_Up';
+		if (get_next_posts_link()){
+			$primary_link = get_next_posts_page_link();
+			$primary_link_text = 'Next Page';
+			$icon_name = 'Arrow_Down';
+
+		} elseif (get_previous_posts_link()){
+			$primary_link = get_pagenum_link(1);
+			$primary_link_text = 'First Page';
+			$icon_name = 'Arrow_Up';
+		}
+
+	} elseif (wp_link_pages(['echo'=> 0])) { // on a paginated post or page
+
+		global $page, $numpages;
+		
+		$current_page = $page;
+		$total_pages = $numpages;
+
+		$paginate_links = wp_link_pages([
+			'before'           => '',
+			'after'            => '',
+			'next_or_number'   => 'number',
+			'separator'        => '',
+			'echo'             => 0
+		]);
+
+		$href_regex = '/href=[\'\"]([^\'\"]*)[\'\"]/';
+
+		if ($current_page == $total_pages) { // this is the last page
+			preg_match(
+				$href_regex,
+				$paginate_links,
+				$primary_link 
+			);
+			$primary_link = $primary_link[1];
+			$primary_link_text = 'First Page';
+			$icon_name = 'Arrow_Up';
+
+		} else { // this is not the last page		
+			preg_match_all(
+				$href_regex,
+				wp_link_pages([
+					'next_or_number'   => 'next',
+					'echo'             => 0,			
+				]),
+				$primary_link 
+			);
+			$primary_link = end($primary_link[1]);
+			$primary_link_text = 'Next Page';
+			$icon_name = 'Arrow_Down';
+
+		}
 	}
 
-} elseif (wp_link_pages(['echo'=> 0])) {
+	if (isset($paginate_links)) : 
+		
+		// add classes
+		$paginate_links = preg_replace(
+			'/(class=[\'\"])/',
+			'$1pagination__link button button--icon ',
+			$paginate_links
+		); 
+		// add .button--current class
+		$paginate_links = preg_replace(
+			'/(class=[\'\"][^\'\"]*current)/',
+			'$1 button--current',
+			$paginate_links
+		); 
+		// remove classes from .dots // ???
+		$paginate_links = preg_replace(
+			'/(class=[\'\"][^\'\"]*dots[^\'\"]*[\'\"])/',
+			'class="pagination__link page-numbers dots"',
+			$paginate_links
+		); 
+		
+	?>
 
-	$paginate_links = wp_link_pages([
-		'before'           => '',
-		'after'            => '',
-		'next_or_number'   => 'number',
-		'separator'        => '',
-		'echo'             => 0
-	]);
+	<div <?php
+		$atts['class'] = ! empty($atts['class']) ? "pagination {$atts['class']}" : 'pagination';
+		foreach($atts as $att => $val)
+			if ($att == 'display_paginate_title') continue;
+			echo " $att=\"$val\""; // echo all attributes from the shortcode
+		?>>
+		<div class="pagination__column">
+			<nav class="pagination__menu">
 
-	$href_regex = '/href=[\'\"]([^\'\"]*)[\'\"]/';
+			<?php if ( !empty( $atts['display_paginate_title'] ) ) : ?>
+					<span class="pagination__title">
+						<?php echo "Page $current_page of $total_pages"; ?>
+					</span>
 
-	if ($page == $numpages) { // this is the last page
-		preg_match(
-			$href_regex,
-			$paginate_links,
-			$primary_link 
-		);
-		$primary_link = $primary_link[1];
-		$primary_link_text = 'First Page';
-		$icon_name = 'Arrow_Up';
+				<?php elseif (isset($primary_link)) : ?>
+					<a class="button pagination__primary-button" href="<?php echo esc_url($primary_link); ?>" >
+						<?php echo $primary_link_text; ?>
+						<?php trns_icon_component(['name'=>$icon_name, 'class'=>'button__icon']) ?>
+					</a>
 
-	} else { // this is not the last page		
-		preg_match_all(
-			$href_regex,
-			wp_link_pages([
-				'next_or_number'   => 'next',
-				'echo'             => 0,			
-			]),
-			$primary_link 
-		);
-		$primary_link = end($primary_link[1]);
-		$primary_link_text = 'Next Page';
-		$icon_name = 'Arrow_Down';
+				<?php endif; ?>
 
-	}
+				<span class="pagination__label">Go to page:</span>
+
+				<?php echo $paginate_links; ?>
+
+			</nav>
+		</div>
+	</div>
+
+	<?php endif; 
+
 }
 
-if (isset($paginate_links)) : 
-	
-	// add classes
-	$paginate_links = preg_replace(
-		'/(class=[\'\"])/',
-		'$1pagination__link button button--icon ',
-		$paginate_links
-	); 
-	// add .button--current class
-	$paginate_links = preg_replace(
-		'/(class=[\'\"][^\'\"]*current)/',
-		'$1 button--current',
-		$paginate_links
-	); 
-	
 ?>
-
-<div class="pagination">
-	<div class="pagination__column">
-		<nav class="pagination__menu">
-
-			<?php if ($display_paginate_title) : ?>
-				<span class="pagination__title">
-					<?php echo "Page $page of $numpages"; ?>
-				</span>
-
-			<?php elseif (isset($primary_link)) : ?>
-				<a class="button pagination__primary-button" href="<?php echo esc_url($primary_link); ?>" >
-					<?php echo $primary_link_text; ?>
-					<?php trns_icon_component(['name'=>$icon_name, 'class'=>'button__icon']) ?>
-				</a>
-
-			<?php endif; ?>
-
-			<span class="pagination__label">Go to page:</span>
-
-			<?php echo $paginate_links; ?>
-
-		</nav>
-	</div>
-</div>
-
-<?php endif; ?>

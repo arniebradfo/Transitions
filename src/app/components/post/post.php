@@ -52,7 +52,7 @@
 				'post__edit-button button button--outline'
 			); ?>
 
-		<?php get_template_part('pagination'); ?>
+		<?php trns_pagination_component(); ?>
 
 	<?php else : ?>
 
