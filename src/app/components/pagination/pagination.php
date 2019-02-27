@@ -111,26 +111,28 @@ function trns_pagination_component( $atts=[], $content=null, $tag='' ) {
 			echo " $att=\"$val\""; // echo all attributes from the shortcode
 		?>>
 		<div class="pagination__column">
+
+			<?php if ( $display_paginate_title ) : ?>
+				<span class="pagination__title">
+					<?php echo "Page $current_page of $total_pages"; ?>
+				</span>
+
+			<?php elseif (isset($primary_link)) : ?>
+				<a class="button pagination__primary-button" href="<?php echo esc_url($primary_link); ?>" >
+					<?php echo $primary_link_text; ?>
+					<?php echo trns_icon_component(['name'=>$icon_name, 'class'=>'button__icon']) ?>
+				</a>
+
+			<?php endif; ?>
+
+			<div class="pagination__flex-splitter"></div>		
+
 			<nav class="pagination__menu">
-
-				<?php if ( $display_paginate_title ) : ?>
-					<span class="pagination__title">
-						<?php echo "Page $current_page of $total_pages"; ?>
-					</span>
-
-				<?php elseif (isset($primary_link)) : ?>
-					<a class="button pagination__primary-button" href="<?php echo esc_url($primary_link); ?>" >
-						<?php echo $primary_link_text; ?>
-						<?php echo trns_icon_component(['name'=>$icon_name, 'class'=>'button__icon']) ?>
-					</a>
-
-				<?php endif; ?>
-
 				<span class="pagination__label">Go to page:</span>
-
+				
 				<?php echo $paginate_links; ?>
-
 			</nav>
+
 		</div>
 	</div>
 

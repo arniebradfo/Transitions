@@ -1,18 +1,24 @@
-
 .pagination{
 	// border-top: @s1 solid @bgOverlay_Color;
 }
 .pagination__column{
 	@column_Rules();
-	padding: @s8 @column_PaddingVar;
+	padding: @s16 @column_PaddingVar;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
 }
 .pagination__menu{
 	display: flex;
+	flex-wrap: wrap;
 	align-items: baseline;
-	margin: 0 -@button_Padding;
+	margin-right: -@button_Padding;
+	z-index: 0;
 }
 .pagination__primary-button{
 	flex: 0 0 auto;
+	margin-left: -@button_Padding;
+	margin-right: @s8;
 }
 .pagination__label{
 	flex: 1 1 auto;
@@ -24,5 +30,8 @@
 }
 .pagination__title{
 	.strong_Type();
-	margin: 0 @button_Padding;
+	margin-right: @button_Padding;
+}
+.pagination__flex-splitter{
+	flex: 1 1 auto;
 }

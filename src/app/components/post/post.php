@@ -53,18 +53,23 @@
 			); ?>
 
 		<?php if (trns_is_post_paginated()) : // post has pages ?>
-			<div class="post-pagination">
-				
-				<?php if (!trns_is_last_page_of_post()) : // is not the last post ?>
+			
+			<?php if (!trns_is_last_page_of_post()) : // is not the last post ?>				
+				<div class="post-pagination  post-pagination--titled">
 					<div class="post-pagination__column">
 						<div class="post-pagination__label">Next Page:</div>
 						<h3 class="post-pagination__title"><?php the_title(); ?></h3>
 					</div>
-				<?php endif; ?>
+
+			<?php else: ?>
+				<div class="post-pagination  post-pagination--last-page">
+
+			<?php endif; ?>
 
 				<?php trns_pagination_component(['next_page_number'=>true]); ?>
 				
 			</div>
+
 		<?php endif; ?>
 
 

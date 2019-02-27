@@ -1,33 +1,29 @@
 # TODO List
-- FEATURES
-	- pagination should stack at smaller widths
-	- ===
-	- tune text shadow
-	- password protected post has a password input field in preview
-	- credit meta fields
-	- add tags somewhere?
-	- img shadow class for content.less - or in custom css, not theme?
 - ANIMATIONS
 	- ctrl click to open new page?
 	- better loading/unloading animations
 	- doesn't animate on first load sometimes
 	- critical css?
-	- active animations for post clicks
-	- logo loading? DO IT LAST!
-- BUTTONS
+	- logo loading animation? DO IT LAST!
+- FEATURES
+	- ===
 	- press/touch only?
+	- tune text shadow
+	- password protected post has a password input field in preview
+	- credit meta fields
+	- add tags somewhere?
+	- img shadow class for content.less - or in custom css, not theme?
 - TESTING
 	- browser test
 	- does is validate?
 	- accessibility
 	- mobile testing
-- LATER
-	- [favicon](https://stackoverflow.com/a/48969053/5648839) 
-	- preview does not work with navigation
 - TITLES - better titles for everything
 	- remove _PROTECTED_ from post title: [link](https://www.templatemonster.com/help/wordpress-how-to-removechange-protected-prefix-for-password-protected-posts.html)
 	- Tagged and Category with description
-	- Author with description
+	- Author with description & links to social
+- COMMENTS
+	- things
 
 ## DoneDid 
 Move things here off the list, then to the __ChangeLog.md__
@@ -57,8 +53,10 @@ Move things here off the list, then to the __ChangeLog.md__
 	- better min and max height for post headers
 	- menu button bg color is stronger
 	- header colors - lighter with no image, no gradient, border, no shadow
-	- other minor changes...
 	- heading photos are more intense now
+	- active animations for post clicks
+	- pagination stacks at smaller widths
+	- other minor changes...
 - PAGINATION
 	- change post list name to All Posts
 	- add pagination to post headers
@@ -71,6 +69,7 @@ Move things here off the list, then to the __ChangeLog.md__
 
 
 ## TODO Later
+- theme preview & customize does not work with navigation
 - better heights for headers
 - current item style on pagination & menus
 	- button current style? `.current-menu-item`
