@@ -26,7 +26,7 @@
 		<div class="heading__featured-media heading__featured-media--empty"></div> 
 
 		<!-- <div class="heading__meta">
-			Page #<?php echo get_page_number(); ?>
+			Page #<?php echo trns_get_page_number(); ?>
 		</div> -->
 
 		<h1 class="heading__title">

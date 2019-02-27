@@ -158,12 +158,20 @@ function disable_wp_emojicons() {
 }
 add_action( 'init', 'disable_wp_emojicons' );
 
-function get_page_number() {
+function trns_get_page_number() {
 	return (get_query_var('paged')) ? get_query_var('paged') : 1;
 }
-function get_total_pages() {
+function trns_get_total_pages() {
 	global $wp_query;
 	return $wp_query->max_num_pages;
+}
+function trns_is_post_paginated(){
+	global $multipage;
+	return 0 !== $multipage;
+}
+function trns_is_last_page_of_post(){
+	global $page, $numpages;
+	return $page == $numpages;
 }
 
 // shortcode component includes

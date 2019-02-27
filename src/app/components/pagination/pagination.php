@@ -11,20 +11,25 @@
  */
 
 // display_paginate_title makes a title 'Page n of x' appear instead of 'Next Page'
+// next_page_number makes a title 'Page X' appear instead of 'Next Page'
 
 function trns_pagination_component( $atts=[], $content=null, $tag='' ) {
+
+	$next_page_number = ! empty( $atts['next_page_number'] );
+	$display_paginate_title = ! empty( $atts['display_paginate_title'] );
+	unset( $atts['display_paginate_title'], $atts['next_page_number'] );
 
 	if (paginate_links()) { // in a list of pages or posts
 		global $wp_query;
 
-		$current_page = get_page_number();
-		$total_pages = get_total_pages();
+		$current_page = trns_get_page_number();
+		$total_pages = trns_get_total_pages();
 
 		$paginate_links = paginate_links(['prev_next'=>false]);
 
 		if (get_next_posts_link()){
-			$primary_link = get_next_posts_page_link();
-			$primary_link_text = 'Next Page';
+			$primary_link = get_next_posts_page_link(); 
+			$primary_link_text = $next_page_number ? 'Page '.$current_page : 'Next Page';
 			$icon_name = 'Arrow_Down';
 
 		} elseif (get_previous_posts_link()){
@@ -70,7 +75,7 @@ function trns_pagination_component( $atts=[], $content=null, $tag='' ) {
 				$primary_link 
 			);
 			$primary_link = end($primary_link[1]);
-			$primary_link_text = 'Next Page';
+			$primary_link_text = $next_page_number ? 'Page '.($current_page+1) : 'Next Page';
 			$icon_name = 'Arrow_Down';
 
 		}
@@ -100,15 +105,15 @@ function trns_pagination_component( $atts=[], $content=null, $tag='' ) {
 	?>
 
 	<div <?php
+
 		$atts['class'] = ! empty($atts['class']) ? "pagination {$atts['class']}" : 'pagination';
 		foreach($atts as $att => $val)
-			if ($att == 'display_paginate_title') continue;
 			echo " $att=\"$val\""; // echo all attributes from the shortcode
 		?>>
 		<div class="pagination__column">
 			<nav class="pagination__menu">
 
-			<?php if ( !empty( $atts['display_paginate_title'] ) ) : ?>
+				<?php if ( $display_paginate_title ) : ?>
 					<span class="pagination__title">
 						<?php echo "Page $current_page of $total_pages"; ?>
 					</span>

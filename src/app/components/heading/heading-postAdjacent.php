@@ -42,6 +42,10 @@
 
 		<?php endif; ?> 
 
+		<div class="heading__label">
+			Next Post:
+		</div>
+
 		<!-- <div class="heading__flex-splitter"></div>		 -->
 	
 		<div class="heading__meta">

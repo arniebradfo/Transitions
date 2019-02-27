@@ -186,7 +186,7 @@
 .heading--post-adjacent{
 	.heading__column{
 		.heading_MinHeight();
-		justify-content: center;
+		// justify-content: center;
 	}
 	.heading__categories, 
 	.heading__tags{
@@ -201,10 +201,15 @@
 			background-image: @shadowTop_Gradient;
 		}
 	}
+
 	.heading__primary-button{
-		margin: 10% -@button_Padding @s16; // horizontal was -@s16
+		margin: 10vh -@button_Padding @s32;
 		z-index: 2;
 		order: 10; //-1;
+	}
+	.heading__label{
+		margin: @s32 0 10vh;
+		.strong_Type();
 	}
 }
 

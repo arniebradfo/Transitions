@@ -16,7 +16,7 @@
 
 <?php
 
-$is_homepage = is_front_page() && get_page_number() < 2;
+$is_homepage = is_front_page() && trns_get_page_number() < 2;
 
 if( is_singular() ) {
 	// print nothing, just skip to loop
