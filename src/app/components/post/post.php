@@ -32,8 +32,6 @@
 			<?php
 
 			the_content(); 
-
-			wp_link_pages();
 			
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() )
@@ -53,6 +51,8 @@
 				null,
 				'post__edit-button button button--outline'
 			); ?>
+
+		<?php get_template_part('pagination'); ?>
 
 	<?php else : ?>
 

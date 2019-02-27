@@ -23,6 +23,7 @@
 - BUTTONS
 	- press/touch only?
 - ANIMATIONS
+	- ctrl click to open new page?
 	- better loading/unloading animations
 	- doesn't animate on first load sometimes
 	- critical css?
