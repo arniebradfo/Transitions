@@ -1,12 +1,13 @@
 # TODO List
 - FEATURES
-	- better min and max height for post header
+	- fix icon component echo
 	- menu opens on hover, closes off hover
 	- menu button bg color
 	- parallax doesn't fire in off screen contexts
 		- other parallax bugs, seems slow
 	- header colors - lighter with no image, no gradient, border, no shadow
 	- photos need to be more intense, css filters?
+	- pagination should stack at smaller widths
 	- ===
 	- tune text shadow
 	- password protected post has a password input field in preview
@@ -58,6 +59,7 @@ Move things here off the list, then to the __ChangeLog.md__
 	- bigger, better search header
 	- no outline for image-less posts
 	- move over _'read more'_ button a little bit
+	- better min and max height for post headers
 	- other minor changes...
 - PAGINATION
 	- change post list name to All Posts
