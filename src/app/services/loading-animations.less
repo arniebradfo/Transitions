@@ -1,8 +1,14 @@
 
+// body is in one of three states:
+// .jsState-stylePreload | .jsState-styleLoaded' | .jsState-styleUnload'
+
+// 
 body{
 	.transition(opacity, linear, @exitAnimation_Duration);
 	
-	&.jsState-styleUnloaded {
+	&.jsState-stylePreload,
+	&.jsState-styleUnload
+	{
 		opacity: 0; 
 	}
 
@@ -11,18 +17,28 @@ body{
 	}
 }
 
-.post-list{
-	transform: translate3d(0, 100px, 0); 
-	.transition(opacity transform outline-color, ease, @exitAnimation_Duration);
-	.jsState-styleLoaded &{
-		transform: translate3d(0,0,0); 
-	}
-}
-
-.jsTarget-transitionEnd{
+// this element is visually hidden
+// it is used by the loading-animation.js to know when transitions are done.
+.jsTarget-transitionEnd{ // in not styleLoaded state
 	opacity: 0;
 	.transition(opacity, ease, @exitAnimation_Duration);
 }
 .jsState-styleLoaded .jsTarget-transitionEnd{
 	opacity: 1;
+}
+
+.post-list{
+	.transition(opacity transform outline-color, ease, @exitAnimation_Duration);
+
+	.jsState-stylePreload &{
+		transform: translate3d(0, 100px, 0); 
+	}
+
+	.jsState-styleLoaded &{
+		transform: translate3d(0,0,0); 
+	}
+
+	.jsState-styleUnload &{
+		transform: translate3d(0, -100px, 0); 
+	}
 }

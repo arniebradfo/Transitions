@@ -1,17 +1,10 @@
 # TODO List
+- fix `.full-size`?
 - ANIMATIONS
 	- better loading/unloading animations
 	- doesn't animate on first load sometimes
 	- critical css?
 	- logo loading animation? DO IT LAST!
-- FEATURES
-	- ===
-	- press/touch only?
-	- tune text shadow
-	- password protected post has a password input field in preview
-	- credit meta fields
-	- add tags somewhere?
-	- img shadow class for content.less - or in custom css, not theme?
 - TESTING
 	- browser test
 	- does is validate?
@@ -21,6 +14,14 @@
 	- remove _PROTECTED_ from post title: [link](https://www.templatemonster.com/help/wordpress-how-to-removechange-protected-prefix-for-password-protected-posts.html)
 	- Tagged and Category with description
 	- Author with description & links to social
+- FEATURES
+	- ===
+	- press/touch only?
+	- tune text shadow
+	- password protected post has a password input field in preview
+	- credit meta fields
+	- add tags somewhere?
+	- img shadow class for content.less - or in custom css, not theme?
 - COMMENTS
 	- things
 

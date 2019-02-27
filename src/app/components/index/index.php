@@ -25,7 +25,7 @@
 <body <?php body_class(); ?>>
 
 	<script type="text/javascript" id="js-test">
-		document.body.classList.add('jsState-styleUnloaded');
+		document.body.classList.add('jsState-stylePreload');
 	</script>
 
 	<div class="visually-hidden jsTarget-transitionEnd"></div>

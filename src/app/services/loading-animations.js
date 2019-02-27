@@ -7,6 +7,15 @@
 	var initialized = false;
 	var cssMain = document.head.querySelector('link[href*="/style.css"]');
 
+	var preloadClass = 'jsState-stylePreload';
+	var loadedClass  = 'jsState-styleLoaded';
+	var unloadClass  = 'jsState-styleUnload';
+
+	var transitionEndClass = 'jsTarget-transitionEnd';
+
+
+	// add class to animate in
+
 	function isCssMainLoaded() {
 		var sheets = document.styleSheets;
 		for (var i = 0; i < sheets.length; i++) {
@@ -18,15 +27,17 @@
 	}
 
 	function maybeInitialize() {
-		if (isCssMainLoaded() && !initialized) 
+		if (isCssMainLoaded() && !initialized)
 			initialize();
 	}
 
 	function initialize() {
 		initialized = true;
-		// console.log('styleLoaded');
+		// maybe use window.setTimeout() ?
 		window.requestAnimationFrame( function () {
-			document.body.classList.add('jsState-styleLoaded');
+			console.log('styleLoaded');
+			document.body.classList.remove(preloadClass);
+			document.body.classList.add(loadedClass);
 		});
 	}
 
@@ -42,9 +53,10 @@
 		if (unloading) return;
 
 		event.preventDefault();
-		document.body.classList.remove('jsState-styleLoaded');
+		document.body.classList.remove(loadedClass);
+		document.body.classList.add(unloadClass);
 
-		document.getElementsByClassName('jsTarget-transitionEnd')[0]
+		document.getElementsByClassName(transitionEndClass)[0]
 			.addEventListener('transitionend', function (transitionEvent) {				
 				unloading = true;
 				switch (event.type) {
@@ -84,6 +96,7 @@
 			link.addEventListener('click', onUnload, false);
 		}
 		for (var i = 0; i < document.forms.length; i++) {
+			// TODO: test with comment forms
 			var form = document.forms[i];
 			form.addEventListener('submit', onUnload, false);
 		}
