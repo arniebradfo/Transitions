@@ -32,11 +32,12 @@
 
 	var unloading = false;
 	function onUnload(event) {		
+
+		// if there is a special keypress+click combo
+		if( event.altKey || event.ctrlKey || event.shiftKey || event.metaKey ) return;
 		
 		// if its an anchor link press
 		if (event.type === 'popstate' && event.state == null) return;
-
-		// TODO: handle ctrl+click request
 
 		if (unloading) return;
 
@@ -72,11 +73,14 @@
 	function bindNavigatingElements() {
 		for (var i = 0; i < document.links.length; i++) {
 			var link = document.links[i];
+
 			if (link.target == '_blank') continue;
+
 			if (link.pathname == window.location.pathname) {
 				link.addEventListener('click', anchorNavigation, false);
 				continue;
-			}				
+			}
+
 			link.addEventListener('click', onUnload, false);
 		}
 		for (var i = 0; i < document.forms.length; i++) {

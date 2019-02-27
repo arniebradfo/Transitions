@@ -1,6 +1,5 @@
 # TODO List
 - ANIMATIONS
-	- ctrl click to open new page?
 	- better loading/unloading animations
 	- doesn't animate on first load sometimes
 	- critical css?
@@ -39,6 +38,7 @@ Move things here off the list, then to the __ChangeLog.md__
 - menu opens on hover, closes off hover, `mouseenter`
 - smoother parallax scroll performance
 - parallax doesn't fire if window has scrolled one window height, could be better...
+- handle special keypress+click combo in animation loading
 - CSS
 	- round corners of `<hr/>`, more intense color
 	- wider column - set content-width correctly
