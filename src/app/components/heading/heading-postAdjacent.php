@@ -16,7 +16,7 @@
 	$featured_media_class_suffix = ( $has_featured_media ? 'has' : 'lacks') . '-featured-media';
 ?>
 <!-- heading-post.php -->
-<header class="heading heading--post-adjacent heading--interactive heading--<?php echo $featured_media_class_suffix; ?>" id="adjacent-post">
+<header class="heading heading--post-adjacent heading--interactive heading--<?php echo $featured_media_class_suffix; ?> jsTarget-eligibleTargetElement" id="adjacent-post">
 
 	<div class="heading__column">
 

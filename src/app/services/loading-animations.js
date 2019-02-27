@@ -7,14 +7,13 @@
 	var initialized = false;
 	var cssMain = document.head.querySelector('link[href*="/style.css"]');
 
-	var preloadClass = 'jsState-stylePreload';
-	var loadedClass  = 'jsState-styleLoaded';
-	var unloadClass  = 'jsState-styleUnload';
+	var preloadClass         = 'jsState-stylePreload';
+	var loadedClass          = 'jsState-styleLoaded';
+	var unloadClass          = 'jsState-styleUnload';
+	var unloadTargetClass    = 'jsState-unloadTargetElement';
+	var eligibleTargetClass  = 'jsTarget-eligibleTargetElement'; 
+	var transitionEndClass   = 'jsTarget-transitionEnd';
 
-	var transitionEndClass = 'jsTarget-transitionEnd';
-
-
-	// add class to animate in
 
 	function isCssMainLoaded() {
 		var sheets = document.styleSheets;
@@ -53,11 +52,17 @@
 		if (unloading) return;
 
 		event.preventDefault();
+		
+		var unloadTargetElement = event.target.closest('.'+eligibleTargetClass);
+		console.log(unloadTargetElement);
+		if (unloadTargetElement)
+			unloadTargetElement.classList.add(unloadTargetClass);
+		
 		document.body.classList.remove(loadedClass);
 		document.body.classList.add(unloadClass);
 
 		document.getElementsByClassName(transitionEndClass)[0]
-			.addEventListener('transitionend', function (transitionEvent) {				
+			.addEventListener('transitionend', function (transitionEvent) {
 				unloading = true;
 				switch (event.type) {
 					case 'click':

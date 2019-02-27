@@ -2,7 +2,9 @@
 // body is in one of three states:
 // .jsState-stylePreload | .jsState-styleLoaded' | .jsState-styleUnload'
 
-// 
+// certain elements have a .jsTarget-eligibleTargetElement class 
+// these elements will receive a .jsState-unloadTargetElement class when something inside them is clicked
+
 body{
 	.transition(opacity, linear, @exitAnimation_Duration);
 	
@@ -28,10 +30,10 @@ body{
 }
 
 .post-list{
-	.transition(opacity transform outline-color, ease, @exitAnimation_Duration);
+	.transition(opacity transform, ease, @exitAnimation_Duration);
 
 	.jsState-stylePreload &{
-		transform: translate3d(0, 100px, 0); 
+		transform: translate3d(0, 50px, 0); 
 	}
 
 	.jsState-styleLoaded &{
@@ -39,6 +41,11 @@ body{
 	}
 
 	.jsState-styleUnload &{
-		transform: translate3d(0, -100px, 0); 
+		transform: translate3d(0, -10px, 0); 
 	}
+}
+
+.jsState-unloadTargetElement{
+	.transition(transform, ease, (@exitAnimation_Duration/2));
+	transform: translate3d(0, -100px, 0); 
 }
