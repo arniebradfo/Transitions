@@ -42,6 +42,9 @@
 	function closeNav(event) {
 		if (bufferActive) return;
 
+		// only return clicks
+		// if (bufferActive && (!event || event.type !== 'mouseenter') ) return; 
+		
 		TRANSITIONS.state.isNavOpen = false;
 		document.body.classList.remove(navOpenClass);
 		document.body.classList.add(navClosedClass);

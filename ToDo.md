@@ -1,6 +1,5 @@
 # TODO List
 - FEATURES
-	- menu button bg color
 	- parallax doesn't fire in off screen contexts
 		- other parallax bugs, seems slow
 	- header colors - lighter with no image, no gradient, border, no shadow
@@ -59,6 +58,7 @@ Move things here off the list, then to the __ChangeLog.md__
 	- no outline for image-less posts
 	- move over _'read more'_ button a little bit
 	- better min and max height for post headers
+	- menu button bg color is stronger
 	- other minor changes...
 - PAGINATION
 	- change post list name to All Posts
