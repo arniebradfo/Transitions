@@ -1,7 +1,5 @@
 # TODO List
 - FEATURES
-	- parallax doesn't fire in off screen contexts
-		- other parallax bugs, seems slow
 	- header colors - lighter with no image, no gradient, border, no shadow
 	- photos need to be more intense, css filters?
 	- pagination should stack at smaller widths
@@ -46,6 +44,8 @@ Move things here off the list, then to the __ChangeLog.md__
 	- [link](https://viastudio.com/optimizing-your-theme-for-wordpress-4-4s-responsive-images/)
 	- [another link](https://make.wordpress.org/core/2015/11/10/responsive-images-in-wordpress-4-4/)
 - menu opens on hover, closes off hover, `mouseenter`
+- smoother parallax scroll performance
+- parallax doesn't fire if window has scrolled one window height, could be better...
 - CSS
 	- round corners of `<hr/>`, more intense color
 	- wider column - set content-width correctly
