@@ -121,7 +121,7 @@ function trns_pagination_component( $atts=[], $content=null, $tag='' ) {
 				<?php elseif (isset($primary_link)) : ?>
 					<a class="button pagination__primary-button" href="<?php echo esc_url($primary_link); ?>" >
 						<?php echo $primary_link_text; ?>
-						<?php trns_icon_component(['name'=>$icon_name, 'class'=>'button__icon']) ?>
+						<?php echo trns_icon_component(['name'=>$icon_name, 'class'=>'button__icon']) ?>
 					</a>
 
 				<?php endif; ?>

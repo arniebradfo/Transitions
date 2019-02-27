@@ -1,6 +1,5 @@
 # TODO List
 - FEATURES
-	- fix icon component echo
 	- menu opens on hover, closes off hover
 	- menu button bg color
 	- parallax doesn't fire in off screen contexts
@@ -16,6 +15,7 @@
 	- img shadow class for content.less - or in custom css, not theme?
 - ANIMATIONS
 	- ctrl click to open new page?
+	
 	- better loading/unloading animations
 	- doesn't animate on first load sometimes
 	- critical css?

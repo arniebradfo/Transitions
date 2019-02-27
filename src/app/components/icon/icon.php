@@ -12,18 +12,21 @@
 
 
 function trns_icon_component( $atts, $content=null, $tag='' ) {
-?>
-	<!-- icon.php -->
-	<svg <?php
+
+	$atts_list = '';
 	$atts['class'] = ! empty($atts['class']) ? "icon {$atts['class']}" : 'icon';
 	foreach($atts as $att => $val)
 		if ($att == 'name') continue;
-		echo " $att=\"$val\""; // echo all attributes from the shortcode
-	?>>
-	<use xlink:href="#icon_<?php echo $atts['name'] ?>"></use>
-	</svg>
+		$atts_list .= " $att=\"$val\""; // echo all attributes from the shortcode
+	
+	$name =	$atts['name'];
+	
+	$output = <<<HTML
+	<!-- icon.php -->
+	<svg $atts_list ><use xlink:href="#icon_$name"></use></svg>
 	<!--/ icon.php -->
-<?php
+HTML;
+	return $output;
 }
 // add_shortcode( 'trns-icon', 'trns_icon_component' );
 
