@@ -1,6 +1,5 @@
 # TODO List
 - FEATURES
-	- menu opens on hover, closes off hover
 	- menu button bg color
 	- parallax doesn't fire in off screen contexts
 		- other parallax bugs, seems slow
@@ -15,7 +14,7 @@
 	- img shadow class for content.less - or in custom css, not theme?
 - ANIMATIONS
 	- ctrl click to open new page?
-	
+
 	- better loading/unloading animations
 	- doesn't animate on first load sometimes
 	- critical css?
@@ -38,16 +37,16 @@
 
 ## DoneDid 
 Move things here off the list, then to the __ChangeLog.md__
-- GithubUpdater doesn't work - yes it does apparently
-- make a widget area on main page
-- change tags to categories
+- made a widget area on main page
+- changed tags to categories
 - replacing `.alignout` with `.size-full`
 - replacing `.alignout-section` with `.section-size-full`
-- password protect post form submit fails animation
+- Fixed: password protect post form submit fails animation
 - IMAGES - make sure responsive images work
 	- they work ok, just need to include the full-size image
 	- [link](https://viastudio.com/optimizing-your-theme-for-wordpress-4-4s-responsive-images/)
 	- [another link](https://make.wordpress.org/core/2015/11/10/responsive-images-in-wordpress-4-4/)
+- menu opens on hover, closes off hover, `mouseenter`
 - CSS
 	- round corners of `<hr/>`, more intense color
 	- wider column - set content-width correctly

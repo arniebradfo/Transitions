@@ -8,6 +8,8 @@
 	var navOverlay = document.querySelector('.jsTarget-navOverlay');
 	var navOpenClass = 'jsState-navOpen';
 	var navClosedClass = 'jsState-navClosed';
+	var bufferActive = false;
+	var bufferTime = 500; //ms
 	TRANSITIONS.state.isNavOpen = false;
 
 	
@@ -25,17 +27,37 @@
 	}
 	
 	function openNav(event) {
+		// if (bufferActive) return;
+
 		TRANSITIONS.state.isNavOpen = true;
 		document.body.classList.add(navOpenClass);
 		document.body.classList.remove(navClosedClass);
-		
+
+		navOverlay.addEventListener('mouseenter', closeNav, false);
+		navButton.removeEventListener('mouseenter', openNav, false);
+
+		setBuffer();
 	}
 	
 	function closeNav(event) {
-		TRANSITIONS.state.isNavOpen = false;	
+		if (bufferActive) return;
+
+		TRANSITIONS.state.isNavOpen = false;
 		document.body.classList.remove(navOpenClass);
 		document.body.classList.add(navClosedClass);
+
+		navOverlay.removeEventListener('mouseenter', closeNav, false);
+		navButton.addEventListener('mouseenter', openNav, false);
 	}
+
+	function setBuffer(){
+		bufferActive = true;
+		window.setTimeout( function () {
+			bufferActive = false;
+		}, bufferTime);
+	}
+
+
 	
 	attachNavEvents();
 	closeNav();
