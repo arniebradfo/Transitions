@@ -1,5 +1,48 @@
 # Change Log
 
+## 3.1.0
+Overall wordpress improvements
+- made a widget area on main page
+- changed tags to categories
+- replaced `.alignout` with `.aligncenter`
+- replaced `.alignout-section` with `.section-full-width`
+- Fixed: password protect post form submit fails animation
+- IMAGES - responsive images work
+	- they work ok, just need to include the full-size image
+	- [link](https://viastudio.com/optimizing-your-theme-for-wordpress-4-4s-responsive-images/)
+	- [another link](https://make.wordpress.org/core/2015/11/10/responsive-images-in-wordpress-4-4/)
+- menu opens on hover, closes off hover, `mouseenter`
+- smoother parallax scroll performance
+- parallax doesn't fire if window has scrolled one window height, could be better...
+- animation loading handles special keypress+click combo 
+- better loading/unloading animations
+- CSS
+	- rounded corners of `<hr/>`, more intense color
+	- wider column - set content-width correctly
+	- bigger text - smaller with media queries
+	- buttons grow less on hover
+	- margins get bigger at different screen widths - added css var `--column_Padding`
+	- replaced `@s16` with @button_Padding where appropriate
+	- renamed column css classes to include `.x__column`
+	- bigger, better search header
+	- no outline for image-less posts
+	- moved _'Read More'_ button over a little bit
+	- better min and max height for post headers
+	- menu button bg color is stronger
+	- header color improvement - lighter with no image, no gradient, border, no shadow
+	- heading photos are more intense now
+	- active animations for post clicks
+	- pagination stacks at smaller widths
+	- other minor changes...
+- PAGINATION
+	- changed post list name to All Posts
+	- added pagination to post headers
+	- optional _'Page n of x'_ title
+	- added pagination to paginate posts
+	- added _'Next Post:'_ and _'Next Page:'_ label
+	- bg and styles for header pagination
+	- border lines for pagination
+
 ## 3.0.2
 Image Refinements
 - GPU intensive CSS and JS is skipped for mobile
