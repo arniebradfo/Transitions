@@ -45,7 +45,7 @@ if( is_singular() ) {
 <?php endif; ?>
 
 <?php if( ! is_singular() ) 
-	echo '<div class="post-list" id="post-list">'; ?>
+	echo '<div class="post-list jsTarget-loadDelay" id="post-list">'; ?>
 
 	<?php if ( have_posts() ) : ?>
 	
@@ -57,7 +57,7 @@ if( is_singular() ) {
 		?>
 
 	<?php else : // if there are no posts ?>
-		<div class="post__content">
+		<div class="post__content jsTarget-loadDelay">
 			<h2>Nothing matches the request</h2>
 			<p>Sorry. Please try again.</p>
 			<?php // echo get_search_form(); ?>
@@ -68,6 +68,6 @@ if( is_singular() ) {
 	echo '</div>'; ?>
 
 <?php if( ! is_singular() && have_posts()) 
-	trns_pagination_component(['class'=>'post-list__pagination']); ?>
+	trns_pagination_component(['class'=>'post-list__pagination jsTarget-loadDelay']); ?>
 
 </main><!-- .main -->

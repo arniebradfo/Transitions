@@ -12,7 +12,7 @@
 
 ?>
 
-<footer class="footer" id="footer">
+<footer class="footer jsTarget-loadDelay" id="footer">
 
 	<div class="footer__column">
 		<div class="footer__items">

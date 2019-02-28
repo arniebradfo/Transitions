@@ -38,16 +38,16 @@
 
 		<?php endif; ?> 
 
-		<h1 class="heading__title"><?php the_title(); ?></h1>
+		<h1 class="heading__title jsTarget-loadDelay"><?php the_title(); ?></h1>
 
-		<hr class="heading__rule" />
+		<hr class="heading__rule jsTarget-loadDelay" />
 
 		<?php 
 			$subtitle = get_post_meta(get_the_ID(), 'subtitle', true); 
 			if ($subtitle):
 		?>
 		
-			<p class="heading__subtitle">
+			<p class="heading__subtitle jsTarget-loadDelay">
 				<?php echo $subtitle; ?>
 			</p>
 
@@ -55,6 +55,6 @@
 
 	</div>
 
-	<?php trns_pagination_component([ 'class'=>'heading__pagination', 'display_paginate_title'=>true ]); ?>
+	<?php trns_pagination_component([ 'class'=>'heading__pagination jsTarget-loadDelay', 'display_paginate_title'=>true ]); ?>
 
 </header><!--/ heading-home.php -->

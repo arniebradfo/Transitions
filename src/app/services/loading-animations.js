@@ -13,7 +13,7 @@
 	var unloadTargetClass    = 'jsState-unloadTargetElement';
 	var eligibleTargetClass  = 'jsTarget-eligibleTargetElement'; 
 	var transitionEndClass   = 'jsTarget-transitionEnd';
-
+	var loadDelayClass       = 'jsTarget-loadDelay';
 
 	function isCssMainLoaded() {
 		var sheets = document.styleSheets;
@@ -34,9 +34,14 @@
 		initialized = true;
 		// maybe use window.setTimeout() ?
 		window.requestAnimationFrame( function () {
-			console.log('styleLoaded');
+			// console.log('styleLoaded');
 			document.body.classList.remove(preloadClass);
 			document.body.classList.add(loadedClass);
+			var loadDelayElements = document.getElementsByClassName(loadDelayClass)
+			for (var i = 0; i < loadDelayElements.length; i++) {
+				var loadDelayElement = loadDelayElements[i];
+				loadDelayElement.classList.add(loadDelayClass+'-'+(i+1));
+			}
 		});
 	}
 

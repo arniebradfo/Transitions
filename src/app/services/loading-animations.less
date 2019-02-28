@@ -5,19 +5,6 @@
 // certain elements have a .jsTarget-eligibleTargetElement class 
 // these elements will receive a .jsState-unloadTargetElement class when something inside them is clicked
 
-body{
-	.transition(opacity, linear, @exitAnimation_Duration);
-	
-	&.jsState-stylePreload,
-	&.jsState-styleUnload
-	{
-		opacity: 0; 
-	}
-
-	&.jsState-styleLoaded {
-		opacity: 1; 
-	}
-}
 
 // this element is visually hidden
 // it is used by the loading-animation.js to know when transitions are done.
@@ -29,23 +16,69 @@ body{
 	opacity: 1;
 }
 
-.post-list{
-	.transition(opacity transform, ease, @exitAnimation_Duration);
+@delay_Interval: 70ms;
 
-	.jsState-stylePreload &{
-		transform: translate3d(0, 50px, 0); 
+
+body{
+	.transition(opacity transform, linear, @exitAnimation_Duration);	
+	&.jsState-stylePreload{
+		opacity: 0; 
 	}
-
-	.jsState-styleLoaded &{
-		transform: translate3d(0,0,0); 
+	&.jsState-styleLoaded {
+		opacity: 1; 
+		transition-timing-function: @panelTransitionIn_Timing;
 	}
-
-	.jsState-styleUnload &{
-		transform: translate3d(0, -10px, 0); 
+	&.jsState-styleUnload{
+		opacity: 0; 
+		transition-timing-function: @panelTransitionOut_Timing;
 	}
 }
 
-.jsState-unloadTargetElement{
-	.transition(transform, ease, (@exitAnimation_Duration/2));
-	transform: translate3d(0, -100px, 0); 
+
+.main,
+.footer{
+	.transition(opacity transform, ease, @exitAnimation_Duration);
+	.jsState-stylePreload &{
+		transform: translate3d(0, 60px, 0); 
+	}
+	.jsState-styleLoaded &{
+		transform: translate3d(0,0,0); 
+		transition-timing-function: @panelTransitionIn_Timing;
+	}
+	.jsState-styleUnload &{
+		transform: translate3d(0, -60px, 0); 
+		transition-timing-function: @panelTransitionOut_Timing;
+	}
+}
+
+.jsTarget-loadDelay{
+	.transition(opacity transform, ease, @exitAnimation_Duration);
+	.jsState-stylePreload &{
+		opacity: 0;
+		transform: translate3d(0, 50px, 0);
+	}
+	.jsState-styleLoaded &{
+		transform: translate3d(0,0,0); 
+		opacity: 1;
+		transition-timing-function: @panelTransitionIn_Timing;
+
+		.for(9); .-each(@i) {
+			&.jsTarget-loadDelay-@{i}{
+				transition-delay: @delay_Interval*@i;
+			}
+		}
+		
+	}
+	.jsState-styleUnload &{}
+}
+
+.jsTarget-loadDelay{
+
+}
+
+.jsState-unloadTargetElement{ // this didn't really work out...
+	// .transition(transform opacity, @panelTransitionOut_Timing, @exitAnimation_Duration);
+	// transform: translate3d(0, -100px, 0); 
+	// z-index: 20;
+	// opacity: 0;
 }

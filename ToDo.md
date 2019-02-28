@@ -1,11 +1,8 @@
 # TODO List
 - fix `.full-size`?
-- ANIMATIONS
-	- better loading/unloading animations
-	- doesn't animate on first load sometimes
-	- critical css?
-	- logo loading animation? DO IT LAST!
 - TESTING
+	- speed test
+	- html doc outline
 	- browser test
 	- does is validate?
 	- accessibility
@@ -15,7 +12,7 @@
 	- Tagged and Category with description
 	- Author with description & links to social
 - FEATURES
-	- ===
+	- logo loading animation? DO IT LAST!
 	- press/touch only?
 	- tune text shadow
 	- password protected post has a password input field in preview
@@ -40,6 +37,7 @@ Move things here off the list, then to the __ChangeLog.md__
 - smoother parallax scroll performance
 - parallax doesn't fire if window has scrolled one window height, could be better...
 - handle special keypress+click combo in animation loading
+- better loading/unloading animations
 - CSS
 	- round corners of `<hr/>`, more intense color
 	- wider column - set content-width correctly
@@ -105,14 +103,8 @@ Move things here off the list, then to the __ChangeLog.md__
 	- make a widget
 
 ## Build scheme
-based on angular
+based on angular component structure
 outputs an external dist folder that wp uses
-
-
-## Interaction principles?
-- grows when hovered
-- shrinks when pressed
-- flash animates when when tapped
 
 
 ## cd From `Wordpress` project

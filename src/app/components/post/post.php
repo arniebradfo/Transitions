@@ -27,7 +27,7 @@
 
 	<?php if ( is_singular() ) : ?>
 
-		<div class="post__content" id="post-content">
+		<div class="post__content post__content--full jsTarget-loadDelay" id="post-content">
 
 			<?php
 
@@ -41,36 +41,40 @@
 	
 		</div>
 
-		<?php get_template_part('copyright', 'post'); ?>
-
-		<?php if (is_user_logged_in())
-			edit_post_link(
-				'Edit this post',
-				'<p class="post__edit">',
-				'</p>',
-				null,
-				'post__edit-button button button--outline'
-			); ?>
-
-		<?php if (trns_is_post_paginated()) : // post has pages ?>
+		<footer class="jsTarget-loadDelay">
 			
-			<?php if (!trns_is_last_page_of_post()) : // is not the last post ?>				
-				<div class="post-pagination  post-pagination--titled">
-					<div class="post-pagination__column">
-						<div class="post-pagination__label">Next Page:</div>
-						<h3 class="post-pagination__title"><?php the_title(); ?></h3>
-					</div>
+			<?php get_template_part('copyright', 'post'); ?>
 
-			<?php else: ?>
-				<div class="post-pagination  post-pagination--last-page">
+			<?php if (is_user_logged_in())
+				edit_post_link(
+					'Edit this post',
+					'<p class="post__edit ">',
+					'</p>',
+					null,
+					'post__edit-button button button--outline'
+				); ?>
 
-			<?php endif; ?>
-
-				<?php trns_pagination_component(['next_page_number'=>true]); ?>
+			<?php if (trns_is_post_paginated()) : // post has pages ?>
 				
-			</div>
+				<?php if (!trns_is_last_page_of_post()) : // is not the last post ?>				
+					<div class="post-pagination  post-pagination--titled">
+						<div class="post-pagination__column">
+							<div class="post-pagination__label">Next Page:</div>
+							<h3 class="post-pagination__title"><?php the_title(); ?></h3>
+						</div>
+
+				<?php else: ?>
+					<div class="post-pagination  post-pagination--last-page">
+
+				<?php endif; ?>
+
+					<?php trns_pagination_component(['next_page_number'=>true]); ?>
+					
+				</div>
 
 		<?php endif; ?>
+
+		</footer>
 
 
 

@@ -20,17 +20,17 @@
 
 		<div class="heading__featured-media heading__featured-media--empty"></div> 
 
-		<div class="heading__logo">		
+		<div class="heading__logo jsTarget-loadDelay">		
 			<?php get_template_part('logo'); ?>
 		</div>
 
-		<h1 class="heading__title">
+		<h1 class="heading__title jsTarget-loadDelay">
 			<?php bloginfo( 'name' ); ?>
 		</h1>
 
-		<hr class="heading__rule" />
+		<hr class="heading__rule jsTarget-loadDelay" />
 
-		<p class="heading__subtitle">
+		<p class="heading__subtitle jsTarget-loadDelay">
 			<?php bloginfo( 'description' ); ?>
 		</p>
 
@@ -39,7 +39,7 @@
 				'link_class'       => 'heading__menu-link button',
 				'first_link_class' => 'button--fill',
 				'theme_location'   => 'home',
-				'container_class'  => 'heading__menu',
+				'container_class'  => 'heading__menu jsTarget-loadDelay',
 				'container'        => 'nav',
 				'menu_class'       => 'menu heading__menu-list',
 				'depth'            => 1,
