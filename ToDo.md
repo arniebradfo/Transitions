@@ -1,5 +1,4 @@
 # TODO List
-- fix `.full-size`?
 - TESTING
 	- speed test
 	- html doc outline
@@ -26,8 +25,8 @@
 Move things here off the list, then to the __ChangeLog.md__
 - made a widget area on main page
 - changed tags to categories
-- replacing `.alignout` with `.size-full`
-- replacing `.alignout-section` with `.section-size-full`
+- replacing `.alignout` with `.aligncenter`
+- replacing `.alignout-section` with `.section-full-width`
 - Fixed: password protect post form submit fails animation
 - IMAGES - make sure responsive images work
 	- they work ok, just need to include the full-size image
