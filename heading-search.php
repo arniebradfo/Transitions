@@ -1,7 +1,7 @@
 <!--heading-archive.php-->
 <header class="heading heading--search heading--lacks-featured-media" id="heading">
 
-	<div class="heading__wrapper">
+	<div class="heading__column">
 
 		<a class="heading__site-title  button--large" 
 			href="<?php echo esc_url( home_url( '/' ) ); ?>" 
@@ -13,21 +13,22 @@
 
 		<div class="heading__featured-media heading__featured-media--empty"></div> 
 
-		<div class="heading__meta">
-			Search Results: 
-			Page #<?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
+		<div class="heading__meta jsTarget-loadDelay">
+			Search results for: 
 		</div>
 
-		<h1 class="heading__title">
+		<!-- <h1 class="heading__title jsTarget-loadDelay">
 			<?php echo get_search_query() ?>
-		</h1>
+		</h1> -->
 
-		<!-- <hr class="heading__rule" /> -->
+		<!-- <hr class="heading__rule jsTarget-loadDelay" /> -->
 		
-		<div class="heading__searchform" >
+		<div class="heading__searchform searchform--title jsTarget-loadDelay" >
 			<?php echo get_search_form(); ?>
 		</div>
 	
 	</div>
+
+	<?php trns_pagination_component([ 'class'=>'heading__pagination jsTarget-loadDelay', 'display_paginate_title'=>true ]); ?>
 
 </header><!--/heading-archive.php-->

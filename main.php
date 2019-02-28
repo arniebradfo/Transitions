@@ -12,13 +12,16 @@
 
 ?>
 
-<main class="main">
+<main class="main" id="main">
 
 <?php
+
+$is_homepage = is_front_page() && trns_get_page_number() < 2;
+
 if( is_singular() ) {
 	// print nothing, just skip to loop
 
-} elseif ( is_front_page() && get_page_number() < 2 ){
+} elseif ( $is_homepage ) { 
 	get_template_part('heading', 'home');
 
 } elseif( is_search() ) {
@@ -35,8 +38,14 @@ if( is_singular() ) {
 
 } ?>
 
+<?php if ( $is_homepage && is_active_sidebar('homepage-widgets') ): ?>
+	<section id="homepage-widgets" class="homepage-widgets">
+		<?php dynamic_sidebar( 'homepage-widgets' ); ?>
+	</section>
+<?php endif; ?>
+
 <?php if( ! is_singular() ) 
-	echo '<div class="post-list" id="post-list">'; ?>
+	echo '<div class="post-list jsTarget-loadDelay" id="post-list">'; ?>
 
 	<?php if ( have_posts() ) : ?>
 	
@@ -48,7 +57,7 @@ if( is_singular() ) {
 		?>
 
 	<?php else : // if there are no posts ?>
-		<div class="post__content">
+		<div class="post__content jsTarget-loadDelay">
 			<h2>Nothing matches the request</h2>
 			<p>Sorry. Please try again.</p>
 			<?php // echo get_search_form(); ?>
@@ -59,6 +68,6 @@ if( is_singular() ) {
 	echo '</div>'; ?>
 
 <?php if( ! is_singular() && have_posts()) 
-	get_template_part('pagination'); ?>
+	trns_pagination_component(['class'=>'post-list__pagination jsTarget-loadDelay']); ?>
 
 </main><!-- .main -->

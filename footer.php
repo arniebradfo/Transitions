@@ -10,21 +10,25 @@
  * @version 1.0
  */
 
-?><footer class="footer" id="footer">
+?>
 
-	<div class="footer__wrapper">
+<footer class="footer jsTarget-loadDelay" id="footer">
 
-		<?php get_search_form(); ?>
+	<div class="footer__column">
+		<div class="footer__items">
 
-		<?php trns_wp_nav_menu( array(
-			'link_class'      => 'button footer__menu-link',
-			'theme_location'  => 'footer',
-			'container_class' => 'footer__menu',
-			'container'       => 'nav',
-			'menu_class'      => 'menu footer__menu-list',
-			'depth'           => 1
-		)); ?>
+			<?php get_search_form(); ?>
 
+			<?php trns_wp_nav_menu( array(
+				'link_class'      => 'button footer__menu-link',
+				'theme_location'  => 'footer',
+				'container_class' => 'footer__menu',
+				'container'       => 'nav',
+				'menu_class'      => 'menu footer__menu-list',
+				'depth'           => 1
+			)); ?>
+
+		</div>
 	</div>
 
 	<?php 
@@ -41,3 +45,5 @@
 	} ?>
 
 </footer>
+
+<?php wp_footer(); ?>

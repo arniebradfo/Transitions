@@ -18,7 +18,7 @@
 <!-- heading-post.php -->
 <header class="heading heading--post-list heading--interactive heading--<?php echo $featured_media_class_suffix; ?>">
 
-	<div class="heading__wrapper">
+	<div class="heading__column">
 
 		<a class="heading__cover-link button--custom" 
 			href="<?php echo esc_url( get_permalink() ) ?>" 
@@ -48,11 +48,8 @@
 		<hr class="heading__rule" />
 
 	</div>
-	
-	<?php echo preg_replace( 
-		'/<a\s/',
-		'<a class="heading__tag button" ', // all links need classes
-		get_the_tag_list('<p class="heading__tags">', ' ', '</p>')
-	); ?>
+
+	<?php // trns_the_tags('<p class="heading__tags">', ' ', '</p>', '', 'heading__tag button'); ?>
+	<?php trns_the_categories('', '', '', 'heading__category button', 'heading__categories'); ?>
 
 </header><!--/ heading-home.php -->

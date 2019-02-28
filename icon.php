@@ -13,18 +13,21 @@
 
 function trns_icon_component( $atts, $content=null, $tag='' ) {
 
-	$output = '<!-- icon.php -->';
-	$output.= '<svg ';
-	$atts['class'] = isset($atts['class']) ? "icon {$atts['class']}" : 'icon';
+	$atts_list = '';
+	$atts['class'] = ! empty($atts['class']) ? "icon {$atts['class']}" : 'icon';
 	foreach($atts as $att => $val)
 		if ($att == 'name') continue;
-		$output .= " $att=\"$val\""; // echo all attributes from the shorcode
-	$output .= '>';
-	$output .= "<use xlink:href=\"#icon_{$atts['name']}\"></use>"; 
-	$output .= '</svg>';
-	$output .= '<!--/ icon.php -->';
+		$atts_list .= " $att=\"$val\""; // echo all attributes from the shortcode
+	
+	$name =	$atts['name'];
+	
+	$output = <<<HTML
+	<!-- icon.php -->
+	<svg $atts_list ><use xlink:href="#icon_$name"></use></svg>
+	<!--/ icon.php -->
+HTML;
 	return $output;
 }
-// add_shortcode( 'tnst-icon', 'trns_icon_component' );
+// add_shortcode( 'trns-icon', 'trns_icon_component' );
 
 ?>

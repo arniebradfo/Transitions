@@ -13,7 +13,7 @@
 <!--heading-error.php-->
 <header class="heading heading--error heading--lacks-featured-media" id="heading">
 
-	<div class="heading__wrapper">
+	<div class="heading__column">
 
 		<a class="heading__site-title button--large" 
 			href="<?php echo esc_url( home_url( '/' ) ); ?>" 
@@ -25,17 +25,17 @@
 
 		<div class="heading__featured-media heading__featured-media--empty"></div> 
 
-		<div class="heading__meta">
+		<div class="heading__meta jsTarget-loadDelay">
 			Error 404
 		</div>
 
-		<h1 class="heading__title">
+		<h1 class="heading__title jsTarget-loadDelay">
 			Page Not Found
 		</h1>
 
 		<!-- <hr class="heading__rule" /> -->
 		
-		<div class="heading__searchform" >
+		<div class="heading__searchform jsTarget-loadDelay" >
 			<?php echo get_search_form(); ?>
 		</div>
 	</div>

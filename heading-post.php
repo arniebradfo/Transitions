@@ -18,7 +18,7 @@
 <!-- heading-post.php -->
 <header class="heading heading--post-full heading--<?php echo $featured_media_class_suffix; ?>" id="heading">
 
-	<div class="heading__wrapper">
+	<div class="heading__column">
 
 		<a class="heading__site-title  button--large" 
 			href="<?php echo esc_url( home_url( '/' ) ); ?>" 
@@ -38,7 +38,7 @@
 
 		<?php endif; ?> 
 	
-		<div class="heading__meta">
+		<div class="heading__meta jsTarget-loadDelay">
 
 			<time class="heading__meta-date" datetime="<?php the_time('c');?>">
 				<?php the_date(); ?>
@@ -51,16 +51,16 @@
 			
 		</div>
 
-		<h1 class="heading__title"><?php the_title(); ?></h1>
+		<h1 class="heading__title jsTarget-loadDelay"><?php the_title(); ?></h1>
 
-		<hr class="heading__rule" />
+		<hr class="heading__rule jsTarget-loadDelay" />
 
-		<?php echo preg_replace( 
-			'/<a\s/',
-			'<a class="heading__tag button" ', // all links need classes
-			get_the_tag_list('<p class="heading__tags">', ' ', '</p>')
-		); ?>
+		<?php // trns_the_tags('<p class="heading__tags">', ' ', '</p>', '', 'heading__tag button'); ?>
+		<?php trns_the_categories('', '', '', 'heading__category button', 'heading__categories jsTarget-loadDelay'); ?>
 
+		
 	</div>
+
+	<?php trns_pagination_component([ 'class'=>'heading__pagination jsTarget-loadDelay', 'display_paginate_title'=>true ]); ?>
 
 </header><!--/ heading-home.php -->
