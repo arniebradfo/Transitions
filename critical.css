@@ -1,1 +1,174 @@
-html{--column_Padding:64px}.jsTarget-transitionEnd{opacity:0;transition:opacity .5s ease}.jsState-styleLoaded .jsTarget-transitionEnd{opacity:1}body{transition:opacity .5s linear,transform .5s linear}body.jsState-stylePreload{opacity:0}body.jsState-styleLoaded{opacity:1;transition-timing-function:cubic-bezier(0,1,1,1)}body.jsState-styleUnload{opacity:0;transition-timing-function:cubic-bezier(.5,0,1,.5)}.footer,.main{transition:opacity .5s ease,transform .5s ease}.jsState-stylePreload .footer,.jsState-stylePreload .main{transform:translate3d(0,60px,0)}.jsState-styleLoaded .footer,.jsState-styleLoaded .main{transform:translateZ(0);transition-timing-function:cubic-bezier(0,1,1,1)}.jsState-styleUnload .footer,.jsState-styleUnload .main{transform:translate3d(0,-60px,0);transition-timing-function:cubic-bezier(.5,0,1,.5)}.jsTarget-loadDelay{transition:opacity .5s ease,transform .5s ease}.jsState-stylePreload .jsTarget-loadDelay{opacity:0;transform:translate3d(0,50px,0)}.jsState-styleLoaded .jsTarget-loadDelay{transform:translateZ(0);opacity:1;transition-timing-function:cubic-bezier(0,1,1,1)}.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-1{transition-delay:70ms}.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-2{transition-delay:.14s}.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-3{transition-delay:.21s}.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-4{transition-delay:.28s}.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-5{transition-delay:.35s}.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-6{transition-delay:.42s}.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-7{transition-delay:.49s}.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-8{transition-delay:.56s}.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-9{transition-delay:.63s}@media screen and (min-width:701px){html{--column_Padding:64px}}@media screen and (max-width:700px){html{--column_Padding:32px}}
+/*
+write position like you would any other thickness value
+
+.absolute(0)
+=>
+position: absolute;
+top:    0;
+right:  0;
+bottom: 0;
+left:   0;
+
+.absolute(0 10px)
+=>
+position: absolute;
+top:    0;
+right:  10px;
+bottom: 0;
+left:   10px;
+
+.absolute(0 10px initial)
+=>
+position: absolute;
+top:    0;
+right:  10px;
+left:   10px;
+
+.absolute(1px 2px 3px 4px)
+=>
+position: absolute;
+top:    1px;
+right:  2px;
+bottom: 3px;
+left:   4px;
+
+*/html {
+  --column_Padding: 64px;
+}
+
+.jsTarget-transitionEnd {
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease;
+  transition: opacity 500ms ease;
+}
+
+.jsState-styleLoaded .jsTarget-transitionEnd {
+  opacity: 1;
+}
+
+body {
+  -webkit-transition: opacity 500ms linear, -webkit-transform 500ms linear;
+  transition: opacity 500ms linear, -webkit-transform 500ms linear;
+  transition: opacity 500ms linear, transform 500ms linear;
+  transition: opacity 500ms linear, transform 500ms linear, -webkit-transform 500ms linear;
+}
+
+body.jsState-stylePreload {
+  opacity: 0;
+}
+
+body.jsState-styleLoaded {
+  opacity: 1;
+  -webkit-transition-timing-function: cubic-bezier(0, 1, 1, 1);
+  transition-timing-function: cubic-bezier(0, 1, 1, 1);
+}
+
+body.jsState-styleUnload {
+  opacity: 0;
+  -webkit-transition-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  transition-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+}
+
+.main,.footer {
+  -webkit-transition: opacity 500ms ease, -webkit-transform 500ms ease;
+  transition: opacity 500ms ease, -webkit-transform 500ms ease;
+  transition: opacity 500ms ease, transform 500ms ease;
+  transition: opacity 500ms ease, transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+.jsState-stylePreload .main,.jsState-stylePreload .footer {
+  -webkit-transform: translate3d(0, 60px, 0);
+  transform: translate3d(0, 60px, 0);
+}
+
+.jsState-styleLoaded .main,.jsState-styleLoaded .footer {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition-timing-function: cubic-bezier(0, 1, 1, 1);
+  transition-timing-function: cubic-bezier(0, 1, 1, 1);
+}
+
+.jsState-styleUnload .main,.jsState-styleUnload .footer {
+  -webkit-transform: translate3d(0, -60px, 0);
+  transform: translate3d(0, -60px, 0);
+  -webkit-transition-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  transition-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+}
+
+.jsTarget-loadDelay {
+  -webkit-transition: opacity 500ms ease, -webkit-transform 500ms ease;
+  transition: opacity 500ms ease, -webkit-transform 500ms ease;
+  transition: opacity 500ms ease, transform 500ms ease;
+  transition: opacity 500ms ease, transform 500ms ease, -webkit-transform 500ms ease;
+}
+
+.jsState-stylePreload .jsTarget-loadDelay {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, 50px, 0);
+}
+
+.jsState-styleLoaded .jsTarget-loadDelay {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  -webkit-transition-timing-function: cubic-bezier(0, 1, 1, 1);
+  transition-timing-function: cubic-bezier(0, 1, 1, 1);
+}
+
+.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-1 {
+  -webkit-transition-delay: 70ms;
+  transition-delay: 70ms;
+}
+
+.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-2 {
+  -webkit-transition-delay: 140ms;
+  transition-delay: 140ms;
+}
+
+.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-3 {
+  -webkit-transition-delay: 210ms;
+  transition-delay: 210ms;
+}
+
+.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-4 {
+  -webkit-transition-delay: 280ms;
+  transition-delay: 280ms;
+}
+
+.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-5 {
+  -webkit-transition-delay: 350ms;
+  transition-delay: 350ms;
+}
+
+.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-6 {
+  -webkit-transition-delay: 420ms;
+  transition-delay: 420ms;
+}
+
+.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-7 {
+  -webkit-transition-delay: 490ms;
+  transition-delay: 490ms;
+}
+
+.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-8 {
+  -webkit-transition-delay: 560ms;
+  transition-delay: 560ms;
+}
+
+.jsState-styleLoaded .jsTarget-loadDelay.jsTarget-loadDelay-9 {
+  -webkit-transition-delay: 630ms;
+  transition-delay: 630ms;
+}
+
+@media screen and (min-width: 701px) {
+  html {
+    --column_Padding: 64px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    --column_Padding: 32px;
+  }
+}
