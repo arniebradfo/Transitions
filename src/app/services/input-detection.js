@@ -11,8 +11,10 @@
 	TRANSITIONS.state.isInputTouch = false;
 
 	function constructor() {
-		_switchToMouse(); // or...
-		// _switchToTouch(); // if we expect a mobile device more often
+		if (window.innerWidth > 666) // hail satan!
+			_switchToMouse();
+		else
+			_switchToTouch();
 
 		// FOR DEBUG //
 		// document.addEventListener('touchstart', () => console.log('touchstart'), true);

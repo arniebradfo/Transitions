@@ -1,23 +1,27 @@
 # TODO List
+- archives with descriptions are have too much subtitle padding
+- button background when nav open
 - FASTER WORDPRESS
 	- minify with plugin
 	- cache with plugin
 	- cloudflare
 - TESTING
-	- [speed test](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fbradford.digital%2F)
-	- does is validate?
-		- [homepage](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbradford.digital%2F)
-		- [HESH Post](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fbradford.digital%2Fwordpress-syntax-highlighter-plugin%2F)
 	- browser test
 		- chrome
 		- firefox
+			- input placeholder is in a weird place - too high
+			- input has a dotted outline
+			- back button doesn't work...
 		- safari
-			- search placeholder is in a weird place
+			- input placeholder is in a weird place - too low
+			- button gradient is darker?
+			- back button doesn't work...
 		- edge
 		- ie11 ?
 	- mobile testing - look at speed and make an exception.
 		- iOS safari
 		- chrome for android
+	- [speed test](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fbradford.digital%2F)
 	- accessibility - later
 - TITLES - better titles for everything
 	- remove _PROTECTED_ from post title: [link](https://www.templatemonster.com/help/wordpress-how-to-removechange-protected-prefix-for-password-protected-posts.html)
@@ -45,6 +49,7 @@ Move things here off the list, then to the __ChangeLog.md__
 - removed tabs from ascii character
 - HTML validates if using a minifier like [W3 total cache](https://wordpress.org/plugins/w3-total-cache/)
 	- the `type="text/javascript"` and `type="text/css"` attributes are unnecessary
+- pagination wrapping issue
 
 
 ## TODO Later
