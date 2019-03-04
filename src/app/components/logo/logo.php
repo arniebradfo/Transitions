@@ -18,7 +18,7 @@ if (has_custom_logo()) {
 	if ($logoAndTitle){
 		preg_match('/(<img)([^>]+>)/', $customLogo, $customLogo);
 		$customLogo = $customLogo[0];
-		$customLogo = preg_replace('/(itemprop="[^\"\']*[\"\'])/'); // itemprop="logo" is bad?
+		$customLogo = preg_replace('/(itemprop="[^\"\']*[\"\'])/', '', $customLogo); // itemprop="logo" is bad?
 	}
 	echo $customLogo;
 }

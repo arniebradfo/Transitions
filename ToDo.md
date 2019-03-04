@@ -8,11 +8,11 @@
 	- does is validate?
 		- [homepage](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbradford.digital%2F)
 		- [HESH Post](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fbradford.digital%2Fwordpress-syntax-highlighter-plugin%2F)
-		- html doc outline on these pages too
 	- browser test
 		- chrome
 		- firefox
 		- safari
+			- search placeholder is in a weird place
 		- edge
 		- ie11 ?
 	- mobile testing - look at speed and make an exception.
@@ -43,9 +43,12 @@ Move things here off the list, then to the __ChangeLog.md__
 - featured image color improvements - rotated gradient so white is at the bottom and text is (somewhat) easier to read.
 - removed _'Protected: Post Name'_ Text
 - removed tabs from ascii character
+- HTML validates if using a minifier like [W3 total cache](https://wordpress.org/plugins/w3-total-cache/)
+	- the `type="text/javascript"` and `type="text/css"` attributes are unnecessary
 
 
 ## TODO Later
+- html doc outline from https://validator.w3.org/nu/
 - theme preview & customize does not work with navigation
 - better heights for headers
 - current item style on pagination & menus
