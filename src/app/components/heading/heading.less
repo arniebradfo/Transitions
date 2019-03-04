@@ -2,18 +2,20 @@
 // heading.less //
 // .heading--has-featured-media | .heading--lacks-featured-media
 
-@after_Opacity: 0.5;
-@after_OpacityHint: 0.4;
-@after_OpacityHover: 0.4;
-@after_OpacityActive: 0.6;
-@after_OpacityEmpty: 0.1;
-@img_Opacity: 0.9;
-@img_Filters: 
+
+// HERO IMG PARAMETERS //
+@heroOverlay_GradientColors: fade(white, 0%), fade(white, 100%);
+@heroOverlay_Opacity:         0.8;
+@heroOverlay_OpacityHint:     0.5;
+@heroOverlay_OpacityHover:    0.5;
+@heroOverlay_OpacityActive:   0.8;
+// @heroOverlay_OpacityEmpty: 0.1;
+@heroImg_Opacity:           1;
+@heroImg_Filters: none;
 	// grayscale(30%) 
-	contrast(100%)
-	// brightness(110%)
-	// saturate(130%)
-	;
+	// contrast(100%)
+	// brightness(80%)
+	// saturate(130%);
 
 
 //////////////////////
@@ -124,8 +126,8 @@
 	height: 100%;
 	width:  100%;
 	object-fit: cover;
-	opacity: @img_Opacity;
-	filter: @img_Filters;
+	opacity: @heroImg_Opacity;
+	filter: @heroImg_Filters;
 }
 .heading__cover-link{
 	display: block;
@@ -186,7 +188,7 @@
 		content: none;
 	}
 	// &::after{ // not specific enough
-	// 	opacity: @after_OpacityEmpty;
+	// 	opacity: @heroOverlay_OpacityEmpty;
 	// }
 }
 // #endregion //
@@ -333,20 +335,22 @@
 ////////////////////
 // #region STATES //
 
-
 // NORMAL //
 .heading--has-featured-media,
 .heading--interactive{
 	.heading__featured-media{
 		&:after{ // img overlay
-			opacity: @after_Opacity;
-			background-image: linear-gradient( -45deg, fade(white, 0%),  fade(white, 100%));
+			opacity: @heroOverlay_Opacity;
+			background-image: linear-gradient( 220deg, @heroOverlay_GradientColors);
 			background-color: transparent;
-			background-color: fade(black, 100%);
+			background-color: fade(black, 20%);
 			// background-size: 110% 110%;
 			.transition(background-color opacity);
 		}
 	}
+}
+.heading--post-adjacent .heading__featured-media:after{
+	background-image: linear-gradient( -50deg, @heroOverlay_GradientColors);
 }
 .heading--interactive{
 	.heading__rule{
@@ -438,7 +442,7 @@
 
 		.heading__featured-media{
 			&:after{
-				opacity: @after_OpacityHint; // img overlay
+				opacity: @heroOverlay_OpacityHint; // img overlay
 				background-color: black;
 			}
 		}
@@ -472,7 +476,7 @@
 
 			~ .heading__featured-media{
 				&:after{ // img overlay
-					opacity: @after_OpacityHover;
+					opacity: @heroOverlay_OpacityHover;
 					background-color: @accentDeep_Color;
 				}
 			}
@@ -509,7 +513,7 @@
 
 			~ .heading__featured-media{
 				&:after{ // img overlay
-					opacity: @after_OpacityActive;
+					opacity: @heroOverlay_OpacityActive;
 					background-color: darken(@accentDeep_Color, 10%);
 					// background-color: @accentPrimary_Color;
 					transition-duration: @active_Duration;
