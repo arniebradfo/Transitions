@@ -1,7 +1,6 @@
 # TODO List
-- srcset sizes for featured images
 - featured image colors: try css filters
-- inline_featured_image meta field ?
+- srcset sizes for featured images - should leave this so it downloads a full width image
 - fix ascii rendering
 - FASTER WORDPRESS
 	- minify with plugin
@@ -67,6 +66,7 @@ Move things here off the list, then to the __ChangeLog.md__
 - last post edge case
 - re-implement text-shadow and parallax on mobile
 - better titles for the Archives page
+- `inline_featured_image` meta field ? the world may never know
 - BUTTONS
 	- outline
 	- focus stuff?
