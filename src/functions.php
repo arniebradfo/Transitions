@@ -158,6 +158,11 @@ function disable_wp_emojicons() {
 }
 add_action( 'init', 'disable_wp_emojicons' );
 
+// https://css-tricks.com/snippets/wordpress/remove-privateprotected-from-post-titles/#comment-73313
+function trns_no_title_formating($content) { return '%s'; }
+add_filter('private_title_format',   'trns_no_title_formating');
+add_filter('protected_title_format', 'trns_no_title_formating');
+
 function trns_get_page_number() {
 	return (get_query_var('paged')) ? get_query_var('paged') : 1;
 }
