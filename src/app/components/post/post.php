@@ -91,9 +91,7 @@
 	<?php else : ?>
 		
 		<div class="post__content">
-			<p>
-				<?php the_excerpt(); ?>
-			</p>
+			<?php the_excerpt(); ?>
 			<a class="post__primary-button button button--outline" href="<?php echo esc_url( get_permalink() ); ?>">
 				Read more <?php echo trns_icon_component(['name'=>'Expand', 'class'=>'button__icon']) ?>
 			</a>

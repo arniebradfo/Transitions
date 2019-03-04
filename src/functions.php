@@ -15,12 +15,33 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 8*100;
 }
 
-function var_dump_pre($mixed = null) { // for debug
-	echo '<pre>';
-	var_dump($mixed);
-	echo '</pre>';
-	return null;
-}
+// function var_dump_pre($mixed = null) { // for debug
+// 	echo '<pre>';
+// 	var_dump($mixed);
+// 	echo '</pre>';
+// 	return null;
+// }
+
+
+// function replace_type_atts($buffer) {      
+// 	// replacing all type="text/javascript|css" attributes because the W3C validator hates them
+// 	return preg_replace('/\stype=[\'\"]text\/(javascript|css)[\'\"]/','',$buffer);
+// }
+// function buffer_start() { ob_start('replace_type_atts'); } 
+// function buffer_end()   { ob_end_flush(); }
+// add_action('after_setup_theme', 'buffer_start');
+// add_action('shutdown', 'buffer_end');
+// add_filter('style_loader_tag', 'codeless_remove_type_attr', 10, 2);
+// add_filter('script_loader_tag', 'codeless_remove_type_attr', 10, 2);
+// function codeless_remove_type_attr($tag, $handle) {
+//     return preg_replace( '/\stype=[\'\"]text\/(javascript|css)[\'\"]/', '', $tag );
+// }
+
+// the 'final_output' is created by a must-use plugin: buffer.php: https://stackoverflow.com/a/22818089/5648839
+add_filter('final_output', function($output) {
+	// replacing all type="text/javascript|css" attributes because the W3C validator hates them
+	return preg_replace( '/\stype=[\'\"]text\/(javascript|css)[\'\"]/', '', $output );
+});
 
 function trns_theme_setup() {
 

@@ -28,7 +28,6 @@ function trns_password_form( $title = '<h2 class="password-form__title">This pos
 		class="password-form" 
 		action="$siteUrl/wp-login.php?action=postpass" 
 		method="post"
-		role="login"
 		>
 		<input 
 			class="password-form__input"
