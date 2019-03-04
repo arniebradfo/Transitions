@@ -8,13 +8,7 @@
 	- browser test
 		- chrome
 		- firefox
-			- input placeholder is in a weird place - too high
-			- input has a dotted outline
-			- back button doesn't work...
 		- safari
-			- input placeholder is in a weird place - too low
-			- button gradient is darker?
-			- back button doesn't work...
 		- edge
 		- ie11 ?
 	- mobile testing - look at speed and make an exception.
@@ -51,6 +45,7 @@ Move things here off the list, then to the __ChangeLog.md__
 - pagination wrapping issue
 - disable back button animation because the `popstate` event works differently in chrome, safari, and firefox?
 - no nav button background when nav is open
+- fixed firefox and safari bugs with gradients and input placeholder position
 
 
 ## TODO Later

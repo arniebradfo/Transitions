@@ -1,3 +1,5 @@
+@buttonBg_GradientLg: linear-gradient(-45deg, @accentDeep_Color, @accentPrimary_Color, fade(@accentPrimary_Color,0%), fade(@accentPrimary_Color,0%));
+
 .button--base(){
 	// RESETS //
 	-webkit-appearance: none;
@@ -30,7 +32,7 @@
 	}
 
 	&::after{
-		background-image: linear-gradient(-45deg, @accentDeep_Color, @accentPrimary_Color, transparent, transparent);
+		background-image: @buttonBg_GradientLg;
 		@bgSize: (4 - 1) * 100%;
 		background-size: @bgSize @bgSize;
 		background-position: 0% 0%;
@@ -130,7 +132,7 @@
 	background-color: transparent;
 	.transition(opacity transform background-position background-color);
 
-	background-image: linear-gradient(-45deg, @accentDeep_Color, @accentPrimary_Color, transparent, transparent);
+	background-image: @buttonBg_GradientLg;
 	@bgSize: (4 - 1) * 100%;
 	background-size: @bgSize @bgSize;
 	background-position: 0% 0%;
