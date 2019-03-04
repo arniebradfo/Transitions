@@ -242,7 +242,7 @@ function trns_the_categories( $separator='', $parents='', $post_id='', $link_cla
 function trns_ascii_logo() {
 	return <<<HTML
 <!--
-		
+
   ◺
   ▢ ▢
   ▢ ▢
@@ -256,8 +256,8 @@ function trns_ascii_logo() {
   ▢ ▢   ▢ ▢ ▢ ▢ ▢
   ▢ ▢   ▢ ▢ ▢ ▢ ▢
         ▢ ▢
-	    ▢ ▢ ▢ ▢ ▢   bradford
-		▢ ▢ ▢ ▢ ▢   digital
+        ▢ ▢ ▢ ▢ ▢   bradford
+        ▢ ▢ ▢ ▢ ▢   digital
 
 -->
 HTML;
@@ -265,22 +265,22 @@ HTML;
 // OTHER OPTIONS
 /*
 
+
   |\
-  |||\
   ||||
   ||||
   ||||
-  |||||||||||
-  |||||||||||  |\
-         ||||  |||\
-  |||||||||||  ||||
-  |||||||||||  ||||
-               ||||
-  ||||  |||||||||||
-  ||||  |||||||||||
+  ||||||||||
+  ||||||||||  
+        ||||  |\
+  ||||||||||  ||||
+  ||||||||||  ||||
+              ||||
+  ||||  ||||||||||
+  ||||  ||||||||||
         ||||
-        |||||||||||   bradford
-		|||||||||||   digital
+        ||||||||||   bradford
+        ||||||||||   digital
 
   ██◣
   ████

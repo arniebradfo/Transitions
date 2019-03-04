@@ -1,6 +1,4 @@
 # TODO List
-- srcset sizes for featured images - should leave this so it downloads a full width image
-- fix ascii rendering
 - FASTER WORDPRESS
 	- minify with plugin
 	- cache with plugin
@@ -44,6 +42,7 @@ Move things here off the list, then to the __ChangeLog.md__
 - home widget area has padding from the header section and post-list section
 - featured image color improvements - rotated gradient so white is at the bottom and text is (somewhat) easier to read.
 - removed _'Protected: Post Name'_ Text
+- removed tabs from ascii character
 
 
 ## TODO Later
