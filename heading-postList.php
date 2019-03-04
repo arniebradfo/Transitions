@@ -33,6 +33,7 @@
 		<div class="heading__flex-splitter"></div>		
 	
 		<div class="heading__meta">
+			
 			<time class="heading__meta-date" datetime="<?php the_time('c');?>">
 				<?php echo get_the_date(); ?>
 			</time>
@@ -41,6 +42,19 @@
 				href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
 				<?php the_author(); ?>
 			</a>
+
+			<?php if(post_password_required()) : ?>
+				&#47;
+				<small class="heading__meta-lock">
+					Locked <?php echo trns_icon_component(['name'=>'Lock', 'class'=>'heading__meta-lock-icon']); ?>
+				</small>
+			<?php elseif(!empty($post->post_password)) : ?>
+				&#47;
+				<small class="heading__meta-lock">
+					Unlocked <?php echo trns_icon_component(['name'=>'Unlock', 'class'=>'heading__meta-lock-icon']); ?>
+				</small>
+			<?php endif; ?> 
+			
 		</div>
 
 		<h2 class="heading__title"><?php the_title(); ?></h2>

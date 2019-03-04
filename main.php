@@ -39,7 +39,7 @@ if( is_singular() ) {
 } ?>
 
 <?php if ( $is_homepage && is_active_sidebar('homepage-widgets') ): ?>
-	<section id="homepage-widgets" class="homepage-widgets">
+	<section id="homepage-widgets" class="homepage-widgets jsTarget-loadDelay">
 		<?php dynamic_sidebar( 'homepage-widgets' ); ?>
 	</section>
 <?php endif; ?>

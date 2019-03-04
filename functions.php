@@ -15,12 +15,12 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 8*100;
 }
 
-function var_dump_pre($mixed = null) { // for debug
-	echo '<pre>';
-	var_dump($mixed);
-	echo '</pre>';
-	return null;
-}
+// function var_dump_pre($mixed = null) { // for debug
+// 	echo '<pre>';
+// 	var_dump($mixed);
+// 	echo '</pre>';
+// 	return null;
+// }
 
 function trns_theme_setup() {
 
@@ -158,6 +158,11 @@ function disable_wp_emojicons() {
 }
 add_action( 'init', 'disable_wp_emojicons' );
 
+// https://css-tricks.com/snippets/wordpress/remove-privateprotected-from-post-titles/#comment-73313
+function trns_no_title_formating($content) { return '%s'; }
+add_filter('private_title_format',   'trns_no_title_formating');
+add_filter('protected_title_format', 'trns_no_title_formating');
+
 function trns_get_page_number() {
 	return (get_query_var('paged')) ? get_query_var('paged') : 1;
 }
@@ -237,7 +242,7 @@ function trns_the_categories( $separator='', $parents='', $post_id='', $link_cla
 function trns_ascii_logo() {
 	return <<<HTML
 <!--
-		
+
   ◺
   ▢ ▢
   ▢ ▢
@@ -251,8 +256,8 @@ function trns_ascii_logo() {
   ▢ ▢   ▢ ▢ ▢ ▢ ▢
   ▢ ▢   ▢ ▢ ▢ ▢ ▢
         ▢ ▢
-	    ▢ ▢ ▢ ▢ ▢   bradford
-		▢ ▢ ▢ ▢ ▢   digital
+        ▢ ▢ ▢ ▢ ▢   bradford
+        ▢ ▢ ▢ ▢ ▢   digital
 
 -->
 HTML;
@@ -260,22 +265,22 @@ HTML;
 // OTHER OPTIONS
 /*
 
+
   |\
-  |||\
   ||||
   ||||
   ||||
-  |||||||||||
-  |||||||||||  |\
-         ||||  |||\
-  |||||||||||  ||||
-  |||||||||||  ||||
-               ||||
-  ||||  |||||||||||
-  ||||  |||||||||||
+  ||||||||||
+  ||||||||||  
+        ||||  |\
+  ||||||||||  ||||
+  ||||||||||  ||||
+              ||||
+  ||||  ||||||||||
+  ||||  ||||||||||
         ||||
-        |||||||||||   bradford
-		|||||||||||   digital
+        ||||||||||   bradford
+        ||||||||||   digital
 
   ██◣
   ████

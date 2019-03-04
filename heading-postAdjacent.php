@@ -16,7 +16,7 @@
 	$featured_media_class_suffix = ( $has_featured_media ? 'has' : 'lacks') . '-featured-media';
 ?>
 <!-- heading-post.php -->
-<header class="heading heading--post-adjacent heading--interactive heading--<?php echo $featured_media_class_suffix; ?> jsTarget-eligibleTargetElement" id="adjacent-post">
+<section class="heading heading--post-adjacent heading--interactive heading--<?php echo $featured_media_class_suffix; ?> jsTarget-eligibleTargetElement" id="adjacent-post">
 
 	<div class="heading__column">
 
@@ -58,6 +58,18 @@
 				href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
 				<?php the_author(); ?>
 			</a>
+
+			<?php if(post_password_required()) : ?>
+				&#47;
+				<small class="heading__meta-lock">
+					Locked <?php echo trns_icon_component(['name'=>'Lock', 'class'=>'heading__meta-lock-icon']); ?>
+				</small>
+			<?php elseif(!empty($post->post_password)) : ?>
+				&#47;
+				<small class="heading__meta-lock">
+					Unlocked <?php echo trns_icon_component(['name'=>'Unlock', 'class'=>'heading__meta-lock-icon']); ?>
+				</small>
+			<?php endif; ?> 
 			
 		</div>
 
@@ -70,4 +82,4 @@
 
 	</div>
 
-</header><!--/ heading-home.php -->
+</section><!--/ heading-home.php -->
