@@ -1,5 +1,4 @@
 # TODO List
-- widget area needs to render in the post-list section padding
 - srcset sizes for featured images
 - featured image colors: try css filters
 - inline_featured_image meta field ?
@@ -44,6 +43,7 @@ Move things here off the list, then to the __ChangeLog.md__
 - renders before animate sometimes when reloading? repro steps
 - password protected post has input in preview
 - locked and unlocked labels
+- home widget area has padding from the header section and post-list section
 
 
 ## TODO Later
