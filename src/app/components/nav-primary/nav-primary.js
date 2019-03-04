@@ -8,6 +8,7 @@
 	var navOverlay = document.querySelector('.jsTarget-navOverlay');
 	var navOpenClass = 'jsState-navOpen';
 	var navClosedClass = 'jsState-navClosed';
+	var buttonFillClass = 'button--fill-light';
 	var bufferActive = false;
 	var bufferTime = 500; //ms
 	TRANSITIONS.state.isNavOpen = false;
@@ -35,6 +36,7 @@
 
 		navOverlay.addEventListener('mouseenter', closeNav, false);
 		navButton.removeEventListener('mouseenter', openNav, false);
+		navButton.classList.remove(buttonFillClass)
 
 		setBuffer();
 	}
@@ -51,6 +53,7 @@
 
 		navOverlay.removeEventListener('mouseenter', closeNav, false);
 		navButton.addEventListener('mouseenter', openNav, false);
+		navButton.classList.add(buttonFillClass)
 	}
 
 	function setBuffer(){

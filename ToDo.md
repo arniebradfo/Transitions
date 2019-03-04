@@ -1,6 +1,5 @@
 # TODO List
 - archives with descriptions are have too much subtitle padding
-- button background when nav open
 - FASTER WORDPRESS
 	- minify with plugin
 	- cache with plugin
@@ -51,6 +50,7 @@ Move things here off the list, then to the __ChangeLog.md__
 	- the `type="text/javascript"` and `type="text/css"` attributes are unnecessary
 - pagination wrapping issue
 - disable back button animation because the `popstate` event works differently in chrome, safari, and firefox?
+- no nav button background when nav is open
 
 
 ## TODO Later
