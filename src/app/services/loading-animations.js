@@ -32,6 +32,7 @@
 
 	function initialize() {
 		initialized = true;
+		document.body.classList.add(preloadClass);
 		// maybe use window.setTimeout() ?
 		window.requestAnimationFrame( function () {
 			// console.log('styleLoaded');
@@ -47,7 +48,7 @@
 
 	var unloading = false;
 	function onUnload(event) {		
-
+		
 		// if there is a special keypress+click combo
 		if( event.altKey || event.ctrlKey || event.shiftKey || event.metaKey ) return;
 		
@@ -58,13 +59,14 @@
 
 		event.preventDefault();
 		
-		var unloadTargetElement = event.target.closest('.'+eligibleTargetClass);
-		console.log(unloadTargetElement);
+		if (event.target.closest)
+			var unloadTargetElement = event.target.closest('.'+eligibleTargetClass);
+
 		if (unloadTargetElement)
 			unloadTargetElement.classList.add(unloadTargetClass);
 		
-		document.body.classList.remove(loadedClass);
 		document.body.classList.add(unloadClass);
+		document.body.classList.remove(loadedClass);
 
 		document.getElementsByClassName(transitionEndClass)[0]
 			.addEventListener('transitionend', function (transitionEvent) {
@@ -88,7 +90,8 @@
 	}
 
 	function anchorNavigation(event) {
-		// TODO: animate? body{scroll-behavior: smooth;}
+		// console.log(event.target);
+		// TODO: animate? body{scroll-behavior: smooth;} does this fine
 		// https://css-tricks.com/snippets/jquery/smooth-scrolling/
 	}
 
@@ -98,7 +101,7 @@
 
 			if (link.target == '_blank') continue;
 
-			if (link.pathname == window.location.pathname) {
+			if (link.pathname == window.location.pathname && link.hash) {
 				link.addEventListener('click', anchorNavigation, false);
 				continue;
 			}
@@ -122,13 +125,13 @@
 
 	document.addEventListener('DOMContentLoaded', bindNavigatingElements);
 
+	// https://stackoverflow.com/a/33004917/5648839
+	if (history && history.scrollRestoration)
+		history.scrollRestoration = 'manual';
+
+	// replace the state so the back button will animate too
 	history.replaceState( { href:window.location.href },'replace');
 	history.pushState(    { href:window.location.href },'push');
 	window.addEventListener('popstate', onUnload);
-
-	// window.addEventListener('beforeunload', onUnload, false);
-	// window.addEventListener('popstate', onUnload);
-	// window.addEventListener('hashchange', onUnload);
-	// window.addEventListener('unload', onUnload, false);
 	
 }());

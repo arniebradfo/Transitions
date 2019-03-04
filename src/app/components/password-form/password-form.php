@@ -11,18 +11,19 @@
 ?>
 
 <?php
-function trns_password_form() {
+function trns_password_form( $title = '<h2 class="password-form__title">This post is password protected.</h2>' ) {
 
 	global $post;
 	$label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
 	$siteUrl = get_option('siteurl');	
 	$icon = trns_icon_component(['name'=>'Unlock', 'class'=>'password-form__button-icon']);
+	
+	// https://wpartisan.me/tutorials/wordpress-failing-redirect-protected-posts
+	$link = get_the_permalink();
 
 	$output = <<<HTML
 	<!-- password-form.php -->
-	<h2 class="password-form__title">
-		This post is password protected.
-	</h2>
+	$title
 	<form 
 		class="password-form" 
 		action="$siteUrl/wp-login.php?action=postpass" 
@@ -40,12 +41,14 @@ function trns_password_form() {
 		<button class="password-form__button button--icon" name="submit" type="submit" >
 			$icon
 		</button>
+		<input type="hidden" name="_wp_http_referer" value="$link"/>
 	</form><!--/ password-form.php -->
 
 HTML;
 	return $output;
 }
-add_filter( 'the_password_form', 'trns_password_form' );
+add_filter( 'the_password_form', 'trns_password_form', 10, 0 );
+
 
 
 

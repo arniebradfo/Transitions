@@ -1,11 +1,30 @@
 # TODO List
+- password protected post has a password input field in preview
+- widget area needs to render in the post-list section padding
+- srcset sizes for featured images
+- featured image colors: try css filters
+- inline_featured_image meta field ?
+- fix ascii rendering
+- FASTER WORDPRESS
+	- minify with plugin
+	- cache with plugin
+	- cloudflare
 - TESTING
-	- speed test
-	- html doc outline
-	- browser test
+	- [speed test](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fbradford.digital%2F)
 	- does is validate?
-	- accessibility
-	- mobile testing
+		- [homepage](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbradford.digital%2F)
+		- [HESH Post](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fbradford.digital%2Fwordpress-syntax-highlighter-plugin%2F)
+		- html doc outline on these pages too
+	- browser test
+		- chrome
+		- firefox
+		- safari
+		- edge
+		- ie11 ?
+	- mobile testing - look at speed and make an exception.
+		- iOS safari
+		- chrome for android
+	- accessibility - later
 - TITLES - better titles for everything
 	- remove _PROTECTED_ from post title: [link](https://www.templatemonster.com/help/wordpress-how-to-removechange-protected-prefix-for-password-protected-posts.html)
 	- Tagged and Category with description
@@ -14,16 +33,16 @@
 	- logo loading animation? DO IT LAST!
 	- press/touch only?
 	- tune text shadow
-	- password protected post has a password input field in preview
 	- credit meta fields
 	- add tags somewhere?
 	- img shadow class for content.less - or in custom css, not theme?
 - COMMENTS
 	- things
 
-## DoneDid 
+## TADA List
 Move things here off the list, then to the __ChangeLog.md__
-
+- back button no animate :(
+- renders before animate sometimes when reloading? repro steps
 
 ## TODO Later
 - theme preview & customize does not work with navigation

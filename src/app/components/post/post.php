@@ -78,8 +78,16 @@
 
 
 
-	<?php else : ?>
+	<?php elseif (post_password_required()) : ?>
+		<div class="post__content">
+			<p>
+				This post is password protected.
+				<?php echo trns_password_form(''); ?>
+			</p>
+		</div>
 
+	<?php else : ?>
+		
 		<div class="post__content">
 			<p>
 				<?php the_excerpt(); ?>
@@ -87,6 +95,14 @@
 			<a class="post__primary-button button button--outline" href="<?php echo esc_url( get_permalink() ); ?>">
 				Read more <?php echo trns_icon_component(['name'=>'Expand', 'class'=>'button__icon']) ?>
 			</a>
+			<?php if (is_user_logged_in())
+				edit_post_link(
+					'Edit this post',
+					'',
+					'',
+					null,
+					'post__edit-button button'
+				); ?>
 		</div>
 
 	<?php endif; ?>
