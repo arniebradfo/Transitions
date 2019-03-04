@@ -50,6 +50,7 @@ Move things here off the list, then to the __ChangeLog.md__
 - HTML validates if using a minifier like [W3 total cache](https://wordpress.org/plugins/w3-total-cache/)
 	- the `type="text/javascript"` and `type="text/css"` attributes are unnecessary
 - pagination wrapping issue
+- disable back button animation because the `popstate` event works differently in chrome, safari, and firefox?
 
 
 ## TODO Later

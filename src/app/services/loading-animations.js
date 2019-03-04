@@ -7,6 +7,8 @@
 	var initialized = false;
 	var cssMain = document.head.querySelector('link[href*="/style.css"]');
 
+	var enableBackAnimation = false;
+
 	var preloadClass         = 'jsState-stylePreload';
 	var loadedClass          = 'jsState-styleLoaded';
 	var unloadClass          = 'jsState-styleUnload';
@@ -36,7 +38,7 @@
 		// maybe use window.setTimeout() ?
 		window.requestAnimationFrame( function () {
 			// console.log('styleLoaded');
-			document.body.classList.remove(preloadClass);
+			document.body.classList.remove(preloadClass, unloadClass);
 			document.body.classList.add(loadedClass);
 			var loadDelayElements = document.getElementsByClassName(loadDelayClass)
 			for (var i = 0; i < loadDelayElements.length; i++) {
@@ -48,7 +50,7 @@
 
 	var unloading = false;
 	function onUnload(event) {		
-		
+			
 		// if there is a special keypress+click combo
 		if( event.altKey || event.ctrlKey || event.shiftKey || event.metaKey ) return;
 		
@@ -58,6 +60,7 @@
 		if (unloading) return;
 
 		event.preventDefault();
+		console.log(event);
 		
 		if (event.target.closest)
 			var unloadTargetElement = event.target.closest('.'+eligibleTargetClass);
@@ -66,7 +69,7 @@
 			unloadTargetElement.classList.add(unloadTargetClass);
 		
 		document.body.classList.add(unloadClass);
-		document.body.classList.remove(loadedClass);
+		document.body.classList.remove(loadedClass, preloadClass);
 
 		document.getElementsByClassName(transitionEndClass)[0]
 			.addEventListener('transitionend', function (transitionEvent) {
@@ -115,6 +118,17 @@
 		}
 	}
 
+	function bindBackAnimation() {
+		// https://stackoverflow.com/a/33004917/5648839
+		if (history && history.scrollRestoration)
+			history.scrollRestoration = 'manual';
+
+		// replace the state so the back button will animate too
+		history.replaceState( { href:window.location.href },'replace');
+		history.pushState(    { href:window.location.href },'push');
+		window.addEventListener('popstate', onUnload);
+	}
+
 
 	// START //
 	maybeInitialize();
@@ -125,13 +139,7 @@
 
 	document.addEventListener('DOMContentLoaded', bindNavigatingElements);
 
-	// https://stackoverflow.com/a/33004917/5648839
-	if (history && history.scrollRestoration)
-		history.scrollRestoration = 'manual';
-
-	// replace the state so the back button will animate too
-	history.replaceState( { href:window.location.href },'replace');
-	history.pushState(    { href:window.location.href },'push');
-	window.addEventListener('popstate', onUnload);
+	if (enableBackAnimation) 
+		bindBackAnimation();
 	
 }());
