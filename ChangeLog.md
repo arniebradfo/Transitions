@@ -1,5 +1,20 @@
 # Change Log
 
+## 3.1.1
+Bug Fixes
+- password protected post has input in preview
+- locked and unlocked labels
+- home widget area has padding from the header section and post-list section
+- featured image color improvements - rotated gradient so white is at the bottom and text is (somewhat) easier to read.
+- removed _'Protected: Post Name'_ Text
+- removed tabs from ascii character
+- HTML validates if using a minifier like [W3 total cache](https://wordpress.org/plugins/w3-total-cache/)
+	- the `type="text/javascript"` and `type="text/css"` attributes are unnecessary
+- pagination wrapping issue
+- disabled back button animation because the `popstate` event works differently in chrome, safari, and firefox?
+- no nav button background when nav is open
+- fixed firefox and safari bugs with gradients and input placeholder position
+
 ## 3.1.0
 Overall wordpress improvements
 - made a widget area on main page
