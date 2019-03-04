@@ -82,8 +82,10 @@
 		<div class="post__content">
 			<p>
 				This post is password protected.
-				<?php echo trns_password_form(''); ?>
 			</p>
+			<?php echo trns_password_form(''); ?>
+			<?php if (is_user_logged_in())
+				edit_post_link( 'Edit this post', '', '', null, 'post__edit-button button' ); ?>
 		</div>
 
 	<?php else : ?>
@@ -96,13 +98,7 @@
 				Read more <?php echo trns_icon_component(['name'=>'Expand', 'class'=>'button__icon']) ?>
 			</a>
 			<?php if (is_user_logged_in())
-				edit_post_link(
-					'Edit this post',
-					'',
-					'',
-					null,
-					'post__edit-button button'
-				); ?>
+				edit_post_link( 'Edit this post', '', '', null, 'post__edit-button button' ); ?>
 		</div>
 
 	<?php endif; ?>

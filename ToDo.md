@@ -1,5 +1,4 @@
 # TODO List
-- password protected post has a password input field in preview
 - widget area needs to render in the post-list section padding
 - srcset sizes for featured images
 - featured image colors: try css filters
@@ -43,6 +42,9 @@
 Move things here off the list, then to the __ChangeLog.md__
 - back button no animate :(
 - renders before animate sometimes when reloading? repro steps
+- password protected post has input in preview
+- locked and unlocked labels
+
 
 ## TODO Later
 - theme preview & customize does not work with navigation

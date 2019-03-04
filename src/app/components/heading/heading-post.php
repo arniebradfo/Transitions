@@ -49,6 +49,18 @@
 				<?php the_author(); ?>
 			</a>
 			
+			<?php if(post_password_required()) : ?>
+				&#47;
+				<small class="heading__meta-lock">
+					Locked <?php echo trns_icon_component(['name'=>'Lock', 'class'=>'heading__meta-lock-icon']); ?>
+				</small>
+			<?php elseif(!empty($post->post_password)) : ?>
+				&#47;
+				<small class="heading__meta-lock">
+					Unlocked <?php echo trns_icon_component(['name'=>'Unlock', 'class'=>'heading__meta-lock-icon']); ?>
+				</small>
+			<?php endif; ?> 
+			
 		</div>
 
 		<h1 class="heading__title jsTarget-loadDelay"><?php the_title(); ?></h1>
