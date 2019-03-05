@@ -25,14 +25,15 @@
 @1vh: var(--vh, 1vh); // vh-unit.js
 
 // this must match $content_width in ./functions.php
-@content_Width: @s8*110;
+@content_Width: @s8*110; // less the padding of @column_Padding
+// which ends up being: 8*110 - (32*2)*2 = 750
 
 
 @column_Padding: @s32*2;
 @column_Padding_Mobile: @s32;
 @column_PaddingVar: var(--column_Padding, @column_Padding);
 html{
-	--column_Padding: @column_Padding;
+	--column_Padding: @column_Padding_Mobile;
 	@media @mobile_Media{
 		--column_Padding: @column_Padding_Mobile;
 	}

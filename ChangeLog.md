@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.2.2
+Bug Fixes
+- fixing some whitespace output bugs in php files
+- fixed content_width bug
+- body and html scrollbars css fix
+
 ## 3.1.1
 Bug Fixes
 - password protected post has input in preview

@@ -8,9 +8,6 @@
  * @version 1.0
  */
 
-?>
-
-<?php
 function trns_password_form( $title = '<h2 class="password-form__title">This post is password protected.</h2>' ) {
 
 	global $post;
@@ -49,8 +46,6 @@ HTML;
 add_filter( 'the_password_form', 'trns_password_form', 10, 0 );
 
 
-
-
 // Include Password Protected Posts in Search Results
 // https://www.isitwp.com/include-password-protected-posts-in-search-results/
 add_filter( 'posts_search', 'include_password_posts_in_search' );
@@ -62,8 +57,6 @@ function include_password_posts_in_search( $search ) {
     }
     return $search;
 }
-
-
 
 // MAKING IT A WIDGET
 // https://codex.wordpress.org/Widgets_API
