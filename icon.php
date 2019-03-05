@@ -10,7 +10,6 @@
  * @version 1.0
  */
 
-
 function trns_icon_component( $atts, $content=null, $tag='' ) {
 
 	$atts_list = '';

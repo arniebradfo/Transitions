@@ -10,8 +10,8 @@
 
 ?>
 
-<!-- searchform.php -->
 <?php $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
+<!-- searchform.php -->
 <form 
 	class="searchform" 
 	role="search" 
