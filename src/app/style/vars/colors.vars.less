@@ -15,6 +15,7 @@
 @fgOnColor_Color: fade(white, 85%);
 
 @textShadow_Color: fade(black, 40%);
+@textShadowStrong_Color: fade(black, 60%);
 @shadowBottom_Gradient: linear-gradient(0deg, fade(black, 20%), fade(black, 0%));
 @shadowTop_Gradient:  linear-gradient(180deg, fade(black, 20%), fade(black, 0%));
 
@@ -67,19 +68,19 @@
 }
 
 // TODO: re-implement these for desktop-only
-.text_Shadow(@textSize:@s8){
+.text_Shadow(@shadow_Color: @textShadow_Color, @blur_Size:0.1em){
 	.jsState-inputMouse &{
-		text-shadow: @textShadow_Color 0 0.1em 0.25em;
-		// filter: drop-shadow( 0px 0.1em 0.25em @textShadow_Color);
+		text-shadow: @shadow_Color 0 @blur_Size @blur_Size*2;
+		// filter: drop-shadow( 0px 0.1em 0.25em @shadow_Color);
 	}
 }
-.filter_Shadow(@size:3px){
+.filter_Shadow(@blur_Size:3px){
 	.jsState-inputMouse &{
 		// THIS GUY is no good :( for performance
-		// filter: drop-shadow( 0px @size (@size * 2) @textShadow_Color);
+		// filter: drop-shadow( 0px @blur_Size (@blur_Size * 2) @textShadow_Color);
 	}
 }
-.gradient_Shadow(@size:3px){
+.gradient_Shadow(@blur_Size:3px){
 	// TODO: make .gradient_Shadow work?
 	position: relative;
 	&:before{	
