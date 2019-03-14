@@ -1,5 +1,7 @@
 # TODO List
-- archives with descriptions are have too much subtitle padding
+- try a different animation technique. dont animated opacity of body, only sub elements
+- archives with descriptions have too much subtitle padding
+- animated logo?
 - FASTER WORDPRESS
 	- minify with plugin
 	- cache with plugin

@@ -19,41 +19,64 @@
 @delay_Interval: 70ms;
 
 
-body{
-	.transition(opacity transform, linear, @exitAnimation_Duration);	
-	&.jsState-stylePreload{
-		opacity: 0; 
-	}
-	&.jsState-styleLoaded {
-		opacity: 1; 
-		transition-timing-function: @panelTransitionIn_Timing;
-	}
-	&.jsState-styleUnload{
-		opacity: 0; 
-		transition-timing-function: @panelTransitionOut_Timing;
-	}
-}
+// body{
+// 	.transition(opacity transform, linear, @exitAnimation_Duration);	
+// 	&.jsState-stylePreload{
+// 		opacity: 0; 
+// 	}
+// 	&.jsState-styleLoaded {
+// 		opacity: 1; 
+// 		transition-timing-function: @panelTransitionIn_Timing;
+// 	}
+// 	&.jsState-styleUnload{
+// 		opacity: 0; 
+// 		transition-timing-function: @panelTransitionOut_Timing;
+// 	}
+// }
 
 
 .main,
-.footer{
+.footer,
+.nav,
+.nav__button,
+.nav__overlay
+{
 	.transition(opacity transform, ease, @exitAnimation_Duration);
-	.jsState-stylePreload &{
-		transform: translate3d(0, 60px, 0); 
-	}
+	// .jsState-stylePreload &{
+	// 	// opacity: 0;
+	// 	transform: translate3d(0, 60px, 0); 
+	// }
 	.jsState-styleLoaded &{
+		// opacity: 1;
 		transform: translate3d(0,0,0); 
 		transition-timing-function: @panelTransitionIn_Timing;
 	}
 	.jsState-styleUnload &{
+		opacity: 0;
 		transform: translate3d(0, -60px, 0); 
 		transition-timing-function: @panelTransitionOut_Timing;
 	}
 }
 
+.jsTarget-loadFadeIn
+{
+	.transition(opacity transform, ease, @exitAnimation_Duration*2);
+	.jsState-stylePreload &{
+		opacity: 0;
+		// transform: translate3d(0, 60px, 0); 
+	}
+	.jsState-styleLoaded &{
+		opacity: 1;
+		// transform: translate3d(0,0,0); 
+		transition-timing-function: @panelTransitionIn_Timing;
+	}
+}
+
 .jsTarget-loadDelay{
 	.transition(opacity transform, ease, @exitAnimation_Duration);
+	// will-change: transform, opacity;
 	.jsState-stylePreload &{
+		// display: none;
 		opacity: 0;
 		transform: translate3d(0, 50px, 0);
 	}

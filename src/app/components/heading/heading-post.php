@@ -29,12 +29,12 @@
 		<div class="heading__flex-splitter"></div>
 
 		<?php if ( '' !== get_the_post_thumbnail() ): ?>
-			<div class="heading__featured-media"> 
+			<div class="heading__featured-media jsTarget-loadFadeIn"> 
 				<?php the_post_thumbnail( 'full', ['class'=>'heading__img jsTarget-parallax--top'] ); ?>
 			</div>
 
 		<?php else: ?>
-			<div class="heading__featured-media heading__featured-media--empty"></div> 
+			<div class="heading__featured-media heading__featured-media--empty jsTarget-loadFadeIn"></div> 
 
 		<?php endif; ?> 
 	

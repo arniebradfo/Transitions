@@ -1,5 +1,7 @@
 # Change Log
 
+- double copyright fix
+
 ## 3.2.2
 Bug Fixes
 - fixing some whitespace output bugs in php files
