@@ -75,10 +75,11 @@
 	}
 }
 .filter_Shadow(@blur_Size:3px){
+	transform: translateZ(0); // force hardware acceleration
 	.jsState-inputMouse &{
 		// THIS GUY is no good :( for performance
-		// filter: drop-shadow( 0px @blur_Size (@blur_Size * 2) @textShadow_Color);
-	}
+		filter: drop-shadow( 0px @blur_Size (@blur_Size * 2) @textShadow_Color);
+ 	}
 }
 .gradient_Shadow(@blur_Size:3px){
 	// TODO: make .gradient_Shadow work?
