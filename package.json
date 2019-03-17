@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/arniebradfo/Transitions#readme",
   "devDependencies": {
-    "del": "^3.0.0",
+    "del": "^4.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-combine-mq": "^0.4.0",
@@ -28,7 +28,7 @@
     "gulp-livereload": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-svgstore": "^7.0.1",
-    "gulp-uglify": "^3.0.1",
+    "gulp-uglify": "^3.0.2",
     "less-plugin-glob": "^3.0.0",
     "normalize.css": "^8.0.1",
     "sanitize.css": "^8.0.0"
