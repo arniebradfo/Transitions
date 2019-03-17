@@ -60,7 +60,7 @@
 		if (unloading) return;
 
 		event.preventDefault();
-		console.log(event);
+		console.log('Unload animation starting');
 		
 		if (event.target.closest)
 			var unloadTargetElement = event.target.closest('.'+eligibleTargetClass);
@@ -71,25 +71,27 @@
 		document.body.classList.add(unloadClass);
 		document.body.classList.remove(loadedClass, preloadClass);
 
-		document.getElementsByClassName(transitionEndClass)[0]
-			.addEventListener('transitionend', function (transitionEvent) {
-				unloading = true;
-				switch (event.type) {
-					case 'click':
-						event.target.click();
-						break;
-					case 'submit':
-						// event.target.submit(); // this will fail if there is a form <element name="submit"/>, which seems likely...
-						HTMLFormElement.prototype.submit.call(event.target) // ...so we use this instead? // https://trackjs.com/blog/when-form-submit-is-not-a-function/
-						break;
-					case 'popstate':
-						history.go(-2);
-						break;
-					default:
-						break;
-				}
+		var continueUnload = function () {
+			console.log('Unload animation end. Proceeding to next page');
+			unloading = true;
+			switch (event.type) {
+				case 'click':
+					event.target.click();
+					break;
+				case 'submit':
+					// event.target.submit(); // this will fail if there is a form <element name="submit"/>, which seems likely...
+					HTMLFormElement.prototype.submit.call(event.target) // ...so we use this instead? // https://trackjs.com/blog/when-form-submit-is-not-a-function/
+					break;
+				case 'popstate':
+					history.go(-2);
+					break;
+				default:
+					break;
+			}
+		}
 
-			});
+		document.getElementsByClassName(transitionEndClass)[0].addEventListener('transitionend', continueUnload);
+		window.setTimeout(continueUnload, 2000); // incase something went wrong
 	}
 
 	function anchorNavigation(event) {

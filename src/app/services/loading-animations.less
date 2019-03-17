@@ -70,6 +70,9 @@
 		// transform: translate3d(0,0,0); 
 		transition-timing-function: @panelTransitionIn_Timing;
 	}
+	.jsState-styleUnload &{
+		transition-duration: @exitAnimation_Duration;
+	}
 }
 
 .jsTarget-loadDelay{
