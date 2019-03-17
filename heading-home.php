@@ -18,7 +18,7 @@
 
 		<div class="heading__flex-splitter"></div>
 
-		<div class="heading__featured-media heading__featured-media--empty"></div> 
+		<div class="heading__featured-media heading__featured-media--empty jsTarget-loadFadeIn"></div> 
 
 		<div class="heading__logo jsTarget-loadDelay">		
 			<?php get_template_part('logo'); ?>

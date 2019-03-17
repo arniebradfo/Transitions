@@ -13,7 +13,7 @@
 // display_paginate_title makes a title 'Page n of x' appear instead of 'Next Page'
 // next_page_number makes a title 'Page X' appear instead of 'Next Page'
 
-function trns_pagination_component( $atts=[], $content=null, $tag='' ) {
+function trns_pagination_component( $atts=array(), $content=null, $tag='' ) {
 
 	$next_page_number = ! empty( $atts['next_page_number'] );
 	$display_paginate_title = ! empty( $atts['display_paginate_title'] );
@@ -25,7 +25,7 @@ function trns_pagination_component( $atts=[], $content=null, $tag='' ) {
 		$current_page = trns_get_page_number();
 		$total_pages = trns_get_total_pages();
 
-		$paginate_links = paginate_links(['prev_next'=>false]);
+		$paginate_links = paginate_links(array('prev_next'=>false));
 
 		if (get_next_posts_link()){
 			$primary_link = get_next_posts_page_link(); 
@@ -38,20 +38,20 @@ function trns_pagination_component( $atts=[], $content=null, $tag='' ) {
 			$icon_name = 'Arrow_Up';
 		}
 
-	} elseif (wp_link_pages(['echo'=> 0])) { // on a paginated post or page
+	} elseif (wp_link_pages(array('echo'=> 0))) { // on a paginated post or page
 
 		global $page, $numpages;
 		
 		$current_page = $page;
 		$total_pages = $numpages;
 
-		$paginate_links = wp_link_pages([
+		$paginate_links = wp_link_pages(array(
 			'before'           => '',
 			'after'            => '',
 			'next_or_number'   => 'number',
 			'separator'        => '',
 			'echo'             => 0
-		]);
+		));
 
 		$href_regex = '/href=[\'\"]([^\'\"]*)[\'\"]/';
 
@@ -68,10 +68,10 @@ function trns_pagination_component( $atts=[], $content=null, $tag='' ) {
 		} else { // this is not the last page		
 			preg_match_all(
 				$href_regex,
-				wp_link_pages([
+				wp_link_pages(array(
 					'next_or_number'   => 'next',
 					'echo'             => 0,			
-				]),
+				)),
 				$primary_link 
 			);
 			$primary_link = end($primary_link[1]);
@@ -120,12 +120,12 @@ function trns_pagination_component( $atts=[], $content=null, $tag='' ) {
 			<?php elseif (isset($primary_link)) : ?>
 				<a class="button pagination__primary-button" href="<?php echo esc_url($primary_link); ?>" >
 					<?php echo $primary_link_text; ?>
-					<?php echo trns_icon_component(['name'=>$icon_name, 'class'=>'button__icon']) ?>
+					<?php echo trns_icon_component(array('name'=>$icon_name, 'class'=>'button__icon')) ?>
 				</a>
 
 			<?php endif; ?>
 
-			<div class="pagination__flex-splitter"></div>		
+			<div class="pagination__flex-splitter"></div>
 
 			<nav class="pagination__menu">
 				<span class="pagination__label">Go to page:</span>

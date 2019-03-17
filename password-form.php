@@ -13,7 +13,7 @@ function trns_password_form( $title = '<h2 class="password-form__title">This pos
 	global $post;
 	$label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
 	$siteUrl = get_option('siteurl');	
-	$icon = trns_icon_component(['name'=>'Unlock', 'class'=>'password-form__button-icon']);
+	$icon = trns_icon_component(array('name'=>'Unlock', 'class'=>'password-form__button-icon'));
 	
 	// https://wpartisan.me/tutorials/wordpress-failing-redirect-protected-posts
 	$link = get_the_permalink();
